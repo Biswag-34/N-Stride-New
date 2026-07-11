@@ -1,0 +1,32 @@
+
+> n-stride-brand@0.1.0 dev
+> next dev --hostname 127.0.0.1 --port 3001
+
+   ▲ Next.js 15.5.20
+   - Local:        http://127.0.0.1:3001
+   - Network:      http://127.0.0.1:3001
+
+ ✓ Starting...
+ ✓ Ready in 20.9s
+ ○ Compiling /contact ...
+ ✓ Compiled /contact in 10.7s (1457 modules)
+ GET /contact 200 in 2193ms
+ GET /contact 200 in 1332ms
+ GET /contact 200 in 1131ms
+ ✓ Compiled in 35.4s (1472 modules)
+ GET /contact 200 in 2703ms
+ GET /contact 200 in 1920ms
+ GET /contact?type=foot-checkup 200 in 1179ms
+ GET /contact?type=product-guidance 200 in 1365ms
+ GET /contact?type=wound-care 200 in 1177ms
+ GET /contact?type=bio-fit 200 in 1189ms
+ GET /contact?type=step-ahead 200 in 999ms
+ GET /contact?type=general 200 in 1248ms
+ GET /contact 200 in 1331ms
+ ○ Compiling / ...
+ ✓ Compiled / in 4.1s (1538 modules)
+ GET / 200 in 7133ms
+ GET /contact 200 in 1012ms
+ GET / 200 in 3216ms
+ GET / 200 in 1615ms
+[?25h

@@ -1,0 +1,54 @@
+@import "../styles/tokens.css";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+  background: var(--background);
+}
+
+body {
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at top left, rgba(221, 241, 255, 0.56), transparent 34rem),
+    var(--background);
+  color: var(--text-primary);
+  font-family: var(--font-inter), Inter, sans-serif;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--primary-dark);
+  font-family: var(--font-sora), Sora, sans-serif;
+  letter-spacing: 0;
+}
+
+::selection {
+  background: rgba(38, 182, 200, 0.22);
+  color: var(--primary-dark);
+}
+
+:focus-visible {
+  outline: 3px solid rgba(20, 121, 201, 0.38);
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+}
