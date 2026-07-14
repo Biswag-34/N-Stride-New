@@ -35,6 +35,6 @@
   --radius-md: 0.5rem;
   --radius-lg: 0.75rem;
   --radius-xl: 1rem;
-  --section-padding: clamp(4rem, 8vw, 7rem);
+  --section-padding: clamp(2.75rem, 7vw, 6rem);
   --container-width: 1540px;
 }

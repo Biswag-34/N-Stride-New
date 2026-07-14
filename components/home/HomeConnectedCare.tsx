@@ -20,7 +20,7 @@ export function HomeConnectedCare() {
     <section className="bg-white py-8">
       <Container>
         <motion.div
-          className="relative overflow-hidden rounded-[2.25rem] border border-border-soft bg-[radial-gradient(circle_at_72%_36%,rgba(221,241,255,0.72),transparent_30rem),linear-gradient(135deg,#ffffff,#f8fcff)] p-6 shadow-[0_24px_70px_rgba(20,121,201,0.08)] sm:p-8 lg:p-12"
+          className="relative overflow-hidden rounded-[1.35rem] border border-border-soft bg-[radial-gradient(circle_at_72%_36%,rgba(221,241,255,0.72),transparent_30rem),linear-gradient(135deg,#ffffff,#f8fcff)] p-4 shadow-[0_24px_70px_rgba(20,121,201,0.08)] xs:p-5 sm:rounded-[2.25rem] sm:p-8 lg:p-12"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.18 }}
@@ -29,7 +29,7 @@ export function HomeConnectedCare() {
           <div className="grid gap-9 lg:grid-cols-[0.48fr_1.52fr] lg:items-center">
             <motion.div variants={staggerItem}>
               <SectionKicker>One ecosystem. Connected care.</SectionKicker>
-              <h2 className="mt-4 max-w-[27rem] text-3xl font-semibold leading-tight text-primary-dark sm:text-4xl">
+              <h2 className="mt-4 max-w-[27rem] text-2xl font-semibold leading-tight text-primary-dark xs:text-3xl sm:text-4xl">
                 Designed for connection. Built for better outcomes.
               </h2>
               <p className="mt-4 max-w-[31rem] text-sm leading-7 text-text-secondary">
@@ -46,7 +46,7 @@ export function HomeConnectedCare() {
               </div>
             </motion.div>
 
-            <motion.div className="relative min-h-[21rem] overflow-visible sm:min-h-[31rem] lg:min-h-[33rem]" variants={staggerItem}>
+            <motion.div className="relative min-h-[16rem] overflow-visible xs:min-h-[20rem] sm:min-h-[31rem] lg:min-h-[33rem]" variants={staggerItem}>
               <Image
                 alt="N-Stride connected care ecosystem"
                 className="object-contain"
@@ -58,7 +58,7 @@ export function HomeConnectedCare() {
             </motion.div>
           </div>
           <motion.div
-            className="mx-auto mt-3 flex max-w-[48rem] items-center justify-center gap-4 rounded-[0.7rem] border border-border-soft bg-white/82 px-5 py-3 text-center shadow-[0_18px_44px_rgba(20,121,201,0.07)]"
+            className="mx-auto mt-3 flex max-w-[48rem] flex-col items-center justify-center gap-3 rounded-[0.7rem] border border-border-soft bg-white/82 px-4 py-3 text-center shadow-[0_18px_44px_rgba(20,121,201,0.07)] xs:flex-row xs:gap-4 xs:px-5"
             variants={staggerItem}
           >
             <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full border border-primary/10 bg-white text-primary shadow-soft">

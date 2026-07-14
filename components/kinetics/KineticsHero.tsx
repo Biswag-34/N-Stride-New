@@ -33,7 +33,7 @@ export function KineticsHero({ vertical }: KineticsHeroProps) {
         aria-hidden="true"
         className="absolute inset-0 bg-[radial-gradient(circle_at_77%_43%,rgba(20,121,201,0.2),transparent_34%),radial-gradient(circle_at_61%_74%,rgba(221,241,255,0.65),transparent_34%)]"
       />
-      <KineticsContainer className="relative grid min-h-[560px] items-center gap-6 py-10 lg:grid-cols-[0.82fr_1.18fr] lg:py-0">
+      <KineticsContainer className="relative grid items-center gap-7 py-8 xs:py-10 lg:min-h-[560px] lg:grid-cols-[0.82fr_1.18fr] lg:gap-6 lg:py-0">
         <motion.div
           animate="visible"
           className="max-w-[33rem]"
@@ -44,22 +44,22 @@ export function KineticsHero({ vertical }: KineticsHeroProps) {
             <KineticsKicker>{vertical.shortName}</KineticsKicker>
           </motion.div>
           <motion.h1
-            className="mt-4 max-w-[31rem] font-heading text-[clamp(2.25rem,4vw,4rem)] font-bold leading-[0.98] tracking-[-0.02em] text-primary-dark"
+            className="mt-4 max-w-[31rem] font-heading text-[clamp(2.05rem,10vw,4rem)] font-bold leading-[1.02] tracking-[-0.02em] text-primary-dark lg:leading-[0.98]"
             variants={fadeUp}
           >
             Movement deserves the right foundation.
           </motion.h1>
-          <motion.p className="mt-5 max-w-[30rem] text-base leading-7 text-text-secondary" variants={fadeUp}>
+          <motion.p className="mt-5 max-w-[30rem] text-sm leading-7 text-text-secondary sm:text-base" variants={fadeUp}>
             N-Stride Kinetics brings therapeutic footwear and performance-driven design together for protection,
             comfort and confidence in every step.
           </motion.p>
-          <motion.div className="mt-6 flex flex-col gap-3 sm:flex-row" variants={fadeUp}>
-            <Button className="min-h-10 rounded-[0.45rem] px-6 text-xs" href={vertical.cta.primary.href}>
+          <motion.div className="mt-6 flex flex-col gap-3 xs:flex-row xs:flex-wrap" variants={fadeUp}>
+            <Button className="min-h-10 w-full rounded-[0.45rem] px-5 text-xs xs:w-auto xs:px-6" href={vertical.cta.primary.href}>
               Book Foot Checkup
               <ArrowRight aria-hidden="true" className="h-4 w-4" />
             </Button>
             <Button
-              className="min-h-10 rounded-[0.45rem] px-6 text-xs"
+              className="min-h-10 w-full rounded-[0.45rem] px-5 text-xs xs:w-auto xs:px-6"
               external={secondaryCta.external}
               href={secondaryCta.href}
               variant="outline"
@@ -67,15 +67,15 @@ export function KineticsHero({ vertical }: KineticsHeroProps) {
               Explore Footwear
             </Button>
           </motion.div>
-          <motion.div className="mt-10 grid gap-4 sm:grid-cols-3" variants={fadeUp}>
+          <motion.div className="mt-8 grid gap-4 xs:grid-cols-3 lg:mt-10" variants={fadeUp}>
             <IconText icon={<GiRunningShoe className="h-5 w-5" />} text="movement" title="Built for everyday" />
             <IconText icon={<HeartPulse className="h-5 w-5" />} text="fit & comfort" title="Clinically guided" />
             <IconText icon={<ShieldCheck className="h-5 w-5" />} text="loved by users" title="Trusted by specialists," />
           </motion.div>
         </motion.div>
 
-        <MotionReveal className="relative min-h-[350px] lg:h-[560px]">
-          <div className="relative ml-auto h-full min-h-[350px] w-full max-w-[900px]">
+        <MotionReveal className="relative min-h-[260px] xs:min-h-[320px] lg:h-[560px]">
+          <div className="relative ml-auto h-full min-h-[260px] w-full max-w-[900px] xs:min-h-[320px] lg:min-h-[350px]">
             <div
               aria-hidden="true"
               className="absolute -bottom-10 right-[-4%] z-0 h-[48%] w-[88%] rounded-[50%] bg-[#bce2fb]/70 blur-[48px]"
@@ -84,7 +84,7 @@ export function KineticsHero({ vertical }: KineticsHeroProps) {
               aria-hidden="true"
               className="absolute right-[3%] top-[2%] z-0 h-[88%] w-[88%] rounded-[42%] bg-[#dff1ff]/80 blur-[64px]"
             />
-            <div className="relative z-10 h-full min-h-[350px] overflow-hidden">
+            <div className="relative z-10 h-full min-h-[260px] overflow-hidden xs:min-h-[320px] lg:min-h-[350px]">
               <Image
                 alt="Therapeutic footwear worn indoors"
                 className="object-cover object-center"

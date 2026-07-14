@@ -20,14 +20,14 @@ export function Header() {
 
   return (
     <header className="sticky top-0 z-50 border-b border-border-soft/70 bg-white/96 shadow-[0_8px_28px_rgba(16,42,67,0.045)] backdrop-blur-xl">
-      <div className="mx-auto flex h-14 max-w-container items-center justify-between px-5 sm:px-6 lg:px-8">
+      <div className="mx-auto flex h-14 max-w-container items-center justify-between gap-3 px-4 xs:px-5 sm:px-6 lg:px-8">
         <Link
           aria-label={`${SITE_NAME} home`}
           className="flex min-w-0 items-center gap-3 rounded-md focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-primary/25"
           href="/"
           onClick={() => setMenuOpen(false)}
         >
-          <span className="relative h-9 w-40 shrink-0 overflow-hidden rounded-sm">
+          <span className="relative h-8 w-36 shrink-0 overflow-hidden rounded-sm xs:h-9 xs:w-40">
             <Image
               alt={`${SITE_NAME} logo`}
               className="object-contain"
@@ -73,7 +73,7 @@ export function Header() {
           aria-expanded={menuOpen}
           aria-label={menuOpen ? "Close menu" : "Open menu"}
           className={cn(
-            "inline-flex h-11 w-11 items-center justify-center rounded-md border border-border-soft bg-white text-primary-dark shadow-soft transition hover:bg-background-soft lg:hidden",
+            "inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-md border border-border-soft bg-white text-primary-dark shadow-soft transition hover:bg-background-soft xs:h-11 xs:w-11 lg:hidden",
           )}
           onClick={() => setMenuOpen((current) => !current)}
           type="button"

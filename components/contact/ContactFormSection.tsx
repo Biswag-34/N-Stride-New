@@ -33,12 +33,12 @@ export function ContactFormSection({ onTypeChange, selectedType }: ContactFormSe
   }
 
   return (
-    <Section id="enquiry-form" className="py-14 sm:py-16 lg:py-20" variant="soft">
+    <Section id="enquiry-form" className="py-9 xs:py-12 sm:py-14 lg:py-16" variant="soft">
       <Container>
-        <div className="grid gap-8 lg:grid-cols-[0.78fr_1.22fr] lg:items-start">
+        <div className="grid gap-6 lg:grid-cols-[0.78fr_1.22fr] lg:items-start">
           <div>
-            <p className="text-sm font-bold uppercase tracking-[0.14em] text-primary">Enquiry form</p>
-            <h2 className="mt-4 text-3xl font-semibold leading-tight text-primary-dark sm:text-4xl">
+            <p className="text-xs font-bold uppercase tracking-[0.14em] text-primary sm:text-sm">Enquiry form</p>
+            <h2 className="mt-4 text-2xl font-semibold leading-tight text-primary-dark xs:text-3xl sm:text-4xl">
               Share the details for {selectedInquiry?.title ?? "your enquiry"}.
             </h2>
             <p className="mt-4 leading-7 text-text-secondary">
@@ -51,7 +51,7 @@ export function ContactFormSection({ onTypeChange, selectedType }: ContactFormSe
             ) : null}
           </div>
 
-          <form className="rounded-[2rem] border border-border-soft bg-white p-5 shadow-card sm:p-6" onSubmit={handleSubmit}>
+          <form className="rounded-[1.25rem] border border-border-soft bg-white p-4 shadow-card xs:rounded-[1.5rem] xs:p-5 sm:rounded-[2rem] sm:p-6" onSubmit={handleSubmit}>
             <div className="grid gap-4 sm:grid-cols-2">
               <Field label="Full name" name="fullName" required />
               <Field label="Phone number" name="phone" required type="tel" />
@@ -70,7 +70,7 @@ export function ContactFormSection({ onTypeChange, selectedType }: ContactFormSe
             {stepAhead ? (
               <div className="mt-6 rounded-[1.35rem] border border-accent-green/20 bg-accent-green/10 p-4">
                 <h3 className="font-heading text-lg font-semibold text-primary-dark">Step-Ahead partnership details</h3>
-                <div className="mt-4 grid gap-4 sm:grid-cols-3">
+                <div className="mt-4 grid gap-4 md:grid-cols-3">
                   <SelectField label="Organization type" name="organizationType">
                     {organizationTypes.map((item) => <option key={item}>{item}</option>)}
                   </SelectField>

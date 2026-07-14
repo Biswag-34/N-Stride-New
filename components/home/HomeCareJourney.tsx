@@ -23,7 +23,7 @@ export function HomeCareJourney() {
     <section className="bg-white py-8">
       <Container>
         <motion.div
-          className="relative overflow-hidden rounded-[2.25rem] border border-border-soft bg-white px-6 py-8 shadow-[0_24px_70px_rgba(20,121,201,0.08)] sm:px-8 lg:px-12"
+          className="relative overflow-hidden rounded-[1.35rem] border border-border-soft bg-white px-4 py-7 shadow-[0_24px_70px_rgba(20,121,201,0.08)] xs:px-5 sm:rounded-[2.25rem] sm:px-8 sm:py-8 lg:px-12"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.22 }}
@@ -41,7 +41,7 @@ export function HomeCareJourney() {
                 From your first concern to long-term recovery, we are with you at every step to assess, treat, protect
                 and restore.
               </p>
-              <Button className="shrink-0 rounded-[0.65rem]" href="/contact?type=general" size="sm" variant="outline">
+              <Button className="w-full shrink-0 rounded-[0.65rem] xs:w-auto" href="/contact?type=general" size="sm" variant="outline">
                 See the full journey
                 <ArrowRight aria-hidden="true" className="h-4 w-4" />
               </Button>
@@ -97,7 +97,7 @@ export function HomeCareJourney() {
               const Icon = homeIconMap[iconForStep[step.icon] ?? "activity"];
 
               return (
-                <motion.article className="flex gap-4 rounded-[1.2rem] border border-border-soft bg-background-soft/60 p-4" key={step.id} variants={staggerItem}>
+                <motion.article className="flex gap-3 rounded-[1rem] border border-border-soft bg-background-soft/60 p-3 xs:gap-4 xs:rounded-[1.2rem] xs:p-4" key={step.id} variants={staggerItem}>
                   <IconBubble className="h-12 w-12 shrink-0" tone="blue">
                     <Icon aria-hidden="true" className="h-5 w-5" />
                   </IconBubble>

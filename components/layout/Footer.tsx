@@ -16,8 +16,8 @@ export function Footer() {
 
   return (
     <footer className="border-t border-border-soft bg-[linear-gradient(180deg,#f4faff,#edf7ff)]">
-      <Container className="py-9">
-        <div className="grid gap-8 lg:grid-cols-[1.08fr_2.45fr]">
+      <Container className="py-7 sm:py-9">
+        <div className="grid gap-7 lg:grid-cols-[1.08fr_2.45fr]">
           <div>
             <Link className="relative block h-9 w-36" href="/">
               <Image
@@ -36,7 +36,7 @@ export function Footer() {
             </div>
           </div>
 
-          <div className="grid gap-7 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="grid gap-6 xs:grid-cols-2 lg:grid-cols-4">
             {footerNavigation.map((group) => (
               <div key={group.title}>
                 <h2 className="text-[0.72rem] font-bold uppercase tracking-[0.16em] text-primary-dark">

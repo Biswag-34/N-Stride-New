@@ -44,32 +44,32 @@ export function StepAheadHero() {
         />
       </div>
 
-      <StepContainer className="relative grid min-h-[560px] items-center gap-12 py-14 lg:grid-cols-[0.96fr_1.04fr] lg:py-16">
+      <StepContainer className="relative grid items-center gap-8 py-9 xs:py-11 sm:gap-12 sm:py-14 lg:min-h-[560px] lg:grid-cols-[0.96fr_1.04fr] lg:py-16">
         <StepReveal className="max-w-[690px]">
           <StepKicker>Diabetic foot care business-in-a-box</StepKicker>
-          <h1 className="mt-5 max-w-[720px] font-heading text-[clamp(2.9rem,4.8vw,5.1rem)] font-bold leading-[0.98] tracking-[-0.03em] text-primary-dark">
+          <h1 className="mt-5 max-w-[720px] font-heading text-[clamp(2.12rem,10vw,5.1rem)] font-bold leading-[1.02] tracking-[-0.03em] text-primary-dark lg:leading-[0.98]">
             Step-Ahead.
             <br />
             Build. Deliver. Transform.
           </h1>
-          <p className="mt-6 max-w-[620px] text-[1.05rem] leading-8 text-text-secondary">
+          <p className="mt-6 max-w-[620px] text-sm leading-7 text-text-secondary sm:text-[1.05rem] sm:leading-8">
             A complete program to help clinics launch and scale a modern diabetic foot care service - with the right technology,
             training, inventory and step-by-step service development support.
           </p>
 
-          <div className="mt-8 flex flex-col gap-4 sm:flex-row">
-            <Button className="rounded-[0.55rem] px-7 shadow-[0_16px_32px_rgba(20,121,201,0.18)]" href="/contact?type=step-ahead" size="lg">
+          <div className="mt-8 flex flex-col gap-3 xs:flex-row xs:flex-wrap sm:gap-4">
+            <Button className="w-full rounded-[0.55rem] px-5 shadow-[0_16px_32px_rgba(20,121,201,0.18)] xs:w-auto xs:px-7" href="/contact?type=step-ahead" size="lg">
               Book a Strategy Call
               <ArrowRight aria-hidden="true" className="h-4 w-4" />
             </Button>
-            <Button className="rounded-[0.55rem] px-7 bg-white/80" href="/contact?type=step-ahead" size="lg" variant="outline">
+            <Button className="w-full rounded-[0.55rem] bg-white/80 px-5 xs:w-auto xs:px-7" href="/contact?type=step-ahead" size="lg" variant="outline">
               Download Program Overview
             </Button>
           </div>
         </StepReveal>
 
         <StepReveal delay={0.1} className="relative">
-          <div className="relative ml-auto min-h-[305px] max-w-[705px] overflow-hidden rounded-[1.45rem] bg-[#edf7ff]/80 shadow-[0_28px_80px_rgba(20,121,201,0.14)] ring-1 ring-[#bedcf2]">
+          <div className="relative ml-auto min-h-[230px] max-w-[705px] overflow-hidden rounded-[1.1rem] bg-[#edf7ff]/80 shadow-[0_22px_58px_rgba(20,121,201,0.12)] ring-1 ring-[#bedcf2] xs:min-h-[270px] sm:min-h-[305px] sm:rounded-[1.45rem] sm:shadow-[0_28px_80px_rgba(20,121,201,0.14)]">
             <Image
               alt="Diabetic foot care clinic setup illustration"
               className="object-cover object-center opacity-[0.74]"

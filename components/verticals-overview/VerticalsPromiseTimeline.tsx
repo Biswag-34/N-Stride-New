@@ -81,11 +81,11 @@ const verticalDisplay: Record<
 
 export function VerticalsPromiseTimeline() {
   return (
-    <section className="bg-white py-12 sm:py-14 lg:py-16">
+    <section className="bg-white py-9 xs:py-11 sm:py-14 lg:py-16">
       <Container>
         <div className="text-center">
           <OverviewKicker>The N-Stride promise</OverviewKicker>
-          <h2 className="mt-4 text-3xl font-semibold leading-tight text-primary-dark sm:text-4xl">
+          <h2 className="mt-4 text-2xl font-semibold leading-tight text-primary-dark xs:text-3xl sm:text-4xl">
             Care that connects. Outcomes that matter.
           </h2>
           <p className="mx-auto mt-3 max-w-[46rem] text-sm leading-7 text-text-secondary">
@@ -100,7 +100,7 @@ export function VerticalsPromiseTimeline() {
           viewport={{ once: true, amount: 0.14 }}
           variants={staggerContainer}
         >
-          <div className="pointer-events-none absolute -bottom-5 -top-8 left-[-0.35rem] hidden w-[17.5rem] md:block" aria-hidden="true">
+          <div className="pointer-events-none absolute -bottom-5 -top-8 left-[-0.35rem] hidden w-[17.5rem] lg:block" aria-hidden="true">
             <Image
               alt=""
               className="object-fill object-left"
@@ -119,14 +119,14 @@ export function VerticalsPromiseTimeline() {
               const CheckIcon = overviewIconMap.check;
 
               return (
-                <motion.article className="relative md:pl-[6.35rem]" key={vertical.id} variants={staggerItem}>
+                <motion.article className="relative lg:pl-[6.35rem]" key={vertical.id} variants={staggerItem}>
                   <div
-                    className={`absolute left-[-0.05rem] top-10 z-10 hidden h-[4.4rem] w-[4.4rem] items-center justify-center rounded-full border-[8px] border-white bg-gradient-to-br ${tone.path} font-heading text-xl font-bold text-white shadow-[0_14px_34px_rgba(20,121,201,0.16)] md:flex`}
+                    className={`absolute left-[-0.05rem] top-10 z-10 hidden h-[4.4rem] w-[4.4rem] items-center justify-center rounded-full border-[8px] border-white bg-gradient-to-br ${tone.path} font-heading text-xl font-bold text-white shadow-[0_14px_34px_rgba(20,121,201,0.16)] lg:flex`}
                   >
                     {String(index + 1).padStart(2, "0")}
                   </div>
 
-                  <div className="relative grid gap-5 overflow-hidden rounded-[0.85rem] bg-white p-3.5 shadow-[12px_16px_42px_rgba(7,59,102,0.06),inset_1px_1px_0_rgba(255,255,255,0.95),inset_0_0_0_1px_rgba(201,230,248,0.48)] md:grid-cols-[15rem_17rem_1fr] md:p-4 lg:gap-6">
+                  <div className="relative grid gap-5 overflow-hidden rounded-[0.85rem] bg-white p-3.5 shadow-[12px_16px_42px_rgba(7,59,102,0.06),inset_1px_1px_0_rgba(255,255,255,0.95),inset_0_0_0_1px_rgba(201,230,248,0.48)] md:grid-cols-[14rem_1fr] md:p-4 lg:grid-cols-[15rem_17rem_1fr] lg:gap-6">
                     <div className={`absolute inset-y-4 left-0 w-[3px] rounded-r-full bg-gradient-to-b ${tone.path} opacity-30`} aria-hidden="true" />
                     <div className="relative min-h-[8.8rem] overflow-hidden rounded-[0.65rem] bg-[linear-gradient(180deg,#ffffff,#f7fbff)]">
                       <Image
@@ -138,7 +138,7 @@ export function VerticalsPromiseTimeline() {
                       />
                     </div>
 
-                    <div className="flex flex-col justify-center border-border-soft md:border-r md:pr-6">
+                    <div className="flex flex-col justify-center border-border-soft lg:border-r lg:pr-6">
                       <p className={`text-[0.58rem] font-extrabold uppercase tracking-[0.18em] ${tone.text}`}>
                         Chapter {String(index + 1).padStart(2, "0")}
                       </p>

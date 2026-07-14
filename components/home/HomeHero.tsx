@@ -24,7 +24,7 @@ function EcosystemVisual() {
   return (
     <motion.div
       aria-label="N-Stride care ecosystem visual"
-      className="relative mx-auto aspect-[1448/1086] w-full max-w-[45rem] overflow-visible drop-shadow-[0_26px_50px_rgba(20,121,201,0.10)]"
+      className="relative mx-auto aspect-[1448/1086] w-full max-w-[min(45rem,92vw)] overflow-visible drop-shadow-[0_20px_40px_rgba(20,121,201,0.10)] sm:drop-shadow-[0_26px_50px_rgba(20,121,201,0.10)]"
       initial={reduceMotion ? false : "hidden"}
       animate={reduceMotion ? undefined : "visible"}
       variants={scaleIn}
@@ -46,7 +46,7 @@ export function HomeHero() {
 
   return (
     <section
-      className="relative isolate overflow-hidden bg-bottom bg-no-repeat pb-8 pt-11 sm:pt-12 lg:pb-10"
+      className="relative isolate overflow-hidden bg-bottom bg-no-repeat pb-7 pt-8 xs:pt-10 sm:pt-12 lg:pb-10"
       style={{
         backgroundImage:
           "radial-gradient(circle at 78% 20%, rgba(38,182,200,0.10), transparent 28rem), linear-gradient(180deg, rgba(255,255,255,0.94) 0%, rgba(247,251,255,0.94) 100%), url('/home/decorative-wave-final.png')",
@@ -61,7 +61,7 @@ export function HomeHero() {
               <SectionKicker>All-in-one foot & lower-limb care ecosystem</SectionKicker>
             </motion.div>
             <motion.h1
-              className="mt-5 max-w-[34rem] text-[2.65rem] font-semibold leading-[1.04] text-primary-dark sm:text-5xl lg:text-[3.72rem]"
+              className="mt-5 max-w-[34rem] text-[clamp(2.08rem,10vw,2.8rem)] font-semibold leading-[1.04] text-primary-dark sm:text-5xl lg:text-[3.72rem]"
               variants={fadeUp}
             >
               One ecosystem.
@@ -74,16 +74,16 @@ export function HomeHero() {
               N-Stride connects diagnostics, clinical expertise, advanced products and rehabilitation support across foot health,
               lower-limb care, wound care and mobility restoration.
             </motion.p>
-            <motion.div className="mt-7 flex flex-col gap-3 sm:flex-row" variants={fadeUp}>
-              <Button className="rounded-[0.45rem] px-6" href={ctas.primary.href}>
+            <motion.div className="mt-7 flex flex-col gap-3 xs:flex-row xs:flex-wrap" variants={fadeUp}>
+              <Button className="w-full rounded-[0.45rem] px-5 xs:w-auto xs:px-6" href={ctas.primary.href}>
                 Book Consultation
                 <ArrowRight aria-hidden="true" className="h-4 w-4" />
               </Button>
-              <Button className="rounded-[0.45rem] px-6" href="/contact?type=general" variant="outline">
+              <Button className="w-full rounded-[0.45rem] px-5 xs:w-auto xs:px-6" href="/contact?type=general" variant="outline">
                 Explore Our Ecosystem
               </Button>
             </motion.div>
-            <motion.div className="mt-8 grid max-w-[34rem] gap-4 sm:grid-cols-3" variants={staggerContainer}>
+            <motion.div className="mt-8 grid max-w-[34rem] gap-4 xs:grid-cols-3" variants={staggerContainer}>
               {trustItems.map((item) => {
                 const Icon = item.icon;
 

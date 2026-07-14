@@ -30,17 +30,17 @@ const gradientByTheme: Record<PageTheme, string> = {
 
 export function CTASection({ description, primaryCta, secondaryCta, title, variant = "default" }: CTASectionProps) {
   return (
-    <div className={cn("rounded-[2rem] border border-border-soft bg-gradient-to-br p-6 shadow-card sm:p-8 lg:p-10", gradientByTheme[variant])}>
+    <div className={cn("rounded-[1.25rem] border border-border-soft bg-gradient-to-br p-4 shadow-card xs:p-5 sm:rounded-[2rem] sm:p-8 lg:p-10", gradientByTheme[variant])}>
       <ThemeBadge theme={variant}>Next step</ThemeBadge>
-      <h2 className="mt-5 max-w-3xl text-3xl font-semibold leading-tight text-primary-dark sm:text-4xl">{title}</h2>
-      <p className="mt-4 max-w-2xl leading-7 text-text-secondary">{description}</p>
-      <div className="mt-7 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
-        <Button external={primaryCta.external} href={primaryCta.href}>
+      <h2 className="mt-5 max-w-3xl text-2xl font-semibold leading-tight text-primary-dark xs:text-3xl sm:text-4xl">{title}</h2>
+      <p className="mt-4 max-w-2xl text-sm leading-7 text-text-secondary sm:text-base">{description}</p>
+      <div className="mt-7 flex flex-col gap-3 xs:flex-row xs:flex-wrap">
+        <Button className="w-full xs:w-auto" external={primaryCta.external} href={primaryCta.href}>
           {primaryCta.label}
           <ArrowRight aria-hidden="true" className="h-4 w-4" />
         </Button>
         {secondaryCta ? (
-          <Button external={secondaryCta.external} href={secondaryCta.href} variant="outline">
+          <Button className="w-full xs:w-auto" external={secondaryCta.external} href={secondaryCta.href} variant="outline">
             {secondaryCta.label}
           </Button>
         ) : null}

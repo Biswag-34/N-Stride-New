@@ -20,20 +20,20 @@ export function DirectContactOptions() {
   ];
 
   return (
-    <Section className="py-14 sm:py-16 lg:py-20" variant="white">
+    <Section className="py-9 xs:py-12 sm:py-14 lg:py-16" variant="white">
       <Container>
         <SectionHeading
           description="Use a direct route when you already know how you want to reach the team."
           eyebrow="Direct contact"
           title="Quick contact options"
         />
-        <div className="mt-8 grid gap-4 md:grid-cols-2 xl:grid-cols-4">
+        <div className="mt-7 grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
           {options.map((option) => {
             const Icon = option.icon;
 
             return (
               <a
-                className="group rounded-[1.25rem] border border-border-soft bg-white p-5 shadow-soft transition hover:-translate-y-1 hover:shadow-card focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-primary/20"
+                className="group rounded-[1rem] border border-border-soft bg-white p-4 shadow-soft transition hover:-translate-y-1 hover:shadow-card focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-primary/20 xs:p-5 sm:rounded-[1.25rem]"
                 href={option.href}
                 key={option.title}
                 rel={option.external ? "noreferrer" : undefined}

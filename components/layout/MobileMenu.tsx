@@ -24,7 +24,7 @@ export function MobileMenu({ onClose, open }: MobileMenuProps) {
           exit={{ height: 0, opacity: 0 }}
           transition={{ duration: 0.24, ease: "easeOut" }}
         >
-          <nav aria-label="Mobile navigation" className="mx-auto max-w-container px-5 py-5">
+          <nav aria-label="Mobile navigation" className="mx-auto max-w-container px-4 py-4 xs:px-5 xs:py-5">
             <div className="grid gap-2">
               {navigationLinks.map((item) => (
                 <Link
@@ -37,7 +37,7 @@ export function MobileMenu({ onClose, open }: MobileMenuProps) {
                 </Link>
               ))}
             </div>
-            <div className="mt-5 grid gap-3 sm:grid-cols-2">
+            <div className="mt-5 grid gap-3 xs:grid-cols-2">
               <Button href="/contact" onClick={onClose} size="md">
                 Book Consultation
               </Button>

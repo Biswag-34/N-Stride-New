@@ -38,26 +38,26 @@ export function PageHero({
   variant = "default",
 }: PageHeroProps) {
   return (
-    <Section className={cn("relative isolate overflow-hidden py-16 sm:py-20 lg:py-24", `bg-gradient-to-br ${heroAccents[variant]}`)}>
+    <Section className={cn("relative isolate overflow-hidden py-10 xs:py-12 sm:py-16 lg:py-20", `bg-gradient-to-br ${heroAccents[variant]}`)}>
       <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_18%_18%,rgba(221,241,255,0.78),transparent_26rem)]" />
       <Container>
         <div className={cn("grid gap-10", imageLabel && "lg:grid-cols-[1fr_0.78fr] lg:items-center")}>
           <div className="max-w-3xl">
             {eyebrow ? <ThemeBadge theme={variant === "default" ? "blue" : variant}>{eyebrow}</ThemeBadge> : null}
-            <h1 className="mt-5 text-4xl font-semibold leading-tight text-primary-dark sm:text-5xl lg:text-[3.5rem]">
+            <h1 className="mt-5 text-[clamp(2rem,9vw,2.75rem)] font-semibold leading-tight text-primary-dark sm:text-5xl lg:text-[3.5rem]">
               {title}
             </h1>
-            {description ? <p className="mt-5 max-w-2xl text-base leading-8 text-text-secondary sm:text-lg">{description}</p> : null}
+            {description ? <p className="mt-5 max-w-2xl text-sm leading-7 text-text-secondary sm:text-lg sm:leading-8">{description}</p> : null}
             {primaryCta || secondaryCta ? (
-              <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
+              <div className="mt-8 flex flex-col gap-3 xs:flex-row xs:flex-wrap">
                 {primaryCta ? (
-                  <Button external={primaryCta.external} href={primaryCta.href}>
+                  <Button className="w-full xs:w-auto" external={primaryCta.external} href={primaryCta.href}>
                     {primaryCta.label}
                     <ArrowRight aria-hidden="true" className="h-4 w-4" />
                   </Button>
                 ) : null}
                 {secondaryCta ? (
-                  <Button external={secondaryCta.external} href={secondaryCta.href} variant="outline">
+                  <Button className="w-full xs:w-auto" external={secondaryCta.external} href={secondaryCta.href} variant="outline">
                     {secondaryCta.label}
                   </Button>
                 ) : null}
@@ -65,7 +65,7 @@ export function PageHero({
             ) : null}
           </div>
           {imageLabel ? (
-            <div className="rounded-[2rem] border border-border-soft bg-white/75 p-4 shadow-card">
+            <div className="rounded-[1.25rem] border border-border-soft bg-white/75 p-3 shadow-card xs:p-4 sm:rounded-[2rem]">
               <ImagePlaceholder aspect="wide" label={imageLabel} />
             </div>
           ) : null}

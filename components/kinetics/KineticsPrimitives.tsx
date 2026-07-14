@@ -26,7 +26,7 @@ export function KineticsSection({ children, className }: PropsWithChildren<{ cla
 
 export function KineticsContainer({ children, className }: PropsWithChildren<{ className?: string }>) {
   return (
-    <div className={cn("mx-auto w-full max-w-[1380px] px-6 sm:px-8 lg:px-12 xl:px-16", className)}>
+    <div className={cn("mx-auto w-full max-w-[1380px] px-4 xs:px-5 sm:px-7 lg:px-10 xl:px-14", className)}>
       {children}
     </div>
   );

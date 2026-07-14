@@ -55,7 +55,7 @@ const packages = [
 
 export function StepAheadPackages() {
   return (
-    <StepSection className="bg-[linear-gradient(180deg,#ffffff,#f4fbff_92%)] py-16" id="packages">
+    <StepSection className="bg-[linear-gradient(180deg,#ffffff,#f4fbff_92%)] py-10 xs:py-12 sm:py-16" id="packages">
       <StepContainer>
         <div className="grid gap-10 lg:grid-cols-[0.29fr_0.71fr]">
           <StepReveal>
@@ -65,7 +65,7 @@ export function StepAheadPackages() {
               <br />
               Nothing you do not.
             </h2>
-            <div className="relative mt-8 space-y-0 pl-2">
+            <div className="relative mt-7 space-y-0 pl-1 xs:mt-8 xs:pl-2">
               <span aria-hidden="true" className="absolute left-[1.28rem] top-5 h-[calc(100%-2.25rem)] w-px bg-[#b9dff5]" />
               {included.map((item) => {
                 const Icon = item.icon;
@@ -86,7 +86,7 @@ export function StepAheadPackages() {
           </StepReveal>
 
           <StepReveal delay={0.08}>
-            <div className="relative overflow-hidden rounded-[2rem] bg-[linear-gradient(135deg,#ffffff,#f3fbff)] p-6 shadow-[24px_34px_85px_rgba(20,121,201,0.09)] ring-1 ring-[#d5eafa] lg:p-7">
+            <div className="relative overflow-hidden rounded-[1.25rem] bg-[linear-gradient(135deg,#ffffff,#f3fbff)] p-4 shadow-[24px_34px_85px_rgba(20,121,201,0.09)] ring-1 ring-[#d5eafa] xs:p-5 sm:rounded-[2rem] sm:p-6 lg:p-7">
               <Image
                 alt=""
                 className="pointer-events-none absolute inset-0 h-full w-full object-cover object-center opacity-[0.16]"
@@ -106,8 +106,8 @@ export function StepAheadPackages() {
                     <div
                       className={
                         item.featured
-                          ? "relative rounded-[1.15rem] border border-[#8bd899] bg-white p-6 shadow-[0_22px_55px_rgba(92,184,92,0.16)]"
-                          : "relative rounded-[1.15rem] border border-[#d7e9f7] bg-white/95 p-6 shadow-[0_16px_40px_rgba(20,121,201,0.07)]"
+                          ? "relative rounded-[1rem] border border-[#8bd899] bg-white p-4 shadow-[0_22px_55px_rgba(92,184,92,0.16)] xs:p-5 sm:rounded-[1.15rem] sm:p-6"
+                          : "relative rounded-[1rem] border border-[#d7e9f7] bg-white/95 p-4 shadow-[0_16px_40px_rgba(20,121,201,0.07)] xs:p-5 sm:rounded-[1.15rem] sm:p-6"
                       }
                       key={item.name}
                     >
@@ -135,7 +135,7 @@ export function StepAheadPackages() {
                     </div>
                   ))}
 
-                  <div className="relative flex min-h-[15rem] flex-col justify-center rounded-[1.15rem] bg-[linear-gradient(145deg,#f8fdff,#eef8ff)] p-6 shadow-[0_16px_40px_rgba(20,121,201,0.06)] ring-1 ring-[#d7ebfa]">
+                  <div className="relative flex min-h-[13rem] flex-col justify-center rounded-[1rem] bg-[linear-gradient(145deg,#f8fdff,#eef8ff)] p-4 shadow-[0_16px_40px_rgba(20,121,201,0.06)] ring-1 ring-[#d7ebfa] xs:p-5 sm:min-h-[15rem] sm:rounded-[1.15rem] sm:p-6">
                     <StepIconBubble className="mb-5 h-12 w-12" size="sm">
                       <CircleDollarSign aria-hidden="true" className="h-6 w-6" />
                     </StepIconBubble>

@@ -19,7 +19,7 @@ type ButtonProps = CommonButtonProps &
   Omit<AnchorHTMLAttributes<HTMLAnchorElement>, keyof CommonButtonProps>;
 
 const baseClasses =
-  "inline-flex items-center justify-center gap-2 rounded-md font-semibold transition duration-200 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-primary/25 disabled:pointer-events-none disabled:opacity-60";
+  "inline-flex min-w-0 max-w-full items-center justify-center gap-2 rounded-md text-center font-semibold leading-snug transition duration-200 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-primary/25 disabled:pointer-events-none disabled:opacity-60";
 
 const variants: Record<ButtonVariant, string> = {
   primary: "bg-primary text-white shadow-soft hover:bg-primary-dark",
