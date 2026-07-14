@@ -1,46 +1,47 @@
 "use client";
 
 import { ChevronDown } from "lucide-react";
-import { useState } from "react";
+import Link from "next/link";
 
-import { Container } from "@/components/ui/Container";
-import { Section } from "@/components/ui/Section";
-import { SectionHeading } from "@/components/ui/SectionHeading";
-import { stepAheadProgram } from "@/data/stepAhead";
-import { cn } from "@/lib/cn";
+import { StepContainer, StepKicker, StepReveal, StepSection } from "./StepAheadPrimitives";
+
+const faqs = [
+  "How long does it take to launch the service?",
+  "Can I upgrade my package later?",
+  "What kind of space is required?",
+  "What ongoing support do you provide?",
+  "Do you provide training for our team?",
+  "Is financing available?",
+];
 
 export function StepAheadFAQ() {
-  const [openIndex, setOpenIndex] = useState(0);
-
   return (
-    <Section className="py-14 sm:py-16 lg:py-20" variant="white">
-      <Container>
-        <SectionHeading
-          description="Practical answers for providers evaluating the Step-Ahead program."
-          eyebrow="FAQ"
-          title="Step-Ahead questions"
-        />
-        <div className="mt-8 grid gap-3">
-          {stepAheadProgram.faqs.map((faq, index) => {
-            const open = openIndex === index;
-
-            return (
-              <article className="overflow-hidden rounded-[1.2rem] border border-border-soft bg-white shadow-soft" key={faq.question}>
-                <button
-                  aria-expanded={open}
-                  className="flex w-full items-center justify-between gap-4 p-5 text-left focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-primary/20"
-                  onClick={() => setOpenIndex(open ? -1 : index)}
-                  type="button"
-                >
-                  <span className="font-heading text-base font-semibold text-primary-dark">{faq.question}</span>
-                  <ChevronDown aria-hidden="true" className={cn("h-5 w-5 shrink-0 text-primary transition", open && "rotate-180")} />
-                </button>
-                {open ? <p className="border-t border-border-soft px-5 pb-5 pt-4 text-sm leading-7 text-text-secondary">{faq.answer}</p> : null}
-              </article>
-            );
-          })}
+    <StepSection className="border-t border-[#dcecf7] py-12">
+      <StepContainer>
+        <StepReveal className="mb-7 flex flex-col justify-between gap-4 md:flex-row md:items-end">
+          <div>
+            <StepKicker>Frequently asked questions</StepKicker>
+            <h2 className="mt-3 font-heading text-[clamp(1.55rem,2vw,2.05rem)] font-bold text-primary-dark">
+              Answers to help you take the next step.
+            </h2>
+          </div>
+          <Link className="text-sm font-bold text-primary transition hover:text-primary-dark" href="/contact?type=step-ahead">
+            Still have questions? Contact our team {"->"}
+          </Link>
+        </StepReveal>
+        <div className="grid gap-3 md:grid-cols-2">
+          {faqs.map((question) => (
+            <button
+              className="flex min-h-[3.2rem] items-center justify-between rounded-[0.45rem] border border-[#cfe8f8] bg-white px-5 text-left text-[0.82rem] font-bold text-primary-dark shadow-[0_8px_20px_rgba(20,121,201,0.035)] transition hover:border-primary focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-primary/20"
+              key={question}
+              type="button"
+            >
+              {question}
+              <ChevronDown aria-hidden="true" className="h-4 w-4 text-primary" />
+            </button>
+          ))}
         </div>
-      </Container>
-    </Section>
+      </StepContainer>
+    </StepSection>
   );
 }

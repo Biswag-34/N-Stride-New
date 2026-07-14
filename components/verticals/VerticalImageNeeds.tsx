@@ -14,7 +14,7 @@ export function VerticalImageNeeds({ vertical }: VerticalImageNeedsProps) {
           <span className="ml-2 text-xs font-semibold text-text-muted">(development checklist)</span>
         </summary>
         <p className="mt-3 text-sm leading-6 text-text-secondary">
-          Temporary placeholders are shown until real N-Stride clinical and product imagery is approved.
+          Final N-Stride clinical and product imagery is shown as assets are approved.
         </p>
         <div className="mt-5 grid gap-4 md:grid-cols-2">
           {vertical.imageNeeds.map((image) => (

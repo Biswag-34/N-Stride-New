@@ -21,7 +21,7 @@ export const brand = {
   contact: {
     phone: "+91-9353971269",
     email: "info@nstride.in",
-    address: "1st Cross Road, Shankarapuram, Basavanagudi, Bengaluru, Karnataka 560004",
+    address: "1241 C, BTM 4th Stage, BDA Layout, Devarachikannahalli, Bengaluru, Karnataka-560076",
   },
   social: {
     instagram: "https://www.instagram.com/nayapada_nstride/",

@@ -1,2 +1,0 @@
-<w> [webpack.cache.PackFileCacheStrategy] Caching failed for pack: Error: EPERM: operation not permitted, rename 'C:\Users\User\Desktop\N-Stride\.next\cache\webpack\client-development\5.pack.gz_' -> 'C:\Users\User\Desktop\N-Stride\.next\cache\webpack\client-development\5.pack.gz'
- ⚠ Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload

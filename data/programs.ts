@@ -65,7 +65,7 @@ export const programs = [
     statusNote:
       "Program details are being structured and should be finalized with exact partner onboarding, commercial and training information.",
     cta: {
-      primary: { label: "Partner with Step-Ahead", href: "/step-ahead" },
+      primary: { label: "Partner with Step-Ahead", href: "/contact?type=step-ahead" },
       secondary: { label: "Contact N-Stride", href: "/contact" },
     },
     seo: {

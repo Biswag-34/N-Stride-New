@@ -7,7 +7,7 @@ export const resources = [
     category: "Diabetic Foot Care",
     summary:
       "A practical guide to symptoms and changes that should prompt timely foot-care attention.",
-    image: "Placeholder image: calm diabetic foot-care education visual",
+    image: "Calm diabetic foot-care education visual",
     href: "/resources/diabetic-foot-warning-signs",
   },
   {
@@ -16,7 +16,7 @@ export const resources = [
     category: "Pressure Protection",
     summary:
       "An educational overview of pressure reduction and why off-loading may be recommended in wound or risk management.",
-    image: "Placeholder image: off-loading footwear with pressure map graphic",
+    image: "Off-loading footwear with pressure map graphic",
     href: "/resources/why-off-loading-matters",
   },
   {
@@ -25,7 +25,7 @@ export const resources = [
     category: "Therapeutic Footwear",
     summary:
       "A simple explanation of when standard footwear may not be enough and how customization can support comfort.",
-    image: "Placeholder image: custom footwear consultation",
+    image: "Custom footwear consultation",
     href: "/resources/when-custom-footwear-helps",
   },
   {
@@ -34,7 +34,7 @@ export const resources = [
     category: "Diagnostics",
     summary:
       "A patient-friendly walkthrough of foot screening, consultation and care recommendation steps.",
-    image: "Placeholder image: doctor performing foot checkup",
+    image: "Doctor performing foot checkup",
     href: "/resources/what-happens-in-a-foot-checkup",
   },
   {
@@ -43,7 +43,7 @@ export const resources = [
     category: "Wound Care",
     summary:
       "A responsible introduction to NPWT VAC dressing support and why it should be guided by clinical teams.",
-    image: "Placeholder image: NPWT VAC supplies without graphic wound imagery",
+    image: "NPWT VAC supplies without graphic wound imagery",
     href: "/resources/npwt-vac-dressing-basics",
   },
   {
@@ -52,7 +52,7 @@ export const resources = [
     category: "Bio-Fit",
     summary:
       "A clear primer on prosthetics, orthotics and support devices for mobility and functional adaptation.",
-    image: "Placeholder image: prosthetics and orthotics education visual",
+    image: "Prosthetics and orthotics education visual",
     href: "/resources/prosthetics-orthotics-explained",
   },
 ] satisfies Resource[];

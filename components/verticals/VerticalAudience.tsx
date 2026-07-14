@@ -21,7 +21,7 @@ export function VerticalAudience({ vertical }: VerticalAudienceProps) {
   return (
     <section className="grid gap-6 lg:grid-cols-[0.74fr_1fr] lg:items-center">
       <div className="rounded-[1.5rem] border border-border-soft bg-background-soft p-4">
-        <ImagePlaceholder aspect="wide" label={vertical.imageNeeds[1] ?? `${vertical.shortName} audience image placeholder`} />
+        <ImagePlaceholder aspect="wide" label={vertical.imageNeeds[1] ?? `${vertical.shortName} audience visual`} />
       </div>
       <div>
         <div className="flex items-center gap-3">

@@ -69,7 +69,7 @@ export function VerticalHero({ vertical }: VerticalHeroProps) {
           <div className="relative hidden rounded-[1.5rem] border border-border-soft bg-white/80 p-4 shadow-card sm:block">
             <div className={cn("absolute -right-6 -top-6 h-32 w-32 rounded-full blur-3xl", theme.softBackground)} />
             <div className="relative">
-              <ImagePlaceholder aspect="wide" label={vertical.imageNeeds[0] ?? `${vertical.name} image placeholder`} />
+              <ImagePlaceholder aspect="wide" label={vertical.imageNeeds[0] ?? `${vertical.name} visual`} />
             </div>
           </div>
         </div>

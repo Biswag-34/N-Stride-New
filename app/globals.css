@@ -7,10 +7,12 @@
 html {
   scroll-behavior: smooth;
   background: var(--background);
+  overflow-x: hidden;
 }
 
 body {
   min-height: 100vh;
+  overflow-x: hidden;
   background:
     radial-gradient(circle at top left, rgba(221, 241, 255, 0.56), transparent 34rem),
     var(--background);

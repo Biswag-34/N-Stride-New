@@ -1,9 +1,6 @@
 import type { Metadata } from "next";
 import { Suspense } from "react";
 
-import { BeforeYouContactSection } from "@/components/contact/BeforeYouContactSection";
-import { ContactFAQ } from "@/components/contact/ContactFAQ";
-import { ContactFinalCTA } from "@/components/contact/ContactFinalCTA";
 import { ContactHero } from "@/components/contact/ContactHero";
 import { ContactPageClient } from "@/components/contact/ContactPageClient";
 import { DirectContactOptions } from "@/components/contact/DirectContactOptions";
@@ -24,9 +21,6 @@ export default function ContactPage() {
       </Suspense>
       <DirectContactOptions />
       <VisitLocationSection />
-      <BeforeYouContactSection />
-      <ContactFAQ />
-      <ContactFinalCTA />
     </>
   );
 }

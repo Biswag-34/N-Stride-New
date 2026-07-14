@@ -38,7 +38,7 @@ export function MobileMenu({ onClose, open }: MobileMenuProps) {
               ))}
             </div>
             <div className="mt-5 grid gap-3 sm:grid-cols-2">
-              <Button href="#consultation" onClick={onClose} size="md">
+              <Button href="/contact" onClick={onClose} size="md">
                 Book Consultation
               </Button>
               <Button external href={brand.ecommerceUrl} onClick={onClose} size="md" variant="outline">

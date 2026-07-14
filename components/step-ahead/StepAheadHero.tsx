@@ -1,137 +1,111 @@
 "use client";
 
-import { ArrowRight } from "lucide-react";
-import { motion, useReducedMotion } from "framer-motion";
+import Image from "next/image";
+import { ArrowRight, BarChart3, FileCheck2, Handshake, RefreshCcw } from "lucide-react";
 
 import { Button } from "@/components/ui/Button";
-import { Container } from "@/components/ui/Container";
-import { Section } from "@/components/ui/Section";
-import { stepAheadProgram } from "@/data/stepAhead";
 
-const systemNodes = ["Technology", "Training", "Inventory", "Wound Care", "Clinic Setup"];
-const partnerNodes = ["Doctors", "Clinics", "Nursing Homes", "Hospitals"];
+import { StepContainer, StepIconBubble, StepKicker, StepReveal, StepSection } from "./StepAheadPrimitives";
+
+const proofItems = [
+  {
+    icon: FileCheck2,
+    title: "Proven Clinical Model",
+    text: "Evidence-aligned pathways and protocols",
+  },
+  {
+    icon: RefreshCcw,
+    title: "End-to-End Support",
+    text: "From setup to scale - we are with you at every step",
+  },
+  {
+    icon: Handshake,
+    title: "Partner-First Mindset",
+    text: "Built for clinics, designed for impact and growth",
+  },
+  {
+    icon: BarChart3,
+    title: "Measurable Outcomes",
+    text: "Better patient results, stronger clinic outcomes",
+  },
+];
 
 export function StepAheadHero() {
-  const reduceMotion = useReducedMotion();
-
   return (
-    <Section className="relative isolate overflow-hidden py-12 sm:py-16 lg:py-20" variant="soft">
-      <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_78%_18%,rgba(92,184,92,0.16),transparent_24rem),linear-gradient(135deg,rgba(255,255,255,0.96),rgba(221,241,255,0.72))]" />
-      <Container>
-        <div className="grid gap-10 lg:grid-cols-[minmax(0,0.96fr)_minmax(28rem,1.04fr)] lg:items-center">
-          <div>
-            <motion.p
-              className="inline-flex rounded-full border border-accent-green/25 bg-accent-green/10 px-3 py-1 text-xs font-bold uppercase tracking-[0.13em] text-accent-green"
-              initial={reduceMotion ? false : { opacity: 0, y: 12 }}
-              animate={reduceMotion ? undefined : { opacity: 1, y: 0 }}
-              transition={{ duration: 0.45, ease: [0.22, 1, 0.36, 1] }}
-            >
-              {stepAheadProgram.name}
-            </motion.p>
-            <motion.h1
-              className="mt-5 max-w-3xl text-4xl font-semibold leading-tight text-primary-dark sm:text-5xl lg:text-[3.35rem]"
-              initial={reduceMotion ? false : { opacity: 0, y: 18 }}
-              animate={reduceMotion ? undefined : { opacity: 1, y: 0 }}
-              transition={{ delay: 0.08, duration: 0.56, ease: [0.22, 1, 0.36, 1] }}
-            >
-              {stepAheadProgram.headline}
-            </motion.h1>
-            <p className="mt-5 max-w-2xl text-base leading-8 text-text-secondary sm:text-lg">
-              {stepAheadProgram.coreDescription}
-            </p>
-            <p className="mt-5 font-heading text-lg font-semibold text-primary-dark">
-              {stepAheadProgram.communicationLines[0]}
-            </p>
-            <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
-              <Button href={stepAheadProgram.ctas.primary.href} size="lg">
-                {stepAheadProgram.ctas.primary.label}
-                <ArrowRight aria-hidden="true" className="h-4 w-4" />
-              </Button>
-              <Button href={stepAheadProgram.ctas.compare.href} size="lg" variant="outline">
-                {stepAheadProgram.ctas.compare.label}
-              </Button>
-              <Button href={stepAheadProgram.ctas.workflow.href} size="lg" variant="ghost">
-                {stepAheadProgram.ctas.workflow.label}
-              </Button>
+    <StepSection className="bg-[linear-gradient(112deg,#ffffff_0%,#f6fbff_58%,#eef8ff_100%)]">
+      <div aria-hidden="true" className="absolute inset-0 opacity-70">
+        <Image
+          alt=""
+          className="object-cover object-center"
+          fill
+          priority
+          src="/step-ahead/ambient-stepahead-bg.png"
+          sizes="100vw"
+        />
+      </div>
+
+      <StepContainer className="relative grid min-h-[560px] items-center gap-12 py-14 lg:grid-cols-[0.96fr_1.04fr] lg:py-16">
+        <StepReveal className="max-w-[690px]">
+          <StepKicker>Diabetic foot care business-in-a-box</StepKicker>
+          <h1 className="mt-5 max-w-[720px] font-heading text-[clamp(2.9rem,4.8vw,5.1rem)] font-bold leading-[0.98] tracking-[-0.03em] text-primary-dark">
+            Step-Ahead.
+            <br />
+            Build. Deliver. Transform.
+          </h1>
+          <p className="mt-6 max-w-[620px] text-[1.05rem] leading-8 text-text-secondary">
+            A complete program to help clinics launch and scale a modern diabetic foot care service - with the right technology,
+            training, inventory and step-by-step service development support.
+          </p>
+
+          <div className="mt-8 flex flex-col gap-4 sm:flex-row">
+            <Button className="rounded-[0.55rem] px-7 shadow-[0_16px_32px_rgba(20,121,201,0.18)]" href="/contact?type=step-ahead" size="lg">
+              Book a Strategy Call
+              <ArrowRight aria-hidden="true" className="h-4 w-4" />
+            </Button>
+            <Button className="rounded-[0.55rem] px-7 bg-white/80" href="/contact?type=step-ahead" size="lg" variant="outline">
+              Download Program Overview
+            </Button>
+          </div>
+        </StepReveal>
+
+        <StepReveal delay={0.1} className="relative">
+          <div className="relative ml-auto min-h-[305px] max-w-[705px] overflow-hidden rounded-[1.45rem] bg-[#edf7ff]/80 shadow-[0_28px_80px_rgba(20,121,201,0.14)] ring-1 ring-[#bedcf2]">
+            <Image
+              alt="Diabetic foot care clinic setup illustration"
+              className="object-cover object-center opacity-[0.74]"
+              fill
+              priority
+              src="/step-ahead/hero-clinic-program.png"
+              sizes="(min-width: 1024px) 48vw, 100vw"
+            />
+            <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(244,250,255,0.2),rgba(255,255,255,0.18)_45%,rgba(231,244,255,0.55))]" />
+            <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_40%,rgba(255,255,255,0.06),rgba(255,255,255,0.62)_78%)]" />
+            <div className="absolute left-1/2 top-1/2 flex max-w-[260px] -translate-x-1/2 -translate-y-1/2 flex-col items-center text-center" aria-label="Diabetic foot care clinic program illustration">
+              <span className="mb-3 flex h-12 w-12 items-center justify-center rounded-full bg-white/70 text-primary shadow-[0_16px_38px_rgba(20,121,201,0.14)] ring-1 ring-white/70">
+                <Handshake aria-hidden="true" className="h-6 w-6" />
+              </span>
             </div>
           </div>
+        </StepReveal>
 
-          <motion.div
-            className="relative mx-auto h-[24rem] w-full max-w-[36rem] overflow-hidden rounded-[2rem] border border-border-soft bg-white/80 shadow-card"
-            initial={reduceMotion ? false : { opacity: 0, scale: 0.97 }}
-            animate={reduceMotion ? undefined : { opacity: 1, scale: 1 }}
-            transition={{ delay: 0.18, duration: 0.65, ease: [0.22, 1, 0.36, 1] }}
-            aria-label="Step-Ahead program system visual"
-          >
-            <svg className="absolute inset-0 h-full w-full" viewBox="0 0 560 380" aria-hidden="true">
-              <defs>
-                <linearGradient id="stepAheadLine" x1="0" x2="1" y1="0" y2="1">
-                  <stop stopColor="#1479C9" stopOpacity="0.35" />
-                  <stop offset="1" stopColor="#5CB85C" stopOpacity="0.5" />
-                </linearGradient>
-              </defs>
-              {[80, 170, 280, 390, 480].map((x) => (
-                <motion.path
-                  d={`M280 190 C280 145 ${x} 130 ${x} 88`}
-                  fill="none"
-                  initial={reduceMotion ? false : { pathLength: 0, opacity: 0 }}
-                  animate={reduceMotion ? undefined : { pathLength: 1, opacity: 1 }}
-                  transition={{ delay: 0.35, duration: 0.9, ease: "easeOut" }}
-                  key={x}
-                  stroke="url(#stepAheadLine)"
-                  strokeLinecap="round"
-                  strokeWidth="2"
-                />
-              ))}
-              {[120, 230, 340, 450].map((x) => (
-                <motion.path
-                  d={`M280 190 C280 236 ${x} 250 ${x} 300`}
-                  fill="none"
-                  initial={reduceMotion ? false : { pathLength: 0, opacity: 0 }}
-                  animate={reduceMotion ? undefined : { pathLength: 1, opacity: 1 }}
-                  transition={{ delay: 0.45, duration: 0.9, ease: "easeOut" }}
-                  key={`partner-${x}`}
-                  stroke="#C9E6F8"
-                  strokeLinecap="round"
-                  strokeWidth="2"
-                />
-              ))}
-            </svg>
-            <motion.div
-              className="absolute left-1/2 top-1/2 flex h-32 w-32 -translate-x-1/2 -translate-y-1/2 flex-col items-center justify-center rounded-full border border-accent-green/25 bg-white text-center shadow-card"
-              animate={reduceMotion ? undefined : { scale: [1, 1.025, 1] }}
-              transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-            >
-              <span className="font-heading text-xl font-semibold text-primary-dark">Step-Ahead</span>
-              <span className="mt-1 text-xs font-semibold text-accent-green">Partner setup</span>
-            </motion.div>
-            {systemNodes.map((node, index) => (
-              <motion.div
-                className="absolute top-12 w-[6.8rem] rounded-lg border border-border-soft bg-white px-3 py-2 text-center text-xs font-bold text-primary-dark shadow-soft"
-                style={{ left: `calc(${[14, 30, 50, 69, 85][index]}% - 3.4rem)` }}
-                initial={reduceMotion ? false : { opacity: 0, y: -10 }}
-                animate={reduceMotion ? undefined : { opacity: 1, y: 0 }}
-                transition={{ delay: 0.42 + index * 0.06, duration: 0.38, ease: "easeOut" }}
-                key={node}
-              >
-                {node}
-              </motion.div>
-            ))}
-            {partnerNodes.map((node, index) => (
-              <motion.div
-                className="absolute bottom-12 w-[7rem] rounded-full border border-border-soft bg-background-soft px-3 py-2 text-center text-xs font-bold text-primary-dark"
-                style={{ left: `calc(${[21, 40, 60, 79][index]}% - 3.5rem)` }}
-                initial={reduceMotion ? false : { opacity: 0, y: 10 }}
-                animate={reduceMotion ? undefined : { opacity: 1, y: 0 }}
-                transition={{ delay: 0.55 + index * 0.06, duration: 0.38, ease: "easeOut" }}
-                key={node}
-              >
-                {node}
-              </motion.div>
-            ))}
-          </motion.div>
+        <div className="col-span-full grid gap-x-7 gap-y-5 pt-1 sm:grid-cols-2 lg:grid-cols-4">
+          {proofItems.map((item, index) => {
+            const Icon = item.icon;
+
+            return (
+              <StepReveal className="flex items-start gap-3" delay={0.06 * index} key={item.title}>
+                <StepIconBubble className="h-9 w-9 border-transparent bg-white/70 shadow-none" size="sm">
+                  <Icon aria-hidden="true" className="h-[18px] w-[18px]" />
+                </StepIconBubble>
+                <div>
+                  <p className="font-heading text-[0.8rem] font-bold text-primary-dark">{item.title}</p>
+                  <p className="mt-1 text-[0.7rem] leading-5 text-text-secondary">{item.text}</p>
+                </div>
+              </StepReveal>
+            );
+          })}
         </div>
-      </Container>
-    </Section>
+      </StepContainer>
+    </StepSection>
   );
 }

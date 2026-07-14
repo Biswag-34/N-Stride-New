@@ -1,0 +1,822 @@
+
+> n-stride-brand@0.1.0 dev
+> next dev
+
+   ▲ Next.js 15.5.20
+   - Local:        http://localhost:3000
+   - Network:      http://10.86.238.136:3000
+
+ ✓ Starting...
+ ✓ Ready in 15.3s
+ ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+ ○ Compiling /verticals/[slug] ...
+ ✓ Compiled /verticals/[slug] in 49.6s (1775 modules)
+ ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+ GET /verticals/wound-care 200 in 51356ms
+ GET /verticals/wound-care 200 in 9845ms
+ GET /verticals/wound-care 200 in 653ms
+ GET /verticals/wound-care 200 in 595ms
+ ○ Compiling / ...
+ ✓ Compiled / in 5s (1824 modules)
+ GET / 200 in 5407ms
+ GET / 200 in 65ms
+ GET / 200 in 57ms
+ ○ Compiling /step-ahead ...
+ ✓ Compiled /step-ahead in 2.8s (1880 modules)
+ GET /step-ahead 200 in 3176ms
+ ○ Compiling /verticals ...
+ ✓ Compiled /verticals in 8.7s (1924 modules)
+ GET /verticals 200 in 9198ms
+ GET /verticals 200 in 81ms
+ GET /verticals 200 in 64ms
+ GET /verticals 200 in 47ms
+ GET /verticals 200 in 63ms
+ GET /verticals 200 in 1760ms
+ GET /verticals 200 in 215ms
+ GET /verticals/kinetics 200 in 612ms
+ ○ Compiling /contact ...
+ ✓ Compiled /contact in 4s (1949 modules)
+ GET /contact?type=foot-checkup 200 in 4943ms
+ GET /contact?type=foot-checkup 200 in 162ms
+ GET /verticals 200 in 121ms
+ GET /verticals/bio-fit 200 in 185ms
+ ✓ Compiled in 31.4s (1964 modules)
+ GET /verticals/bio-fit 200 in 1345ms
+ ✓ Compiled in 5.6s (1964 modules)
+ GET /verticals/bio-fit 200 in 2539ms
+ ✓ Compiled in 15.1s (1964 modules)
+ GET /verticals/bio-fit 200 in 761ms
+ ⨯ ./components/layout/Footer.tsx
+Error: 
+
+Caused by:
+    0: Failed to read source code from C:\Users\User\Desktop\N-Stride\N-Stride New\components\layout\Footer.tsx
+    1: stream did not contain valid UTF-8
+
+Import trace for requested module:
+./components/layout/Footer.tsx
+./components/layout/PageShell.tsx
+./app/layout.tsx
+ ○ Compiling /_error ...
+ ⨯ ./components/layout/Footer.tsx
+Error: 
+
+Caused by:
+    0: Failed to read source code from C:\Users\User\Desktop\N-Stride\N-Stride New\components\layout\Footer.tsx
+    1: stream did not contain valid UTF-8
+
+Import trace for requested module:
+./components/layout/Footer.tsx
+./components/layout/PageShell.tsx
+./app/layout.tsx
+ GET /verticals/bio-fit 500 in 31284ms
+ GET /verticals/bio-fit 500 in 64ms
+ GET /verticals/bio-fit 500 in 64ms
+ GET /verticals/bio-fit 500 in 80ms
+ ⚠ Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+ ⚠ Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+ GET /verticals/bio-fit 500 in 1981ms
+ ⚠ Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+ ⚠ Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+ ⨯ ./components/layout/Footer.tsx
+Error: 
+
+Caused by:
+    0: Failed to read source code from C:\Users\User\Desktop\N-Stride\N-Stride New\components\layout\Footer.tsx
+    1: stream did not contain valid UTF-8
+
+Import trace for requested module:
+./components/layout/Footer.tsx
+./components/layout/PageShell.tsx
+./app/layout.tsx
+ GET /verticals/bio-fit 200 in 1183ms
+ GET /verticals/bio-fit 500 in 313ms
+ ⚠ Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+ ⚠ Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+ GET /verticals/bio-fit 500 in 4587ms
+ ⚠ Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+ ⨯ ./components/layout/Footer.tsx
+Error: 
+
+Caused by:
+    0: Failed to read source code from C:\Users\User\Desktop\N-Stride\N-Stride New\components\layout\Footer.tsx
+    1: stream did not contain valid UTF-8
+
+Import trace for requested module:
+./components/layout/Footer.tsx
+./components/layout/PageShell.tsx
+./app/layout.tsx
+ GET /verticals/bio-fit 200 in 2730ms
+ GET /verticals/bio-fit 500 in 91ms
+ ⚠ Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+ ⚠ Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+ GET /verticals/bio-fit 500 in 1332ms
+ ⚠ Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+ ⚠ Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+ ⨯ ./components/layout/Footer.tsx
+Error: 
+
+Caused by:
+    0: Failed to read source code from C:\Users\User\Desktop\N-Stride\N-Stride New\components\layout\Footer.tsx
+    1: stream did not contain valid UTF-8
+
+Import trace for requested module:
+./components/layout/Footer.tsx
+./components/layout/PageShell.tsx
+./app/layout.tsx
+ GET /verticals/bio-fit 500 in 1307ms
+ ⚠ Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+ ⚠ Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+ GET /verticals/bio-fit 500 in 34463ms
+ ⚠ Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+ ⨯ ./components/layout/Footer.tsx
+Error: 
+
+Caused by:
+    0: Failed to read source code from C:\Users\User\Desktop\N-Stride\N-Stride New\components\layout\Footer.tsx
+    1: stream did not contain valid UTF-8
+
+Import trace for requested module:
+./components/layout/Footer.tsx
+./components/layout/PageShell.tsx
+./app/layout.tsx
+ GET /verticals/bio-fit 200 in 4351ms
+ GET /verticals/bio-fit 500 in 1039ms
+ ⚠ Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+ ⚠ Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+ GET /verticals/bio-fit 500 in 34036ms
+ ⚠ Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+ ⨯ ./components/layout/Footer.tsx
+Error: 
+
+Caused by:
+    0: Failed to read source code from C:\Users\User\Desktop\N-Stride\N-Stride New\components\layout\Footer.tsx
+    1: stream did not contain valid UTF-8
+
+Import trace for requested module:
+./components/layout/Footer.tsx
+./components/layout/PageShell.tsx
+./app/layout.tsx
+ GET /verticals/bio-fit 200 in 18584ms
+ ⨯ ./components/layout/Footer.tsx
+Error: 
+
+Caused by:
+    0: Failed to read source code from C:\Users\User\Desktop\N-Stride\N-Stride New\components\layout\Footer.tsx
+    1: stream did not contain valid UTF-8
+
+Import trace for requested module:
+./components/layout/Footer.tsx
+./components/layout/PageShell.tsx
+./app/layout.tsx
+ ⚠ Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+ ⨯ ./components/layout/Footer.tsx
+Error: 
+
+Caused by:
+    0: Failed to read source code from C:\Users\User\Desktop\N-Stride\N-Stride New\components\layout\Footer.tsx
+    1: stream did not contain valid UTF-8
+
+Import trace for requested module:
+./components/layout/Footer.tsx
+./components/layout/PageShell.tsx
+./app/layout.tsx
+ GET /verticals/bio-fit 500 in 1467ms
+ ⚠ Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+ ⚠ Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+ ⚠ Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+ ⨯ ./components/layout/Footer.tsx
+Error: 
+
+Caused by:
+    0: Failed to read source code from C:\Users\User\Desktop\N-Stride\N-Stride New\components\layout\Footer.tsx
+    1: stream did not contain valid UTF-8
+
+Import trace for requested module:
+./components/layout/Footer.tsx
+./components/layout/PageShell.tsx
+./app/layout.tsx
+ ⚠ Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+ GET /verticals/bio-fit 500 in 13236ms
+ ⚠ Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+ GET /verticals/bio-fit 500 in 890ms
+ ⨯ ./components/layout/Footer.tsx
+Error: 
+
+Caused by:
+    0: Failed to read source code from C:\Users\User\Desktop\N-Stride\N-Stride New\components\layout\Footer.tsx
+    1: stream did not contain valid UTF-8
+
+Import trace for requested module:
+./components/layout/Footer.tsx
+./components/layout/PageShell.tsx
+./app/layout.tsx
+ ⨯ ./components/layout/Footer.tsx
+Error: 
+
+Caused by:
+    0: Failed to read source code from C:\Users\User\Desktop\N-Stride\N-Stride New\components\layout\Footer.tsx
+    1: stream did not contain valid UTF-8
+
+Import trace for requested module:
+./components/layout/Footer.tsx
+./components/layout/PageShell.tsx
+./app/layout.tsx
+ GET /verticals/bio-fit 500 in 5745ms
+ ⚠ Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+ ⚠ Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+ ⚠ Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+ ⨯ ./components/layout/Footer.tsx
+Error: 
+
+Caused by:
+    0: Failed to read source code from C:\Users\User\Desktop\N-Stride\N-Stride New\components\layout\Footer.tsx
+    1: stream did not contain valid UTF-8
+
+Import trace for requested module:
+./components/layout/Footer.tsx
+./components/layout/PageShell.tsx
+./app/layout.tsx
+ ⚠ Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+ GET /verticals/bio-fit 500 in 6382ms
+ ⚠ Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+ GET /verticals/bio-fit 500 in 849ms
+ ⨯ ./components/layout/Footer.tsx
+Error: 
+
+Caused by:
+    0: Failed to read source code from C:\Users\User\Desktop\N-Stride\N-Stride New\components\layout\Footer.tsx
+    1: stream did not contain valid UTF-8
+
+Import trace for requested module:
+./components/layout/Footer.tsx
+./components/layout/PageShell.tsx
+./app/layout.tsx
+ ⨯ ./components/layout/Footer.tsx
+Error: 
+
+Caused by:
+    0: Failed to read source code from C:\Users\User\Desktop\N-Stride\N-Stride New\components\layout\Footer.tsx
+    1: stream did not contain valid UTF-8
+
+Import trace for requested module:
+./components/layout/Footer.tsx
+./components/layout/PageShell.tsx
+./app/layout.tsx
+ GET /verticals/bio-fit 500 in 3062ms
+ ⚠ Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+ ⚠ Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+ GET /verticals/bio-fit 500 in 68069ms
+ ⚠ Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+ ⨯ ./components/layout/Footer.tsx
+Error: 
+
+Caused by:
+    0: Failed to read source code from C:\Users\User\Desktop\N-Stride\N-Stride New\components\layout\Footer.tsx
+    1: stream did not contain valid UTF-8
+
+Import trace for requested module:
+./components/layout/Footer.tsx
+./components/layout/PageShell.tsx
+./app/layout.tsx
+ GET /verticals/bio-fit 200 in 5616ms
+ GET /verticals/bio-fit 500 in 398ms
+ ⚠ Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+ ⚠ Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+ ⚠ Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+ ⨯ ./components/layout/Footer.tsx
+Error: 
+
+Caused by:
+    0: Failed to read source code from C:\Users\User\Desktop\N-Stride\N-Stride New\components\layout\Footer.tsx
+    1: stream did not contain valid UTF-8
+
+Import trace for requested module:
+./components/layout/Footer.tsx
+./components/layout/PageShell.tsx
+./app/layout.tsx
+ GET /verticals/bio-fit 500 in 960ms
+ ⚠ Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+ ⚠ Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+ GET /verticals/bio-fit 500 in 130693ms
+ ⚠ Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+ ⨯ ./components/layout/Footer.tsx
+Error: 
+
+Caused by:
+    0: Failed to read source code from C:\Users\User\Desktop\N-Stride\N-Stride New\components\layout\Footer.tsx
+    1: stream did not contain valid UTF-8
+
+Import trace for requested module:
+./components/layout/Footer.tsx
+./components/layout/PageShell.tsx
+./app/layout.tsx
+ GET /verticals/bio-fit 200 in 9320ms
+ ⚠ Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+ GET /verticals/bio-fit 500 in 294ms
+ ⚠ Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+ GET /verticals/bio-fit 500 in 1614ms
+ ⨯ ./components/layout/Footer.tsx
+Error: 
+
+Caused by:
+    0: Failed to read source code from C:\Users\User\Desktop\N-Stride\N-Stride New\components\layout\Footer.tsx
+    1: stream did not contain valid UTF-8
+
+Import trace for requested module:
+./components/layout/Footer.tsx
+./components/layout/PageShell.tsx
+./app/layout.tsx
+ ⨯ ./components/layout/Footer.tsx
+Error: 
+
+Caused by:
+    0: Failed to read source code from C:\Users\User\Desktop\N-Stride\N-Stride New\components\layout\Footer.tsx
+    1: stream did not contain valid UTF-8
+
+Import trace for requested module:
+./components/layout/Footer.tsx
+./components/layout/PageShell.tsx
+./app/layout.tsx
+ GET /verticals/bio-fit 500 in 2845ms
+ ⚠ Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+ ⚠ Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+ ⚠ Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+ ⨯ ./components/layout/Footer.tsx
+Error: 
+
+Caused by:
+    0: Failed to read source code from C:\Users\User\Desktop\N-Stride\N-Stride New\components\layout\Footer.tsx
+    1: stream did not contain valid UTF-8
+
+Import trace for requested module:
+./components/layout/Footer.tsx
+./components/layout/PageShell.tsx
+./app/layout.tsx
+ GET /verticals/bio-fit 500 in 4113ms
+ ⚠ Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+ ⚠ Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+ ⚠ Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+ ⨯ ./components/layout/Footer.tsx
+Error: 
+
+Caused by:
+    0: Failed to read source code from C:\Users\User\Desktop\N-Stride\N-Stride New\components\layout\Footer.tsx
+    1: stream did not contain valid UTF-8
+
+Import trace for requested module:
+./components/layout/Footer.tsx
+./components/layout/PageShell.tsx
+./app/layout.tsx
+ ⚠ Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+ GET /verticals/bio-fit 500 in 2864ms
+ ⚠ Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+ GET /verticals/bio-fit 500 in 874ms
+ ⨯ ./components/layout/Footer.tsx
+Error: 
+
+Caused by:
+    0: Failed to read source code from C:\Users\User\Desktop\N-Stride\N-Stride New\components\layout\Footer.tsx
+    1: stream did not contain valid UTF-8
+
+Import trace for requested module:
+./components/layout/Footer.tsx
+./components/layout/PageShell.tsx
+./app/layout.tsx
+ ⨯ ./components/layout/Footer.tsx
+Error: 
+
+Caused by:
+    0: Failed to read source code from C:\Users\User\Desktop\N-Stride\N-Stride New\components\layout\Footer.tsx
+    1: stream did not contain valid UTF-8
+
+Import trace for requested module:
+./components/layout/Footer.tsx
+./components/layout/PageShell.tsx
+./app/layout.tsx
+ ⚠ Server is approaching the used memory threshold, restarting...
+ ⚠ Server is approaching the used memory threshold, restarting...
+ ⚠ Server is approaching the used memory threshold, restarting...
+ ⚠ Server is approaching the used memory threshold, restarting...
+   ▲ Next.js 15.5.20
+   - Local:        http://localhost:3000
+   - Network:      http://10.86.238.136:3000
+
+ ✓ Starting...
+ ✓ Ready in 74s
+ ○ Compiling /verticals/[slug] ...
+ ⨯ ./components/layout/Footer.tsx
+Error: 
+
+Caused by:
+    0: Failed to read source code from C:\Users\User\Desktop\N-Stride\N-Stride New\components\layout\Footer.tsx
+    1: stream did not contain valid UTF-8
+
+Import trace for requested module:
+./components/layout/Footer.tsx
+./components/layout/PageShell.tsx
+./app/layout.tsx
+ ⨯ ./components/layout/Footer.tsx
+Error: 
+
+Caused by:
+    0: Failed to read source code from C:\Users\User\Desktop\N-Stride\N-Stride New\components\layout\Footer.tsx
+    1: stream did not contain valid UTF-8
+
+Import trace for requested module:
+./components/layout/Footer.tsx
+./components/layout/PageShell.tsx
+./app/layout.tsx
+ ⨯ ./components/layout/Footer.tsx
+Error: 
+
+Caused by:
+    0: Failed to read source code from C:\Users\User\Desktop\N-Stride\N-Stride New\components\layout\Footer.tsx
+    1: stream did not contain valid UTF-8
+
+Import trace for requested module:
+./components/layout/Footer.tsx
+./components/layout/PageShell.tsx
+./app/layout.tsx
+ GET /verticals/bio-fit 500 in 115439ms
+ ⚠ Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+ ⚠ Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+ ⚠ Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+ ⨯ ./components/layout/Footer.tsx
+Error: 
+
+Caused by:
+    0: Failed to read source code from C:\Users\User\Desktop\N-Stride\N-Stride New\components\layout\Footer.tsx
+    1: stream did not contain valid UTF-8
+
+Import trace for requested module:
+./components/layout/Footer.tsx
+./components/layout/PageShell.tsx
+./app/layout.tsx
+ ⚠ Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+ ⚠ Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+ ⚠ Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+ ⚠ Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+ ⨯ ./components/layout/Footer.tsx
+Error: 
+
+Caused by:
+    0: Failed to read source code from C:\Users\User\Desktop\N-Stride\N-Stride New\components\layout\Footer.tsx
+    1: stream did not contain valid UTF-8
+
+Import trace for requested module:
+./components/layout/Footer.tsx
+./components/layout/PageShell.tsx
+./app/layout.tsx
+ GET /verticals/bio-fit 500 in 543ms
+ ⚠ Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+ ⚠ Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+ ⨯ ./components/layout/Footer.tsx
+Error: 
+
+Caused by:
+    0: Failed to read source code from C:\Users\User\Desktop\N-Stride\N-Stride New\components\layout\Footer.tsx
+    1: stream did not contain valid UTF-8
+
+Import trace for requested module:
+./components/layout/Footer.tsx
+./components/layout/PageShell.tsx
+./app/layout.tsx
+ ⚠ Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+ ⚠ Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+ ⨯ ./components/layout/Footer.tsx
+Error: 
+
+Caused by:
+    0: Failed to read source code from C:\Users\User\Desktop\N-Stride\N-Stride New\components\layout\Footer.tsx
+    1: stream did not contain valid UTF-8
+
+Import trace for requested module:
+./components/layout/Footer.tsx
+./components/layout/PageShell.tsx
+./app/layout.tsx
+ ⨯ ./components/layout/Footer.tsx
+Error: 
+
+Caused by:
+    0: Failed to read source code from C:\Users\User\Desktop\N-Stride\N-Stride New\components\layout\Footer.tsx
+    1: stream did not contain valid UTF-8
+
+Import trace for requested module:
+./components/layout/Footer.tsx
+./components/layout/PageShell.tsx
+./app/layout.tsx
+ ⚠ Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+ ⚠ Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+ ⚠ Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+ ⚠ Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+ ⨯ ./components/layout/Footer.tsx
+Error: 
+
+Caused by:
+    0: Failed to read source code from C:\Users\User\Desktop\N-Stride\N-Stride New\components\layout\Footer.tsx
+    1: stream did not contain valid UTF-8
+
+Import trace for requested module:
+./components/layout/Footer.tsx
+./components/layout/PageShell.tsx
+./app/layout.tsx
+ GET /verticals/bio-fit 500 in 520ms
+ ⚠ Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+ ⚠ Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+ ✓ Compiled /_not-found in 35s (1998 modules)
+ ⚠ Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+ GET /verticals/bio-fit 200 in 24287ms
+ ⨯ [Error: ENOENT: no such file or directory, open 'C:\Users\User\Desktop\N-Stride\N-Stride New\.next\routes-manifest.json'] {
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: 'C:\\Users\\User\\Desktop\\N-Stride\\N-Stride New\\.next\\routes-manifest.json'
+}
+ ⚠ Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+ GET /verticals/bio-fit 200 in 1766ms
+ ○ Compiling /_error ...
+ ⚠ Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+ GET /verticals/bio-fit 200 in 1309ms
+ ✓ Compiled /_error in 2.4s (2094 modules)
+ ⨯ [Error: ENOENT: no such file or directory, open 'C:\Users\User\Desktop\N-Stride\N-Stride New\.next\routes-manifest.json'] {
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: 'C:\\Users\\User\\Desktop\\N-Stride\\N-Stride New\\.next\\routes-manifest.json'
+}
+ ⨯ Error: Cannot find module './611.js'
+Require stack:
+- C:\Users\User\Desktop\N-Stride\N-Stride New\.next\server\webpack-runtime.js
+- C:\Users\User\Desktop\N-Stride\N-Stride New\.next\server\app\verticals\[slug]\page.js
+- C:\Users\User\Desktop\N-Stride\N-Stride New\node_modules\next\dist\server\require.js
+- C:\Users\User\Desktop\N-Stride\N-Stride New\node_modules\next\dist\server\load-components.js
+- C:\Users\User\Desktop\N-Stride\N-Stride New\node_modules\next\dist\build\utils.js
+- C:\Users\User\Desktop\N-Stride\N-Stride New\node_modules\next\dist\build\swc\options.js
+- C:\Users\User\Desktop\N-Stride\N-Stride New\node_modules\next\dist\build\swc\index.js
+- C:\Users\User\Desktop\N-Stride\N-Stride New\node_modules\next\dist\build\next-config-ts\transpile-config.js
+- C:\Users\User\Desktop\N-Stride\N-Stride New\node_modules\next\dist\server\config.js
+- C:\Users\User\Desktop\N-Stride\N-Stride New\node_modules\next\dist\server\next.js
+- C:\Users\User\Desktop\N-Stride\N-Stride New\node_modules\next\dist\server\lib\start-server.js
+    at <unknown> (C:\Users\User\Desktop\N-Stride\N-Stride New\.next\server\pages\_document.js:1:325)
+    at Object.<anonymous> (C:\Users\User\Desktop\N-Stride\N-Stride New\.next\server\pages\_document.js:1:371) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [Array]
+}
+[Error: ENOENT: no such file or directory, open 'C:\Users\User\Desktop\N-Stride\N-Stride New\.next\routes-manifest.json'] {
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: 'C:\\Users\\User\\Desktop\\N-Stride\\N-Stride New\\.next\\routes-manifest.json'
+}
+ ⨯ Error: Cannot find module './611.js'
+Require stack:
+- C:\Users\User\Desktop\N-Stride\N-Stride New\.next\server\webpack-runtime.js
+- C:\Users\User\Desktop\N-Stride\N-Stride New\.next\server\app\verticals\[slug]\page.js
+- C:\Users\User\Desktop\N-Stride\N-Stride New\node_modules\next\dist\server\require.js
+- C:\Users\User\Desktop\N-Stride\N-Stride New\node_modules\next\dist\server\load-components.js
+- C:\Users\User\Desktop\N-Stride\N-Stride New\node_modules\next\dist\build\utils.js
+- C:\Users\User\Desktop\N-Stride\N-Stride New\node_modules\next\dist\build\swc\options.js
+- C:\Users\User\Desktop\N-Stride\N-Stride New\node_modules\next\dist\build\swc\index.js
+- C:\Users\User\Desktop\N-Stride\N-Stride New\node_modules\next\dist\build\next-config-ts\transpile-config.js
+- C:\Users\User\Desktop\N-Stride\N-Stride New\node_modules\next\dist\server\config.js
+- C:\Users\User\Desktop\N-Stride\N-Stride New\node_modules\next\dist\server\next.js
+- C:\Users\User\Desktop\N-Stride\N-Stride New\node_modules\next\dist\server\lib\start-server.js
+    at <unknown> (C:\Users\User\Desktop\N-Stride\N-Stride New\.next\server\pages\_document.js:1:325)
+    at Object.<anonymous> (C:\Users\User\Desktop\N-Stride\N-Stride New\.next\server\pages\_document.js:1:371) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [Array]
+}
+[Error: ENOENT: no such file or directory, open 'C:\Users\User\Desktop\N-Stride\N-Stride New\.next\routes-manifest.json'] {
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: 'C:\\Users\\User\\Desktop\\N-Stride\\N-Stride New\\.next\\routes-manifest.json'
+}
+ ⨯ [Error: ENOENT: no such file or directory, open 'C:\Users\User\Desktop\N-Stride\N-Stride New\.next\prerender-manifest.json'] {
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: 'C:\\Users\\User\\Desktop\\N-Stride\\N-Stride New\\.next\\prerender-manifest.json',
+  page: '/verticals/bio-fit'
+}
+ ⨯ [Error: ENOENT: no such file or directory, open 'C:\Users\User\Desktop\N-Stride\N-Stride New\.next\prerender-manifest.json'] {
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: 'C:\\Users\\User\\Desktop\\N-Stride\\N-Stride New\\.next\\prerender-manifest.json',
+  page: '/verticals/bio-fit'
+}
+ ⨯ [Error: ENOENT: no such file or directory, open 'C:\Users\User\Desktop\N-Stride\N-Stride New\.next\prerender-manifest.json'] {
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: 'C:\\Users\\User\\Desktop\\N-Stride\\N-Stride New\\.next\\prerender-manifest.json',
+  page: '/verticals/bio-fit'
+}
+ ⨯ [Error: ENOENT: no such file or directory, open 'C:\Users\User\Desktop\N-Stride\N-Stride New\.next\prerender-manifest.json'] {
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: 'C:\\Users\\User\\Desktop\\N-Stride\\N-Stride New\\.next\\prerender-manifest.json',
+  page: '/verticals/bio-fit'
+}
+ ⨯ Error: Cannot find module './611.js'
+Require stack:
+- C:\Users\User\Desktop\N-Stride\N-Stride New\.next\server\webpack-runtime.js
+- C:\Users\User\Desktop\N-Stride\N-Stride New\.next\server\app\verticals\[slug]\page.js
+- C:\Users\User\Desktop\N-Stride\N-Stride New\node_modules\next\dist\server\require.js
+- C:\Users\User\Desktop\N-Stride\N-Stride New\node_modules\next\dist\server\load-components.js
+- C:\Users\User\Desktop\N-Stride\N-Stride New\node_modules\next\dist\build\utils.js
+- C:\Users\User\Desktop\N-Stride\N-Stride New\node_modules\next\dist\build\swc\options.js
+- C:\Users\User\Desktop\N-Stride\N-Stride New\node_modules\next\dist\build\swc\index.js
+- C:\Users\User\Desktop\N-Stride\N-Stride New\node_modules\next\dist\build\next-config-ts\transpile-config.js
+- C:\Users\User\Desktop\N-Stride\N-Stride New\node_modules\next\dist\server\config.js
+- C:\Users\User\Desktop\N-Stride\N-Stride New\node_modules\next\dist\server\next.js
+- C:\Users\User\Desktop\N-Stride\N-Stride New\node_modules\next\dist\server\lib\start-server.js
+    at <unknown> (C:\Users\User\Desktop\N-Stride\N-Stride New\.next\server\pages\_document.js:1:325)
+    at Object.<anonymous> (C:\Users\User\Desktop\N-Stride\N-Stride New\.next\server\pages\_document.js:1:371) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [Array]
+}
+ ⨯ Error: Cannot find module './611.js'
+Require stack:
+- C:\Users\User\Desktop\N-Stride\N-Stride New\.next\server\webpack-runtime.js
+- C:\Users\User\Desktop\N-Stride\N-Stride New\.next\server\app\verticals\[slug]\page.js
+- C:\Users\User\Desktop\N-Stride\N-Stride New\node_modules\next\dist\server\require.js
+- C:\Users\User\Desktop\N-Stride\N-Stride New\node_modules\next\dist\server\load-components.js
+- C:\Users\User\Desktop\N-Stride\N-Stride New\node_modules\next\dist\build\utils.js
+- C:\Users\User\Desktop\N-Stride\N-Stride New\node_modules\next\dist\build\swc\options.js
+- C:\Users\User\Desktop\N-Stride\N-Stride New\node_modules\next\dist\build\swc\index.js
+- C:\Users\User\Desktop\N-Stride\N-Stride New\node_modules\next\dist\build\next-config-ts\transpile-config.js
+- C:\Users\User\Desktop\N-Stride\N-Stride New\node_modules\next\dist\server\config.js
+- C:\Users\User\Desktop\N-Stride\N-Stride New\node_modules\next\dist\server\next.js
+- C:\Users\User\Desktop\N-Stride\N-Stride New\node_modules\next\dist\server\lib\start-server.js
+    at <unknown> (C:\Users\User\Desktop\N-Stride\N-Stride New\.next\server\pages\_document.js:1:325)
+    at Object.<anonymous> (C:\Users\User\Desktop\N-Stride\N-Stride New\.next\server\pages\_document.js:1:371) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [Array]
+}
+ ⨯ Error: Cannot find module './611.js'
+Require stack:
+- C:\Users\User\Desktop\N-Stride\N-Stride New\.next\server\webpack-runtime.js
+- C:\Users\User\Desktop\N-Stride\N-Stride New\.next\server\app\verticals\[slug]\page.js
+- C:\Users\User\Desktop\N-Stride\N-Stride New\node_modules\next\dist\server\require.js
+- C:\Users\User\Desktop\N-Stride\N-Stride New\node_modules\next\dist\server\load-components.js
+- C:\Users\User\Desktop\N-Stride\N-Stride New\node_modules\next\dist\build\utils.js
+- C:\Users\User\Desktop\N-Stride\N-Stride New\node_modules\next\dist\build\swc\options.js
+- C:\Users\User\Desktop\N-Stride\N-Stride New\node_modules\next\dist\build\swc\index.js
+- C:\Users\User\Desktop\N-Stride\N-Stride New\node_modules\next\dist\build\next-config-ts\transpile-config.js
+- C:\Users\User\Desktop\N-Stride\N-Stride New\node_modules\next\dist\server\config.js
+- C:\Users\User\Desktop\N-Stride\N-Stride New\node_modules\next\dist\server\next.js
+- C:\Users\User\Desktop\N-Stride\N-Stride New\node_modules\next\dist\server\lib\start-server.js
+    at <unknown> (C:\Users\User\Desktop\N-Stride\N-Stride New\.next\server\pages\_document.js:1:325)
+    at Object.<anonymous> (C:\Users\User\Desktop\N-Stride\N-Stride New\.next\server\pages\_document.js:1:371) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [Array]
+}
+ ⨯ Error: Cannot find module './611.js'
+Require stack:
+- C:\Users\User\Desktop\N-Stride\N-Stride New\.next\server\webpack-runtime.js
+- C:\Users\User\Desktop\N-Stride\N-Stride New\.next\server\app\verticals\[slug]\page.js
+- C:\Users\User\Desktop\N-Stride\N-Stride New\node_modules\next\dist\server\require.js
+- C:\Users\User\Desktop\N-Stride\N-Stride New\node_modules\next\dist\server\load-components.js
+- C:\Users\User\Desktop\N-Stride\N-Stride New\node_modules\next\dist\build\utils.js
+- C:\Users\User\Desktop\N-Stride\N-Stride New\node_modules\next\dist\build\swc\options.js
+- C:\Users\User\Desktop\N-Stride\N-Stride New\node_modules\next\dist\build\swc\index.js
+- C:\Users\User\Desktop\N-Stride\N-Stride New\node_modules\next\dist\build\next-config-ts\transpile-config.js
+- C:\Users\User\Desktop\N-Stride\N-Stride New\node_modules\next\dist\server\config.js
+- C:\Users\User\Desktop\N-Stride\N-Stride New\node_modules\next\dist\server\next.js
+- C:\Users\User\Desktop\N-Stride\N-Stride New\node_modules\next\dist\server\lib\start-server.js
+    at <unknown> (C:\Users\User\Desktop\N-Stride\N-Stride New\.next\server\pages\_document.js:1:325)
+    at Object.<anonymous> (C:\Users\User\Desktop\N-Stride\N-Stride New\.next\server\pages\_document.js:1:371) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [Array]
+}
+[Error: ENOENT: no such file or directory, open 'C:\Users\User\Desktop\N-Stride\N-Stride New\.next\prerender-manifest.json'] {
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: 'C:\\Users\\User\\Desktop\\N-Stride\\N-Stride New\\.next\\prerender-manifest.json',
+  page: '/verticals/bio-fit'
+}
+[Error: ENOENT: no such file or directory, open 'C:\Users\User\Desktop\N-Stride\N-Stride New\.next\prerender-manifest.json'] {
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: 'C:\\Users\\User\\Desktop\\N-Stride\\N-Stride New\\.next\\prerender-manifest.json',
+  page: '/verticals/bio-fit'
+}
+[Error: ENOENT: no such file or directory, open 'C:\Users\User\Desktop\N-Stride\N-Stride New\.next\prerender-manifest.json'] {
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: 'C:\\Users\\User\\Desktop\\N-Stride\\N-Stride New\\.next\\prerender-manifest.json',
+  page: '/verticals/bio-fit'
+}
+[Error: ENOENT: no such file or directory, open 'C:\Users\User\Desktop\N-Stride\N-Stride New\.next\prerender-manifest.json'] {
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: 'C:\\Users\\User\\Desktop\\N-Stride\\N-Stride New\\.next\\prerender-manifest.json',
+  page: '/verticals/bio-fit'
+}
+ ⨯ Error: Cannot find module './611.js'
+Require stack:
+- C:\Users\User\Desktop\N-Stride\N-Stride New\.next\server\webpack-runtime.js
+- C:\Users\User\Desktop\N-Stride\N-Stride New\.next\server\app\verticals\[slug]\page.js
+- C:\Users\User\Desktop\N-Stride\N-Stride New\node_modules\next\dist\server\require.js
+- C:\Users\User\Desktop\N-Stride\N-Stride New\node_modules\next\dist\server\load-components.js
+- C:\Users\User\Desktop\N-Stride\N-Stride New\node_modules\next\dist\build\utils.js
+- C:\Users\User\Desktop\N-Stride\N-Stride New\node_modules\next\dist\build\swc\options.js
+- C:\Users\User\Desktop\N-Stride\N-Stride New\node_modules\next\dist\build\swc\index.js
+- C:\Users\User\Desktop\N-Stride\N-Stride New\node_modules\next\dist\build\next-config-ts\transpile-config.js
+- C:\Users\User\Desktop\N-Stride\N-Stride New\node_modules\next\dist\server\config.js
+- C:\Users\User\Desktop\N-Stride\N-Stride New\node_modules\next\dist\server\next.js
+- C:\Users\User\Desktop\N-Stride\N-Stride New\node_modules\next\dist\server\lib\start-server.js
+    at <unknown> (C:\Users\User\Desktop\N-Stride\N-Stride New\.next\server\pages\_document.js:1:325)
+    at Object.<anonymous> (C:\Users\User\Desktop\N-Stride\N-Stride New\.next\server\pages\_document.js:1:371) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [Array]
+}
+ ⨯ Error: Cannot find module './611.js'
+Require stack:
+- C:\Users\User\Desktop\N-Stride\N-Stride New\.next\server\webpack-runtime.js
+- C:\Users\User\Desktop\N-Stride\N-Stride New\.next\server\app\verticals\[slug]\page.js
+- C:\Users\User\Desktop\N-Stride\N-Stride New\node_modules\next\dist\server\require.js
+- C:\Users\User\Desktop\N-Stride\N-Stride New\node_modules\next\dist\server\load-components.js
+- C:\Users\User\Desktop\N-Stride\N-Stride New\node_modules\next\dist\build\utils.js
+- C:\Users\User\Desktop\N-Stride\N-Stride New\node_modules\next\dist\build\swc\options.js
+- C:\Users\User\Desktop\N-Stride\N-Stride New\node_modules\next\dist\build\swc\index.js
+- C:\Users\User\Desktop\N-Stride\N-Stride New\node_modules\next\dist\build\next-config-ts\transpile-config.js
+- C:\Users\User\Desktop\N-Stride\N-Stride New\node_modules\next\dist\server\config.js
+- C:\Users\User\Desktop\N-Stride\N-Stride New\node_modules\next\dist\server\next.js
+- C:\Users\User\Desktop\N-Stride\N-Stride New\node_modules\next\dist\server\lib\start-server.js
+    at <unknown> (C:\Users\User\Desktop\N-Stride\N-Stride New\.next\server\pages\_document.js:1:325)
+    at Object.<anonymous> (C:\Users\User\Desktop\N-Stride\N-Stride New\.next\server\pages\_document.js:1:371) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [Array]
+}
+ ⨯ Error: Cannot find module './611.js'
+Require stack:
+- C:\Users\User\Desktop\N-Stride\N-Stride New\.next\server\webpack-runtime.js
+- C:\Users\User\Desktop\N-Stride\N-Stride New\.next\server\app\verticals\[slug]\page.js
+- C:\Users\User\Desktop\N-Stride\N-Stride New\node_modules\next\dist\server\require.js
+- C:\Users\User\Desktop\N-Stride\N-Stride New\node_modules\next\dist\server\load-components.js
+- C:\Users\User\Desktop\N-Stride\N-Stride New\node_modules\next\dist\build\utils.js
+- C:\Users\User\Desktop\N-Stride\N-Stride New\node_modules\next\dist\build\swc\options.js
+- C:\Users\User\Desktop\N-Stride\N-Stride New\node_modules\next\dist\build\swc\index.js
+- C:\Users\User\Desktop\N-Stride\N-Stride New\node_modules\next\dist\build\next-config-ts\transpile-config.js
+- C:\Users\User\Desktop\N-Stride\N-Stride New\node_modules\next\dist\server\config.js
+- C:\Users\User\Desktop\N-Stride\N-Stride New\node_modules\next\dist\server\next.js
+- C:\Users\User\Desktop\N-Stride\N-Stride New\node_modules\next\dist\server\lib\start-server.js
+    at <unknown> (C:\Users\User\Desktop\N-Stride\N-Stride New\.next\server\pages\_document.js:1:325)
+    at Object.<anonymous> (C:\Users\User\Desktop\N-Stride\N-Stride New\.next\server\pages\_document.js:1:371) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [Array]
+}
+ ⨯ Error: Cannot find module './611.js'
+Require stack:
+- C:\Users\User\Desktop\N-Stride\N-Stride New\.next\server\webpack-runtime.js
+- C:\Users\User\Desktop\N-Stride\N-Stride New\.next\server\app\verticals\[slug]\page.js
+- C:\Users\User\Desktop\N-Stride\N-Stride New\node_modules\next\dist\server\require.js
+- C:\Users\User\Desktop\N-Stride\N-Stride New\node_modules\next\dist\server\load-components.js
+- C:\Users\User\Desktop\N-Stride\N-Stride New\node_modules\next\dist\build\utils.js
+- C:\Users\User\Desktop\N-Stride\N-Stride New\node_modules\next\dist\build\swc\options.js
+- C:\Users\User\Desktop\N-Stride\N-Stride New\node_modules\next\dist\build\swc\index.js
+- C:\Users\User\Desktop\N-Stride\N-Stride New\node_modules\next\dist\build\next-config-ts\transpile-config.js
+- C:\Users\User\Desktop\N-Stride\N-Stride New\node_modules\next\dist\server\config.js
+- C:\Users\User\Desktop\N-Stride\N-Stride New\node_modules\next\dist\server\next.js
+- C:\Users\User\Desktop\N-Stride\N-Stride New\node_modules\next\dist\server\lib\start-server.js
+    at <unknown> (C:\Users\User\Desktop\N-Stride\N-Stride New\.next\server\pages\_document.js:1:325)
+    at Object.<anonymous> (C:\Users\User\Desktop\N-Stride\N-Stride New\.next\server\pages\_document.js:1:371) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [Array]
+}
+[Error: ENOENT: no such file or directory, open 'C:\Users\User\Desktop\N-Stride\N-Stride New\.next\routes-manifest.json'] {
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: 'C:\\Users\\User\\Desktop\\N-Stride\\N-Stride New\\.next\\routes-manifest.json'
+}
+[Error: ENOENT: no such file or directory, open 'C:\Users\User\Desktop\N-Stride\N-Stride New\.next\routes-manifest.json'] {
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: 'C:\\Users\\User\\Desktop\\N-Stride\\N-Stride New\\.next\\routes-manifest.json'
+}
+[Error: ENOENT: no such file or directory, open 'C:\Users\User\Desktop\N-Stride\N-Stride New\.next\routes-manifest.json'] {
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: 'C:\\Users\\User\\Desktop\\N-Stride\\N-Stride New\\.next\\routes-manifest.json'
+}
+[Error: ENOENT: no such file or directory, open 'C:\Users\User\Desktop\N-Stride\N-Stride New\.next\routes-manifest.json'] {
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: 'C:\\Users\\User\\Desktop\\N-Stride\\N-Stride New\\.next\\routes-manifest.json'
+}
+ GET /verticals/bio-fit 500 in 8929ms
+ GET /verticals/bio-fit 500 in 538ms
+[?25h

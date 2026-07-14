@@ -13,33 +13,37 @@ export function VisitLocationSection() {
   ];
 
   return (
-    <Section className="py-14 sm:py-16 lg:py-20" variant="soft">
+    <Section className="py-8 sm:py-10 lg:py-12" variant="soft">
       <Container>
-        <div className="grid gap-6 rounded-[2rem] border border-border-soft bg-white p-5 shadow-card lg:grid-cols-[0.82fr_1.18fr] lg:p-8">
+        <div className="grid gap-5 rounded-[1.25rem] border border-border-soft bg-white p-4 shadow-[0_18px_52px_rgba(16,42,67,0.07)] lg:grid-cols-[0.72fr_1.28fr] lg:p-5">
           <div>
-            <p className="text-sm font-bold uppercase tracking-[0.14em] text-primary">Location</p>
-            <h2 className="mt-4 text-3xl font-semibold leading-tight text-primary-dark sm:text-4xl">Visit or contact N-Stride</h2>
-            <div className="mt-6 grid gap-4">
+            <p className="text-xs font-bold uppercase tracking-[0.16em] text-primary">Location</p>
+            <h2 className="mt-3 text-2xl font-semibold leading-tight text-primary-dark sm:text-3xl">Visit or contact N-Stride</h2>
+            <div className="mt-5 grid gap-3">
               {rows.map((row) => {
                 const Icon = row.icon;
 
                 return (
-                  <div className="flex gap-3 rounded-[1rem] border border-border-soft bg-background-soft p-4" key={row.label}>
+                  <div className="flex gap-3 rounded-[0.8rem] border border-border-soft bg-background-soft p-3" key={row.label}>
                     <Icon aria-hidden="true" className="mt-0.5 h-5 w-5 shrink-0 text-primary" />
                     <div>
                       <p className="text-sm font-bold text-primary-dark">{row.label}</p>
-                      <p className="mt-1 text-sm leading-6 text-text-secondary">{row.value}</p>
+                      <p className="mt-1 text-[0.82rem] leading-5 text-text-secondary">{row.value}</p>
                     </div>
                   </div>
                 );
               })}
             </div>
           </div>
-          <div className="flex min-h-[22rem] items-center justify-center rounded-[1.5rem] border border-dashed border-border-soft bg-background-soft p-6 text-center">
-            {/* TODO: Add verified Google Maps embed URL here after the final location embed is approved. */}
-            <p className="max-w-sm text-sm font-semibold leading-6 text-text-secondary">
-              Map embed placeholder: add verified Google Maps embed URL here.
-            </p>
+          <div className="min-h-[19rem] overflow-hidden rounded-[1rem] bg-background-soft">
+            <iframe
+              allowFullScreen
+              className="h-full min-h-[19rem] w-full border-0"
+              loading="lazy"
+              referrerPolicy="strict-origin-when-cross-origin"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3889.332708080544!2d77.6096967733017!3d12.886315016745943!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae15749a6f3c39%3A0x87c930d166c58778!2sN-Stride%20(Nayapada%20Healing%20Solutions%20Pvt%20Ltd)!5e0!3m2!1sen!2sin!4v1784057216308!5m2!1sen!2sin"
+              title="N-Stride location map"
+            />
           </div>
         </div>
       </Container>

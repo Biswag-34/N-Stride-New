@@ -1,16 +1,13 @@
-import { PageHero } from "@/components/page-sections/PageHero";
+import type { Metadata } from "next";
+
+import { AboutPage as AboutExperience } from "@/components/about/AboutPage";
 import { brand } from "@/data/brand";
-import { ctas } from "@/data/ctas";
+
+export const metadata: Metadata = {
+  title: "About N-Stride | Complete Foot & Lower-Limb Care Ecosystem",
+  description: brand.longIntro,
+};
 
 export default function AboutPage() {
-  return (
-    <PageHero
-      description={brand.longIntro}
-      eyebrow={brand.descriptor}
-      primaryCta={ctas.primary}
-      secondaryCta={ctas.verticals}
-      title="About N-Stride"
-      variant="blue"
-    />
-  );
+  return <AboutExperience />;
 }

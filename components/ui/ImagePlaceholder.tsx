@@ -17,13 +17,13 @@ const aspects: Record<NonNullable<ImagePlaceholderProps["aspect"]>, string> = {
 export function ImagePlaceholder({ aspect = "video", label }: ImagePlaceholderProps) {
   return (
     <div
+      aria-label={label}
       className={cn(
         "flex min-w-0 w-full flex-col items-center justify-center overflow-hidden rounded-lg border border-dashed border-border-soft bg-background-soft p-6 text-center text-primary",
         aspects[aspect],
       )}
     >
-      <ImageIcon aria-hidden="true" className="mb-3 h-8 w-8" strokeWidth={1.8} />
-      <span className="max-w-full break-words text-sm font-semibold [overflow-wrap:anywhere]">{label}</span>
+      <ImageIcon aria-hidden="true" className="h-8 w-8" strokeWidth={1.8} />
     </div>
   );
 }

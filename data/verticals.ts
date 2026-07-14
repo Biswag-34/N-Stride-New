@@ -166,7 +166,7 @@ export const verticals = [
     ],
     imageNeeds: [
       "Doctor-led foot checkup in a clean consultation environment",
-      "Foot scan or pressure assessment visual placeholder",
+      "Foot scan or pressure assessment visual",
       "Patient consultation with footwear recommendation materials",
       "Clinical diagnostic tools on an ice-blue surface",
     ],
@@ -260,7 +260,7 @@ export const verticals = [
     ],
     cta: {
       primary: { label: "Request Wound Care Support", href: "/contact?type=wound-care" },
-      secondary: { label: "Partner with Step-Ahead", href: "/step-ahead" },
+      secondary: { label: "Partner with Step-Ahead", href: "/contact?type=step-ahead" },
     },
     seo: {
       title: "N-Stride NPWT VAC & Wound Care | Modern Wound-Care Support",
@@ -342,7 +342,7 @@ export const verticals = [
     imageNeeds: [
       "Prosthetic and orthotic fitting consultation in a premium clinical setting",
       "Close-up of orthotic brace or mobility support detail",
-      "Silicone restoration material or process placeholder without sensitive imagery",
+      "Silicone restoration material or process visual without sensitive imagery",
       "Patient walking support or rehabilitation guidance scene",
     ],
     cta: {
