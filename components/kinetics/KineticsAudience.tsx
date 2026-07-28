@@ -6,7 +6,6 @@ import type { Vertical } from "@/data/verticals";
 
 import {
   KineticsContainer,
-  KineticsKicker,
   KineticsSection,
   MotionReveal,
 } from "@/components/kinetics/KineticsPrimitives";
@@ -29,8 +28,7 @@ export function KineticsAudience({ vertical }: KineticsAudienceProps) {
       <KineticsContainer>
         <div className="grid items-center gap-7 lg:grid-cols-[0.26fr_0.6fr_0.14fr]">
           <MotionReveal>
-            <KineticsKicker>Who this helps</KineticsKicker>
-            <h2 className="mt-3 font-heading text-3xl font-bold leading-tight text-primary-dark">
+            <h2 className="font-heading text-3xl font-bold leading-tight text-primary-dark">
               For every step.
               <br />
               For every story.

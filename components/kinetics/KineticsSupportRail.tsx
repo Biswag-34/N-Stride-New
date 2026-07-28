@@ -7,7 +7,6 @@ import { FaShoePrints } from "react-icons/fa6";
 import {
   KineticsContainer,
   KineticsIconBubble,
-  KineticsKicker,
   KineticsSection,
   MotionReveal,
 } from "@/components/kinetics/KineticsPrimitives";
@@ -28,8 +27,7 @@ export function KineticsSupportRail() {
       <KineticsContainer>
         <MotionReveal>
           <div className="rounded-[1.35rem] border border-[#c9e6f8] bg-[linear-gradient(90deg,#f4faff,#ffffff,#f4faff)] px-7 py-6 shadow-[0_20px_55px_rgba(20,121,201,0.1)]">
-            <KineticsKicker>Complete your care</KineticsKicker>
-            <div className="mt-4 grid gap-6 lg:grid-cols-[0.24fr_0.76fr] lg:items-end">
+            <div className="grid gap-6 lg:grid-cols-[0.24fr_0.76fr] lg:items-end">
               <div>
                 <h2 className="font-heading text-2xl font-bold text-primary-dark">Support beyond footwear.</h2>
                 <p className="mt-2 text-sm text-text-secondary">

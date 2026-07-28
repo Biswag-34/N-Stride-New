@@ -7,7 +7,6 @@ import {
   WoundBackgroundImage,
   WoundContainer,
   WoundIconBubble,
-  WoundKicker,
   WoundReveal,
   WoundSection,
 } from "@/components/wound-care/WoundCarePrimitives";
@@ -30,14 +29,13 @@ export function WoundCareTechnology({ vertical }: WoundCareTechnologyProps) {
       <WoundContainer>
         <div className="grid items-center gap-8 lg:grid-cols-[0.28fr_0.72fr]">
           <WoundReveal>
-            <WoundKicker>Technology & logic</WoundKicker>
-            <h2 className="mt-4 max-w-[24rem] font-heading text-3xl font-bold leading-tight text-primary-dark">
+            <h2 className="max-w-[24rem] font-heading text-3xl font-bold leading-tight text-primary-dark">
               The NPWT VAC advantage
             </h2>
             <p className="mt-5 max-w-[24rem] text-sm leading-7 text-text-secondary">
               Negative Pressure Wound Therapy helps create an optimal healing environment.
             </p>
-            <a className="mt-5 inline-flex items-center gap-2 text-sm font-bold text-primary" href="#wound-support">
+            <a className="mt-5 inline-flex items-center gap-2 text-sm font-bold text-primary" href="/contact?type=wound-care">
               Learn about NPWT VAC
               <ArrowRight aria-hidden="true" className="h-4 w-4" />
             </a>

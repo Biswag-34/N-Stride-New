@@ -2,7 +2,7 @@
 
 import { CheckCircle2, Clock3, Handshake, LineChart, Repeat2 } from "lucide-react";
 
-import { StepContainer, StepIconBubble, StepKicker, StepReveal, StepSection } from "./StepAheadPrimitives";
+import { StepContainer, StepIconBubble, StepReveal, StepSection } from "./StepAheadPrimitives";
 
 const values = [
   { title: "Proven clinical pathways and outcomes focus", icon: CheckCircle2 },
@@ -14,32 +14,33 @@ const values = [
 
 export function StepAheadValueBand() {
   return (
-    <StepSection className="py-9">
+    <StepSection className="bg-white py-9">
       <StepContainer>
         <StepReveal>
-          <div className="relative overflow-hidden rounded-[1.75rem] bg-white px-8 py-9 shadow-[18px_28px_70px_rgba(20,121,201,0.075)] ring-1 ring-[#d8edf8]">
+          <div className="relative overflow-hidden rounded-[1rem] bg-[linear-gradient(135deg,#073b66,#0f6eb9_58%,#eafaf0_58%,#ffffff)] px-5 py-7 shadow-[18px_28px_70px_rgba(20,121,201,0.11)] ring-1 ring-[#d8edf8] lg:px-7 lg:py-8">
             <div
               aria-hidden="true"
-              className="absolute inset-x-0 bottom-0 h-28 bg-[url('/step-ahead/soft-green-wave.png')] bg-cover bg-bottom opacity-45"
+              className="absolute inset-x-0 bottom-0 h-24 bg-[url('/step-ahead/soft-green-wave.png')] bg-cover bg-bottom opacity-28"
             />
-            <svg aria-hidden="true" className="absolute inset-x-0 bottom-0 h-20 w-full" preserveAspectRatio="none" viewBox="0 0 1200 120">
-              <path d="M5 15 C210 105 438 100 615 67 C800 32 965 41 1195 15" fill="none" stroke="#7ccf8d" strokeLinecap="round" strokeWidth="2.2" />
-            </svg>
-            <div className="relative">
-              <StepKicker>Why partners choose Step-Ahead</StepKicker>
-              <h2 className="mt-3 font-heading text-[clamp(1.55rem,2vw,2.15rem)] font-bold text-primary-dark">
+            <div className="relative grid gap-7 lg:grid-cols-[0.36fr_0.64fr] lg:items-center">
+              <div className="text-white">
+              <h2 className="font-heading text-[clamp(1.6rem,2.2vw,2.35rem)] font-bold leading-tight text-white">
                 A partnership built for better care and better business.
               </h2>
-              <div className="mt-8 grid gap-5 md:grid-cols-5">
+                <p className="mt-4 text-sm leading-7 text-white/82">
+                  Built for clinics and healthcare entrepreneurs who want a credible care service, not just equipment.
+                </p>
+              </div>
+              <div className="grid gap-3 md:grid-cols-5">
                 {values.map((item) => {
                   const Icon = item.icon;
 
                   return (
-                    <div className="flex items-center gap-3 md:block" key={item.title}>
-                      <StepIconBubble className="h-12 w-12 bg-[#f1fff5] text-[#4aa65a] shadow-[0_13px_30px_rgba(92,184,92,0.11)]" size="sm">
+                    <div className="rounded-[0.85rem] bg-white/88 p-4 shadow-[0_14px_34px_rgba(7,59,102,0.1)] backdrop-blur" key={item.title}>
+                      <StepIconBubble className="h-12 w-12 bg-[#f1fff5] text-[#4aa65a] shadow-none" size="sm">
                         <Icon aria-hidden="true" className="h-5 w-5" />
                       </StepIconBubble>
-                      <p className="mt-0 max-w-[11rem] text-[0.8rem] font-bold leading-5 text-primary-dark md:mt-4">{item.title}</p>
+                      <p className="mt-4 text-[0.8rem] font-bold leading-5 text-primary-dark">{item.title}</p>
                     </div>
                   );
                 })}

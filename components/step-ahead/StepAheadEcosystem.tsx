@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { CheckCircle2 } from "lucide-react";
 
-import { StepContainer, StepKicker, StepReveal, StepSection } from "./StepAheadPrimitives";
+import { StepContainer, StepReveal, StepSection } from "./StepAheadPrimitives";
 
 const bullets = [
   "Unified patient journey across needs",
@@ -15,12 +15,11 @@ const bullets = [
 
 export function StepAheadEcosystem() {
   return (
-    <StepSection className="py-12">
+    <StepSection className="bg-[linear-gradient(180deg,#ffffff,#f7fcff)] py-10">
       <StepContainer>
-        <div className="grid items-center gap-10 lg:grid-cols-[0.31fr_0.43fr_0.26fr]">
+        <div className="grid items-center gap-8 lg:grid-cols-[0.31fr_0.43fr_0.26fr]">
           <StepReveal>
-            <StepKicker>Connected to the N-Stride ecosystem</StepKicker>
-            <h2 className="mt-4 font-heading text-[clamp(1.6rem,2.3vw,2.25rem)] font-bold leading-tight text-primary-dark">
+            <h2 className="font-heading text-[clamp(1.6rem,2.3vw,2.25rem)] font-bold leading-tight text-primary-dark">
               You are never building alone.
             </h2>
             <p className="mt-4 max-w-[22rem] text-sm leading-7 text-text-secondary">

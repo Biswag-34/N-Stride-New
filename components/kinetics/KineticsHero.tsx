@@ -1,26 +1,19 @@
 "use client";
 
 import Image from "next/image";
-import { motion, useReducedMotion } from "framer-motion";
+import { motion } from "framer-motion";
 import { ArrowRight, HeartPulse, ShieldCheck } from "lucide-react";
 import { GiRunningShoe } from "react-icons/gi";
 import type { Vertical } from "@/data/verticals";
 
 import { Button } from "@/components/ui/Button";
-import { fadeUp, IconText, KineticsContainer, KineticsKicker, kineticEase, MotionReveal } from "@/components/kinetics/KineticsPrimitives";
+import { fadeUp, IconText, KineticsContainer, MotionReveal } from "@/components/kinetics/KineticsPrimitives";
 
 type KineticsHeroProps = {
   vertical: Vertical;
 };
 
-const heroLabels = [
-  { label: "Support that moves with you", className: "left-[38%] top-[22%]" },
-  { label: "Protection that lasts", className: "left-[24%] top-[50%]" },
-  { label: "Guidance that fits", className: "right-[7%] top-[43%]" },
-];
-
 export function KineticsHero({ vertical }: KineticsHeroProps) {
-  const reduceMotion = useReducedMotion();
   const secondaryCta = vertical.cta.secondary ?? {
     external: true,
     href: "https://nstride.shop",
@@ -28,26 +21,25 @@ export function KineticsHero({ vertical }: KineticsHeroProps) {
   };
 
   return (
-    <section className="relative isolate overflow-hidden bg-white shadow-[inset_0_-18px_35px_rgba(20,121,201,0.06)]">
+    <section className="relative isolate overflow-hidden bg-[linear-gradient(115deg,#ffffff_0%,#fbfdff_42%,#eef8ff_100%)]">
       <div
         aria-hidden="true"
-        className="absolute inset-0 bg-[radial-gradient(circle_at_77%_43%,rgba(20,121,201,0.2),transparent_34%),radial-gradient(circle_at_61%_74%,rgba(221,241,255,0.65),transparent_34%)]"
+        className="absolute inset-0 bg-[radial-gradient(circle_at_78%_42%,rgba(20,121,201,0.18),transparent_32%),radial-gradient(circle_at_62%_80%,rgba(221,241,255,0.68),transparent_33%)]"
       />
-      <KineticsContainer className="relative grid items-center gap-7 py-8 xs:py-10 lg:min-h-[560px] lg:grid-cols-[0.82fr_1.18fr] lg:gap-6 lg:py-0">
+      <div aria-hidden="true" className="absolute inset-x-0 bottom-0 h-24 bg-[linear-gradient(180deg,transparent,#ffffff_78%)]" />
+      <KineticsContainer className="relative grid items-center gap-7 py-9 xs:py-11 lg:min-h-[560px] lg:grid-cols-[0.78fr_1.22fr] lg:gap-6 lg:py-0">
         <motion.div
           animate="visible"
-          className="max-w-[33rem]"
+          className="max-w-[34rem]"
           initial={false}
           variants={{ hidden: {}, visible: { transition: { staggerChildren: 0.1 } } }}
         >
-          <motion.div variants={fadeUp}>
-            <KineticsKicker>{vertical.shortName}</KineticsKicker>
-          </motion.div>
           <motion.h1
-            className="mt-4 max-w-[31rem] font-heading text-[clamp(2.05rem,10vw,4rem)] font-bold leading-[1.02] tracking-[-0.02em] text-primary-dark lg:leading-[0.98]"
+            className="max-w-[32rem] font-heading text-[clamp(2rem,7vw,3.9rem)] font-bold leading-[1.04] text-primary-dark lg:leading-[1]"
             variants={fadeUp}
           >
-            Movement deserves the right foundation.
+            <span className="block whitespace-nowrap">Protect every step.</span>
+            <span className="block whitespace-nowrap">Move with confidence.</span>
           </motion.h1>
           <motion.p className="mt-5 max-w-[30rem] text-sm leading-7 text-text-secondary sm:text-base" variants={fadeUp}>
             N-Stride Kinetics brings therapeutic footwear and performance-driven design together for protection,
@@ -78,33 +70,37 @@ export function KineticsHero({ vertical }: KineticsHeroProps) {
           <div className="relative ml-auto h-full min-h-[260px] w-full max-w-[900px] xs:min-h-[320px] lg:min-h-[350px]">
             <div
               aria-hidden="true"
-              className="absolute -bottom-10 right-[-4%] z-0 h-[48%] w-[88%] rounded-[50%] bg-[#bce2fb]/70 blur-[48px]"
+              className="absolute -bottom-12 right-[-4%] z-0 h-[48%] w-[88%] rounded-[50%] bg-[#bce2fb]/70 blur-[52px]"
             />
             <div
               aria-hidden="true"
-              className="absolute right-[3%] top-[2%] z-0 h-[88%] w-[88%] rounded-[42%] bg-[#dff1ff]/80 blur-[64px]"
+              className="absolute right-[3%] top-[1%] z-0 h-[88%] w-[88%] rounded-[42%] bg-[#dff1ff]/84 blur-[72px]"
             />
-            <div className="relative z-10 h-full min-h-[260px] overflow-hidden xs:min-h-[320px] lg:min-h-[350px]">
+            <div className="relative z-10 h-full min-h-[260px] xs:min-h-[320px] lg:min-h-[350px]">
               <Image
                 alt="Therapeutic footwear worn indoors"
-                className="object-cover object-center"
+                className="object-cover object-center mix-blend-multiply"
                 fill
                 priority
                 sizes="(min-width: 1024px) 900px, 94vw"
                 src="/kinetics/hero.png"
                 style={{
                   maskImage:
-                    "linear-gradient(90deg, transparent 0%, rgba(0,0,0,0.18) 7%, #000 20%, #000 100%)",
+                    "radial-gradient(ellipse at 56% 48%, #000 54%, rgba(0,0,0,0.82) 67%, transparent 93%)",
                   WebkitMaskImage:
-                    "linear-gradient(90deg, transparent 0%, rgba(0,0,0,0.18) 7%, #000 20%, #000 100%)",
+                    "radial-gradient(ellipse at 56% 48%, #000 54%, rgba(0,0,0,0.82) 67%, transparent 93%)",
                 }}
               />
-              <div className="absolute inset-0 bg-[linear-gradient(90deg,#ffffff_0%,rgba(255,255,255,0.72)_10%,transparent_24%,transparent_82%,rgba(221,241,255,0.13)_100%)]" />
-              <div className="absolute inset-x-0 bottom-0 h-[32%] bg-[linear-gradient(0deg,rgba(188,226,251,0.76),rgba(188,226,251,0.22)_42%,transparent)]" />
-              <div className="absolute -left-10 bottom-0 h-32 w-[72%] rounded-full bg-[#dff1ff]/56 blur-3xl" />
+              <div className="absolute inset-0 bg-[linear-gradient(90deg,#ffffff_0%,rgba(255,255,255,0.76)_8%,transparent_25%,transparent_78%,rgba(238,248,255,0.42)_100%)]" />
+              <div className="absolute inset-x-0 bottom-0 h-[38%] bg-[linear-gradient(0deg,#ffffff_0%,rgba(244,250,255,0.72)_32%,transparent_82%)]" />
+              <div className="absolute -left-10 bottom-0 h-36 w-[78%] rounded-full bg-[#dff1ff]/62 blur-3xl" />
+              <div className="absolute bottom-[7%] right-[14%] z-20 flex items-center gap-2 rounded-full border border-white/82 bg-white/46 px-4 py-2 text-xs font-bold text-primary-dark shadow-[0_14px_34px_rgba(7,59,102,0.12)] backdrop-blur-md">
+                <span className="h-2 w-2 rounded-full bg-primary" />
+                Comfort fit tested
+              </div>
               <svg
                 aria-hidden="true"
-                className="pointer-events-none absolute inset-x-[2%] bottom-[8%] z-20 h-[42%] w-[92%]"
+                className="pointer-events-none absolute inset-x-[4%] bottom-[9%] z-20 h-[34%] w-[88%]"
                 fill="none"
                 viewBox="0 0 760 190"
               >
@@ -131,21 +127,7 @@ export function KineticsHero({ vertical }: KineticsHeroProps) {
                   opacity="0.22"
                 />
               </svg>
-              <div className="absolute bottom-[9%] right-[8%] z-20 flex h-20 w-20 rotate-[-12deg] items-center justify-center rounded-full border border-white/72 bg-white/14 text-center font-heading text-[0.48rem] font-bold uppercase tracking-[0.15em] text-white shadow-[inset_0_0_0_1px_rgba(255,255,255,0.25)] backdrop-blur-sm">
-                Comfort fit tested
-              </div>
             </div>
-            {heroLabels.map((item, index) => (
-              <motion.div
-                animate={reduceMotion ? undefined : { y: [0, -5, 0] }}
-                className={`absolute z-20 hidden rounded-full border border-white/50 bg-primary-dark/34 px-4 py-3 text-xs font-bold leading-snug text-white shadow-[0_12px_28px_rgba(7,59,102,0.18)] backdrop-blur-md md:block ${item.className}`}
-                key={item.label}
-                transition={{ delay: index * 0.25, duration: 5.2, ease: kineticEase, repeat: Infinity }}
-              >
-                <span className="mr-2 inline-flex h-4 w-4 rounded-full border border-white/60 align-middle" />
-                {item.label}
-              </motion.div>
-            ))}
           </div>
         </MotionReveal>
       </KineticsContainer>

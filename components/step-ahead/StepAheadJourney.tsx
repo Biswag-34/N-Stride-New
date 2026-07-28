@@ -1,9 +1,9 @@
 "use client";
 
-import Image from "next/image";
+import { motion } from "framer-motion";
 import { TbCompass, TbPackage, TbRocket, TbSchool, TbTargetArrow, TbTrendingUp } from "react-icons/tb";
 
-import { StepContainer, StepIconBubble, StepKicker, StepReveal, StepSection } from "./StepAheadPrimitives";
+import { StepContainer, StepIconBubble, StepReveal, StepSection, stepEase } from "./StepAheadPrimitives";
 
 const journey = [
   { title: "Discover & Plan", text: "Assess needs, define scope and build your business case.", icon: TbCompass },
@@ -16,56 +16,56 @@ const journey = [
 
 export function StepAheadJourney() {
   return (
-    <StepSection className="bg-white py-14">
+    <StepSection className="bg-[linear-gradient(180deg,#ffffff,#f7fcff)] py-11">
       <StepContainer>
-        <StepReveal className="mb-8 flex flex-col justify-between gap-3 md:flex-row md:items-end">
+        <StepReveal className="mb-7 flex flex-col justify-between gap-3 md:flex-row md:items-end">
           <div>
-            <StepKicker>The Step-Ahead journey</StepKicker>
-            <h2 className="mt-3 font-heading text-[clamp(2rem,3vw,3rem)] font-bold tracking-[-0.02em] text-primary-dark">
+            <h2 className="font-heading text-[clamp(1.85rem,2.8vw,2.75rem)] font-bold text-primary-dark">
               A guided pathway from setup to scale.
             </h2>
           </div>
         </StepReveal>
 
         <StepReveal>
-          <div className="relative overflow-hidden rounded-[3rem] bg-white px-5 py-8 shadow-[18px_24px_70px_rgba(20,121,201,0.08)] ring-1 ring-[#c9e6f8] lg:px-9 lg:py-10">
-            <Image
-              alt=""
-              className="pointer-events-none absolute inset-0 h-full w-full object-cover object-center opacity-[0.16]"
-              fill
-              src="/step-ahead/journey-process-line.png"
-              sizes="100vw"
-            />
-            <svg
-              aria-hidden="true"
-              className="absolute left-[6%] top-[5.35rem] hidden h-12 w-[88%] text-[#9fcdf4] lg:block"
-              fill="none"
-              preserveAspectRatio="none"
-              viewBox="0 0 1180 74"
-            >
-              <path
-                d="M6 38C82 38 86 37 152 37H222C272 37 283 37 330 37H410C452 37 470 37 512 37H592C639 37 654 37 700 37H780C826 37 843 37 890 37H970C1038 37 1054 37 1174 37"
-                stroke="currentColor"
-                strokeDasharray="5 10"
-                strokeLinecap="round"
-                strokeWidth="2"
-              />
-            </svg>
-            <div className="relative grid gap-8 lg:grid-cols-6">
+          <div className="relative overflow-hidden rounded-[1.05rem] border border-[#c9e6f8]/80 bg-white/78 px-4 py-6 shadow-[0_18px_58px_rgba(20,121,201,0.07)] backdrop-blur lg:px-7 lg:py-8">
+            <div aria-hidden="true" className="absolute left-9 top-8 bottom-8 w-px bg-[linear-gradient(180deg,transparent,#8acdf1,#80d8bf,#8acdf1,transparent)] lg:hidden" />
+            <div aria-hidden="true" className="absolute left-[7%] right-[7%] top-[4.8rem] hidden h-px bg-[linear-gradient(90deg,transparent,#8acdf1,#80d8bf,#8acdf1,transparent)] lg:block" />
+            <div className="relative grid gap-5 lg:grid-cols-6 lg:gap-2">
               {journey.map((step, index) => {
                 const Icon = step.icon;
 
                 return (
-                  <div className="relative text-center" key={step.title}>
-                    <StepIconBubble className="mx-auto h-[4.7rem] w-[4.7rem] border-[#afd8f4] text-primary shadow-[0_18px_42px_rgba(20,121,201,0.12)]">
+                  <motion.div
+                    className="relative flex items-center gap-4 pl-2 lg:flex-col lg:gap-3 lg:pl-0 lg:text-center"
+                    key={step.title}
+                    transition={{ delay: index * 0.04, duration: 0.5, ease: stepEase }}
+                    whileHover={{ y: -6 }}
+                  >
+                    <StepIconBubble className="h-16 w-16 border-[#afd8f4] text-primary shadow-[0_16px_36px_rgba(20,121,201,0.12)]">
                       <Icon aria-hidden="true" className="h-8 w-8 stroke-[1.7]" />
                     </StepIconBubble>
-                    <p className="mt-4 text-[0.68rem] font-bold text-text-muted">Step 0{index + 1}</p>
-                    <h3 className="mt-1 font-heading text-base font-bold text-primary-dark">{step.title}</h3>
-                    <p className="mx-auto mt-3 max-w-[10.4rem] text-xs leading-5 text-text-secondary">{step.text}</p>
-                  </div>
+                    <div className="max-w-[12rem]">
+                      <p className="font-heading text-xs font-bold text-primary">0{index + 1}</p>
+                      <h3 className="mt-1 font-heading text-base font-bold text-primary-dark">{step.title}</h3>
+                      <p className="mt-2 text-xs leading-5 text-text-secondary">{step.text}</p>
+                    </div>
+                  </motion.div>
                 );
               })}
+            </div>
+            <div className="relative mt-6 grid gap-3 border-t border-[#d8edf8] pt-5 md:grid-cols-3">
+              <div className="rounded-[0.75rem] bg-[#f7fcff] px-4 py-3">
+                <p className="font-heading text-sm font-bold text-primary-dark">Setup clarity</p>
+                <p className="mt-1 text-xs leading-5 text-text-secondary">space, package and launch plan aligned first</p>
+              </div>
+              <div className="rounded-[0.75rem] bg-[linear-gradient(135deg,#eaf8ff,#eefcf4)] px-4 py-3 text-center">
+                <p className="font-heading text-sm font-bold text-primary-dark">Clinic enablement</p>
+                <p className="mt-1 text-xs leading-5 text-text-secondary">training, equipment and SOPs move together</p>
+              </div>
+              <div className="rounded-[0.75rem] bg-[#f7fcff] px-4 py-3 md:text-right">
+                <p className="font-heading text-sm font-bold text-primary-dark">Growth support</p>
+                <p className="mt-1 text-xs leading-5 text-text-secondary">referrals, outcomes and review cadence</p>
+              </div>
             </div>
           </div>
         </StepReveal>

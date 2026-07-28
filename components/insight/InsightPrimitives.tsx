@@ -43,7 +43,7 @@ export function InsightReveal({
   return (
     <motion.div
       className={className}
-      initial={false}
+      initial={{ opacity: 0, y: 26 }}
       transition={{ delay, duration: 0.72, ease: insightEase }}
       viewport={{ once: true, margin: "-80px" }}
       whileInView={{ opacity: 1, y: 0 }}

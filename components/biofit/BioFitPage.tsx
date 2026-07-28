@@ -1,6 +1,5 @@
 import type { Vertical } from "@/data/verticals";
 
-import { BioFitConnectedPathways } from "@/components/biofit/BioFitConnectedPathways";
 import { BioFitCTA } from "@/components/biofit/BioFitCTA";
 import { BioFitEcosystem } from "@/components/biofit/BioFitEcosystem";
 import { BioFitHero } from "@/components/biofit/BioFitHero";
@@ -22,7 +21,6 @@ export function BioFitPage({ vertical }: BioFitPageProps) {
       <BioFitSolutions vertical={vertical} />
       <BioFitJourney />
       <BioFitTechnology vertical={vertical} />
-      <BioFitConnectedPathways />
       <BioFitCTA vertical={vertical} />
     </>
   );

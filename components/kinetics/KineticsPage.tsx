@@ -2,7 +2,6 @@ import type { Vertical } from "@/data/verticals";
 
 import { KineticsAudience } from "@/components/kinetics/KineticsAudience";
 import { KineticsCTA } from "@/components/kinetics/KineticsCTA";
-import { KineticsEcosystemBand } from "@/components/kinetics/KineticsEcosystemBand";
 import { KineticsHero } from "@/components/kinetics/KineticsHero";
 import { KineticsJourney } from "@/components/kinetics/KineticsJourney";
 import { KineticsPathways } from "@/components/kinetics/KineticsPathways";
@@ -17,7 +16,6 @@ export function KineticsPage({ vertical }: KineticsPageProps) {
   return (
     <>
       <KineticsHero vertical={vertical} />
-      <KineticsEcosystemBand />
       <KineticsAudience vertical={vertical} />
       <KineticsPathways />
       <KineticsJourney />

@@ -6,7 +6,6 @@ import { ArrowRight, BadgeCheck, Footprints, Route, ScanLine } from "lucide-reac
 import {
   KineticsContainer,
   KineticsIconBubble,
-  KineticsKicker,
   KineticsSection,
   MotionReveal,
 } from "@/components/kinetics/KineticsPrimitives";
@@ -38,8 +37,7 @@ export function KineticsJourney() {
           </MotionReveal>
 
           <MotionReveal>
-            <KineticsKicker>Our journey with you</KineticsKicker>
-            <h2 className="mt-3 max-w-[41rem] font-heading text-3xl font-bold leading-tight text-primary-dark md:text-4xl">
+            <h2 className="max-w-[41rem] font-heading text-3xl font-bold leading-tight text-primary-dark md:text-4xl">
               From understanding to the right fit-every step guided.
             </h2>
             <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">

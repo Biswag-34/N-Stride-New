@@ -1,7 +1,6 @@
 "use client";
 
 import { StepAheadEcosystem } from "@/components/step-ahead/StepAheadEcosystem";
-import { StepAheadFAQ } from "@/components/step-ahead/StepAheadFAQ";
 import { StepAheadFinalCTA } from "@/components/step-ahead/StepAheadFinalCTA";
 import { StepAheadHero } from "@/components/step-ahead/StepAheadHero";
 import { StepAheadJourney } from "@/components/step-ahead/StepAheadJourney";
@@ -18,7 +17,6 @@ export function StepAheadPage() {
       <StepAheadPackages />
       <StepAheadValueBand />
       <StepAheadEcosystem />
-      <StepAheadFAQ />
       <StepAheadFinalCTA />
     </>
   );

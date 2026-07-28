@@ -1,6 +1,5 @@
 "use client";
 
-import Link from "next/link";
 import { ArrowRight, HeartPulse, ShieldCheck, Stethoscope, UserRoundCheck } from "lucide-react";
 import type { Vertical } from "@/data/verticals";
 
@@ -9,7 +8,6 @@ import {
   WoundAsset,
   WoundBackgroundImage,
   WoundContainer,
-  WoundKicker,
   WoundPill,
   WoundReveal,
   WoundSection,
@@ -28,23 +26,15 @@ const proof = [
 
 export function WoundCareHero({ vertical }: WoundCareHeroProps) {
   return (
-    <WoundSection className="bg-[linear-gradient(105deg,#ffffff,#fbfdff_56%,#fff7e8)] pb-8 pt-7 xs:pt-9">
+    <WoundSection className="bg-[linear-gradient(105deg,#ffffff,#fbfdff_56%,#fff7e8)] pb-8 pt-0">
       <WoundBackgroundImage className="bottom-[-2rem] right-0 h-[24rem] w-[54rem] opacity-20 sm:h-[31rem] sm:w-[70rem] sm:opacity-30" src="/wound-care/blue-amber-wave.png" />
       <WoundContainer className="relative">
-        <nav aria-label="Breadcrumb" className="mb-6 flex flex-wrap items-center gap-2 text-xs font-semibold text-text-secondary xs:mb-7">
-          <Link className="hover:text-primary" href="/">Home</Link>
-          <span>/</span>
-          <Link className="hover:text-primary" href="/verticals">Verticals</Link>
-          <span>/</span>
-          <span className="text-primary-dark">Wound Care</span>
-        </nav>
-        <div className="grid items-center gap-7 lg:min-h-[445px] lg:grid-cols-[0.52fr_0.48fr] lg:gap-9">
+        <div className="grid items-start gap-7 lg:min-h-[445px] lg:grid-cols-[0.52fr_0.48fr] lg:gap-9">
           <WoundReveal>
-            <WoundKicker>Wound Care</WoundKicker>
-            <h1 className="mt-5 max-w-[45rem] font-heading text-[clamp(2rem,10vw,4.15rem)] font-bold leading-[1.04] tracking-[-0.02em] text-primary-dark">
-              N-Stride NPWT VAC &
-              <br />
-              Wound Care
+            <h1 className="max-w-[42rem] font-heading text-[clamp(1.7rem,5.4vw,3.62rem)] font-bold leading-[1.04] text-primary-dark">
+              <span className="block whitespace-nowrap">N-Stride NPWT VAC &</span>
+              {" "}
+              <span className="block whitespace-nowrap">Wound Care</span>
             </h1>
             <p className="mt-5 max-w-[36rem] font-heading text-lg font-semibold leading-7 text-[#b86b00] sm:text-xl sm:leading-8">
               Advanced wound-care support for complex foot and lower-limb needs.

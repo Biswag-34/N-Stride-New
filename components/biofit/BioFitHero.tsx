@@ -8,9 +8,7 @@ import { Button } from "@/components/ui/Button";
 import {
   BioFitContainer,
   BioFitAsset,
-  BioFitCurveDivider,
   BioFitDottedField,
-  BioFitKicker,
   BioFitReveal,
   BioFitSection,
   BioFitWaveImage,
@@ -29,21 +27,22 @@ const proof = [
 
 export function BioFitHero({ vertical }: BioFitHeroProps) {
   return (
-    <BioFitSection className="bg-[linear-gradient(105deg,#ffffff,#fbf9ff_52%,#f2efff)] pb-8 pt-8 xs:pb-10 xs:pt-10">
+    <BioFitSection className="bg-[linear-gradient(105deg,#ffffff,#fbf9ff_52%,#f2efff)] pb-16 pt-8 xs:pt-10 lg:pb-20">
       <div aria-hidden="true" className="absolute inset-0 bg-[radial-gradient(circle_at_76%_24%,rgba(115,87,216,0.12),transparent_28%)]" />
       <BioFitWaveImage
-        className="bottom-[-2.75rem] h-48 bg-bottom opacity-40 [mask-image:linear-gradient(to_top,black_16%,black_68%,transparent_100%)]"
+        className="bottom-[-4.75rem] h-60 bg-bottom opacity-24 blur-[1px] [mask-image:linear-gradient(to_top,black_0%,rgba(0,0,0,0.7)_42%,transparent_92%)]"
         src="/biofit/wave-divider-soft.png"
       />
       <BioFitDottedField className="bottom-1 right-0 h-56 w-[26rem] opacity-55 sm:h-72 sm:w-[38rem] sm:opacity-100" />
-      <BioFitCurveDivider className="bottom-[-2.35rem] opacity-55" />
-      <BioFitContainer className="relative grid items-center gap-7 lg:min-h-[540px] lg:grid-cols-[0.68fr_1.32fr] lg:gap-8">
-        <BioFitReveal>
-          <BioFitKicker>{vertical.shortName}</BioFitKicker>
-          <h1 className="mt-5 max-w-[39rem] font-heading text-[clamp(2.08rem,10vw,4.75rem)] font-bold leading-[1.03] tracking-[-0.025em] text-primary-dark">
-            Restoring form.
-            <br />
-            Restoring life.
+      <div
+        aria-hidden="true"
+        className="absolute inset-x-0 bottom-[-1px] z-10 h-28 bg-[linear-gradient(180deg,rgba(255,255,255,0),rgba(255,255,255,0.72)_48%,#ffffff_96%)]"
+      />
+      <BioFitContainer className="relative z-20 grid gap-7 lg:min-h-[540px] lg:grid-cols-[0.68fr_1.32fr] lg:items-start lg:gap-8">
+        <BioFitReveal className="lg:pt-16">
+          <h1 className="max-w-[34rem] font-heading text-[clamp(2rem,5.6vw,3.72rem)] font-bold leading-[1.04] text-primary-dark">
+            <span className="block whitespace-nowrap">Restoring form.</span>
+            <span className="block whitespace-nowrap">Restoring life.</span>
           </h1>
           <p className="mt-6 max-w-[31rem] text-sm leading-7 text-text-secondary sm:text-base sm:leading-8">
             Orthotics, prosthetics, silicone restoration. Personalized solutions that fit you, support your journey,
@@ -71,7 +70,7 @@ export function BioFitHero({ vertical }: BioFitHeroProps) {
           </div>
         </BioFitReveal>
 
-        <BioFitReveal className="relative min-h-[260px] xs:min-h-[340px] sm:min-h-[440px]">
+        <BioFitReveal className="relative min-h-[260px] xs:min-h-[340px] sm:min-h-[440px] lg:pt-16">
           <div className="absolute right-[2%] top-[4%] h-[86%] w-[88%] rounded-[50%] bg-[#ece8ff]/60 blur-[56px]" />
           <BioFitAsset
             alt="Bio-Fit patient walking with prosthetic support and clinical alignment overlay"

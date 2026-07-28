@@ -34,8 +34,7 @@ export function WoundCareCTA({ vertical }: WoundCareCTAProps) {
             />
             <div className="relative z-10 grid gap-8 lg:grid-cols-[0.3fr_0.34fr_0.36fr] lg:items-center">
               <div>
-                <p className="font-heading text-[0.68rem] font-bold uppercase tracking-[0.16em] text-text-muted">Next step</p>
-                <h2 className="mt-3 font-heading text-2xl font-bold leading-tight text-primary-dark xs:text-3xl">
+                <h2 className="font-heading text-2xl font-bold leading-tight text-primary-dark xs:text-3xl">
                   Let us build your wound-care plan.
                 </h2>
                 <p className="mt-4 text-sm leading-7 text-text-secondary">

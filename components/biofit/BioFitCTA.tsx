@@ -8,7 +8,6 @@ import {
   BioFitAsset,
   BioFitContainer,
   BioFitDottedField,
-  BioFitKicker,
   BioFitReveal,
   BioFitSoftDivider,
   BioFitSection,
@@ -44,8 +43,7 @@ export function BioFitCTA({ vertical }: BioFitCTAProps) {
             </svg>
             <div className="relative z-10 grid gap-8 lg:grid-cols-[0.46fr_0.54fr] lg:items-center">
               <div>
-                <BioFitKicker>Your next step</BioFitKicker>
-                <h2 className="mt-4 max-w-[35rem] font-heading text-3xl font-bold leading-tight text-primary-dark md:text-4xl">
+                <h2 className="max-w-[35rem] font-heading text-3xl font-bold leading-tight text-primary-dark md:text-4xl">
                   Let&apos;s build the right solution for you.
                 </h2>
                 <p className="mt-4 max-w-[35rem] text-sm leading-7 text-text-secondary">

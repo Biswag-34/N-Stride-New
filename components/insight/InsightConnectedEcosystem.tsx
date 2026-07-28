@@ -1,55 +1,101 @@
 "use client";
 
-import Link from "next/link";
-import { ArrowRight, Bandage, Footprints } from "lucide-react";
-import { PiPersonSimpleWalkDuotone } from "react-icons/pi";
+import { Activity, BrainCircuit, Camera, Footprints, MonitorCheck } from "lucide-react";
+import { motion } from "framer-motion";
 
 import {
+  InsightAsset,
   InsightContainer,
   InsightIconBubble,
   InsightReveal,
   InsightSection,
   InsightWaveImage,
+  insightEase,
 } from "@/components/insight/InsightPrimitives";
 
-const cards = [
-  { icon: Footprints, title: "Kinetics", text: "Footwear and movement solution aligned to assessment insights.", href: "/verticals/kinetics" },
-  { icon: Bandage, title: "Wound Care", text: "Structured wound management with N-Stride NPWT VAC & advanced care.", href: "/verticals/wound-care" },
-  { icon: PiPersonSimpleWalkDuotone, title: "Bio-Fit", text: "Restoration through prosthetics, orthotics and silicone solutions.", href: "/verticals/bio-fit" },
-  { icon: ArrowRight, title: "Step-Ahead", text: "Business-in-a-box model to launch and grow your foot care service.", href: "/step-ahead" },
+const machines = [
+  {
+    icon: Footprints,
+    title: "3D Foot Scan Platform",
+    text: "Captures foot shape, posture and fit references for custom recommendations.",
+    src: "/insight/scan-foot-platform.png",
+    className: "lg:col-span-5",
+  },
+  {
+    icon: Activity,
+    title: "Dynamic Pressure Mapper",
+    text: "Shows load concentration and pressure shifts during standing and movement.",
+    src: "/insight/pressure-map-card.png",
+    className: "lg:col-span-3",
+  },
+  {
+    icon: Camera,
+    title: "Wound Assessment Capture",
+    text: "Documents wound visuals and healing indicators for follow-up decisions.",
+    src: "/insight/wound-assessment-card.png",
+    className: "lg:col-span-3",
+  },
+  {
+    icon: MonitorCheck,
+    title: "Insight Clinical Console",
+    text: "Brings scan, risk and recommendation views into one care dashboard.",
+    src: "/insight/insight-dashboard.png",
+    className: "lg:col-span-5",
+  },
 ];
 
 export function InsightConnectedEcosystem() {
   return (
-    <InsightSection className="bg-[linear-gradient(180deg,#ffffff,#f8fcff)] py-16">
-      <InsightWaveImage className="inset-x-0 top-20 h-64 w-full opacity-82" src="/insight/connected-flow-bg.png" />
+    <InsightSection className="bg-[linear-gradient(180deg,#ffffff,#f7fcff)] py-14">
+      <InsightWaveImage className="inset-x-0 top-16 h-64 w-full opacity-72" src="/insight/connected-flow-bg.png" />
       <InsightContainer>
         <InsightReveal className="text-center">
-          <p className="font-heading text-[0.68rem] font-bold uppercase tracking-[0.18em] text-primary">Connected ecosystem</p>
-          <h2 className="mt-3 font-heading text-3xl font-bold text-primary-dark">One platform. Complete care continuity.</h2>
+          <h2 className="font-heading text-3xl font-bold text-primary-dark md:text-[2.35rem]">One platform. Complete care continuity.</h2>
         </InsightReveal>
-        <InsightReveal className="relative mt-10" delay={0.08}>
-          <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
-            {cards.map((card) => {
-              const Icon = card.icon;
+        <InsightReveal className="relative mt-9 overflow-hidden rounded-[1.2rem] border border-[#c9e6f8]/70 bg-white/58 p-4 shadow-[0_26px_76px_rgba(20,121,201,0.08)] backdrop-blur sm:p-5 lg:p-6" delay={0.08}>
+          <div aria-hidden="true" className="absolute left-8 right-8 top-1/2 hidden h-px bg-[linear-gradient(90deg,transparent,#8fcff4,#72d7c0,#8fcff4,transparent)] lg:block" />
+          <div aria-hidden="true" className="absolute bottom-8 left-1/2 h-28 w-[72%] -translate-x-1/2 rounded-full bg-[#dff4ff]/74 blur-[46px]" />
+          <div className="relative grid gap-4 lg:grid-cols-8">
+            {machines.map((machine, index) => {
+              const Icon = machine.icon;
               return (
-                <Link
-                  className="group relative rounded-[1.4rem] bg-white/92 p-7 shadow-[0_18px_50px_rgba(20,121,201,0.09)] ring-1 ring-[#c9e6f8] backdrop-blur transition hover:-translate-y-1 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-primary/25"
-                  href={card.href}
-                  key={card.title}
+                <motion.div
+                  className={`group relative isolate min-h-[20rem] overflow-hidden rounded-[1rem] border border-[#d8ebf8]/80 bg-[linear-gradient(135deg,rgba(255,255,255,0.9),rgba(239,249,255,0.64))] p-5 shadow-[0_16px_44px_rgba(20,121,201,0.08)] ${machine.className}`}
+                  key={machine.title}
+                  transition={{ delay: index * 0.05, duration: 0.6, ease: insightEase }}
+                  whileHover={{ y: -6 }}
                 >
-                  <InsightIconBubble className="h-12 w-12 shadow-none" size="sm">
-                    <Icon className="h-5 w-5" />
+                  <div aria-hidden="true" className="absolute -right-16 -top-16 h-48 w-48 rounded-full bg-[#dff4ff]/70 blur-[34px] transition group-hover:scale-110" />
+                  <div className="relative z-10 flex items-start justify-between gap-4">
+                    <div>
+                      <p className="font-heading text-[0.7rem] font-bold text-primary">0{index + 1}</p>
+                      <h3 className="mt-2 max-w-[16rem] font-heading text-xl font-bold leading-tight text-primary-dark">{machine.title}</h3>
+                      <p className="mt-3 max-w-[19rem] text-sm font-semibold leading-6 text-text-secondary">{machine.text}</p>
+                    </div>
+                    <InsightIconBubble className="h-14 w-14 bg-white/86 shadow-none" color={index % 2 ? "#26b6c8" : "#1479c9"} size="lg">
+                      <Icon className="h-7 w-7" />
                   </InsightIconBubble>
-                  <h3 className="mt-5 font-heading text-lg font-bold text-primary-dark">{card.title}</h3>
-                  <p className="mt-3 min-h-[4rem] text-sm leading-6 text-text-secondary">{card.text}</p>
-                  <span className="mt-4 inline-flex items-center gap-2 text-sm font-bold text-primary">
-                    Explore {card.title}
-                    <ArrowRight aria-hidden="true" className="h-4 w-4 transition group-hover:translate-x-1" />
-                  </span>
-                </Link>
+                  </div>
+                  <div className="relative z-10 mt-4 min-h-[11rem]">
+                    <InsightAsset
+                      alt={machine.title}
+                      className="absolute inset-x-0 bottom-0 min-h-[12rem] mix-blend-multiply [mask-image:radial-gradient(ellipse_at_center,black_56%,rgba(0,0,0,0.78)_74%,transparent_96%)]"
+                      imageClassName="object-contain"
+                      sizes="(max-width: 1024px) 92vw, 42vw"
+                      src={machine.src}
+                    />
+                  </div>
+                </motion.div>
               );
             })}
+            <motion.div
+              aria-hidden="true"
+              className="pointer-events-none absolute bottom-8 right-8 hidden h-20 w-20 items-center justify-center rounded-full border border-[#c9e6f8] bg-white/70 text-primary shadow-[0_16px_38px_rgba(20,121,201,0.1)] lg:flex"
+              animate={{ rotate: 360 }}
+              transition={{ duration: 18, ease: "linear", repeat: Infinity }}
+            >
+              <BrainCircuit className="h-8 w-8" />
+            </motion.div>
           </div>
         </InsightReveal>
       </InsightContainer>

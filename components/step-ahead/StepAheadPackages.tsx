@@ -1,157 +1,125 @@
 "use client";
 
-import Image from "next/image";
-import Link from "next/link";
-import { CheckCircle2, CircleDollarSign, ClipboardList, Headphones, MonitorCog, PackageCheck, Settings2 } from "lucide-react";
+import { motion } from "framer-motion";
+import { CheckCircle2, ClipboardList, Headphones, MonitorCog, PackageCheck, Settings2 } from "lucide-react";
 
-import { StepContainer, StepIconBubble, StepKicker, StepReveal, StepSection } from "./StepAheadPrimitives";
+import { Button } from "@/components/ui/Button";
 
-const included = [
-  { title: "Technology", text: "Diagnostic devices, pressure systems and digital tools", icon: MonitorCog },
-  { title: "Training", text: "Clinical training, certification and ongoing learning", icon: ClipboardList },
-  { title: "Inventory", text: "Care kits, disposables and consumables", icon: PackageCheck },
-  { title: "Service Development", text: "SOPs, patient pathways, marketing and operational support", icon: Settings2 },
-  { title: "Ongoing Support", text: "Remote support, outcomes tracking and growth guidance", icon: Headphones },
+import { StepContainer, StepIconBubble, StepReveal, StepSection, stepEase } from "./StepAheadPrimitives";
+
+const process = [
+  { title: "Technology", text: "diagnostic and foot-care setup", icon: MonitorCog },
+  { title: "Training", text: "clinical workflow and team readiness", icon: ClipboardList },
+  { title: "Inventory", text: "starter kits, tools and consumables", icon: PackageCheck },
+  { title: "Operations", text: "SOPs, patient flow and launch support", icon: Settings2 },
+  { title: "Support", text: "remote guidance and review cadence", icon: Headphones },
 ];
 
-const packages = [
+const programs = [
   {
-    name: "Starter",
-    subtitle: "Launch with confidence",
-    price: "₹ 3,50,000*",
-    features: ["Essential diagnostic setup", "Basic foot care instruments & kits", "Team training foundation", "Standard SOPs & protocols", "Marketing toolkit", "3 months remote support"],
-    best: "Clinics launching first-time services",
+    name: "Step-Ahead Essential",
+    price: "Rs. 3.5L",
+    line: "For clinics launching a focused diabetic foot-care service.",
+    features: [
+      "Essential assessment and care setup",
+      "Core instruments, kits and starter inventory",
+      "Team orientation and launch SOPs",
+      "Clinic marketing starter support",
+      "3 months remote launch guidance",
+    ],
   },
   {
-    name: "Growth",
-    subtitle: "Scale with structure",
-    price: "₹ 6,00,000*",
+    name: "Step-Ahead Advanced",
+    price: "Rs. 5L",
+    line: "For clinics that want stronger diagnostics and growth support.",
     featured: true,
     features: [
-      "Advanced diagnostic tools",
-      "Complete foot care instruments & kits",
-      "Team training (advanced)",
-      "Digital risk assessment module",
-      "Patient education & marketing kit",
-      "6 months remote support + review",
+      "Expanded diagnostic and care setup",
+      "Enhanced instruments, kits and consumables",
+      "Advanced team training and care workflows",
+      "Patient education and outreach toolkit",
+      "6 months remote support with review sessions",
     ],
-    best: "Clinics growing patient base and service scope",
-  },
-  {
-    name: "Impact",
-    subtitle: "Lead with excellence",
-    price: "₹ 9,50,000*",
-    features: [
-      "Premium diagnostic & monitoring tools",
-      "Comprehensive instruments & kits",
-      "Team training framework",
-      "Outcomes dashboard & analytics",
-      "Branded marketing & outreach support",
-      "12 months priority support",
-    ],
-    best: "Clinics aiming for leadership and advanced outcomes",
   },
 ];
 
 export function StepAheadPackages() {
   return (
-    <StepSection className="bg-[linear-gradient(180deg,#ffffff,#f4fbff_92%)] py-10 xs:py-12 sm:py-16" id="packages">
+    <StepSection className="bg-[linear-gradient(180deg,#ffffff,#f5fbff)] py-11" id="packages">
       <StepContainer>
-        <div className="grid gap-10 lg:grid-cols-[0.29fr_0.71fr]">
-          <StepReveal>
-            <StepKicker>What is included</StepKicker>
-            <h2 className="mt-4 font-heading text-[clamp(2rem,3vw,3.15rem)] font-bold leading-tight text-primary-dark">
-              Everything you need.
-              <br />
-              Nothing you do not.
-            </h2>
-            <div className="relative mt-7 space-y-0 pl-1 xs:mt-8 xs:pl-2">
-              <span aria-hidden="true" className="absolute left-[1.28rem] top-5 h-[calc(100%-2.25rem)] w-px bg-[#b9dff5]" />
-              {included.map((item) => {
+        <StepReveal className="mx-auto max-w-[760px] text-center">
+          <h2 className="font-heading text-[clamp(1.85rem,2.8vw,2.75rem)] font-bold leading-tight text-primary-dark">
+            Choose the program level that fits your clinic.
+          </h2>
+          <p className="mt-3 text-sm leading-7 text-text-secondary">
+            Every plan follows the same launch process, then scales by equipment depth, training intensity and support duration.
+          </p>
+        </StepReveal>
+
+        <StepReveal className="mt-7" delay={0.06}>
+          <div className="relative overflow-hidden rounded-[1rem] border border-[#c9e6f8]/80 bg-white/76 p-4 shadow-[0_18px_58px_rgba(20,121,201,0.07)] backdrop-blur lg:p-5">
+            <div aria-hidden="true" className="absolute left-8 right-8 top-[3.4rem] hidden h-px bg-[linear-gradient(90deg,transparent,#8acdf1,#80d8bf,#8acdf1,transparent)] lg:block" />
+            <div className="relative grid gap-4 md:grid-cols-5">
+              {process.map((item, index) => {
                 const Icon = item.icon;
 
                 return (
-                  <div className="relative flex gap-5 pb-7 last:pb-0" key={item.title}>
-                    <span className="relative z-10 flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-white text-primary shadow-[0_12px_30px_rgba(20,121,201,0.11)] ring-1 ring-[#c9e6f8]">
-                      <Icon aria-hidden="true" className="h-5 w-5" />
-                    </span>
-                    <div className="-mt-1">
-                      <h3 className="font-heading text-base font-bold text-primary-dark">{item.title}</h3>
-                      <p className="mt-1 max-w-[19rem] text-sm leading-6 text-text-secondary">{item.text}</p>
+                  <motion.div
+                    className="flex items-center gap-3 rounded-[0.85rem] bg-[#f8fcff] p-3 md:block md:text-center"
+                    key={item.title}
+                    transition={{ delay: index * 0.04, duration: 0.45, ease: stepEase }}
+                    whileHover={{ y: -4 }}
+                  >
+                    <StepIconBubble className="h-14 w-14 shadow-[0_12px_28px_rgba(20,121,201,0.1)] md:mx-auto" size="md">
+                      <Icon aria-hidden="true" className="h-6 w-6" />
+                    </StepIconBubble>
+                    <div className="md:mt-3">
+                      <p className="font-heading text-sm font-bold text-primary-dark">{item.title}</p>
+                      <p className="mt-1 text-xs leading-5 text-text-secondary">{item.text}</p>
                     </div>
-                  </div>
+                  </motion.div>
                 );
               })}
             </div>
-          </StepReveal>
+          </div>
+        </StepReveal>
 
-          <StepReveal delay={0.08}>
-            <div className="relative overflow-hidden rounded-[1.25rem] bg-[linear-gradient(135deg,#ffffff,#f3fbff)] p-4 shadow-[24px_34px_85px_rgba(20,121,201,0.09)] ring-1 ring-[#d5eafa] xs:p-5 sm:rounded-[2rem] sm:p-6 lg:p-7">
-              <Image
-                alt=""
-                className="pointer-events-none absolute inset-0 h-full w-full object-cover object-center opacity-[0.16]"
-                fill
-                src="/step-ahead/package-card-shapes.png"
-                sizes="100vw"
-              />
-              <div className="relative">
-                <StepKicker>Packages</StepKicker>
-                <h2 className="mt-4 max-w-[760px] font-heading text-[clamp(1.7rem,2.3vw,2.45rem)] font-bold leading-tight text-primary-dark">
-                  Choose the setup level that fits your clinical goal.
-                </h2>
-                <p className="mt-2 text-sm text-text-secondary">All packages include training, setup support and post-launch guidance.</p>
-
-                <div className="mt-8 grid gap-5 xl:grid-cols-[1fr_1fr_1fr_0.78fr]">
-                  {packages.map((item) => (
-                    <div
-                      className={
-                        item.featured
-                          ? "relative rounded-[1rem] border border-[#8bd899] bg-white p-4 shadow-[0_22px_55px_rgba(92,184,92,0.16)] xs:p-5 sm:rounded-[1.15rem] sm:p-6"
-                          : "relative rounded-[1rem] border border-[#d7e9f7] bg-white/95 p-4 shadow-[0_16px_40px_rgba(20,121,201,0.07)] xs:p-5 sm:rounded-[1.15rem] sm:p-6"
-                      }
-                      key={item.name}
-                    >
-                      {item.featured ? (
-                        <span className="absolute -top-3 left-1/2 -translate-x-1/2 rounded-full bg-[#eefbf2] px-5 py-1 text-[0.68rem] font-bold text-[#2f8a43] ring-1 ring-[#9cdfa8]">
-                          Most Popular
-                        </span>
-                      ) : null}
-                      <h3 className="font-heading text-xl font-bold text-primary-dark">{item.name}</h3>
-                      <p className="mt-1 text-sm font-semibold text-text-secondary">{item.subtitle}</p>
-                      <p className={item.featured ? "mt-5 font-heading text-[2rem] font-bold leading-none text-[#32924a]" : "mt-5 font-heading text-[2rem] font-bold leading-none text-primary"}>
-                        {item.price}
-                      </p>
-                      <ul className="mt-6 space-y-3">
-                        {item.features.map((feature) => (
-                          <li className="flex gap-2 text-xs leading-5 text-text-secondary" key={feature}>
-                            <CheckCircle2 aria-hidden="true" className={item.featured ? "mt-0.5 h-4 w-4 shrink-0 text-[#4caf62]" : "mt-0.5 h-4 w-4 shrink-0 text-primary"} />
-                            {feature}
-                          </li>
-                        ))}
-                      </ul>
-                      <p className="mt-6 border-t border-[#e0eef8] pt-4 text-xs leading-5 text-text-secondary">
-                        <strong className="text-primary-dark">Best for:</strong> {item.best}
-                      </p>
-                    </div>
-                  ))}
-
-                  <div className="relative flex min-h-[13rem] flex-col justify-center rounded-[1rem] bg-[linear-gradient(145deg,#f8fdff,#eef8ff)] p-4 shadow-[0_16px_40px_rgba(20,121,201,0.06)] ring-1 ring-[#d7ebfa] xs:p-5 sm:min-h-[15rem] sm:rounded-[1.15rem] sm:p-6">
-                    <StepIconBubble className="mb-5 h-12 w-12" size="sm">
-                      <CircleDollarSign aria-hidden="true" className="h-6 w-6" />
-                    </StepIconBubble>
-                    <h3 className="font-heading text-base font-bold text-primary-dark">Flexible by design</h3>
-                    <p className="mt-2 text-sm leading-6 text-text-secondary">
-                      Add-ons and modular upgrades let you customize as you grow.
+        <div className="mt-6 grid gap-5 lg:grid-cols-2">
+          {programs.map((program, index) => (
+            <StepReveal delay={0.08 + index * 0.06} key={program.name}>
+              <motion.div
+                className={
+                  program.featured
+                    ? "group relative h-full overflow-hidden rounded-[1rem] border border-[#80d98f] bg-[linear-gradient(135deg,#ffffff,#f2fff5)] p-6 shadow-[0_24px_70px_rgba(92,184,92,0.15)]"
+                    : "group relative h-full overflow-hidden rounded-[1rem] border border-[#c9e6f8] bg-white p-6 shadow-[0_18px_54px_rgba(20,121,201,0.08)]"
+                }
+                transition={{ duration: 0.45, ease: stepEase }}
+                whileHover={{ scale: 1.025, y: -7 }}
+              >
+                <div aria-hidden="true" className="absolute -right-20 -top-20 h-52 w-52 rounded-full bg-[#dff4ff]/70 blur-[42px] transition group-hover:scale-125" />
+                <div className="relative grid gap-5 sm:grid-cols-[0.42fr_0.58fr]">
+                  <div>
+                    <p className="font-heading text-2xl font-bold text-primary-dark">{program.name}</p>
+                    <p className={program.featured ? "mt-4 font-heading text-[3rem] font-bold leading-none text-[#319147]" : "mt-4 font-heading text-[3rem] font-bold leading-none text-primary"}>
+                      {program.price}
                     </p>
-                    <Link className="mt-6 text-sm font-bold text-primary transition hover:text-primary-dark" href="/contact?type=step-ahead">
-                      View all add-ons {"->"}
-                    </Link>
+                    <p className="mt-4 text-sm font-semibold leading-6 text-text-secondary">{program.line}</p>
+                    <Button className="mt-6 rounded-[0.5rem]" href="/contact?type=step-ahead">
+                      Enquire Now
+                    </Button>
                   </div>
+                  <ul className="space-y-3">
+                    {program.features.map((feature) => (
+                      <li className="flex gap-2 text-sm leading-6 text-text-secondary" key={feature}>
+                        <CheckCircle2 aria-hidden="true" className={program.featured ? "mt-1 h-4 w-4 shrink-0 text-[#45a858]" : "mt-1 h-4 w-4 shrink-0 text-primary"} />
+                        {feature}
+                      </li>
+                    ))}
+                  </ul>
                 </div>
-                <p className="mt-4 text-xs text-text-muted">*Taxes extra as applicable. Custom plans available.</p>
-              </div>
-            </div>
-          </StepReveal>
+              </motion.div>
+            </StepReveal>
+          ))}
         </div>
       </StepContainer>
     </StepSection>

@@ -6,7 +6,6 @@ import { CheckCircle2, HeartPulse, PackageCheck, ShieldCheck, Sparkles } from "l
 import {
   KineticsContainer,
   KineticsIconBubble,
-  KineticsKicker,
   KineticsSection,
   MotionReveal,
   Pill,
@@ -33,8 +32,7 @@ export function KineticsScience() {
       <KineticsContainer>
         <div className="grid items-center gap-10 lg:grid-cols-[0.3fr_0.55fr_0.15fr]">
           <MotionReveal>
-            <KineticsKicker>Design that cares</KineticsKicker>
-            <h2 className="mt-3 font-heading text-3xl font-bold leading-tight text-primary-dark md:text-4xl">
+            <h2 className="font-heading text-3xl font-bold leading-tight text-primary-dark md:text-4xl">
               Science in every stitch.
               <br />
               Comfort in every step.

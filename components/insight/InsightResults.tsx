@@ -26,10 +26,7 @@ export function InsightResults() {
       <InsightContainer>
         <div className="grid gap-9 lg:grid-cols-[0.5fr_0.22fr_0.28fr]">
           <InsightReveal>
-            <p className="font-heading text-[0.68rem] font-bold uppercase tracking-[0.18em] text-primary">
-              Insights to action pathway
-            </p>
-            <h2 className="mt-3 font-heading text-3xl font-bold text-primary-dark">
+            <h2 className="font-heading text-3xl font-bold text-primary-dark">
               Intelligence that drives real-world results
             </h2>
             <InsightAsset

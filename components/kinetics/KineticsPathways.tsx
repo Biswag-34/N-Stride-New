@@ -5,7 +5,6 @@ import Image from "next/image";
 import {
   DecorativeWave,
   KineticsContainer,
-  KineticsKicker,
   KineticsSection,
   MotionReveal,
 } from "@/components/kinetics/KineticsPrimitives";
@@ -25,8 +24,7 @@ export function KineticsPathways() {
     <KineticsSection className="bg-[linear-gradient(180deg,#ffffff,#f4faff)] py-12">
       <KineticsContainer>
         <MotionReveal>
-          <KineticsKicker>Footwear pathways</KineticsKicker>
-          <h2 className="mt-3 max-w-[37rem] font-heading text-3xl font-bold text-primary-dark">
+          <h2 className="max-w-[37rem] font-heading text-3xl font-bold text-primary-dark">
             Choose what moves you forward.
           </h2>
           <p className="mt-2 max-w-[28rem] text-sm leading-7 text-text-secondary">

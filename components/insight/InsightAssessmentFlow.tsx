@@ -1,52 +1,73 @@
 "use client";
 
-import { ArrowRight, BadgeCheck, ClipboardCheck, Eye, Gauge, Radar, ScanLine } from "lucide-react";
+import { BadgeCheck, ClipboardCheck, Eye, Gauge, Radar, ScanLine } from "lucide-react";
+import { motion } from "framer-motion";
 
 import {
   InsightContainer,
   InsightIconBubble,
   InsightReveal,
   InsightSection,
-  InsightWaveImage,
+  insightEase,
 } from "@/components/insight/InsightPrimitives";
 
 const steps = [
-  { icon: ScanLine, title: "Capture", text: "Scan in minutes with advanced devices." },
-  { icon: Gauge, title: "Analyze", text: "AI algorithms process data with precision." },
-  { icon: Eye, title: "Interpret", text: "Clear visual insights and risk indicators." },
-  { icon: BadgeCheck, title: "Recommend", text: "Personalized care and device suggestions." },
-  { icon: ClipboardCheck, title: "Act", text: "Integrate with treatment plan seamlessly." },
-  { icon: Radar, title: "Track", text: "Monitor progress and adjust care over time." },
+  { icon: ScanLine, title: "Capture", text: "scan inputs" },
+  { icon: Gauge, title: "Measure", text: "pressure + gait" },
+  { icon: Eye, title: "Interpret", text: "clinical view" },
+  { icon: BadgeCheck, title: "Prioritize", text: "risk level" },
+  { icon: ClipboardCheck, title: "Recommend", text: "care path" },
+  { icon: Radar, title: "Track", text: "follow-up" },
 ];
 
 export function InsightAssessmentFlow() {
   return (
-    <InsightSection className="bg-[linear-gradient(180deg,#ffffff,#f8fcff)] py-12">
-      <InsightWaveImage className="inset-x-0 top-9 h-64 w-full opacity-80" src="/insight/assessment-flow-line.png" />
+    <InsightSection className="bg-[linear-gradient(180deg,#ffffff,#f7fcff)] py-12">
       <InsightContainer>
         <InsightReveal className="text-center">
-          <p className="font-heading text-[0.68rem] font-bold uppercase tracking-[0.18em] text-primary">How assessment works</p>
-          <h2 className="mt-3 font-heading text-3xl font-bold text-primary-dark">From scan to actionable insight</h2>
+          <h2 className="font-heading text-3xl font-bold text-primary-dark md:text-[2.25rem]">From scan to actionable insight</h2>
         </InsightReveal>
-        <InsightReveal className="relative mt-9" delay={0.08}>
-          <div className="absolute left-[6%] right-[6%] top-14 hidden h-px bg-[linear-gradient(90deg,transparent,#9dd5f7,#9ee5c9,#9dd5f7,transparent)] lg:block" />
-          <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-6">
+        <InsightReveal className="relative mt-9 overflow-hidden rounded-[1rem] border border-[#c9e6f8]/70 bg-white/72 px-4 py-6 shadow-[0_20px_60px_rgba(20,121,201,0.07)] backdrop-blur sm:px-6 lg:px-8 lg:py-9" delay={0.08}>
+          <div aria-hidden="true" className="absolute left-8 top-8 bottom-8 w-px bg-[linear-gradient(180deg,transparent,#7ccbef,#70d7c0,#7ccbef,transparent)] lg:hidden" />
+          <div aria-hidden="true" className="absolute left-[8%] right-[8%] top-[5.2rem] hidden h-px bg-[linear-gradient(90deg,transparent,#7ccbef,#70d7c0,#7ccbef,transparent)] lg:block" />
+          <div className="relative grid gap-5 lg:grid-cols-6 lg:gap-0">
             {steps.map((step, index) => {
               const Icon = step.icon;
               return (
-                <div className="relative rounded-[1.25rem] bg-white/82 p-5 shadow-[0_16px_42px_rgba(20,121,201,0.06)] ring-1 ring-[#d8ebf8]/75 backdrop-blur" key={step.title}>
-                  {index < steps.length - 1 ? (
-                    <ArrowRight aria-hidden="true" className="absolute -right-4 top-10 hidden h-4 w-8 text-primary/45 lg:block" />
-                  ) : null}
-                  <p className="font-heading text-xs font-bold text-primary">0{index + 1}</p>
-                  <InsightIconBubble className="mt-3 h-10 w-10 shadow-none" size="sm">
-                    <Icon className="h-5 w-5" />
-                  </InsightIconBubble>
-                  <h3 className="mt-4 font-heading text-sm font-bold text-primary-dark">{step.title}</h3>
-                  <p className="mt-2 text-xs leading-5 text-text-secondary">{step.text}</p>
-                </div>
+                <motion.div
+                  className="relative flex items-center gap-4 pl-2 lg:flex-col lg:gap-3 lg:pl-0 lg:text-center"
+                  key={step.title}
+                  transition={{ delay: index * 0.06, duration: 0.55, ease: insightEase }}
+                  whileHover={{ y: -5 }}
+                >
+                  <div className="relative">
+                    <span className="absolute inset-[-0.35rem] rounded-full bg-[#dff4ff]/70 blur-md" />
+                    <InsightIconBubble className="relative h-14 w-14 border-white bg-white shadow-[0_14px_32px_rgba(20,121,201,0.13)]" color={index % 2 ? "#26b6c8" : "#1479c9"} size="lg">
+                      <Icon className="h-7 w-7" />
+                    </InsightIconBubble>
+                  </div>
+                  <div className="max-w-[12rem]">
+                    <p className="font-heading text-[0.7rem] font-bold text-primary/80">0{index + 1}</p>
+                    <h3 className="mt-1 font-heading text-sm font-bold text-primary-dark">{step.title}</h3>
+                    <p className="mt-1 text-xs font-semibold leading-5 text-text-secondary">{step.text}</p>
+                  </div>
+                </motion.div>
               );
             })}
+          </div>
+          <div className="relative mt-7 grid gap-3 border-t border-[#d8ebf8] pt-5 md:grid-cols-[0.35fr_0.3fr_0.35fr]">
+            <div className="rounded-[0.75rem] bg-[#f7fcff] px-4 py-3">
+              <p className="font-heading text-sm font-bold text-primary-dark">Input</p>
+              <p className="mt-1 text-xs font-semibold leading-5 text-text-secondary">foot scan, pressure and wound data</p>
+            </div>
+            <div className="rounded-[0.75rem] bg-[linear-gradient(135deg,#e9f8ff,#eefcf7)] px-4 py-3 text-center">
+              <p className="font-heading text-sm font-bold text-primary-dark">Insight engine</p>
+              <p className="mt-1 text-xs font-semibold leading-5 text-text-secondary">risk and care logic</p>
+            </div>
+            <div className="rounded-[0.75rem] bg-[#f7fcff] px-4 py-3 md:text-right">
+              <p className="font-heading text-sm font-bold text-primary-dark">Output</p>
+              <p className="mt-1 text-xs font-semibold leading-5 text-text-secondary">clear next-step recommendation</p>
+            </div>
           </div>
         </InsightReveal>
       </InsightContainer>
