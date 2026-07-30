@@ -9,7 +9,7 @@ import { StepContainer, StepReveal, StepSection } from "./StepAheadPrimitives";
 
 export function StepAheadFinalCTA() {
   return (
-    <StepSection className="bg-white pb-10">
+    <StepSection className="bg-white pb-14 pt-2">
       <StepContainer>
         <StepReveal>
           <div className="relative grid min-h-[250px] overflow-hidden rounded-[1.55rem] bg-[linear-gradient(105deg,#eefbf0_0%,#f7fdff_48%,#eaf6ff_100%)] shadow-[20px_28px_70px_rgba(20,121,201,0.1)] ring-1 ring-[#d5eafa] lg:grid-cols-[0.48fr_0.52fr]">

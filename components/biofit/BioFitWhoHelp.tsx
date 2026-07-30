@@ -1,5 +1,6 @@
 "use client";
 
+import { Activity, HeartHandshake, ShieldCheck, Sparkles, UsersRound } from "lucide-react";
 import type { Vertical } from "@/data/verticals";
 
 import {
@@ -7,6 +8,7 @@ import {
   BioFitAsset,
   BioFitCurveDivider,
   BioFitDottedField,
+  BioFitIconBubble,
   BioFitReveal,
   BioFitSection,
 } from "@/components/biofit/BioFitPrimitives";
@@ -15,12 +17,12 @@ type BioFitWhoHelpProps = {
   vertical: Vertical;
 };
 
-const audienceImages = [
-  "/biofit/runner-sea-tech.png",
-  "/biofit/target-hero-visual-clean.png",
-  "/biofit/target-who-help-arch.png",
-  "/biofit/target-cta-hand-clean.png",
-  "/biofit/runner-sea-tech.png",
+const audienceProfiles = [
+  { icon: Activity, tone: "#7357d8", tag: "Mobility" },
+  { icon: ShieldCheck, tone: "#26b6c8", tag: "Support" },
+  { icon: Sparkles, tone: "#f3a99e", tag: "Restore" },
+  { icon: HeartHandshake, tone: "#5a67d8", tag: "Adapt" },
+  { icon: UsersRound, tone: "#1479c9", tag: "Care" },
 ];
 
 export function BioFitWhoHelp({ vertical }: BioFitWhoHelpProps) {
@@ -40,31 +42,49 @@ export function BioFitWhoHelp({ vertical }: BioFitWhoHelpProps) {
           </div>
         </BioFitReveal>
         <BioFitReveal className="mt-8" delay={0.08}>
-          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-5">
-            {vertical.audience.map((item, index) => (
-              <article
-                className="group relative min-h-[285px] overflow-hidden bg-[#ece8ff] shadow-[0_20px_48px_rgba(90,103,216,0.10)] ring-1 ring-white/80 transition duration-500 hover:-translate-y-2 hover:shadow-[0_28px_62px_rgba(90,103,216,0.16)]"
-                key={item}
-                style={{
-                  borderRadius:
-                    index % 2 === 0
-                      ? "2.8rem 0.75rem 2rem 0.75rem"
-                      : "0.75rem 2.6rem 0.75rem 2.2rem",
-                }}
-              >
+          <div className="relative overflow-hidden rounded-[1.35rem] bg-[linear-gradient(135deg,#f4f0ff,#ffffff_50%,#eefbff)] p-4 shadow-[0_24px_68px_rgba(90,103,216,0.11)] ring-1 ring-[#ddd4ff] lg:p-6">
+            <div aria-hidden="true" className="absolute -right-24 top-8 h-64 w-64 rounded-full bg-[#d8d0ff]/70 blur-3xl" />
+            <div aria-hidden="true" className="absolute -left-24 bottom-0 h-64 w-80 rounded-full bg-[#ddf7ff]/60 blur-3xl" />
+            <div className="relative grid gap-4 lg:grid-cols-[0.42fr_0.58fr] lg:items-stretch">
+              <div className="relative min-h-[21rem] overflow-hidden rounded-t-[7rem] rounded-br-[1.4rem] rounded-bl-[1.4rem] bg-[#ece8ff] ring-1 ring-white/80">
                 <BioFitAsset
                   alt=""
                   className="absolute inset-0 h-full w-full"
-                  imageClassName="object-cover object-center transition duration-700 group-hover:scale-110"
-                  src={audienceImages[index % audienceImages.length]}
+                  imageClassName="object-cover object-center"
+                  src="/biofit/target-who-help-arch.png"
                 />
-                <div aria-hidden="true" className="absolute inset-0 bg-[linear-gradient(180deg,rgba(21,31,54,0.03)_24%,rgba(27,22,56,0.74)_100%)]" />
-                <div aria-hidden="true" className="absolute left-4 top-4 h-12 w-12 rounded-[0.55rem] border border-white/55 bg-white/16 backdrop-blur-md" />
-                <p className="absolute inset-x-0 bottom-0 min-h-[5.3rem] bg-white/88 px-4 py-4 text-[0.82rem] font-bold leading-5 text-primary-dark backdrop-blur-xl">
-                  {item}
-                </p>
-              </article>
-            ))}
+                <div aria-hidden="true" className="absolute inset-0 bg-[linear-gradient(180deg,rgba(255,255,255,0.02),rgba(22,20,54,0.58))]" />
+                <div className="absolute bottom-5 left-5 right-5 rounded-[1rem] bg-white/86 p-4 shadow-[0_16px_36px_rgba(21,31,54,0.12)] backdrop-blur">
+                  <p className="font-heading text-lg font-bold text-primary-dark">Patient-specific fit</p>
+                  <p className="mt-2 text-xs font-semibold leading-5 text-text-secondary">Support shaped around function, comfort and confidence.</p>
+                </div>
+              </div>
+
+              <div className="grid gap-3 sm:grid-cols-2">
+                {vertical.audience.map((item, index) => {
+                  const profile = audienceProfiles[index % audienceProfiles.length];
+                  const Icon = profile.icon;
+
+                  return (
+                    <article
+                      className="group relative overflow-hidden rounded-[1rem] bg-white/90 p-4 shadow-[0_14px_38px_rgba(90,103,216,0.08)] ring-1 ring-[#e1dbff] transition duration-300 hover:-translate-y-1 hover:bg-white"
+                      key={item}
+                    >
+                      <div aria-hidden="true" className="absolute inset-y-4 left-0 w-[3px] rounded-r-full" style={{ backgroundColor: profile.tone }} />
+                      <div className="flex items-start gap-4">
+                        <BioFitIconBubble className="h-12 w-12 rounded-[0.9rem] shadow-[0_12px_28px_rgba(90,103,216,0.11)]" color={profile.tone} size="sm">
+                          <Icon aria-hidden="true" className="h-5 w-5" />
+                        </BioFitIconBubble>
+                        <div>
+                          <p className="font-heading text-[0.68rem] font-bold uppercase tracking-[0.14em]" style={{ color: profile.tone }}>{profile.tag}</p>
+                          <p className="mt-2 text-sm font-bold leading-6 text-primary-dark">{item}</p>
+                        </div>
+                      </div>
+                    </article>
+                  );
+                })}
+              </div>
+            </div>
           </div>
         </BioFitReveal>
       </BioFitContainer>

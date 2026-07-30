@@ -7,7 +7,6 @@ import { staggerContainer, staggerItem } from "@/lib/motion";
 import {
   CircularIcon,
   overviewIconMap,
-  OverviewKicker,
   type VerticalTone,
 } from "./VerticalsOverviewPrimitives";
 
@@ -38,8 +37,7 @@ export function VerticalsCarePathwayBand() {
           variants={staggerContainer}
         >
           <div className="text-center">
-            <OverviewKicker>Care pathway</OverviewKicker>
-            <h2 className="mt-3 text-3xl font-semibold leading-tight text-primary-dark sm:text-4xl">
+            <h2 className="text-3xl font-semibold leading-tight text-primary-dark sm:text-4xl">
               From concern to continued care
             </h2>
             <p className="mx-auto mt-3 max-w-[36rem] text-sm leading-7 text-text-secondary">

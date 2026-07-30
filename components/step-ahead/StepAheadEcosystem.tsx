@@ -15,7 +15,7 @@ const bullets = [
 
 export function StepAheadEcosystem() {
   return (
-    <StepSection className="bg-[linear-gradient(180deg,#ffffff,#f7fcff)] py-10">
+    <StepSection className="bg-[linear-gradient(180deg,#ffffff,#f7fcff)] py-14">
       <StepContainer>
         <div className="grid items-center gap-8 lg:grid-cols-[0.31fr_0.43fr_0.26fr]">
           <StepReveal>

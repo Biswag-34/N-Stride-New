@@ -45,11 +45,10 @@ export function StepAheadHero() {
       </div>
 
       <div aria-hidden="true" className="absolute inset-x-0 bottom-0 h-20 bg-[linear-gradient(180deg,transparent,#ffffff_86%)]" />
-      <StepContainer className="relative grid items-center gap-6 pb-9 pt-3 xs:pb-10 xs:pt-4 sm:gap-10 lg:min-h-[520px] lg:grid-cols-[0.95fr_1.05fr] lg:py-5">
+      <StepContainer className="relative grid items-center gap-8 pb-12 pt-8 xs:pb-14 xs:pt-10 sm:gap-10 lg:min-h-[560px] lg:grid-cols-[0.95fr_1.05fr] lg:py-10">
         <StepReveal className="max-w-[690px]">
-          <h1 className="max-w-[650px] font-heading text-[clamp(2rem,7vw,4.05rem)] font-bold leading-[1.04] text-primary-dark lg:leading-[1]">
-            <span className="block whitespace-nowrap">Step-Ahead clinics.</span>
-            <span className="block whitespace-nowrap">Built to launch.</span>
+          <h1 className="max-w-[650px] font-heading text-[clamp(2rem,6.5vw,3.9rem)] font-bold leading-[1.04] text-primary-dark lg:leading-[1.02]">
+            <span className="block">Launch diabetic foot-care services with confidence.</span>
           </h1>
           <p className="mt-5 max-w-[610px] text-sm leading-7 text-text-secondary sm:text-[1rem] sm:leading-8">
             A complete program to help clinics launch and scale a modern diabetic foot care service - with the right technology,

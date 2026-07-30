@@ -9,7 +9,7 @@ import { Button } from "@/components/ui/Button";
 import { Container } from "@/components/ui/Container";
 import { resources } from "@/data/resources";
 import { staggerContainer, staggerItem } from "@/lib/motion";
-import { ImageDrop, SectionKicker } from "./HomeDesignPrimitives";
+import { ImageDrop } from "./HomeDesignPrimitives";
 
 const resourceImages = [
   "/home/resource-foot-check-final.png",
@@ -33,8 +33,7 @@ export function HomeKnowledgePreview() {
         >
           <div className="flex flex-col gap-5 sm:flex-row sm:items-end sm:justify-between">
             <div>
-              <SectionKicker>Learn, prevent & stay informed?</SectionKicker>
-              <h2 className="mt-3 text-3xl font-semibold leading-tight text-primary-dark">Knowledge for better foot health</h2>
+              <h2 className="text-3xl font-semibold leading-tight text-primary-dark">Knowledge for better foot health</h2>
             </div>
             <Button className="rounded-[0.65rem]" href="/contact?type=general" size="sm" variant="outline">
               View All Resources
@@ -49,7 +48,7 @@ export function HomeKnowledgePreview() {
                   className="group block overflow-hidden rounded-[1.2rem] border border-border-soft bg-white shadow-soft transition hover:-translate-y-1 hover:shadow-card focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-primary/20"
                   href={resource.href}
                 >
-                  <ImageDrop className="min-h-[14rem] rounded-none border-0" label={index === 3 ? "Stay connected" : ""}>
+                  <ImageDrop className="min-h-[14rem] rounded-none border-0">
                     <div className="relative flex h-full min-h-[14rem] items-end p-5 text-white">
                       <Image
                         alt={resource.title}
@@ -65,8 +64,7 @@ export function HomeKnowledgePreview() {
                         </span>
                       ) : null}
                       <div className="relative z-10">
-                        <p className="text-[0.62rem] font-bold uppercase tracking-[0.14em] text-white/72">{resource.category}</p>
-                        <h3 className="mt-2 text-lg font-semibold leading-tight">{resource.title}</h3>
+                        <h3 className="text-lg font-semibold leading-tight">{resource.title}</h3>
                       </div>
                     </div>
                   </ImageDrop>

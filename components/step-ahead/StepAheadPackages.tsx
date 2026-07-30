@@ -45,7 +45,7 @@ const programs = [
 
 export function StepAheadPackages() {
   return (
-    <StepSection className="bg-[linear-gradient(180deg,#ffffff,#f5fbff)] py-11" id="packages">
+    <StepSection className="bg-[linear-gradient(180deg,#ffffff,#f5fbff)] py-14" id="packages">
       <StepContainer>
         <StepReveal className="mx-auto max-w-[760px] text-center">
           <h2 className="font-heading text-[clamp(1.85rem,2.8vw,2.75rem)] font-bold leading-tight text-primary-dark">

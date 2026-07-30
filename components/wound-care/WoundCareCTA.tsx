@@ -20,7 +20,7 @@ const checklist = ["Personalized wound-care strategy", "Evidence-aligned protoco
 
 export function WoundCareCTA({ vertical }: WoundCareCTAProps) {
   return (
-    <WoundSection className="pb-10 pt-6">
+    <WoundSection className="pb-14 pt-8">
       <WoundBackgroundImage className="inset-x-0 top-0 h-40 w-full opacity-16" src="/wound-care/amber-wave.png" />
       <WoundContainer>
         <WoundReveal>

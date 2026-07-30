@@ -134,7 +134,7 @@ function DemoVideoPanel() {
 
 export function StepAheadWhy() {
   return (
-    <StepSection className="bg-white py-12">
+    <StepSection className="bg-white py-14">
       <div aria-hidden="true" className="absolute inset-x-0 top-0 h-px bg-[#d7ebfa]" />
       <div aria-hidden="true" className="absolute inset-x-0 bottom-0 h-px bg-[#e6f2fb]" />
       <StepContainer>

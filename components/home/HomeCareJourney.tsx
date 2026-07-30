@@ -7,7 +7,7 @@ import { Button } from "@/components/ui/Button";
 import { Container } from "@/components/ui/Container";
 import { carePathway } from "@/data/carePathway";
 import { staggerContainer, staggerItem } from "@/lib/motion";
-import { homeIconMap, IconBubble, SectionKicker } from "./HomeDesignPrimitives";
+import { homeIconMap, IconBubble } from "./HomeDesignPrimitives";
 
 const iconForStep: Record<string, keyof typeof homeIconMap> = {
   "clipboard-list": "scan",
@@ -31,8 +31,7 @@ export function HomeCareJourney() {
         >
           <div className="grid gap-5 lg:grid-cols-[0.86fr_1.14fr] lg:items-start">
             <motion.div variants={staggerItem}>
-              <SectionKicker>Your care journey</SectionKicker>
-              <h2 className="mt-3 max-w-[24rem] text-2xl font-semibold leading-tight text-primary-dark sm:text-3xl">
+              <h2 className="max-w-[24rem] text-2xl font-semibold leading-tight text-primary-dark sm:text-3xl">
                 Guided care. Every step of the way.
               </h2>
             </motion.div>

@@ -26,7 +26,7 @@ const proof = [
 
 export function WoundCareHero({ vertical }: WoundCareHeroProps) {
   return (
-    <WoundSection className="bg-[linear-gradient(105deg,#ffffff,#fbfdff_56%,#fff7e8)] pb-8 pt-0">
+    <WoundSection className="bg-[linear-gradient(105deg,#ffffff,#fbfdff_56%,#fff7e8)] pb-12 pt-8">
       <WoundBackgroundImage className="bottom-[-2rem] right-0 h-[24rem] w-[54rem] opacity-20 sm:h-[31rem] sm:w-[70rem] sm:opacity-30" src="/wound-care/blue-amber-wave.png" />
       <WoundContainer className="relative">
         <div className="grid items-start gap-7 lg:min-h-[445px] lg:grid-cols-[0.52fr_0.48fr] lg:gap-9">

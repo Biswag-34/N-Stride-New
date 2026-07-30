@@ -96,10 +96,12 @@ function IdentitySection() {
   }, []);
 
   return (
-    <AboutSection className="bg-white py-11">
+    <AboutSection className="bg-[linear-gradient(180deg,#ffffff,#f5fbff)] py-14">
+      <div aria-hidden="true" className="absolute -right-32 top-10 h-80 w-80 rounded-full bg-[#dff4ff]/70 blur-3xl" />
+      <div aria-hidden="true" className="absolute -left-32 bottom-0 h-80 w-96 rounded-full bg-[#eefbf4]/70 blur-3xl" />
       <AboutContainer>
-        <AboutReveal className="grid gap-6 lg:grid-cols-[0.36fr_0.64fr] lg:items-stretch">
-          <div>
+        <AboutReveal className="relative grid gap-6 lg:grid-cols-[0.34fr_0.66fr] lg:items-stretch">
+          <div className="relative rounded-[1.1rem] bg-white/82 p-5 shadow-[0_18px_54px_rgba(20,121,201,0.07)] ring-1 ring-[#d7ebfa] backdrop-blur">
             <h2 className="font-heading text-[clamp(1.85rem,3vw,2.9rem)] font-bold leading-tight text-primary-dark">
               The N-Stride identity, in four clear answers.
             </h2>
@@ -110,44 +112,77 @@ function IdentitySection() {
               {identityTabs.map((tab, index) => (
                 <button
                   aria-pressed={activeIndex === index}
-                  className={
-                    activeIndex === index
-                      ? "flex items-center justify-between rounded-[0.7rem] bg-primary px-4 py-3 text-left font-heading text-sm font-bold text-white shadow-[0_16px_34px_rgba(20,121,201,0.18)]"
-                      : "flex items-center justify-between rounded-[0.7rem] bg-[#f6fbff] px-4 py-3 text-left font-heading text-sm font-bold text-primary-dark ring-1 ring-[#d7ebfa] transition hover:bg-white"
-                  }
+                  className="group relative overflow-hidden rounded-[0.8rem] bg-[#f6fbff] px-4 py-3 text-left font-heading text-sm font-bold text-primary-dark ring-1 ring-[#d7ebfa] transition hover:bg-white aria-pressed:bg-primary aria-pressed:text-white aria-pressed:shadow-[0_16px_34px_rgba(20,121,201,0.18)]"
                   key={tab.label}
                   onClick={() => setActiveIndex(index)}
                   type="button"
                 >
-                  {tab.label}
-                  <span className="text-xs opacity-75">0{index + 1}</span>
+                  <span className="relative z-10 flex items-center justify-between gap-4">
+                    <span>{tab.label}</span>
+                    <span className="text-xs opacity-75">0{index + 1}</span>
+                  </span>
+                  {activeIndex === index ? (
+                    <motion.span
+                      aria-hidden="true"
+                      className="absolute inset-x-0 bottom-0 h-[3px] bg-white/75"
+                      layoutId="identity-tab-progress"
+                    />
+                  ) : null}
                 </button>
               ))}
             </div>
           </div>
 
           <motion.div
-            className="relative overflow-hidden rounded-[1rem] border border-[#c9e6f8] bg-[linear-gradient(135deg,#f8fcff,#ffffff_48%,#eefbf4)] p-6 shadow-[0_20px_64px_rgba(20,121,201,0.08)]"
+            className="relative overflow-hidden rounded-[1.25rem] border border-[#c9e6f8] bg-[#073b66] p-4 shadow-[0_24px_74px_rgba(20,121,201,0.13)] md:p-5"
             key={active.label}
             initial={reduceMotion ? false : { opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.45, ease: aboutEase }}
           >
-            <div aria-hidden="true" className="absolute -right-16 -top-16 h-52 w-52 rounded-full bg-[#dff4ff]/80 blur-[42px]" />
-            <div className="relative grid gap-6 md:grid-cols-[0.36fr_0.64fr] md:items-center">
-              <div className="grid min-h-[13rem] place-items-center rounded-[0.9rem] bg-white/75 ring-1 ring-[#d7ebfa]">
-                <AboutIconBubble className="h-24 w-24" size="lg">
+            <div aria-hidden="true" className="absolute inset-0 bg-[radial-gradient(circle_at_18%_18%,rgba(38,182,200,0.38),transparent_30%),radial-gradient(circle_at_86%_70%,rgba(92,184,92,0.3),transparent_34%)]" />
+            <div className="relative grid gap-5 md:grid-cols-[0.42fr_0.58fr] md:items-stretch">
+              <div className="relative grid min-h-[18rem] place-items-center overflow-hidden rounded-[1rem] bg-white/10 ring-1 ring-white/20">
+                <motion.div
+                  aria-hidden="true"
+                  className="absolute h-52 w-52 rounded-full border border-white/20"
+                  animate={reduceMotion ? undefined : { rotate: 360 }}
+                  transition={{ duration: 24, ease: "linear", repeat: Infinity }}
+                />
+                <motion.div
+                  aria-hidden="true"
+                  className="absolute h-36 w-36 rounded-full border border-dashed border-white/30"
+                  animate={reduceMotion ? undefined : { rotate: -360 }}
+                  transition={{ duration: 18, ease: "linear", repeat: Infinity }}
+                />
+                {identityTabs.map((tab, index) => {
+                  const Icon = tab.icon;
+                  const positions = ["left-[12%] top-[18%]", "right-[12%] top-[18%]", "bottom-[18%] right-[16%]", "bottom-[18%] left-[16%]"];
+                  return (
+                    <button
+                      aria-label={tab.label}
+                      className={`absolute ${positions[index]} grid h-10 w-10 place-items-center rounded-full bg-white/90 text-primary shadow-[0_12px_28px_rgba(0,0,0,0.12)] ring-1 ring-white/70 transition ${activeIndex === index ? "scale-110" : "opacity-72"}`}
+                      key={tab.label}
+                      onClick={() => setActiveIndex(index)}
+                      type="button"
+                    >
+                      <Icon aria-hidden="true" className="h-5 w-5" />
+                    </button>
+                  );
+                })}
+                <AboutIconBubble className="relative h-24 w-24 border-white bg-white text-primary shadow-[0_20px_44px_rgba(0,0,0,0.16)]" size="lg">
                   <ActiveIcon aria-hidden="true" className="h-10 w-10" />
                 </AboutIconBubble>
               </div>
-              <div>
-                <h3 className="font-heading text-[clamp(1.45rem,2.2vw,2.25rem)] font-bold leading-tight text-primary-dark">
+              <div className="rounded-[1rem] bg-white p-6 shadow-[0_18px_50px_rgba(0,0,0,0.12)] md:p-7">
+                <p className="font-heading text-[0.72rem] font-bold uppercase tracking-[0.16em] text-primary">0{activeIndex + 1} / {active.label}</p>
+                <h3 className="mt-3 font-heading text-[clamp(1.45rem,2.2vw,2.25rem)] font-bold leading-tight text-primary-dark">
                   {active.title}
                 </h3>
                 <p className="mt-4 text-sm leading-7 text-text-secondary">{active.text}</p>
                 <div className="mt-5 grid gap-3 sm:grid-cols-3">
                   {active.points.map((point) => (
-                    <div className="rounded-[0.7rem] bg-white/82 px-3 py-3 text-xs font-bold leading-5 text-primary-dark ring-1 ring-[#d7ebfa]" key={point}>
+                    <div className="rounded-[0.75rem] bg-[#f6fbff] px-3 py-3 text-xs font-bold leading-5 text-primary-dark ring-1 ring-[#d7ebfa]" key={point}>
                       {point}
                     </div>
                   ))}

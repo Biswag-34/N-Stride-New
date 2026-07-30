@@ -1,74 +1,46 @@
 "use client";
 
-import { ArrowRight, BadgeCheck, ExternalLink, Network, ShieldCheck } from "lucide-react";
-import Image from "next/image";
-import Link from "next/link";
+import { ArrowRight, BadgeCheck, CalendarCheck, ExternalLink, Network, ShieldCheck } from "lucide-react";
 import { motion, useReducedMotion } from "framer-motion";
 
 import { Button } from "@/components/ui/Button";
 import { Container } from "@/components/ui/Container";
 import { brand } from "@/data/brand";
 import { ctas } from "@/data/ctas";
-import { fadeUp, scaleIn, staggerContainer, staggerItem } from "@/lib/motion";
-import { SectionKicker } from "./HomeDesignPrimitives";
+import { fadeUp, staggerContainer, staggerItem } from "@/lib/motion";
 
 const trustItems = [
-  { title: "Expert Care", subtitle: "Clinical-led", icon: ShieldCheck },
-  { title: "Integrated Solutions", subtitle: "All in one place", icon: Network },
-  { title: "Proven Outcomes", subtitle: "Better results", icon: BadgeCheck },
+  { title: "Clinical-led", subtitle: "Expert care", icon: ShieldCheck },
+  { title: "Connected", subtitle: "One ecosystem", icon: Network },
+  { title: "Outcome-first", subtitle: "Clearer care", icon: BadgeCheck },
 ];
-
-function EcosystemVisual() {
-  const reduceMotion = useReducedMotion();
-
-  return (
-    <motion.div
-      aria-label="N-Stride care ecosystem visual"
-      className="relative mx-auto aspect-[1448/1086] w-full max-w-[min(45rem,92vw)] overflow-visible drop-shadow-[0_20px_40px_rgba(20,121,201,0.10)] sm:drop-shadow-[0_26px_50px_rgba(20,121,201,0.10)]"
-      initial={reduceMotion ? false : "hidden"}
-      animate={reduceMotion ? undefined : "visible"}
-      variants={scaleIn}
-    >
-      <Image
-        alt="N-Stride care ecosystem showing Kinetics, Insight, Bio-Fit and Wound Care"
-        className="object-contain"
-        fill
-        priority
-        sizes="(min-width: 1024px) 720px, 100vw"
-        src="/home/hero-ecosystem-final.png"
-      />
-    </motion.div>
-  );
-}
 
 export function HomeHero() {
   const reduceMotion = useReducedMotion();
 
   return (
     <section
-      className="relative isolate overflow-hidden bg-bottom bg-no-repeat pb-7 pt-8 xs:pt-10 sm:pt-12 lg:pb-10"
+      className="relative isolate overflow-hidden bg-cover bg-center pb-8 pt-8 xs:pt-10 sm:pt-12 lg:min-h-[620px] lg:pb-12"
       style={{
         backgroundImage:
-          "radial-gradient(circle at 78% 20%, rgba(38,182,200,0.10), transparent 28rem), linear-gradient(180deg, rgba(255,255,255,0.94) 0%, rgba(247,251,255,0.94) 100%), url('/home/decorative-wave-final.png')",
-        backgroundSize: "auto, auto, 100% auto",
+          "linear-gradient(90deg, rgba(255,255,255,0.96) 0%, rgba(255,255,255,0.88) 38%, rgba(255,255,255,0.30) 72%, rgba(255,255,255,0.68) 100%), linear-gradient(180deg, rgba(255,255,255,0.12), rgba(244,250,255,0.9)), url('/home/resource-consultation-final.png')",
+        backgroundPosition: "center right",
       }}
     >
-      <div className="absolute inset-x-0 bottom-[-6rem] -z-10 h-52 rounded-[50%] border-t border-primary/20" />
+      <div className="absolute inset-x-0 bottom-0 -z-10 h-28 bg-[linear-gradient(180deg,transparent,#ffffff_82%)]" />
       <Container>
-        <div className="grid items-center gap-7 lg:grid-cols-[0.88fr_1.12fr]">
-          <motion.div initial={reduceMotion ? false : "hidden"} animate={reduceMotion ? undefined : "visible"} variants={staggerContainer}>
-            <motion.div variants={staggerItem}>
-              <SectionKicker>All-in-one foot & lower-limb care ecosystem</SectionKicker>
-            </motion.div>
+        <div className="flex min-h-[520px] items-center">
+          <motion.div
+            className="max-w-[42rem] rounded-[1.15rem] border border-white/76 bg-white/58 px-5 py-6 shadow-[0_28px_70px_rgba(7,59,102,0.12),inset_0_1px_0_rgba(255,255,255,0.86)] backdrop-blur-md xs:px-6 sm:px-8 sm:py-8"
+            initial={false}
+            animate={reduceMotion ? undefined : "visible"}
+            variants={staggerContainer}
+          >
             <motion.h1
-              className="mt-5 max-w-[34rem] text-[clamp(2.08rem,10vw,2.8rem)] font-semibold leading-[1.04] text-primary-dark sm:text-5xl lg:text-[3.72rem]"
+              className="max-w-[34rem] text-[clamp(2.05rem,9vw,3.35rem)] font-semibold leading-[1.03] text-primary-dark sm:text-5xl"
               variants={fadeUp}
             >
-              One ecosystem.
-              <br />
-              Every step of care.
-              <br />
-              Better outcomes.
+              Complete care. Clearer steps.
             </motion.h1>
             <motion.p className="mt-5 max-w-[34rem] text-sm leading-7 text-text-secondary sm:text-base sm:leading-8" variants={fadeUp}>
               N-Stride connects diagnostics, clinical expertise, advanced products and rehabilitation support across foot health,
@@ -79,17 +51,18 @@ export function HomeHero() {
                 Book Consultation
                 <ArrowRight aria-hidden="true" className="h-4 w-4" />
               </Button>
-              <Button className="w-full rounded-[0.45rem] px-5 xs:w-auto xs:px-6" href="/contact?type=general" variant="outline">
+              <Button className="w-full rounded-[0.45rem] border-primary/30 bg-white/78 px-5 xs:w-auto xs:px-6" href="/contact?type=general" variant="outline">
                 Explore Our Ecosystem
+                <ExternalLink aria-hidden="true" className="h-4 w-4" />
               </Button>
             </motion.div>
-            <motion.div className="mt-8 grid max-w-[34rem] gap-4 xs:grid-cols-3" variants={staggerContainer}>
+            <motion.div className="mt-8 grid max-w-[36rem] gap-3 xs:grid-cols-3" variants={staggerContainer}>
               {trustItems.map((item) => {
                 const Icon = item.icon;
 
                 return (
-                  <motion.div className="flex items-center gap-3" key={item.title} variants={staggerItem}>
-                    <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-white text-primary shadow-soft">
+                  <motion.div className="group flex items-center gap-3 rounded-[0.8rem] border border-white/78 bg-white/64 px-3 py-3 shadow-[0_14px_32px_rgba(20,121,201,0.09)] transition hover:-translate-y-1 hover:bg-white" key={item.title} variants={staggerItem}>
+                    <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-[0.7rem] bg-soft-sky text-primary shadow-[0_10px_22px_rgba(20,121,201,0.1)]">
                       <Icon aria-hidden="true" className="h-4 w-4" />
                     </span>
                     <span>
@@ -100,18 +73,18 @@ export function HomeHero() {
                 );
               })}
             </motion.div>
-          </motion.div>
-
-          <motion.div initial={reduceMotion ? false : "hidden"} animate={reduceMotion ? undefined : "visible"} variants={staggerContainer}>
-            <EcosystemVisual />
+            <motion.div className="mt-4 flex items-center gap-2 text-xs font-bold text-primary-dark" variants={fadeUp}>
+              <CalendarCheck aria-hidden="true" className="h-4 w-4 text-primary" />
+              Book, assess, plan and support through one coordinated ecosystem.
+            </motion.div>
           </motion.div>
         </div>
 
         <div className="mt-8 flex justify-center lg:hidden">
-          <Link className="inline-flex items-center gap-2 text-sm font-bold text-primary" href={brand.ecommerceUrl} target="_blank" rel="noreferrer">
+          <a className="inline-flex items-center gap-2 text-sm font-bold text-primary" href={brand.ecommerceUrl} target="_blank" rel="noreferrer">
             Visit Store
             <ExternalLink aria-hidden="true" className="h-4 w-4" />
-          </Link>
+          </a>
         </div>
       </Container>
     </section>

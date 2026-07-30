@@ -20,7 +20,7 @@ const audience = [
 
 export function WoundCareAudience() {
   return (
-    <WoundSection className="py-10">
+    <WoundSection className="py-14">
       <WoundBackgroundImage className="-left-24 bottom-[-2rem] h-52 w-[42rem] opacity-10" src="/wound-care/blue-amber-wave.png" />
       <WoundContainer>
         <WoundReveal className="text-center">

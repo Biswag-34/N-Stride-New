@@ -10,10 +10,7 @@ import { Container } from "@/components/ui/Container";
 import { brand } from "@/data/brand";
 import { ctas } from "@/data/ctas";
 import { fadeUp, staggerContainer, staggerItem } from "@/lib/motion";
-import {
-  overviewIconMap,
-  OverviewKicker,
-} from "./VerticalsOverviewPrimitives";
+import { overviewIconMap } from "./VerticalsOverviewPrimitives";
 
 const heroMetrics = [
   { label: "Clinical-led solutions", icon: overviewIconMap.protect },
@@ -48,10 +45,7 @@ export function VerticalsHero() {
       <Container>
         <div className="grid items-center gap-10 lg:grid-cols-[0.86fr_1.14fr]">
           <motion.div initial={reduceMotion ? false : "hidden"} animate={reduceMotion ? undefined : "visible"} variants={staggerContainer}>
-            <motion.div variants={staggerItem}>
-              <OverviewKicker>Care Verticals</OverviewKicker>
-            </motion.div>
-            <motion.h1 className="mt-5 max-w-[32rem] text-[clamp(2.08rem,10vw,2.8rem)] font-semibold leading-[1.05] text-primary-dark sm:text-5xl lg:text-[3.55rem]" variants={fadeUp}>
+            <motion.h1 className="max-w-[32rem] text-[clamp(2.08rem,10vw,2.8rem)] font-semibold leading-[1.05] text-primary-dark sm:text-5xl lg:text-[3.55rem]" variants={fadeUp}>
               One Ecosystem.
               <br />
               Four Verticals.

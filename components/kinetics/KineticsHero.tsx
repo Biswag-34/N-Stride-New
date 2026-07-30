@@ -35,11 +35,11 @@ export function KineticsHero({ vertical }: KineticsHeroProps) {
           variants={{ hidden: {}, visible: { transition: { staggerChildren: 0.1 } } }}
         >
           <motion.h1
-            className="max-w-[32rem] font-heading text-[clamp(2rem,7vw,3.9rem)] font-bold leading-[1.04] text-primary-dark lg:leading-[1]"
+            className="max-w-[28rem] font-heading text-[clamp(2rem,6vw,3.45rem)] font-bold leading-[1.04] text-primary-dark lg:leading-[1.02]"
             variants={fadeUp}
           >
-            <span className="block whitespace-nowrap">Protect every step.</span>
-            <span className="block whitespace-nowrap">Move with confidence.</span>
+            <span className="block">Protected steps.</span>
+            <span className="block">Confident movement.</span>
           </motion.h1>
           <motion.p className="mt-5 max-w-[30rem] text-sm leading-7 text-text-secondary sm:text-base" variants={fadeUp}>
             N-Stride Kinetics brings therapeutic footwear and performance-driven design together for protection,

@@ -8,7 +8,7 @@ import { Button } from "@/components/ui/Button";
 import { Container } from "@/components/ui/Container";
 import { stepAheadProgram } from "@/data/stepAhead";
 import { staggerContainer, staggerItem } from "@/lib/motion";
-import { ImageDrop, SectionKicker } from "./HomeDesignPrimitives";
+import { ImageDrop } from "./HomeDesignPrimitives";
 
 const programItems = [
   { label: "Risk screening & assessment", icon: UserRound },
@@ -46,16 +46,15 @@ export function HomeStepAheadFeature() {
                   <p className="font-heading text-2xl font-semibold">Step-Ahead Program</p>
                   <p className="mt-1 max-w-[15rem] text-sm leading-6 text-white/88">Clinical care pathway and support</p>
                 </div>
-                <span className="absolute bottom-7 left-1/2 z-10 flex h-20 w-20 -translate-x-1/2 items-center justify-center rounded-full border-[6px] border-white/35 bg-primary text-white shadow-[0_20px_45px_rgba(7,59,102,0.25)]">
-                  <Play aria-hidden="true" className="ml-1 h-8 w-8 fill-current" />
+                <span className="absolute right-6 top-6 z-10 flex h-14 w-14 items-center justify-center rounded-full border-[4px] border-white/40 bg-primary text-white shadow-[0_18px_38px_rgba(7,59,102,0.25)]">
+                  <Play aria-hidden="true" className="ml-0.5 h-6 w-6 fill-current" />
                 </span>
               </div>
             </ImageDrop>
           </motion.div>
 
           <motion.div variants={staggerItem}>
-            <SectionKicker>Featured program</SectionKicker>
-            <h2 className="mt-4 max-w-[31rem] text-3xl font-semibold leading-tight text-primary-dark sm:text-4xl">
+            <h2 className="max-w-[31rem] text-3xl font-semibold leading-tight text-primary-dark sm:text-4xl">
               Step-Ahead: Structured care. Stronger outcomes.
             </h2>
             <p className="mt-4 max-w-[36rem] text-sm leading-7 text-text-secondary">

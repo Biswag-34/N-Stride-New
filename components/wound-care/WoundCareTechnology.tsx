@@ -24,7 +24,7 @@ const advantages = [
 
 export function WoundCareTechnology({ vertical }: WoundCareTechnologyProps) {
   return (
-    <WoundSection className="bg-[linear-gradient(180deg,#ffffff,#fbfdff)] py-11" id="technology">
+    <WoundSection className="bg-[linear-gradient(180deg,#ffffff,#fbfdff)] py-14" id="technology">
       <WoundBackgroundImage className="-left-20 bottom-0 h-56 w-[52rem] opacity-10" src="/wound-care/blue-amber-wave.png" />
       <WoundContainer>
         <div className="grid items-center gap-8 lg:grid-cols-[0.28fr_0.72fr]">

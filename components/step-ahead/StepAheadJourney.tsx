@@ -16,7 +16,7 @@ const journey = [
 
 export function StepAheadJourney() {
   return (
-    <StepSection className="bg-[linear-gradient(180deg,#ffffff,#f7fcff)] py-11">
+    <StepSection className="bg-[linear-gradient(180deg,#ffffff,#f7fcff)] py-14">
       <StepContainer>
         <StepReveal className="mb-7 flex flex-col justify-between gap-3 md:flex-row md:items-end">
           <div>
