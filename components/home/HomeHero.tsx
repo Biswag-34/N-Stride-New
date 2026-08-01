@@ -22,16 +22,14 @@ export function HomeHero() {
     <section
       className="relative isolate overflow-hidden bg-cover bg-center pb-8 pt-8 xs:pt-10 sm:pt-12 lg:min-h-[620px] lg:pb-12"
       style={{
-        backgroundImage:
-          "linear-gradient(90deg, rgba(255,255,255,0.96) 0%, rgba(255,255,255,0.88) 38%, rgba(255,255,255,0.30) 72%, rgba(255,255,255,0.68) 100%), linear-gradient(180deg, rgba(255,255,255,0.12), rgba(244,250,255,0.9)), url('/home/resource-consultation-final.png')",
+        backgroundImage: "url('/requested-assets/home-hero.png')",
         backgroundPosition: "center right",
       }}
     >
-      <div className="absolute inset-x-0 bottom-0 -z-10 h-28 bg-[linear-gradient(180deg,transparent,#ffffff_82%)]" />
-      <Container>
+      <Container className="relative z-10">
         <div className="flex min-h-[520px] items-center">
           <motion.div
-            className="max-w-[42rem] rounded-[1.15rem] border border-white/76 bg-white/58 px-5 py-6 shadow-[0_28px_70px_rgba(7,59,102,0.12),inset_0_1px_0_rgba(255,255,255,0.86)] backdrop-blur-md xs:px-6 sm:px-8 sm:py-8"
+            className="max-w-[42rem] py-6"
             initial={false}
             animate={reduceMotion ? undefined : "visible"}
             variants={staggerContainer}
@@ -61,7 +59,7 @@ export function HomeHero() {
                 const Icon = item.icon;
 
                 return (
-                  <motion.div className="group flex items-center gap-3 rounded-[0.8rem] border border-white/78 bg-white/64 px-3 py-3 shadow-[0_14px_32px_rgba(20,121,201,0.09)] transition hover:-translate-y-1 hover:bg-white" key={item.title} variants={staggerItem}>
+                  <motion.div className="group flex items-center gap-3 rounded-[0.8rem] border border-white/78 bg-white/72 px-3 py-3 shadow-[0_14px_32px_rgba(20,121,201,0.09)] transition hover:-translate-y-1 hover:bg-white" key={item.title} variants={staggerItem}>
                     <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-[0.7rem] bg-soft-sky text-primary shadow-[0_10px_22px_rgba(20,121,201,0.1)]">
                       <Icon aria-hidden="true" className="h-4 w-4" />
                     </span>

@@ -28,16 +28,11 @@ const proof = [
 export function BioFitHero({ vertical }: BioFitHeroProps) {
   return (
     <BioFitSection className="bg-[linear-gradient(105deg,#ffffff,#fbf9ff_52%,#f2efff)] pb-16 pt-8 xs:pt-10 lg:pb-20">
-      <div aria-hidden="true" className="absolute inset-0 bg-[radial-gradient(circle_at_76%_24%,rgba(115,87,216,0.12),transparent_28%)]" />
       <BioFitWaveImage
         className="bottom-[-4.75rem] h-60 bg-bottom opacity-24 blur-[1px] [mask-image:linear-gradient(to_top,black_0%,rgba(0,0,0,0.7)_42%,transparent_92%)]"
         src="/biofit/wave-divider-soft.png"
       />
       <BioFitDottedField className="bottom-1 right-0 h-56 w-[26rem] opacity-55 sm:h-72 sm:w-[38rem] sm:opacity-100" />
-      <div
-        aria-hidden="true"
-        className="absolute inset-x-0 bottom-[-1px] z-10 h-28 bg-[linear-gradient(180deg,rgba(255,255,255,0),rgba(255,255,255,0.72)_48%,#ffffff_96%)]"
-      />
       <BioFitContainer className="relative z-20 grid gap-7 lg:min-h-[540px] lg:grid-cols-[0.68fr_1.32fr] lg:items-start lg:gap-8">
         <BioFitReveal className="lg:pt-16">
           <h1 className="max-w-[34rem] font-heading text-[clamp(2rem,5.6vw,3.72rem)] font-bold leading-[1.04] text-primary-dark">
@@ -71,13 +66,12 @@ export function BioFitHero({ vertical }: BioFitHeroProps) {
         </BioFitReveal>
 
         <BioFitReveal className="relative min-h-[260px] xs:min-h-[340px] sm:min-h-[440px] lg:pt-16">
-          <div className="absolute right-[2%] top-[4%] h-[86%] w-[88%] rounded-[50%] bg-[#ece8ff]/60 blur-[56px]" />
           <BioFitAsset
             alt="Bio-Fit patient walking with prosthetic support and clinical alignment overlay"
-            className="relative z-10 ml-auto min-h-[260px] w-full max-w-[910px] [mask-image:radial-gradient(ellipse_at_58%_50%,black_38%,rgba(0,0,0,0.96)_55%,transparent_76%)] xs:min-h-[340px] sm:min-h-[440px]"
-            imageClassName="object-contain object-right mix-blend-multiply"
+            className="relative z-10 ml-auto min-h-[260px] w-full max-w-[910px] xs:min-h-[340px] sm:min-h-[440px]"
+            imageClassName="object-contain object-right"
             priority
-            src="/biofit/target-hero-visual-clean.png"
+            src="/requested-assets/biofit-hero.png"
           />
         </BioFitReveal>
       </BioFitContainer>

@@ -33,7 +33,7 @@ const verticalDisplay: Record<
       "Custom footwear solutions",
     ],
     imageLabel: "Kinetics footwear visual",
-    imageSrc: "/verticals-overview/kinetics-footwear-cutout.png",
+    imageSrc: "/requested-assets/kinetics-card.png",
     icon: "foot",
     tone: "kinetics",
   },

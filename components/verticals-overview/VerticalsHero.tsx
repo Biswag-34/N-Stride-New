@@ -1,7 +1,6 @@
 "use client";
 
 import { ArrowRight } from "lucide-react";
-import Image from "next/image";
 import Link from "next/link";
 import { motion, useReducedMotion } from "framer-motion";
 
@@ -19,31 +18,22 @@ const heroMetrics = [
   { label: "Outcome focused", icon: overviewIconMap.outcome },
 ];
 
-function HeroEcosystemVisual() {
-  return (
-    <div
-      aria-label="N-Stride connected care verticals visual"
-      className="relative mx-auto aspect-[488/374] w-full max-w-[min(38.5rem,92vw)] overflow-visible drop-shadow-[0_18px_38px_rgba(20,121,201,0.08)] sm:drop-shadow-[0_24px_48px_rgba(20,121,201,0.08)]"
-    >
-      <Image
-        alt="N-Stride connected care ecosystem with Kinetics, Insight, Wound Care and Bio-Fit"
-        className="object-contain"
-        fill
-        priority
-        sizes="(min-width: 1024px) 620px, 100vw"
-        src="/verticals-overview/hero-ecosystem-crop.png"
-      />
-    </div>
-  );
-}
-
 export function VerticalsHero() {
   const reduceMotion = useReducedMotion();
 
   return (
-    <section className="relative isolate overflow-hidden bg-[radial-gradient(circle_at_75%_30%,rgba(38,182,200,0.12),transparent_31rem),linear-gradient(180deg,#ffffff_0%,#f4faff_100%)] pb-10 pt-8 xs:pt-10 sm:pt-14 lg:pb-14">
-      <Container>
-        <div className="grid items-center gap-10 lg:grid-cols-[0.86fr_1.14fr]">
+    <section
+      className="relative isolate overflow-hidden bg-cover bg-center pb-10 pt-8 xs:pt-10 sm:pt-14 lg:min-h-[650px] lg:pb-14"
+      style={{
+        backgroundImage:
+          "linear-gradient(90deg, rgba(255,255,255,0.98) 0%, rgba(255,255,255,0.92) 38%, rgba(255,255,255,0.42) 66%, rgba(255,255,255,0.08) 100%), linear-gradient(180deg, rgba(255,255,255,0.08), rgba(244,250,255,0.62)), url('/verticals-overview/hero-verticals-banner.png')",
+        backgroundPosition: "center right",
+      }}
+    >
+      <div aria-hidden="true" className="absolute inset-y-0 left-0 z-0 w-36 bg-[linear-gradient(90deg,#ffffff,rgba(255,255,255,0))]" />
+      <div aria-hidden="true" className="absolute inset-x-0 bottom-0 z-0 h-28 bg-[linear-gradient(180deg,rgba(244,250,255,0),#ffffff_88%)]" />
+      <Container className="relative z-10">
+        <div className="flex min-h-[540px] items-center">
           <motion.div initial={reduceMotion ? false : "hidden"} animate={reduceMotion ? undefined : "visible"} variants={staggerContainer}>
             <motion.h1 className="max-w-[32rem] text-[clamp(2.08rem,10vw,2.8rem)] font-semibold leading-[1.05] text-primary-dark sm:text-5xl lg:text-[3.55rem]" variants={fadeUp}>
               One Ecosystem.
@@ -78,8 +68,6 @@ export function VerticalsHero() {
               })}
             </motion.div>
           </motion.div>
-
-          <HeroEcosystemVisual />
         </div>
       </Container>
 

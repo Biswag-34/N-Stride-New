@@ -45,14 +45,17 @@ export function BioFitWhoHelp({ vertical }: BioFitWhoHelpProps) {
           <div className="relative overflow-hidden rounded-[1.35rem] bg-[linear-gradient(135deg,#f4f0ff,#ffffff_50%,#eefbff)] p-4 shadow-[0_24px_68px_rgba(90,103,216,0.11)] ring-1 ring-[#ddd4ff] lg:p-6">
             <div aria-hidden="true" className="absolute -right-24 top-8 h-64 w-64 rounded-full bg-[#d8d0ff]/70 blur-3xl" />
             <div aria-hidden="true" className="absolute -left-24 bottom-0 h-64 w-80 rounded-full bg-[#ddf7ff]/60 blur-3xl" />
-            <div className="relative grid gap-4 lg:grid-cols-[0.42fr_0.58fr] lg:items-stretch">
-              <div className="relative min-h-[21rem] overflow-hidden rounded-t-[7rem] rounded-br-[1.4rem] rounded-bl-[1.4rem] bg-[#ece8ff] ring-1 ring-white/80">
+            <div className="relative grid gap-4 lg:grid-cols-[0.5fr_0.5fr] lg:items-stretch">
+              <div className="relative min-h-[22rem] overflow-hidden rounded-[1.2rem] bg-[#ece8ff] ring-1 ring-white/80">
                 <BioFitAsset
-                  alt=""
+                  alt="Technician fitting a prosthetic leg in a clinical workshop"
                   className="absolute inset-0 h-full w-full"
                   imageClassName="object-cover object-center"
-                  src="/biofit/target-who-help-arch.png"
+                  src="/requested-assets/biofit-who-help.png"
                 />
+                <div aria-hidden="true" className="absolute inset-x-0 top-0 h-20 bg-[linear-gradient(180deg,#f4f0ff,rgba(244,240,255,0))]" />
+                <div aria-hidden="true" className="absolute inset-y-0 left-0 w-20 bg-[linear-gradient(90deg,#f4f0ff,rgba(244,240,255,0))]" />
+                <div aria-hidden="true" className="absolute inset-y-0 right-0 w-20 bg-[linear-gradient(270deg,#ffffff,rgba(255,255,255,0))]" />
                 <div aria-hidden="true" className="absolute inset-0 bg-[linear-gradient(180deg,rgba(255,255,255,0.02),rgba(22,20,54,0.58))]" />
                 <div className="absolute bottom-5 left-5 right-5 rounded-[1rem] bg-white/86 p-4 shadow-[0_16px_36px_rgba(21,31,54,0.12)] backdrop-blur">
                   <p className="font-heading text-lg font-bold text-primary-dark">Patient-specific fit</p>

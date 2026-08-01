@@ -34,18 +34,18 @@ export function HomeFitRxFeature() {
           <div aria-hidden="true" className="absolute -right-28 -top-28 h-72 w-72 rounded-full bg-[#dff4ff]/72 blur-3xl" />
           <div aria-hidden="true" className="absolute -left-32 bottom-0 h-72 w-96 rounded-full bg-[#eefcf4]/72 blur-3xl" />
           <div className="relative grid gap-7 lg:grid-cols-[0.48fr_0.52fr] lg:items-center">
-            <motion.div className="relative min-h-[22rem] overflow-hidden rounded-[1rem] bg-[#073b66] shadow-[0_22px_55px_rgba(7,59,102,0.14)]" variants={staggerItem}>
+            <motion.div className="relative min-h-[22rem] overflow-hidden rounded-[1rem] bg-[#eef7fb] shadow-[0_22px_55px_rgba(7,59,102,0.14)]" variants={staggerItem}>
               <Image
                 alt="NStride FitRx clinical footwear customization demo"
-                className="object-cover object-center opacity-88"
+                className="object-contain object-center"
                 fill
                 sizes="(min-width: 1024px) 560px, 100vw"
-                src="/home/resource-footwear-final.png"
+                src="/home/fitrx-insoles-clinic.png"
               />
-              <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(7,59,102,0.06),rgba(7,59,102,0.78))]" />
-              <div className="absolute bottom-5 left-5 right-5 rounded-[0.95rem] border border-white/24 bg-white/14 p-5 text-white shadow-[0_16px_38px_rgba(7,59,102,0.18)] backdrop-blur-md">
-                <p className="font-heading text-2xl font-semibold">NStride FitRx</p>
-                <p className="mt-2 text-sm font-semibold leading-6 text-white/86">Assess. Configure. Fit.</p>
+              <div className="absolute inset-x-0 bottom-0 h-32 bg-[linear-gradient(180deg,transparent,rgba(7,59,102,0.62))]" />
+              <div className="absolute bottom-6 left-6 right-6 text-white [text-shadow:0_3px_18px_rgba(7,59,102,0.72)]">
+                <p className="font-heading text-4xl font-extrabold leading-none sm:text-5xl">NStride FitRx</p>
+                <p className="mt-3 text-base font-extrabold leading-6 sm:text-lg">Assess. Configure. Fit.</p>
               </div>
             </motion.div>
 

@@ -15,8 +15,8 @@ export const navigation = [
       { label: "N-Stride Bio-Fit", href: "/verticals/bio-fit" },
     ],
   },
+  { label: "FitRx", href: "/fitrx" },
   { label: "Step-Ahead", href: "/step-ahead" },
-  { label: "Resources", href: "/resources" },
   { label: "Contact", href: "/contact" },
   { label: "Visit Store", href: brand.ecommerceUrl, external: true },
 ] satisfies NavigationItem[];
@@ -36,9 +36,9 @@ export const footerNavigation = [
   {
     title: "Programs",
     links: [
+      { label: "FitRx", href: "/fitrx" },
       { label: "Step-Ahead", href: "/step-ahead" },
       { label: "Book Consultation", href: "/contact" },
-      { label: "Book Foot Checkup", href: "/contact?type=foot-checkup" },
     ],
   },
   {

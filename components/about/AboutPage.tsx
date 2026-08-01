@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { useEffect, useMemo, useState } from "react";
+import { useMemo, useState } from "react";
 import { motion, useReducedMotion } from "framer-motion";
 import {
   ArrowRight,
@@ -86,14 +86,6 @@ function IdentitySection() {
   const reduceMotion = useReducedMotion();
   const active = identityTabs[activeIndex];
   const ActiveIcon = active.icon;
-
-  useEffect(() => {
-    const timer = window.setInterval(() => {
-      setActiveIndex((index) => (index + 1) % identityTabs.length);
-    }, 4500);
-
-    return () => window.clearInterval(timer);
-  }, []);
 
   return (
     <AboutSection className="bg-[linear-gradient(180deg,#ffffff,#f5fbff)] py-14">
@@ -339,26 +331,15 @@ export function AboutPage() {
           </AboutReveal>
 
           <AboutReveal className="relative" delay={0.08}>
-            <div className="absolute bottom-4 right-[10%] h-28 w-[72%] rounded-full bg-[#dff4ff]/80 blur-[44px]" />
             <div className="relative min-h-[320px] sm:min-h-[390px] lg:min-h-[460px]">
               <Image
                 alt="N-Stride mobility and lower-limb care consultation"
-                className="object-contain object-center mix-blend-multiply"
+                className="object-contain object-center"
                 fill
                 priority
                 sizes="(min-width: 1024px) 52vw, 100vw"
-                src="/about/hero-ecosystem.png"
-                style={{
-                  maskImage: "radial-gradient(ellipse at center, #000 58%, rgba(0,0,0,0.78) 74%, transparent 94%)",
-                  WebkitMaskImage: "radial-gradient(ellipse at center, #000 58%, rgba(0,0,0,0.78) 74%, transparent 94%)",
-                }}
+                src="/requested-assets/hero-ecosystem.png"
               />
-              <div className="absolute left-2 top-4 rounded-full bg-white/82 px-4 py-2 text-xs font-bold text-primary-dark shadow-[0_14px_34px_rgba(20,121,201,0.1)] ring-1 ring-[#d7ebfa] backdrop-blur">
-                Connected-care ecosystem
-              </div>
-              <div className="absolute bottom-5 left-4 max-w-[17rem] rounded-[0.85rem] bg-white/78 px-4 py-3 text-xs font-semibold leading-5 text-text-secondary shadow-[0_14px_34px_rgba(20,121,201,0.1)] ring-1 ring-[#d7ebfa] backdrop-blur">
-                Diagnosis, protection, treatment and restoration aligned into one care path.
-              </div>
             </div>
           </AboutReveal>
 

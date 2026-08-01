@@ -1,9 +1,8 @@
 "use client";
 
-import { ArrowUpRight, CheckCircle2 } from "lucide-react";
+import { CheckCircle2 } from "lucide-react";
 import { motion } from "framer-motion";
 import Image from "next/image";
-import Link from "next/link";
 
 import { Container } from "@/components/ui/Container";
 import { staggerContainer, staggerItem } from "@/lib/motion";
@@ -13,13 +12,6 @@ const connectedBullets = [
   "Footwear, wound care and restoration stay connected",
   "Follow-up keeps the care plan accountable",
   "Complex needs move into the right specialist vertical",
-];
-
-const hotspots = [
-  { label: "Kinetics", href: "/verticals/kinetics", className: "left-[10%] top-[34%]" },
-  { label: "Insight", href: "/verticals/insight", className: "left-[47%] top-[8%]" },
-  { label: "Wound Care", href: "/verticals/wound-care", className: "right-[8%] top-[37%]" },
-  { label: "Bio-Fit", href: "/verticals/bio-fit", className: "left-[47%] bottom-[8%]" },
 ];
 
 export function HomeConnectedCare() {
@@ -56,28 +48,19 @@ export function HomeConnectedCare() {
               </div>
             </motion.div>
 
-            <motion.div className="relative -mr-4 min-h-[18rem] overflow-visible xs:min-h-[22rem] sm:min-h-[32rem] lg:-mr-16 lg:min-h-[34rem]" variants={staggerItem}>
-              <div aria-hidden="true" className="absolute inset-y-0 left-0 z-10 w-28 bg-[linear-gradient(90deg,#f8fcff,transparent)]" />
-              <div aria-hidden="true" className="absolute inset-y-0 right-0 z-10 w-24 bg-[linear-gradient(270deg,#f8fcff,transparent)]" />
+            <motion.div className="relative -mx-3 min-h-[19rem] overflow-visible xs:min-h-[24rem] sm:min-h-[35rem] lg:-mr-14 lg:min-h-[36rem]" variants={staggerItem}>
+              <div aria-hidden="true" className="absolute inset-y-0 left-0 z-10 w-24 bg-[linear-gradient(90deg,#f8fcff,rgba(248,252,255,0))]" />
+              <div aria-hidden="true" className="absolute inset-y-0 right-0 z-10 w-24 bg-[linear-gradient(270deg,#f8fcff,rgba(248,252,255,0))]" />
+              <div aria-hidden="true" className="absolute inset-x-0 bottom-0 z-10 h-24 bg-[linear-gradient(0deg,#f8fcff,rgba(248,252,255,0))]" />
+              <div aria-hidden="true" className="absolute inset-x-0 top-0 z-10 h-20 bg-[linear-gradient(180deg,#f8fcff,rgba(248,252,255,0))]" />
               <Image
                 alt="N-Stride connected care ecosystem"
-                className="object-contain object-right drop-shadow-[0_24px_50px_rgba(20,121,201,0.08)]"
+                className="object-contain object-center drop-shadow-[0_24px_50px_rgba(20,121,201,0.08)]"
                 fill
                 priority={false}
-                sizes="(min-width: 1024px) 820px, 100vw"
-                src="/home/connected-care-final.png"
+                sizes="(min-width: 1024px) 840px, 100vw"
+                src="/requested-assets/mainly.png"
               />
-              {hotspots.map((spot) => (
-                <Link
-                  aria-label={`Open ${spot.label}`}
-                  className={`absolute z-20 hidden rounded-full border border-white/80 bg-white/72 px-3 py-2 text-xs font-bold text-primary-dark shadow-[0_12px_30px_rgba(20,121,201,0.14)] backdrop-blur transition hover:-translate-y-1 hover:bg-white hover:text-primary focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-primary/20 sm:inline-flex ${spot.className}`}
-                  href={spot.href}
-                  key={spot.label}
-                >
-                  {spot.label}
-                  <ArrowUpRight aria-hidden="true" className="ml-1 h-3.5 w-3.5" />
-                </Link>
-              ))}
             </motion.div>
           </div>
         </motion.div>

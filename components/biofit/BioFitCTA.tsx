@@ -5,7 +5,6 @@ import type { Vertical } from "@/data/verticals";
 
 import { Button } from "@/components/ui/Button";
 import {
-  BioFitAsset,
   BioFitContainer,
   BioFitDottedField,
   BioFitReveal,
@@ -32,12 +31,6 @@ export function BioFitCTA({ vertical }: BioFitCTAProps) {
           <div className="relative isolate overflow-hidden rounded-[1.45rem] bg-[#151f36] px-5 py-5 shadow-[0_28px_76px_rgba(21,31,54,0.18)] ring-1 ring-[#ddd4ff] md:px-6 md:py-6">
             <div aria-hidden="true" className="absolute inset-0 bg-[radial-gradient(circle_at_12%_18%,rgba(115,87,216,0.42),transparent_32%),radial-gradient(circle_at_86%_62%,rgba(38,182,200,0.24),transparent_34%)]" />
             <div aria-hidden="true" className="absolute inset-x-0 top-0 h-px bg-white/45" />
-            <BioFitAsset
-              alt=""
-              className="pointer-events-none absolute bottom-0 right-0 hidden h-full w-[24rem] opacity-90 [mask-image:linear-gradient(90deg,transparent_0%,black_26%)] lg:block"
-              imageClassName="object-contain object-[right_bottom]"
-              src="/biofit/target-cta-hand-clean.png"
-            />
             <div className="relative z-10 grid gap-5 lg:grid-cols-[0.58fr_0.42fr] lg:items-stretch">
               <div className="rounded-[1.05rem] bg-white px-6 py-7 shadow-[0_20px_54px_rgba(0,0,0,0.12)] md:px-8 md:py-8">
                 <div className="flex h-12 w-12 items-center justify-center rounded-[0.9rem] bg-[#ece8ff] text-[#7357d8]">
@@ -63,13 +56,13 @@ export function BioFitCTA({ vertical }: BioFitCTAProps) {
                   A clearer next step for fit, comfort and confidence.
                 </p>
                 <div className="mt-6 flex flex-col gap-3">
-                <Button className="justify-center rounded-[0.55rem] bg-white px-7 text-[#7357d8] hover:bg-[#f6f2ff]" href={vertical.cta.primary.href}>
-                  Request Bio-Fit Consultation
-                  <ArrowRight aria-hidden="true" className="h-4 w-4" />
-                </Button>
-                <Button className="justify-center rounded-[0.55rem] border-white/65 bg-transparent px-7 text-white hover:bg-white/10" href="/contact?type=bio-fit" variant="outline">
-                  Explore All Verticals
-                </Button>
+                  <Button className="justify-center rounded-[0.55rem] bg-white px-7 text-[#7357d8] hover:bg-[#f6f2ff]" href={vertical.cta.primary.href}>
+                    Request Bio-Fit Consultation
+                    <ArrowRight aria-hidden="true" className="h-4 w-4" />
+                  </Button>
+                  <Button className="justify-center rounded-[0.55rem] border-white/65 bg-transparent px-7 text-white hover:bg-white/10" href="/contact?type=bio-fit" variant="outline">
+                    Explore All Verticals
+                  </Button>
                 </div>
               </div>
             </div>

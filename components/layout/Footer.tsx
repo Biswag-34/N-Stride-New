@@ -1,11 +1,18 @@
-﻿import Link from "next/link";
 import Image from "next/image";
-import { Facebook, Instagram, Youtube } from "lucide-react";
+import Link from "next/link";
+import { Facebook, Instagram, Mail, MapPin, Phone, Youtube } from "lucide-react";
 
 import { Container } from "@/components/ui/Container";
 import { brand } from "@/data/brand";
 import { footerNavigation } from "@/data/navigation";
+import { cn } from "@/lib/cn";
 import { SITE_NAME } from "@/lib/constants";
+
+const socialHoverStyles: Record<string, string> = {
+  Facebook: "hover:border-[#1877f2] hover:bg-[#1877f2] hover:text-white",
+  Instagram: "hover:border-transparent hover:bg-[linear-gradient(135deg,#f58529,#dd2a7b,#8134af,#515bd4)] hover:text-white",
+  YouTube: "hover:border-[#ff0000] hover:bg-[#ff0000] hover:text-white",
+};
 
 export function Footer() {
   const socialIcons = {
@@ -15,9 +22,9 @@ export function Footer() {
   };
 
   return (
-    <footer className="border-t border-border-soft bg-[linear-gradient(180deg,#f4faff,#edf7ff)]">
-      <Container className="py-7 sm:py-9">
-        <div className="grid gap-7 lg:grid-cols-[1.08fr_2.45fr]">
+    <footer className="border-t border-border-soft bg-background text-text-primary">
+      <Container className="py-6 sm:py-7">
+        <div className="grid gap-6 lg:grid-cols-[1.05fr_1.95fr_0.62fr] lg:items-start">
           <div>
             <Link className="relative block h-9 w-36" href="/">
               <Image
@@ -29,20 +36,29 @@ export function Footer() {
               />
             </Link>
             <p className="mt-3 max-w-md text-[0.82rem] leading-6 text-text-secondary">{brand.summary}</p>
-            <div className="mt-4 space-y-1.5 text-[0.82rem] leading-6 text-text-secondary" id="contact">
-              <p>{brand.contact.phone}</p>
-              <p>{brand.contact.email}</p>
-              <p>{brand.contact.address}</p>
+            <div className="mt-3 space-y-2 text-[0.8rem] leading-5 text-text-secondary" id="contact">
+              <p className="flex items-start gap-2">
+                <Phone aria-hidden="true" className="mt-0.5 h-4 w-4 shrink-0 text-primary" />
+                <span>{brand.contact.phone}</span>
+              </p>
+              <p className="flex items-start gap-2">
+                <Mail aria-hidden="true" className="mt-0.5 h-4 w-4 shrink-0 text-primary" />
+                <span>{brand.contact.email}</span>
+              </p>
+              <p className="flex items-start gap-2">
+                <MapPin aria-hidden="true" className="mt-0.5 h-4 w-4 shrink-0 text-primary" />
+                <span>{brand.contact.address}</span>
+              </p>
             </div>
           </div>
 
-          <div className="grid gap-6 xs:grid-cols-2 lg:grid-cols-4">
+          <div className="grid gap-5 xs:grid-cols-2 lg:grid-cols-3">
             {footerNavigation.map((group) => (
               <div key={group.title}>
                 <h2 className="text-[0.72rem] font-bold uppercase tracking-[0.16em] text-primary-dark">
                   {group.title}
                 </h2>
-                <ul className="mt-3 space-y-2.5">
+                <ul className="mt-3 space-y-2">
                   {group.links.map((link) => {
                     const isExternal = link.href.startsWith("http");
 
@@ -58,10 +74,7 @@ export function Footer() {
                             {link.label}
                           </a>
                         ) : (
-                          <Link
-                            className="text-[0.82rem] text-text-secondary transition hover:text-primary"
-                            href={link.href}
-                          >
+                          <Link className="text-[0.82rem] text-text-secondary transition hover:text-primary" href={link.href}>
                             {link.label}
                           </Link>
                         )}
@@ -71,44 +84,41 @@ export function Footer() {
                 </ul>
               </div>
             ))}
-            <div>
-              <h2 className="text-[0.72rem] font-bold uppercase tracking-[0.16em] text-primary-dark">
-                Stay connected
-              </h2>
-              <div className="mt-3 flex gap-2.5">
-                {brand.socialLinks.map((link) => {
-                  const Icon = socialIcons[link.label as keyof typeof socialIcons];
+          </div>
 
-                  return (
-                    <a
-                      aria-label={link.label}
-                      className="flex h-9 w-9 items-center justify-center rounded-full border border-primary/10 bg-white text-primary-dark shadow-soft transition hover:border-primary/35 hover:bg-primary hover:text-white"
-                      href={link.href}
-                      key={link.label}
-                      rel="noreferrer"
-                      target="_blank"
-                    >
-                      {Icon ? <Icon aria-hidden="true" className="h-4 w-4" /> : link.label.slice(0, 1)}
-                    </a>
-                  );
-                })}
-              </div>
+          <div>
+            <h2 className="text-[0.72rem] font-bold uppercase tracking-[0.16em] text-primary-dark">
+              Stay connected
+            </h2>
+            <div className="mt-4 flex gap-2.5">
+              {brand.socialLinks.map((link) => {
+                const Icon = socialIcons[link.label as keyof typeof socialIcons];
+
+                return (
+                  <a
+                    aria-label={link.label}
+                    className={cn(
+                      "flex h-11 w-11 items-center justify-center rounded-full border border-border-soft bg-white text-primary-dark shadow-soft transition duration-300 hover:scale-105",
+                      socialHoverStyles[link.label],
+                    )}
+                    href={link.href}
+                    key={link.label}
+                    rel="noreferrer"
+                    target="_blank"
+                  >
+                    {Icon ? <Icon aria-hidden="true" className="h-4 w-4" /> : link.label.slice(0, 1)}
+                  </a>
+                );
+              })}
             </div>
           </div>
         </div>
 
-        <div className="mt-7 flex flex-col gap-3 border-t border-border-soft pt-5 text-[0.78rem] text-text-muted sm:flex-row sm:items-center sm:justify-between">
-          <p>© {new Date().getFullYear()} {SITE_NAME}. All rights reserved.</p>
-          <div className="flex flex-wrap gap-4 lg:hidden">
-            {brand.socialLinks.map((link) => (
-              <a className="transition hover:text-primary" href={link.href} key={link.label}>
-                {link.label}
-              </a>
-            ))}
-          </div>
+        <div className="mt-5 flex flex-col gap-2 border-t border-border-soft pt-4 text-[0.78rem] text-text-muted sm:flex-row sm:items-center sm:justify-between">
+          <p>© 2026 Nayapada&apos;s N-Stride. All rights reserved.</p>
+          <p className="font-heading font-bold text-primary-dark">Crafted By Biswa</p>
         </div>
       </Container>
     </footer>
   );
 }
-

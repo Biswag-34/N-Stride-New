@@ -54,7 +54,7 @@ export function KineticsAudience({ vertical }: KineticsAudienceProps) {
                 className="h-auto w-full"
                 height={675}
                 sizes="(min-width: 1024px) 760px, 92vw"
-                src="/kinetics/step.webp"
+                src="/requested-assets/walk-freely.png"
                 width={1200}
               />
               <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(7,59,102,0.22),transparent_42%,rgba(255,255,255,0.05))]" />

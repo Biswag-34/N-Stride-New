@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import { ArrowRight, BarChart3, FileCheck2, Handshake, RefreshCcw } from "lucide-react";
 
 import { Button } from "@/components/ui/Button";
@@ -32,19 +31,7 @@ const proofItems = [
 
 export function StepAheadHero() {
   return (
-    <StepSection className="bg-[linear-gradient(112deg,#ffffff_0%,#f6fbff_58%,#eef8ff_100%)]">
-      <div aria-hidden="true" className="absolute inset-0 opacity-44">
-        <Image
-          alt=""
-          className="object-cover object-center"
-          fill
-          priority
-          src="/step-ahead/ambient-stepahead-bg.png"
-          sizes="100vw"
-        />
-      </div>
-
-      <div aria-hidden="true" className="absolute inset-x-0 bottom-0 h-20 bg-[linear-gradient(180deg,transparent,#ffffff_86%)]" />
+    <StepSection className="bg-[url('/requested-assets/stepahead-hero.png')] bg-cover bg-center">
       <StepContainer className="relative grid items-center gap-8 pb-12 pt-8 xs:pb-14 xs:pt-10 sm:gap-10 lg:min-h-[560px] lg:grid-cols-[0.95fr_1.05fr] lg:py-10">
         <StepReveal className="max-w-[690px]">
           <h1 className="max-w-[650px] font-heading text-[clamp(2rem,6.5vw,3.9rem)] font-bold leading-[1.04] text-primary-dark lg:leading-[1.02]">
@@ -67,21 +54,7 @@ export function StepAheadHero() {
         </StepReveal>
 
         <StepReveal delay={0.1} className="relative">
-          <div className="absolute bottom-2 right-[8%] h-24 w-[72%] rounded-full bg-[#d8f1ff]/78 blur-[42px]" />
-          <div className="relative ml-auto min-h-[230px] max-w-[720px] xs:min-h-[270px] sm:min-h-[330px]">
-            <Image
-              alt="Diabetic foot care clinic setup illustration"
-              className="object-contain object-center mix-blend-multiply"
-              fill
-              priority
-              src="/step-ahead/hero-clinic-program.png"
-              sizes="(min-width: 1024px) 48vw, 100vw"
-              style={{
-                maskImage: "radial-gradient(ellipse at center, #000 57%, rgba(0,0,0,0.78) 73%, transparent 94%)",
-                WebkitMaskImage: "radial-gradient(ellipse at center, #000 57%, rgba(0,0,0,0.78) 73%, transparent 94%)",
-              }}
-            />
-          </div>
+          <div className="relative ml-auto min-h-[230px] max-w-[720px] xs:min-h-[270px] sm:min-h-[330px]" />
         </StepReveal>
 
         <div className="col-span-full grid gap-x-7 gap-y-4 pt-0 sm:grid-cols-2 lg:grid-cols-4">

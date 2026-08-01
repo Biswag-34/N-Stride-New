@@ -18,7 +18,7 @@ const machines = [
     icon: Footprints,
     title: "3D Foot Scan Platform",
     text: "Captures foot shape, posture and fit references for custom recommendations.",
-    src: "/insight/scan-foot-platform.png",
+    src: "/requested-assets/podograph.png",
     className: "lg:col-span-5",
   },
   {
@@ -32,7 +32,7 @@ const machines = [
     icon: Camera,
     title: "Wound Assessment Capture",
     text: "Documents wound visuals and healing indicators for follow-up decisions.",
-    src: "/insight/wound-assessment-card.png",
+    src: "/requested-assets/vasosense.png",
     className: "lg:col-span-3",
   },
   {
@@ -79,7 +79,7 @@ export function InsightConnectedEcosystem() {
                   <div className="relative z-10 mt-4 min-h-[11rem]">
                     <InsightAsset
                       alt={machine.title}
-                      className="absolute inset-x-0 bottom-0 min-h-[12rem] mix-blend-multiply [mask-image:radial-gradient(ellipse_at_center,black_56%,rgba(0,0,0,0.78)_74%,transparent_96%)]"
+                      className="absolute inset-x-0 bottom-0 min-h-[12rem]"
                       imageClassName="object-contain"
                       sizes="(max-width: 1024px) 92vw, 42vw"
                       src={machine.src}

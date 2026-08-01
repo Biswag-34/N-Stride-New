@@ -49,19 +49,18 @@ const steps = [
 
 export function WoundCarePathway() {
   return (
-    <WoundSection className="bg-[linear-gradient(180deg,#ffffff,#fbfdff_52%,#fffaf2)] py-16">
-      <WoundBackgroundImage className="-right-24 top-0 hidden h-72 w-[62rem] opacity-14 lg:block" src="/wound-care/pathway-circles.png" />
-      <WoundBackgroundImage className="-left-28 bottom-[-5rem] hidden h-64 w-[56rem] opacity-10 lg:block" src="/wound-care/blue-amber-wave.png" />
+    <WoundSection className="bg-[linear-gradient(180deg,#ffffff,#fbfdff_58%,#fffaf2)] py-10">
+      <WoundBackgroundImage className="-right-24 top-0 hidden h-56 w-[54rem] opacity-10 lg:block" src="/wound-care/pathway-circles.png" />
       <WoundContainer>
-        <div className="grid items-center gap-8 lg:grid-cols-[0.34fr_0.66fr]">
+        <div className="grid items-center gap-6 lg:grid-cols-[0.32fr_0.68fr]">
           <WoundReveal>
             <h2 className="max-w-[25rem] font-heading text-3xl font-bold leading-tight text-primary-dark">
               Wound-care pathway architecture
             </h2>
-            <p className="mt-5 max-w-[25rem] text-sm leading-7 text-text-secondary">
+            <p className="mt-4 max-w-[25rem] text-sm leading-7 text-text-secondary">
               A visual care map for assessment, VAC readiness, pressure protection and review.
             </p>
-            <div className="mt-7 grid max-w-[25rem] grid-cols-3 overflow-hidden rounded-[0.9rem] bg-white shadow-[0_14px_38px_rgba(16,42,67,0.07)] ring-1 ring-[#c9e6f8]">
+            <div className="mt-5 grid max-w-[25rem] grid-cols-3 overflow-hidden rounded-[0.75rem] bg-white shadow-[0_12px_30px_rgba(16,42,67,0.06)] ring-1 ring-[#c9e6f8]">
               {[
                 ["Map", "status"],
                 ["Treat", "VAC"],
@@ -76,23 +75,23 @@ export function WoundCarePathway() {
           </WoundReveal>
 
           <WoundReveal delay={0.08}>
-            <div className="relative isolate overflow-hidden rounded-tl-[2rem] rounded-tr-[0.85rem] rounded-br-[2rem] rounded-bl-[0.85rem] bg-white p-5 shadow-[0_24px_66px_rgba(16,42,67,0.09)] ring-1 ring-[#c9e6f8] md:p-7">
-              <div aria-hidden="true" className="absolute -right-24 -top-24 h-56 w-56 rounded-full bg-[#fff2dd]/80 blur-3xl" />
-              <div aria-hidden="true" className="absolute -bottom-24 left-6 h-56 w-72 rounded-full bg-[#ddf1ff]/80 blur-3xl" />
+            <div className="relative isolate overflow-hidden rounded-[1.15rem] bg-white p-4 shadow-[0_18px_52px_rgba(16,42,67,0.08)] ring-1 ring-[#c9e6f8] md:p-5">
+              <div aria-hidden="true" className="absolute -right-24 -top-24 h-48 w-48 rounded-full bg-[#e7f6ff]/80 blur-3xl" />
+              <div aria-hidden="true" className="absolute -bottom-24 left-6 h-48 w-64 rounded-full bg-[#fff2dd]/70 blur-3xl" />
 
-              <div className="relative rounded-[1.15rem] bg-[linear-gradient(135deg,#fbfdff,#ffffff_58%,#fff9ee)] p-4 ring-1 ring-[#e4f1fa] md:p-6">
-                <div className="grid gap-5 lg:grid-cols-[0.44fr_0.56fr] lg:items-center">
-                  <div className="relative min-h-[21rem] overflow-hidden rounded-[1rem] bg-[linear-gradient(145deg,#073b66,#1479c9_55%,#fff2dd_55%,#ffffff)] p-5 text-white shadow-[0_18px_48px_rgba(16,42,67,0.1)]">
-                    <div aria-hidden="true" className="absolute -right-14 -top-12 h-44 w-44 rounded-full bg-white/18 blur-2xl" />
-                    <div aria-hidden="true" className="absolute bottom-0 left-0 h-32 w-full bg-[linear-gradient(0deg,rgba(255,255,255,0.22),transparent)]" />
-                    <div className="relative flex h-full min-h-[18rem] flex-col justify-between">
+              <div className="relative rounded-[0.95rem] bg-[linear-gradient(135deg,#fbfdff,#ffffff_62%,#fff9ee)] p-3 ring-1 ring-[#e4f1fa] md:p-4">
+                <div className="grid gap-4 lg:grid-cols-[0.36fr_0.64fr] lg:items-stretch">
+                  <div className="relative min-h-[15rem] overflow-hidden rounded-[0.9rem] bg-[linear-gradient(145deg,#f8fcff,#e8f7ff_54%,#fff8ec)] p-5 text-primary-dark shadow-[0_14px_34px_rgba(16,42,67,0.08)] ring-1 ring-[#c9e6f8]">
+                    <div aria-hidden="true" className="absolute -right-16 -top-16 h-40 w-40 rounded-full bg-[#26b6c8]/18 blur-2xl" />
+                    <div aria-hidden="true" className="absolute -bottom-16 -left-12 h-40 w-48 rounded-full bg-[#f5a623]/16 blur-2xl" />
+                    <div className="relative flex h-full min-h-[13rem] flex-col justify-between">
                       <div>
-                        <p className="font-heading text-[0.68rem] font-bold uppercase tracking-[0.16em] text-white/70">NPWT control point</p>
+                        <p className="font-heading text-[0.68rem] font-bold uppercase tracking-[0.16em] text-primary">NPWT control point</p>
                         <p className="mt-3 max-w-[16rem] font-heading text-2xl font-bold leading-tight">Seal, pressure and protection move as one.</p>
                       </div>
                       <div className="grid grid-cols-2 gap-3">
                         {["Seal", "Pressure", "Offload", "Review"].map((item) => (
-                          <span className="rounded-[0.7rem] bg-white/14 px-3 py-2 text-xs font-bold ring-1 ring-white/24 backdrop-blur" key={item}>
+                          <span className="rounded-[0.65rem] bg-white px-3 py-2 text-xs font-bold text-primary-dark shadow-[0_8px_20px_rgba(16,42,67,0.05)] ring-1 ring-[#d8ecf8]" key={item}>
                             {item}
                           </span>
                         ))}
@@ -101,36 +100,35 @@ export function WoundCarePathway() {
                   </div>
 
                   <div className="relative">
-                    <div aria-hidden="true" className="absolute bottom-7 left-7 top-7 w-px bg-[linear-gradient(180deg,#1479c9,#26b6c8,#f5a623,#6f86a0,#1d9a72)] opacity-30" />
-                    <div className="grid gap-3">
-                    {steps.map((step) => {
-                      const Icon = step.icon;
-                      return (
-                        <article className="group relative z-10 grid grid-cols-[auto_1fr] items-center gap-4 rounded-[0.85rem] bg-white/90 p-3 shadow-[0_12px_30px_rgba(16,42,67,0.06)] ring-1 ring-[#d8ecf8] transition duration-300 hover:-translate-y-1 hover:bg-white" key={step.title}>
-                          <span
-                            className="grid h-12 w-12 shrink-0 place-items-center rounded-[0.8rem] bg-white shadow-[0_12px_26px_rgba(16,42,67,0.07)] ring-1 ring-[#d8ecf8]"
-                            style={{ color: step.color }}
-                          >
-                            <Icon aria-hidden="true" className="h-6 w-6" />
-                          </span>
-                          <div>
-                            <p className="font-heading text-[0.66rem] font-bold uppercase tracking-[0.16em]" style={{ color: step.color }}>
-                              {step.code}
-                            </p>
-                            <h3 className="mt-1 font-heading text-sm font-bold leading-5 text-primary-dark">{step.title}</h3>
-                            <p className="mt-2 w-fit rounded-full bg-[#f4faff] px-3 py-1 text-[0.7rem] font-bold text-primary-dark ring-1 ring-[#d8ecf8]">
-                              {step.output}
-                            </p>
-                          </div>
-                        </article>
-                      );
-                    })}
+                    <div className="grid gap-3 sm:grid-cols-2">
+                      {steps.map((step) => {
+                        const Icon = step.icon;
+                        return (
+                          <article className="group relative z-10 grid grid-cols-[auto_1fr] items-center gap-3 rounded-[0.8rem] bg-white/95 p-3 shadow-[0_10px_24px_rgba(16,42,67,0.055)] ring-1 ring-[#d8ecf8] transition duration-300 hover:bg-white hover:ring-[#b8ddf2]" key={step.title}>
+                            <span
+                              className="grid h-11 w-11 shrink-0 place-items-center rounded-[0.7rem] bg-white shadow-[0_10px_22px_rgba(16,42,67,0.06)] ring-1 ring-[#d8ecf8]"
+                              style={{ color: step.color }}
+                            >
+                              <Icon aria-hidden="true" className="h-5 w-5" />
+                            </span>
+                            <div>
+                              <p className="font-heading text-[0.66rem] font-bold uppercase tracking-[0.16em]" style={{ color: step.color }}>
+                                {step.code}
+                              </p>
+                              <h3 className="mt-1 font-heading text-sm font-bold leading-5 text-primary-dark">{step.title}</h3>
+                              <p className="mt-2 w-fit rounded-full bg-[#f4faff] px-2.5 py-1 text-[0.68rem] font-bold text-primary-dark ring-1 ring-[#d8ecf8]">
+                                {step.output}
+                              </p>
+                            </div>
+                          </article>
+                        );
+                      })}
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-            <div className="mt-4 flex flex-col gap-3 rounded-[0.85rem] bg-white px-5 py-4 text-sm font-bold text-primary-dark shadow-[0_16px_40px_rgba(16,42,67,0.08)] ring-1 ring-[#c9e6f8] sm:flex-row sm:items-center sm:justify-between">
+            <div className="mt-3 flex flex-col gap-3 rounded-[0.75rem] bg-white px-5 py-3 text-sm font-bold text-primary-dark shadow-[0_12px_34px_rgba(16,42,67,0.07)] ring-1 ring-[#c9e6f8] sm:flex-row sm:items-center sm:justify-between">
               <span>Personalized by wound status, device suitability, pressure risk and review response.</span>
               <a className="inline-flex items-center gap-2 text-primary" href="/contact?type=wound-care">
                 Request pathway guidance
