@@ -92,27 +92,27 @@ export function BioFitSolutions({ vertical }: BioFitSolutionsProps) {
                   >
                     <Image
                       alt=""
-                      className="object-cover transition duration-700 group-hover/card:scale-110 group-hover/card:blur-[2px] group-focus-visible/card:scale-110 group-focus-visible/card:blur-[2px]"
+                      className="object-cover transition duration-700 group-hover/card:scale-105 group-focus-visible/card:scale-105"
                       fill
                       sizes="(max-width: 1024px) 100vw, 26vw"
                       src={card.image}
                     />
-                    <div aria-hidden="true" className="absolute inset-0 bg-[linear-gradient(180deg,rgba(11,16,32,0)_18%,rgba(11,16,32,0.78)_100%)]" />
-                    <div aria-hidden="true" className="absolute inset-0 translate-y-full bg-[#160f35]/34 opacity-0 backdrop-blur-md transition duration-500 group-hover/card:translate-y-0 group-hover/card:opacity-100 group-focus-visible/card:translate-y-0 group-focus-visible/card:opacity-100" />
-                    <div className="absolute inset-x-0 bottom-0 p-6">
-                      <h3 className="font-heading text-2xl font-bold text-white transition duration-500 group-hover/card:-translate-y-4 group-focus-visible/card:-translate-y-4">
-                        {card.title}
-                      </h3>
-                      <div className="translate-y-8 opacity-0 transition duration-500 group-hover/card:translate-y-0 group-hover/card:opacity-100 group-focus-visible/card:translate-y-0 group-focus-visible/card:opacity-100">
-                        <p className="mt-1 text-sm font-bold text-[#ebe6ff]">{card.subtitle}</p>
-                        <ul className="mt-4 space-y-2">
+                    <div aria-hidden="true" className="absolute inset-0 bg-[linear-gradient(180deg,rgba(4,8,18,0.08)_10%,rgba(4,8,18,0.52)_62%,rgba(4,8,18,0.86)_100%)]" />
+                    <div aria-hidden="true" className="absolute inset-x-4 bottom-5 h-24 rounded-full bg-black/70 blur-2xl transition duration-500 group-hover/card:h-48 group-hover/card:bg-black/82 group-focus-visible/card:h-48 group-focus-visible/card:bg-black/82" />
+                    <div className="absolute inset-x-0 bottom-0 p-5">
+                      <div className="relative rounded-[0.85rem] bg-black/42 px-4 py-3 text-white shadow-[0_16px_40px_rgba(0,0,0,0.34)] backdrop-blur-[2px] transition duration-500 group-hover/card:bg-black/76 group-focus-visible/card:bg-black/76">
+                        <h3 className="font-heading text-2xl font-bold text-white drop-shadow-[0_3px_10px_rgba(0,0,0,0.75)]">{card.title}</h3>
+                        <div className="max-h-0 translate-y-5 overflow-hidden opacity-0 transition-all duration-500 group-hover/card:max-h-56 group-hover/card:translate-y-0 group-hover/card:opacity-100 group-focus-visible/card:max-h-56 group-focus-visible/card:translate-y-0 group-focus-visible/card:opacity-100">
+                          <p className="mt-2 text-sm font-extrabold text-white">{card.subtitle}</p>
+                          <ul className="mt-3 space-y-2">
                           {card.items.map((item) => (
-                            <li className="flex gap-2 text-[0.82rem] leading-5 text-white/88" key={item}>
+                            <li className="flex gap-2 text-[0.82rem] font-semibold leading-5 text-white" key={item}>
                               <span aria-hidden="true" className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-white" />
                               {item}
                             </li>
                           ))}
-                        </ul>
+                          </ul>
+                        </div>
                       </div>
                     </div>
                   </button>

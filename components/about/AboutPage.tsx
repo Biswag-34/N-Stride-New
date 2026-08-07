@@ -32,6 +32,8 @@ const identityTabs = [
     title: "A connected care ecosystem for foot and lower-limb health.",
     text: "N-Stride brings diagnostics, therapeutic footwear, wound care, prosthetics, orthotics and clinical consultation into one coordinated journey.",
     icon: HeartHandshake,
+    image: "/about/identity-who-we-are.png",
+    imageAlt: "N-Stride care team reviewing footwear and lower-limb care planning",
     points: ["Doctor-led care thinking", "Integrated verticals", "Patient-first guidance"],
   },
   {
@@ -39,6 +41,8 @@ const identityTabs = [
     title: "More than a product brand. More than a single clinic service.",
     text: "We are a practical care platform built around assessment, protection, treatment, restoration and long-term support.",
     icon: Layers3,
+    image: "/about/identity-what-we-are.png",
+    imageAlt: "N-Stride clinical care ecosystem with diagnostics, footwear and wound care support",
     points: ["Diagnostics and insight", "Therapeutic product pathways", "Recovery and restoration support"],
   },
   {
@@ -46,6 +50,8 @@ const identityTabs = [
     title: "Because fragmented care makes every step harder.",
     text: "People often move between disconnected providers, unclear recommendations and generic products. N-Stride makes the next step clearer.",
     icon: Sparkles,
+    image: "/about/identity-why-we-are.png",
+    imageAlt: "N-Stride clinician explaining foot pressure assessment to a patient",
     points: ["Earlier risk awareness", "Clearer care direction", "Better continuity"],
   },
   {
@@ -53,6 +59,8 @@ const identityTabs = [
     title: "For patients, families, clinicians and partners building better mobility.",
     text: "From diabetic foot risk to everyday pain, wound support and mobility restoration, the ecosystem is designed for real-world care needs.",
     icon: UsersRound,
+    image: "/about/identity-for-whom.png",
+    imageAlt: "N-Stride consultation with patients and family members",
     points: ["Patients and caregivers", "Doctors and clinics", "Care partners and entrepreneurs"],
   },
 ];
@@ -88,35 +96,37 @@ function IdentitySection() {
   const ActiveIcon = active.icon;
 
   return (
-    <AboutSection className="bg-[linear-gradient(180deg,#ffffff,#f5fbff)] py-14">
+    <AboutSection className="bg-[linear-gradient(180deg,#ffffff,#f5fbff)] py-10">
       <div aria-hidden="true" className="absolute -right-32 top-10 h-80 w-80 rounded-full bg-[#dff4ff]/70 blur-3xl" />
       <div aria-hidden="true" className="absolute -left-32 bottom-0 h-80 w-96 rounded-full bg-[#eefbf4]/70 blur-3xl" />
       <AboutContainer>
-        <AboutReveal className="relative grid gap-6 lg:grid-cols-[0.34fr_0.66fr] lg:items-stretch">
-          <div className="relative rounded-[1.1rem] bg-white/82 p-5 shadow-[0_18px_54px_rgba(20,121,201,0.07)] ring-1 ring-[#d7ebfa] backdrop-blur">
-            <h2 className="font-heading text-[clamp(1.85rem,3vw,2.9rem)] font-bold leading-tight text-primary-dark">
+        <AboutReveal className="relative grid gap-4 lg:grid-cols-[0.31fr_0.69fr] lg:items-stretch">
+          <div className="relative rounded-[1rem] bg-white/86 p-4 shadow-[0_16px_42px_rgba(20,121,201,0.06)] ring-1 ring-[#d7ebfa] backdrop-blur">
+            <h2 className="font-heading text-[clamp(1.65rem,2.65vw,2.45rem)] font-bold leading-tight text-primary-dark">
               The N-Stride identity, in four clear answers.
             </h2>
-            <p className="mt-4 text-sm leading-7 text-text-secondary">
+            <p className="mt-3 text-sm leading-6 text-text-secondary">
               The model is built to keep care connected, practical and easier to understand at every stage.
             </p>
-            <div className="mt-6 grid gap-2">
+            <div className="mt-5 grid gap-2">
               {identityTabs.map((tab, index) => (
                 <button
                   aria-pressed={activeIndex === index}
-                  className="group relative overflow-hidden rounded-[0.8rem] bg-[#f6fbff] px-4 py-3 text-left font-heading text-sm font-bold text-primary-dark ring-1 ring-[#d7ebfa] transition hover:bg-white aria-pressed:bg-primary aria-pressed:text-white aria-pressed:shadow-[0_16px_34px_rgba(20,121,201,0.18)]"
+                  className="group relative overflow-hidden rounded-[0.7rem] bg-[#f6fbff] px-3 py-2.5 text-left font-heading text-xs font-bold text-primary-dark ring-1 ring-[#d7ebfa] transition hover:bg-white aria-pressed:bg-primary aria-pressed:text-white aria-pressed:shadow-[0_12px_26px_rgba(20,121,201,0.16)]"
                   key={tab.label}
                   onClick={() => setActiveIndex(index)}
                   type="button"
                 >
-                  <span className="relative z-10 flex items-center justify-between gap-4">
+                  <span className="relative z-10 flex items-center gap-2">
+                    <span className="grid h-6 w-6 shrink-0 place-items-center rounded-[0.45rem] bg-white/80 text-[0.68rem] text-primary ring-1 ring-[#d7ebfa] group-aria-pressed:bg-white/18 group-aria-pressed:text-white group-aria-pressed:ring-white/20">
+                      0{index + 1}
+                    </span>
                     <span>{tab.label}</span>
-                    <span className="text-xs opacity-75">0{index + 1}</span>
                   </span>
                   {activeIndex === index ? (
                     <motion.span
                       aria-hidden="true"
-                      className="absolute inset-x-0 bottom-0 h-[3px] bg-white/75"
+                      className="absolute inset-y-0 left-0 w-[3px] bg-white/82"
                       layoutId="identity-tab-progress"
                     />
                   ) : null}
@@ -126,55 +136,36 @@ function IdentitySection() {
           </div>
 
           <motion.div
-            className="relative overflow-hidden rounded-[1.25rem] border border-[#c9e6f8] bg-[#073b66] p-4 shadow-[0_24px_74px_rgba(20,121,201,0.13)] md:p-5"
+            className="relative overflow-hidden rounded-[1.15rem] border border-[#c9e6f8] bg-white p-3 shadow-[0_20px_60px_rgba(20,121,201,0.1)] md:p-4"
             key={active.label}
             initial={reduceMotion ? false : { opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.45, ease: aboutEase }}
           >
-            <div aria-hidden="true" className="absolute inset-0 bg-[radial-gradient(circle_at_18%_18%,rgba(38,182,200,0.38),transparent_30%),radial-gradient(circle_at_86%_70%,rgba(92,184,92,0.3),transparent_34%)]" />
-            <div className="relative grid gap-5 md:grid-cols-[0.42fr_0.58fr] md:items-stretch">
-              <div className="relative grid min-h-[18rem] place-items-center overflow-hidden rounded-[1rem] bg-white/10 ring-1 ring-white/20">
-                <motion.div
-                  aria-hidden="true"
-                  className="absolute h-52 w-52 rounded-full border border-white/20"
-                  animate={reduceMotion ? undefined : { rotate: 360 }}
-                  transition={{ duration: 24, ease: "linear", repeat: Infinity }}
+            <div className="relative grid gap-4 md:grid-cols-[0.48fr_0.52fr] md:items-stretch">
+              <div className="relative min-h-[20rem] overflow-hidden rounded-[0.9rem] bg-[#f6fbff] ring-1 ring-[#d7ebfa] sm:min-h-[24rem] lg:min-h-[28rem]">
+                <Image
+                  alt={active.imageAlt}
+                  className="object-cover object-center"
+                  fill
+                  sizes="(min-width: 1024px) 390px, 100vw"
+                  src={active.image}
                 />
-                <motion.div
-                  aria-hidden="true"
-                  className="absolute h-36 w-36 rounded-full border border-dashed border-white/30"
-                  animate={reduceMotion ? undefined : { rotate: -360 }}
-                  transition={{ duration: 18, ease: "linear", repeat: Infinity }}
-                />
-                {identityTabs.map((tab, index) => {
-                  const Icon = tab.icon;
-                  const positions = ["left-[12%] top-[18%]", "right-[12%] top-[18%]", "bottom-[18%] right-[16%]", "bottom-[18%] left-[16%]"];
-                  return (
-                    <button
-                      aria-label={tab.label}
-                      className={`absolute ${positions[index]} grid h-10 w-10 place-items-center rounded-full bg-white/90 text-primary shadow-[0_12px_28px_rgba(0,0,0,0.12)] ring-1 ring-white/70 transition ${activeIndex === index ? "scale-110" : "opacity-72"}`}
-                      key={tab.label}
-                      onClick={() => setActiveIndex(index)}
-                      type="button"
-                    >
-                      <Icon aria-hidden="true" className="h-5 w-5" />
-                    </button>
-                  );
-                })}
-                <AboutIconBubble className="relative h-24 w-24 border-white bg-white text-primary shadow-[0_20px_44px_rgba(0,0,0,0.16)]" size="lg">
-                  <ActiveIcon aria-hidden="true" className="h-10 w-10" />
-                </AboutIconBubble>
+                <div className="absolute inset-x-0 bottom-0 bg-[linear-gradient(180deg,rgba(7,59,102,0),rgba(7,59,102,0.74))] px-4 pb-4 pt-20 text-white">
+                  <p className="font-heading text-lg font-bold">{active.label}</p>
+                </div>
               </div>
-              <div className="rounded-[1rem] bg-white p-6 shadow-[0_18px_50px_rgba(0,0,0,0.12)] md:p-7">
-                <p className="font-heading text-[0.72rem] font-bold uppercase tracking-[0.16em] text-primary">0{activeIndex + 1} / {active.label}</p>
-                <h3 className="mt-3 font-heading text-[clamp(1.45rem,2.2vw,2.25rem)] font-bold leading-tight text-primary-dark">
-                  {active.title}
-                </h3>
-                <p className="mt-4 text-sm leading-7 text-text-secondary">{active.text}</p>
-                <div className="mt-5 grid gap-3 sm:grid-cols-3">
+              <div className="flex flex-col justify-center rounded-[0.9rem] bg-[linear-gradient(135deg,#f8fcff,#ffffff)] p-4 ring-1 ring-[#d7ebfa] md:p-5">
+                <div className="flex items-center gap-3">
+                  <AboutIconBubble className="h-11 w-11 shadow-none" size="sm">
+                    <ActiveIcon aria-hidden="true" className="h-5 w-5" />
+                  </AboutIconBubble>
+                </div>
+                <h3 className="mt-4 font-heading text-[clamp(1.35rem,2vw,2rem)] font-bold leading-tight text-primary-dark">{active.title}</h3>
+                <p className="mt-3 text-sm leading-6 text-text-secondary">{active.text}</p>
+                <div className="mt-4 grid gap-2 sm:grid-cols-3">
                   {active.points.map((point) => (
-                    <div className="rounded-[0.75rem] bg-[#f6fbff] px-3 py-3 text-xs font-bold leading-5 text-primary-dark ring-1 ring-[#d7ebfa]" key={point}>
+                    <div className="rounded-[0.65rem] bg-white px-3 py-2 text-xs font-bold leading-5 text-primary-dark shadow-[0_8px_20px_rgba(20,121,201,0.04)] ring-1 ring-[#d7ebfa]" key={point}>
                       {point}
                     </div>
                   ))}
@@ -309,16 +300,18 @@ function FinalCTA() {
 export function AboutPage() {
   return (
     <>
-      <AboutSection className="bg-[linear-gradient(112deg,#ffffff_0%,#fbfdff_45%,#eef8ff_100%)] pt-4">
-        <div aria-hidden="true" className="absolute inset-x-0 bottom-0 h-24 bg-[linear-gradient(180deg,transparent,#ffffff_88%)]" />
-        <AboutContainer className="relative grid items-center gap-7 pb-10 pt-8 lg:min-h-[540px] lg:grid-cols-[0.48fr_0.52fr] lg:pb-12 lg:pt-10">
+      <AboutSection className="isolate bg-[#eef8ff]">
+        <div aria-hidden="true" className="absolute inset-0 bg-[url('/about/about-hero-banner.png')] bg-cover bg-center" />
+        <div aria-hidden="true" className="absolute inset-0 bg-[linear-gradient(90deg,rgba(255,255,255,0.96)_0%,rgba(255,255,255,0.86)_36%,rgba(255,255,255,0.36)_65%,rgba(255,255,255,0.06)_100%)]" />
+        <div aria-hidden="true" className="absolute inset-x-0 bottom-0 h-28 bg-[linear-gradient(180deg,transparent,#ffffff_86%)]" />
+        <AboutContainer className="relative z-10 grid items-center pb-12 pt-14 lg:min-h-[640px] lg:pb-16 lg:pt-16">
           <AboutReveal>
-            <h1 className="max-w-[590px] font-heading text-[clamp(2.25rem,5.4vw,4.6rem)] font-bold leading-[1.04] text-primary-dark">
+            <h1 className="max-w-[650px] font-heading text-[clamp(2.35rem,5.6vw,5rem)] font-bold leading-[1.02] text-primary-dark">
               One ecosystem.
               <br />
               Complete mobility care.
             </h1>
-            <p className="mt-5 max-w-[560px] text-sm leading-7 text-text-secondary sm:text-base sm:leading-8">{brand.shortIntro}</p>
+            <p className="mt-5 max-w-[570px] text-sm font-semibold leading-7 text-text-secondary sm:text-base sm:leading-8">{brand.shortIntro}</p>
             <div className="mt-7 flex flex-col gap-3 sm:flex-row">
               <Button className="rounded-[0.5rem] px-7 text-sm" href={ctas.primary.href} size="lg">
                 {ctas.primary.label}
@@ -327,19 +320,6 @@ export function AboutPage() {
               <Button className="rounded-[0.5rem] px-7 text-sm" href={ctas.verticals.href} size="lg" variant="outline">
                 {ctas.verticals.label}
               </Button>
-            </div>
-          </AboutReveal>
-
-          <AboutReveal className="relative" delay={0.08}>
-            <div className="relative min-h-[320px] sm:min-h-[390px] lg:min-h-[460px]">
-              <Image
-                alt="N-Stride mobility and lower-limb care consultation"
-                className="object-contain object-center"
-                fill
-                priority
-                sizes="(min-width: 1024px) 52vw, 100vw"
-                src="/requested-assets/hero-ecosystem.png"
-              />
             </div>
           </AboutReveal>
 

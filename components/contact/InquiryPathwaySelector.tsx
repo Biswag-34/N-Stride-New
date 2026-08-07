@@ -1,11 +1,8 @@
 "use client";
 
-import { HeartPulse, MessageCircle, ScanSearch, ShieldCheck, Sparkles, Stethoscope } from "lucide-react";
-
-import { ThemeBadge } from "@/components/page-sections/ThemeBadge";
+import { ArrowDown, HeartPulse, MessageCircle, ScanSearch, ShieldCheck, Sparkles, Stethoscope } from "lucide-react";
 import { Container } from "@/components/ui/Container";
 import { Section } from "@/components/ui/Section";
-import { SectionHeading } from "@/components/ui/SectionHeading";
 import { inquiryTypes } from "@/data/contact";
 import { cn } from "@/lib/cn";
 import { getThemeClasses } from "@/lib/theme";
@@ -26,15 +23,13 @@ const icons = {
 
 export function InquiryPathwaySelector({ onSelect, selectedType }: InquiryPathwaySelectorProps) {
   return (
-    <Section id="enquiry-pathway" className="py-14 sm:py-16 lg:py-20" variant="white">
+    <Section id="enquiry-pathway" className="py-8 sm:py-10" variant="white">
       <Container>
-        <SectionHeading
-          align="center"
-          description="Choose the reason you are contacting N-Stride. The enquiry form will adapt to the selected pathway."
-          eyebrow="Guided pathway"
-          title="What do you need help with?"
-        />
-        <div className="mt-10 grid gap-4 md:grid-cols-2 xl:grid-cols-3">
+        <div className="mx-auto max-w-[920px] text-center">
+          <h2 className="text-2xl font-semibold leading-tight text-primary-dark sm:text-3xl">Choose your enquiry path.</h2>
+          <p className="mt-3 text-sm leading-6 text-text-secondary">Tap one option and we will take you straight to the compact enquiry form.</p>
+        </div>
+        <div className="mx-auto mt-7 flex max-w-[1040px] flex-wrap justify-center gap-2.5">
           {inquiryTypes.map((type) => {
             const selected = selectedType === type.queryValue;
             const theme = getThemeClasses(type.theme);
@@ -44,23 +39,18 @@ export function InquiryPathwaySelector({ onSelect, selectedType }: InquiryPathwa
               <button
                 aria-pressed={selected}
                 className={cn(
-                  "group rounded-[1.35rem] border bg-white p-5 text-left shadow-soft transition hover:-translate-y-1 hover:shadow-card focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-primary/20",
-                  selected ? `${theme.borderColor} ring-4 ${theme.ringClass}` : "border-border-soft",
+                  "group inline-flex min-h-12 items-center gap-2.5 rounded-full border border-border-soft bg-white px-4 text-left text-sm font-bold text-primary-dark shadow-[0_10px_26px_rgba(20,121,201,0.05)] transition hover:-translate-y-0.5 hover:border-primary/35 hover:bg-[#f8fcff] focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-primary/18",
+                  selected ? `${theme.borderColor} ${theme.softBackground} ${theme.textColor} ring-2 ${theme.ringClass}` : "",
                 )}
                 key={type.queryValue}
                 onClick={() => onSelect(type.queryValue)}
                 type="button"
               >
-                <div className="flex items-start gap-4">
-                  <span className={cn("flex h-11 w-11 shrink-0 items-center justify-center rounded-md", theme.softBackground, theme.textColor)}>
-                    <Icon aria-hidden="true" className="h-5 w-5" />
-                  </span>
-                  <div>
-                    <ThemeBadge theme={type.theme}>{selected ? "Selected" : "Pathway"}</ThemeBadge>
-                    <h3 className="mt-3 text-lg font-semibold text-primary-dark">{type.title}</h3>
-                    <p className="mt-2 text-sm leading-6 text-text-secondary">{type.description}</p>
-                  </div>
-                </div>
+                <span className={cn("flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-background-soft", theme.textColor)}>
+                  <Icon aria-hidden="true" className="h-4 w-4" />
+                </span>
+                <span>{type.title}</span>
+                <ArrowDown aria-hidden="true" className="h-3.5 w-3.5 opacity-55 transition group-hover:translate-y-0.5" />
               </button>
             );
           })}

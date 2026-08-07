@@ -16,9 +16,16 @@ export function ContactPageClient() {
   }, [searchParams]);
   const [selectedType, setSelectedType] = useState(initialType);
 
+  function handleSelect(queryValue: string) {
+    setSelectedType(queryValue);
+    window.requestAnimationFrame(() => {
+      document.getElementById("enquiry-form")?.scrollIntoView({ behavior: "smooth", block: "start" });
+    });
+  }
+
   return (
     <>
-      <InquiryPathwaySelector onSelect={setSelectedType} selectedType={selectedType} />
+      <InquiryPathwaySelector onSelect={handleSelect} selectedType={selectedType} />
       <ContactFormSection onTypeChange={setSelectedType} selectedType={selectedType} />
     </>
   );

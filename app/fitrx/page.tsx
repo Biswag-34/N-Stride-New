@@ -15,19 +15,25 @@ export const metadata: Metadata = {
 
 const workflow = [
   {
-    title: "Assess",
+    title: "Partner intake",
+    text: "Understand the clinic, patient profile and footwear-service goals before setup begins.",
+    icon: GraduationCap,
+    tone: "text-primary bg-[#e9f7ff]",
+  },
+  {
+    title: "Clinical assessment",
     text: "Screen comfort, pressure and support needs through a practical partner workflow.",
     icon: ClipboardCheck,
     tone: "text-primary bg-[#e9f7ff]",
   },
   {
-    title: "Configure",
+    title: "Insole configuration",
     text: "Choose the right insole category and pair it with compatible N-Stride footwear.",
     icon: Settings2,
     tone: "text-[#2f8a49] bg-[#eafaf0]",
   },
   {
-    title: "Fit",
+    title: "Fit and fulfil",
     text: "Deliver a guided footwear setup with partner training and repeatable fulfilment.",
     icon: Footprints,
     tone: "text-[#7357d8] bg-[#f3efff]",
@@ -72,7 +78,7 @@ export default function FitRxPage() {
           <div className="relative min-h-[22rem] overflow-hidden rounded-[1.15rem] bg-[#edf8fb] shadow-[0_24px_70px_rgba(20,121,201,0.1)] ring-1 ring-[#c9e6f8] sm:min-h-[28rem]">
             <Image
               alt="FitRx insole and clinical footwear customization system"
-              className="object-contain object-center"
+              className="object-cover object-center"
               fill
               priority
               sizes="(min-width: 1024px) 48vw, 100vw"
@@ -91,19 +97,28 @@ export default function FitRxPage() {
 
       <section className="bg-white py-10">
         <Container>
-          <div className="grid gap-4 lg:grid-cols-3">
+          <div className="mb-7 grid gap-3 lg:grid-cols-[0.4fr_0.6fr] lg:items-end">
+            <h2 className="max-w-[34rem] font-heading text-3xl font-bold leading-tight text-primary-dark sm:text-4xl">
+              FitRx process from partner setup to repeat fulfilment.
+            </h2>
+            <p className="max-w-[42rem] text-sm leading-7 text-text-secondary lg:justify-self-end">
+              The pathway turns assessment, configuration and fitting into one repeatable operating rhythm for clinics and care businesses.
+            </p>
+          </div>
+          <div className="relative grid gap-4 lg:grid-cols-4">
+            <div aria-hidden="true" className="absolute left-[8%] right-[8%] top-12 hidden h-px bg-[linear-gradient(90deg,rgba(20,121,201,0),rgba(20,121,201,0.28),rgba(20,121,201,0))] lg:block" />
             {workflow.map((item, index) => {
               const Icon = item.icon;
 
               return (
                 <article className="relative overflow-hidden rounded-[0.95rem] border border-[#d7ebfa] bg-white p-5 shadow-[0_14px_38px_rgba(20,121,201,0.06)]" key={item.title}>
                   <div className="flex items-center justify-between gap-4">
-                    <span className={`grid h-12 w-12 place-items-center rounded-[0.8rem] ${item.tone}`}>
-                      <Icon aria-hidden="true" className="h-5 w-5" />
+                    <span className={`grid h-20 w-20 place-items-center rounded-[1rem] ${item.tone} shadow-[0_14px_30px_rgba(20,121,201,0.08)]`}>
+                      <Icon aria-hidden="true" className="h-10 w-10" />
                     </span>
                     <span className="font-heading text-3xl font-extrabold text-[#e6f3fb]">0{index + 1}</span>
                   </div>
-                  <h2 className="mt-5 font-heading text-xl font-bold text-primary-dark">{item.title}</h2>
+                  <h3 className="mt-5 font-heading text-xl font-bold text-primary-dark">{item.title}</h3>
                   <p className="mt-3 text-sm leading-7 text-text-secondary">{item.text}</p>
                 </article>
               );
@@ -131,8 +146,8 @@ export default function FitRxPage() {
 
                 return (
                   <div className="flex items-center gap-3 rounded-[0.85rem] bg-white p-4 shadow-[0_12px_30px_rgba(20,121,201,0.055)] ring-1 ring-[#d7ebfa]" key={item.label}>
-                    <span className="grid h-11 w-11 shrink-0 place-items-center rounded-[0.7rem] bg-soft-sky text-primary">
-                      <Icon aria-hidden="true" className="h-5 w-5" />
+                    <span className="grid h-14 w-14 shrink-0 place-items-center rounded-[0.8rem] bg-soft-sky text-primary">
+                      <Icon aria-hidden="true" className="h-7 w-7" />
                     </span>
                     <p className="font-heading text-sm font-bold text-primary-dark">{item.label}</p>
                   </div>

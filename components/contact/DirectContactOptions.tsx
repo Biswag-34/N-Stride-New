@@ -1,8 +1,8 @@
-import { ExternalLink, Mail, MessageCircle, Phone, ShoppingBag } from "lucide-react";
+import { ExternalLink, Mail, Phone, ShoppingBag } from "lucide-react";
+import { FaWhatsapp } from "react-icons/fa6";
 
 import { Container } from "@/components/ui/Container";
 import { Section } from "@/components/ui/Section";
-import { SectionHeading } from "@/components/ui/SectionHeading";
 import { brand } from "@/data/brand";
 
 function whatsappHref() {
@@ -13,38 +13,39 @@ function whatsappHref() {
 
 export function DirectContactOptions() {
   const options = [
-    { icon: Phone, title: "Call N-Stride", value: brand.contact.phone, href: `tel:${brand.contact.phone}` },
-    { icon: MessageCircle, title: "WhatsApp N-Stride", value: "Start WhatsApp enquiry", href: whatsappHref(), external: true },
-    { icon: Mail, title: "Email N-Stride", value: brand.contact.email, href: `mailto:${brand.contact.email}` },
-    { icon: ShoppingBag, title: "Visit N-Stride Shop", value: "Dedicated product store", href: brand.ecommerceUrl, external: true },
+    { icon: Phone, title: "Call", value: brand.contact.phone, href: `tel:${brand.contact.phone}`, tone: "text-[#0f6eb9] bg-[#e9f7ff]" },
+    { icon: FaWhatsapp, title: "WhatsApp", value: "Start chat", href: whatsappHref(), external: true, tone: "text-[#25D366] bg-[#e9fff2]" },
+    { icon: Mail, title: "Email", value: brand.contact.email, href: `mailto:${brand.contact.email}`, tone: "text-[#5a67d8] bg-[#f2f0ff]" },
+    { icon: ShoppingBag, title: "Store", value: "N-Stride Shop", href: brand.ecommerceUrl, external: true, tone: "text-[#f59f00] bg-[#fff7e6]" },
   ];
 
   return (
-    <Section className="py-9 xs:py-12 sm:py-14 lg:py-16" variant="white">
+    <Section className="py-8 xs:py-10 sm:py-12" variant="white">
       <Container>
-        <SectionHeading
-          description="Use a direct route when you already know how you want to reach the team."
-          eyebrow="Direct contact"
-          title="Quick contact options"
-        />
-        <div className="mt-7 grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
+        <div className="mb-6 flex flex-col justify-between gap-3 md:flex-row md:items-end">
+          <h2 className="text-2xl font-semibold leading-tight text-primary-dark sm:text-3xl">Quick contact options</h2>
+          <p className="max-w-[34rem] text-sm leading-6 text-text-secondary">Use a direct route when you already know how you want to reach the team.</p>
+        </div>
+        <div className="grid gap-3 sm:grid-cols-2 xl:grid-cols-4">
           {options.map((option) => {
             const Icon = option.icon;
 
             return (
               <a
-                className="group rounded-[1rem] border border-border-soft bg-white p-4 shadow-soft transition hover:-translate-y-1 hover:shadow-card focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-primary/20 xs:p-5 sm:rounded-[1.25rem]"
+                className="group flex min-h-16 items-center gap-3 border-y border-border-soft bg-white py-3 transition hover:border-primary/35 hover:bg-[#f8fcff] focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-primary/20"
                 href={option.href}
                 key={option.title}
                 rel={option.external ? "noreferrer" : undefined}
                 target={option.external ? "_blank" : undefined}
               >
-                <span className="flex h-11 w-11 items-center justify-center rounded-md bg-background-soft text-primary">
+                <span className={`flex h-11 w-11 shrink-0 items-center justify-center rounded-full ${option.tone}`}>
                   <Icon aria-hidden="true" className="h-5 w-5" />
                 </span>
-                <h3 className="mt-4 text-lg font-semibold text-primary-dark">{option.title}</h3>
-                <p className="mt-2 text-sm leading-6 text-text-secondary">{option.value}</p>
-                {option.external ? <ExternalLink aria-hidden="true" className="mt-4 h-4 w-4 text-primary" /> : null}
+                <span className="min-w-0 flex-1">
+                  <span className="block text-sm font-bold text-primary-dark">{option.title}</span>
+                  <span className="block truncate text-sm text-text-secondary">{option.value}</span>
+                </span>
+                {option.external ? <ExternalLink aria-hidden="true" className="h-4 w-4 shrink-0 text-primary" /> : null}
               </a>
             );
           })}

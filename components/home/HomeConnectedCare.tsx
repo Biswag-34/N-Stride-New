@@ -3,6 +3,7 @@
 import { CheckCircle2 } from "lucide-react";
 import { motion } from "framer-motion";
 import Image from "next/image";
+import Link from "next/link";
 
 import { Container } from "@/components/ui/Container";
 import { staggerContainer, staggerItem } from "@/lib/motion";
@@ -12,6 +13,59 @@ const connectedBullets = [
   "Footwear, wound care and restoration stay connected",
   "Follow-up keeps the care plan accountable",
   "Complex needs move into the right specialist vertical",
+];
+
+const hotspots = [
+  {
+    id: "insights",
+    label: "Open Insights",
+    href: "/verticals/insight",
+    left: 3.1898,
+    top: 17.6236,
+    width: 37.1611,
+    height: 27.2727,
+    zIndex: 2,
+  },
+  {
+    id: "kinetics",
+    label: "Open Kinetics",
+    href: "/verticals/kinetics",
+    left: 60.0478,
+    top: 17.6236,
+    width: 36.8421,
+    height: 27.1132,
+    zIndex: 2,
+  },
+  {
+    id: "bio-fit",
+    label: "Open Bio-Fit",
+    href: "/verticals/bio-fit",
+    left: 3.748,
+    top: 56.5391,
+    width: 35.4067,
+    height: 29.5056,
+    zIndex: 2,
+  },
+  {
+    id: "wound-care",
+    label: "Open Wound Care",
+    href: "/verticals/wound-care",
+    left: 59.9681,
+    top: 56.6986,
+    width: 36.5231,
+    height: 29.1866,
+    zIndex: 2,
+  },
+  {
+    id: "nstride",
+    label: "Open N-Stride",
+    href: "/verticals",
+    left: 34.689,
+    top: 35.0079,
+    width: 30.622,
+    height: 29.3461,
+    zIndex: 3,
+  },
 ];
 
 export function HomeConnectedCare() {
@@ -48,19 +102,39 @@ export function HomeConnectedCare() {
               </div>
             </motion.div>
 
-            <motion.div className="relative -mx-3 min-h-[19rem] overflow-visible xs:min-h-[24rem] sm:min-h-[35rem] lg:-mr-14 lg:min-h-[36rem]" variants={staggerItem}>
-              <div aria-hidden="true" className="absolute inset-y-0 left-0 z-10 w-24 bg-[linear-gradient(90deg,#f8fcff,rgba(248,252,255,0))]" />
-              <div aria-hidden="true" className="absolute inset-y-0 right-0 z-10 w-24 bg-[linear-gradient(270deg,#f8fcff,rgba(248,252,255,0))]" />
-              <div aria-hidden="true" className="absolute inset-x-0 bottom-0 z-10 h-24 bg-[linear-gradient(0deg,#f8fcff,rgba(248,252,255,0))]" />
-              <div aria-hidden="true" className="absolute inset-x-0 top-0 z-10 h-20 bg-[linear-gradient(180deg,#f8fcff,rgba(248,252,255,0))]" />
-              <Image
-                alt="N-Stride connected care ecosystem"
-                className="object-contain object-center drop-shadow-[0_24px_50px_rgba(20,121,201,0.08)]"
-                fill
-                priority={false}
-                sizes="(min-width: 1024px) 840px, 100vw"
-                src="/requested-assets/mainly.png"
-              />
+            <motion.div className="relative -mx-2 overflow-visible sm:-mx-1 lg:-mr-10" variants={staggerItem}>
+              <div className="relative mx-auto aspect-square w-full max-w-[48rem]">
+                <Image
+                  alt="N-Stride connected care ecosystem"
+                  className="block h-auto w-full select-none"
+                  height={1254}
+                  priority={false}
+                  sizes="(min-width: 1024px) 760px, 100vw"
+                  src="/requested-assets/mainly.png"
+                  width={1254}
+                />
+                {hotspots.map((hotspot) => (
+                  <Link
+                    aria-label={hotspot.label}
+                    className="group absolute block rounded-full outline-none motion-safe:transition-colors"
+                    href={hotspot.href}
+                    key={hotspot.id}
+                    style={{
+                      clipPath: "ellipse(50% 50% at 50% 50%)",
+                      height: `${hotspot.height}%`,
+                      left: `${hotspot.left}%`,
+                      top: `${hotspot.top}%`,
+                      width: `${hotspot.width}%`,
+                      zIndex: hotspot.zIndex,
+                    }}
+                  >
+                    <span
+                      aria-hidden="true"
+                      className="absolute inset-0 rounded-full border border-primary/0 bg-primary/0 transition-colors duration-200 group-hover:border-primary/40 group-hover:bg-primary/10 group-focus-visible:border-primary group-focus-visible:bg-primary/12 motion-reduce:transition-none"
+                    />
+                  </Link>
+                ))}
+              </div>
             </motion.div>
           </div>
         </motion.div>

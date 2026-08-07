@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg"
+     xmlns:xlink="http://www.w3.org/1999/xlink"
+     viewBox="0 0 1254 1254"
+     role="img"
+     aria-labelledby="mapTitle mapDescription">
+  <title id="mapTitle">N-Stride interactive services map</title>
+  <desc id="mapDescription">Five clickable elliptical regions: Insights, Kinetics, Bio-Fit, Wound Care, and N-Stride.</desc>
+
+  <style>
+    .zone-shape {
+      fill: #ffffff;
+      fill-opacity: 0.001;
+      stroke: transparent;
+      stroke-width: 5;
+      vector-effect: non-scaling-stroke;
+      cursor: pointer;
+      transition: fill-opacity 160ms ease, stroke 160ms ease;
+    }
+    .zone:hover .zone-shape,
+    .zone:focus .zone-shape,
+    .zone:focus-visible .zone-shape {
+      fill: #1d8cff;
+      fill-opacity: 0.10;
+      stroke: #1d8cff;
+      outline: none;
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .zone-shape { transition: none; }
+    }
+  </style>
+
+  <!-- Keep mainly.png in the same directory as this SVG. -->
+  <image href="mainly.png" xlink:href="mainly.png"
+         x="0" y="0" width="1254" height="1254"
+         preserveAspectRatio="xMidYMid meet" />
+
+  <!-- Surrounding ellipses are painted first. -->
+  <a class="zone" href="/insights" aria-label="Open Insights">
+    <ellipse class="zone-shape" cx="273" cy="392" rx="233" ry="171" />
+  </a>
+  <a class="zone" href="/kinetics" aria-label="Open Kinetics">
+    <ellipse class="zone-shape" cx="984" cy="391" rx="231" ry="170" />
+  </a>
+  <a class="zone" href="/bio-fit" aria-label="Open Bio-Fit">
+    <ellipse class="zone-shape" cx="269" cy="894" rx="222" ry="185" />
+  </a>
+  <a class="zone" href="/wound-care" aria-label="Open Wound Care">
+    <ellipse class="zone-shape" cx="981" cy="894" rx="229" ry="183" />
+  </a>
+
+  <!-- Centre is last so it wins in the small visual overlap area. -->
+  <a class="zone" href="/" aria-label="Open N-Stride home">
+    <ellipse class="zone-shape" cx="627" cy="623" rx="192" ry="184" />
+  </a>
+</svg>

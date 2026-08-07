@@ -1,4 +1,5 @@
 import { HomeCareJourney } from "@/components/home/HomeCareJourney";
+import { HomeBioFitFeature } from "@/components/home/HomeBioFitFeature";
 import { HomeConnectedCare } from "@/components/home/HomeConnectedCare";
 import { HomeFitRxFeature } from "@/components/home/HomeFitRxFeature";
 import { HomeHero } from "@/components/home/HomeHero";
@@ -15,6 +16,7 @@ export default function Home() {
       <HomeConnectedCare />
       <HomeStepAheadFeature />
       <HomeFitRxFeature />
+      <HomeBioFitFeature />
       <HomeKnowledgePreview />
     </>
   );
