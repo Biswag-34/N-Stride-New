@@ -35,7 +35,7 @@ export function WoundCareTechnology({ vertical }: WoundCareTechnologyProps) {
             <p className="mt-5 max-w-[24rem] text-sm leading-7 text-text-secondary">
               Negative Pressure Wound Therapy helps create an optimal healing environment.
             </p>
-            <a className="mt-5 inline-flex items-center gap-2 text-sm font-bold text-primary" href="/contact?type=wound-care">
+            <a className="mt-5 inline-flex min-h-11 items-center gap-2 text-sm font-bold text-primary" href="/contact?type=wound-care">
               Learn about NPWT VAC
               <ArrowRight aria-hidden="true" className="h-4 w-4" />
             </a>

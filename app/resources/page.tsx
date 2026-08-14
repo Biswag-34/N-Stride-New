@@ -26,7 +26,7 @@ export default function ResourcesPage() {
                 <ThemeBadge theme="aqua">{resource.category}</ThemeBadge>
                 <h2 className="mt-4 text-xl font-semibold text-primary-dark">{resource.title}</h2>
                 <p className="mt-2 text-sm leading-6 text-text-secondary">{resource.summary}</p>
-                <Link className="mt-5 inline-flex items-center gap-2 text-sm font-bold text-primary" href={resource.href}>
+                <Link className="mt-5 inline-flex min-h-11 items-center gap-2 text-sm font-bold text-primary" href={resource.href}>
                   Read guide
                   <ArrowRight aria-hidden="true" className="h-4 w-4" />
                 </Link>

@@ -46,8 +46,8 @@ export function InsightHero({ vertical }: InsightHeroProps) {
         <div className="grid items-center gap-7 lg:min-h-[510px] lg:grid-cols-[0.4fr_0.6fr] lg:gap-8">
           <InsightReveal>
             <h1 className="max-w-[34rem] font-heading text-[clamp(1.95rem,6.2vw,3.85rem)] font-bold leading-[1.04] text-primary-dark lg:leading-[1]">
-              <span className="block whitespace-nowrap">Know the foot.</span>
-              <span className="block whitespace-nowrap">Direct the care.</span>
+              <span className="block md:whitespace-nowrap">Know the foot.</span>
+              <span className="block md:whitespace-nowrap">Direct the care.</span>
             </h1>
             <p className="mt-5 max-w-[33rem] text-sm leading-7 text-text-secondary sm:text-[1rem] sm:leading-8">
               N-Stride Insight delivers advanced foot analysis and wound care assessment through intelligent
@@ -64,12 +64,12 @@ export function InsightHero({ vertical }: InsightHeroProps) {
             </div>
           </InsightReveal>
 
-          <InsightReveal className="relative min-h-[280px] xs:min-h-[350px] sm:min-h-[420px]" delay={0.08}>
+          <InsightReveal className="relative aspect-[4/3] min-h-0 md:min-h-[420px]" delay={0.08}>
             <div className="absolute right-0 top-3 h-[86%] w-[88%] rounded-full bg-[#dff4ff]/85 blur-[70px]" />
             <div className="absolute bottom-8 right-[6%] h-24 w-[72%] rounded-full bg-white/80 blur-[34px]" />
             <InsightAsset
               alt="N-Stride Insight foot analysis equipment and pressure dashboard"
-              className="relative z-10 ml-auto min-h-[280px] w-full max-w-[790px] mix-blend-multiply [mask-image:radial-gradient(ellipse_at_center,black_58%,rgba(0,0,0,0.78)_72%,transparent_94%)] xs:min-h-[350px] sm:min-h-[450px]"
+              className="relative z-10 ml-auto min-h-full w-full max-w-[790px] mix-blend-multiply [mask-image:radial-gradient(ellipse_at_center,black_58%,rgba(0,0,0,0.78)_72%,transparent_94%)] md:min-h-[450px]"
               imageClassName="object-contain object-right"
               priority
               sizes="(max-width: 1024px) 100vw, 62vw"

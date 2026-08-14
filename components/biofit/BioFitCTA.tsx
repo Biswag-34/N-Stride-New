@@ -42,7 +42,7 @@ export function BioFitCTA({ vertical }: BioFitCTAProps) {
                 <p className="mt-4 max-w-[35rem] text-sm leading-7 text-text-secondary">
                   Book a focused consultation for prosthetics, orthotics or silicone restoration support built around your mobility goal.
                 </p>
-                <div className="mt-6 grid gap-3 sm:grid-cols-3">
+                <div className="mt-6 grid gap-3 md:grid-cols-3">
                   {["Assess need", "Fit pathway", "Restore function"].map((item) => (
                     <div className="rounded-[0.75rem] bg-[#f8f5ff] px-3 py-3 text-xs font-bold leading-5 text-primary-dark ring-1 ring-[#e1dbff]" key={item}>
                       <CheckCircle2 aria-hidden="true" className="mb-2 h-4 w-4 text-[#7357d8]" />

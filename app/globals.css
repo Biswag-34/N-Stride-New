@@ -65,6 +65,25 @@ a {
   overflow-wrap: anywhere;
 }
 
+.skip-link {
+  position: fixed;
+  left: 1rem;
+  top: calc(0.75rem + env(safe-area-inset-top));
+  z-index: 100;
+  transform: translateY(-140%);
+  border-radius: 0.45rem;
+  background: var(--primary-dark);
+  color: #ffffff;
+  padding: 0.75rem 1rem;
+  font-weight: 700;
+  box-shadow: var(--shadow-soft);
+  transition: transform 160ms ease;
+}
+
+.skip-link:focus-visible {
+  transform: translateY(0);
+}
+
 h1,
 h2,
 h3,
@@ -101,5 +120,99 @@ li {
     animation-iteration-count: 1 !important;
     scroll-behavior: auto !important;
     transition-duration: 0.01ms !important;
+  }
+}
+
+@media (max-width: 767.98px) {
+  :root {
+    --section-padding: 2.25rem;
+  }
+
+  html,
+  body {
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  body {
+    background:
+      radial-gradient(circle at top left, rgba(221, 241, 255, 0.42), transparent 20rem),
+      var(--background);
+  }
+
+  h1,
+  h2,
+  h3 {
+    text-wrap: pretty;
+  }
+
+  main > section {
+    padding-block: clamp(1.45rem, 7vw, 2.35rem) !important;
+  }
+
+  main > section:first-child {
+    padding-top: clamp(1.2rem, 6vw, 2rem) !important;
+  }
+
+  main section h1 {
+    max-width: 100%;
+    font-size: clamp(1.9rem, 8.1vw, 2.52rem) !important;
+    line-height: 1.03 !important;
+    overflow-wrap: break-word;
+  }
+
+  main section h2 {
+    max-width: 100%;
+    font-size: clamp(1.42rem, 6.4vw, 1.95rem) !important;
+    line-height: 1.08 !important;
+    overflow-wrap: break-word;
+  }
+
+  main section h3 {
+    font-size: clamp(1.05rem, 5.4vw, 1.42rem) !important;
+    line-height: 1.16 !important;
+    overflow-wrap: break-word;
+  }
+
+  main section :is(.grid, [class*="grid"]) > *,
+  main section :is(.flex, [class*="flex"]) > *,
+  main section :is(a, button, span, p, h1, h2, h3, h4, h5, h6) {
+    min-width: 0;
+  }
+
+  main section :is(a, button, span) {
+    overflow-wrap: break-word;
+    white-space: normal;
+  }
+
+  main section :is(a, button)[class*="xs:w-auto"] {
+    width: 100% !important;
+  }
+
+  main section p {
+    line-height: 1.5 !important;
+  }
+
+  main section p[class*="text-base"],
+  main section p[class*="text-lg"],
+  main section p[class*="text-[1rem]"] {
+    font-size: 0.875rem !important;
+  }
+
+  main section p[class*="text-sm"],
+  main section p[class*="text-text-secondary"],
+  main section p[class*="text-white/"],
+  main section p[class*="text-text-muted"] {
+    font-size: 0.8125rem !important;
+  }
+
+  main section iframe {
+    min-height: 14rem !important;
+  }
+
+  input,
+  select,
+  textarea {
+    font-size: 1rem;
   }
 }

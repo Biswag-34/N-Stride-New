@@ -26,24 +26,24 @@ export function DirectContactOptions() {
           <h2 className="text-2xl font-semibold leading-tight text-primary-dark sm:text-3xl">Quick contact options</h2>
           <p className="max-w-[34rem] text-sm leading-6 text-text-secondary">Use a direct route when you already know how you want to reach the team.</p>
         </div>
-        <div className="grid gap-3 sm:grid-cols-2 xl:grid-cols-4">
+        <div className="grid grid-cols-2 gap-2 sm:gap-3 xl:grid-cols-4">
           {options.map((option) => {
             const Icon = option.icon;
 
             return (
               <a
-                className="group flex min-h-16 items-center gap-3 border-y border-border-soft bg-white py-3 transition hover:border-primary/35 hover:bg-[#f8fcff] focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-primary/20"
+                className="group flex min-h-14 items-center gap-2 border-y border-border-soft bg-white py-2 transition hover:border-primary/35 hover:bg-[#f8fcff] focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-primary/20 sm:min-h-16 sm:gap-3 sm:py-3"
                 href={option.href}
                 key={option.title}
                 rel={option.external ? "noreferrer" : undefined}
                 target={option.external ? "_blank" : undefined}
               >
-                <span className={`flex h-11 w-11 shrink-0 items-center justify-center rounded-full ${option.tone}`}>
-                  <Icon aria-hidden="true" className="h-5 w-5" />
+                <span className={`flex h-9 w-9 shrink-0 items-center justify-center rounded-full sm:h-11 sm:w-11 ${option.tone}`}>
+                  <Icon aria-hidden="true" className="h-4 w-4 sm:h-5 sm:w-5" />
                 </span>
                 <span className="min-w-0 flex-1">
-                  <span className="block text-sm font-bold text-primary-dark">{option.title}</span>
-                  <span className="block truncate text-sm text-text-secondary">{option.value}</span>
+                  <span className="block text-xs font-bold text-primary-dark sm:text-sm">{option.title}</span>
+                  <span className="block break-words text-[0.72rem] leading-tight text-text-secondary sm:text-sm sm:leading-normal">{option.value}</span>
                 </span>
                 {option.external ? <ExternalLink aria-hidden="true" className="h-4 w-4 shrink-0 text-primary" /> : null}
               </a>

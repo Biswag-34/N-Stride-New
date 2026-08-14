@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import { ArrowRight } from "lucide-react";
 import { motion } from "framer-motion";
 
 import { Container } from "@/components/ui/Container";
@@ -38,7 +39,7 @@ export function HomePathwayRail() {
           </svg>
           <SectionKicker>Solutions that make a difference</SectionKicker>
           <h2 className="mt-3 text-3xl font-semibold text-primary-dark">Explore our care pathways</h2>
-          <motion.div className="relative mt-5 overflow-hidden" variants={staggerItem}>
+          <motion.div className="relative mt-5 hidden overflow-hidden md:block" variants={staggerItem}>
             <div className="relative mx-auto aspect-[2172/724] w-full max-w-[82rem]">
               <Image
                 alt="Explore our care pathways: foot checkup, consultation, custom footwear, orthotics, NPWT VAC therapy, wound care, prosthetics and mobility"
@@ -58,6 +59,23 @@ export function HomePathwayRail() {
                 ))}
               </div>
             </div>
+          </motion.div>
+          <motion.div className="mt-5 grid gap-3 md:hidden" variants={staggerItem}>
+            {pathways.map((pathway, index) => (
+              <Link
+                className="flex min-h-12 items-center justify-between gap-3 rounded-[0.75rem] border border-[#d7ebfa] bg-white px-4 py-3 text-sm font-bold text-primary-dark shadow-[0_10px_24px_rgba(20,121,201,0.05)]"
+                href={pathway.href}
+                key={pathway.label}
+              >
+                <span className="flex min-w-0 items-center gap-3">
+                  <span className="grid h-8 w-8 shrink-0 place-items-center rounded-[0.55rem] bg-soft-sky text-xs text-primary">
+                    {String(index + 1).padStart(2, "0")}
+                  </span>
+                  <span>{pathway.label}</span>
+                </span>
+                <ArrowRight aria-hidden="true" className="h-4 w-4 shrink-0 text-primary" />
+              </Link>
+            ))}
           </motion.div>
         </motion.div>
       </Container>

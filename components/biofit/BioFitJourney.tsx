@@ -24,7 +24,7 @@ export function BioFitJourney() {
     <BioFitSection className="bg-[linear-gradient(90deg,#ffffff,#fbf9ff)] py-12">
       <BioFitAsset
         alt=""
-        className="pointer-events-none absolute -left-24 top-0 h-full w-[22rem] opacity-75"
+        className="pointer-events-none absolute -left-24 top-0 hidden h-full w-[22rem] opacity-75 md:block"
         imageClassName="object-cover object-left"
         src="/biofit/skeleton-network-left.png"
       />
@@ -33,20 +33,20 @@ export function BioFitJourney() {
           <BioFitReveal className="relative z-10">
             <h2 className="font-heading text-3xl font-bold text-primary-dark">Your fitting & adaptation journey</h2>
             <p className="mt-3 text-sm text-text-secondary">A guided, collaborative process built around you.</p>
-            <div className="relative mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-5">
+            <div className="relative mt-10 grid gap-4 md:grid-cols-2 lg:grid-cols-5">
               <span aria-hidden="true" className="absolute left-10 right-10 top-8 hidden border-t border-dashed border-[#b8a9fb]/70 lg:block" />
               {journey.map((step, index) => {
                 const Icon = step.icon;
                 return (
-                  <div className="relative text-center" key={step.title}>
+                  <div className="relative rounded-[0.85rem] bg-white/78 p-4 text-left ring-1 ring-[#e0d9ff] md:text-center md:ring-0" key={step.title}>
                     {index < journey.length - 1 ? (
                       <ArrowRight aria-hidden="true" className="absolute left-[calc(50%+2.05rem)] top-6 hidden h-5 w-20 text-[#b8a9fb] lg:block" />
                     ) : null}
-                    <BioFitIconBubble className="relative z-10 mx-auto h-16 w-16 bg-[#fbf9ff]" size="lg">
+                    <BioFitIconBubble className="relative z-10 h-16 w-16 bg-[#fbf9ff] md:mx-auto" size="lg">
                       <Icon className="h-7 w-7" />
                     </BioFitIconBubble>
                     <h3 className="mt-5 font-heading text-sm font-bold text-primary-dark">{step.title}</h3>
-                    <p className="mx-auto mt-2 max-w-[10rem] text-xs leading-5 text-text-secondary">{step.text}</p>
+                    <p className="mt-2 max-w-[14rem] text-xs leading-5 text-text-secondary md:mx-auto md:max-w-[10rem]">{step.text}</p>
                   </div>
                 );
               })}
@@ -56,7 +56,7 @@ export function BioFitJourney() {
             <div className="relative">
               <BioFitAsset
                 alt="Bio-Fit patient running with prosthetic support by the sea"
-                className="min-h-[330px] rounded-tl-[12rem] rounded-tr-[1.25rem] rounded-br-none rounded-bl-[1.25rem] shadow-[18px_22px_58px_rgba(90,103,216,0.08)]"
+                className="aspect-[4/3] min-h-0 rounded-tl-[4rem] rounded-tr-[1.25rem] rounded-br-none rounded-bl-[1.25rem] shadow-[18px_22px_58px_rgba(90,103,216,0.08)] md:min-h-[330px] md:rounded-tl-[12rem]"
                 imageClassName="object-cover object-[45%_50%]"
                 src="/biofit/runner-sea-tech.png"
               />

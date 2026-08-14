@@ -44,7 +44,7 @@ export function BioFitEcosystem() {
               cosmetic solutions. It combines assessment, custom fitting, fabrication direction and real-world
               adaptation support so the final outcome feels usable, stable and personal.
             </p>
-            <div className="mt-8 grid gap-3 sm:grid-cols-3">
+            <div className="mt-8 grid gap-3 md:grid-cols-3">
               {["Body-led", "Clinic-guided", "Life-ready"].map((item) => (
                 <div className="rounded-[0.65rem] border border-[#ddd4ff] bg-[#fbf9ff]/80 px-4 py-3 text-sm font-bold text-[#7357d8]" key={item}>
                   {item}

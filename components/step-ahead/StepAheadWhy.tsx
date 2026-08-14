@@ -148,12 +148,12 @@ export function StepAheadWhy() {
               training and limited time. Step-Ahead removes the guesswork and gives you a ready-to-execute framework for clinical
               excellence and sustainable growth.
             </p>
-            <div className="mt-10 grid max-w-[650px] gap-7 sm:grid-cols-3">
+            <div className="mt-10 grid max-w-[650px] gap-5 md:grid-cols-3">
               {stats.map((stat) => {
                 const Icon = stat.icon;
 
                 return (
-                  <div className="min-w-0" key={stat.value}>
+                  <div className="min-w-0 rounded-[0.85rem] bg-[#f8fcff] p-3 md:bg-transparent md:p-0" key={stat.value}>
                     <StepIconBubble className="h-12 w-12 border-transparent shadow-none" size="sm">
                       <Icon aria-hidden="true" className="h-6 w-6" />
                     </StepIconBubble>

@@ -60,13 +60,13 @@ export function WoundCarePathway() {
             <p className="mt-4 max-w-[25rem] text-sm leading-7 text-text-secondary">
               A visual care map for assessment, VAC readiness, pressure protection and review.
             </p>
-            <div className="mt-5 grid max-w-[25rem] grid-cols-3 overflow-hidden rounded-[0.75rem] bg-white shadow-[0_12px_30px_rgba(16,42,67,0.06)] ring-1 ring-[#c9e6f8]">
+            <div className="mt-5 grid max-w-[25rem] grid-cols-1 overflow-hidden rounded-[0.75rem] bg-white shadow-[0_12px_30px_rgba(16,42,67,0.06)] ring-1 ring-[#c9e6f8] xs:grid-cols-3">
               {[
                 ["Map", "status"],
                 ["Treat", "VAC"],
                 ["Guard", "review"],
               ].map(([label, value]) => (
-                <div className="border-r border-[#d8ecf8] px-3 py-4 last:border-r-0" key={label}>
+                <div className="border-b border-[#d8ecf8] px-3 py-4 last:border-b-0 xs:border-b-0 xs:border-r xs:last:border-r-0" key={label}>
                   <p className="font-heading text-[0.68rem] font-bold uppercase text-[#8aa0b4]">{label}</p>
                   <p className="mt-1 text-xs font-bold leading-5 text-primary-dark">{value}</p>
                 </div>
@@ -130,7 +130,7 @@ export function WoundCarePathway() {
             </div>
             <div className="mt-3 flex flex-col gap-3 rounded-[0.75rem] bg-white px-5 py-3 text-sm font-bold text-primary-dark shadow-[0_12px_34px_rgba(16,42,67,0.07)] ring-1 ring-[#c9e6f8] sm:flex-row sm:items-center sm:justify-between">
               <span>Personalized by wound status, device suitability, pressure risk and review response.</span>
-              <a className="inline-flex items-center gap-2 text-primary" href="/contact?type=wound-care">
+              <a className="inline-flex min-h-11 items-center gap-2 text-primary" href="/contact?type=wound-care">
                 Request pathway guidance
                 <ArrowRight aria-hidden="true" className="h-4 w-4" />
               </a>

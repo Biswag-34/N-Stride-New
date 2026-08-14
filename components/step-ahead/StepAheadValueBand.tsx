@@ -32,9 +32,9 @@ export function StepAheadValueBand() {
                     Step-Ahead connects clinical readiness, launch operations and business development in one partner program.
                   </p>
                 </div>
-                <div className="mt-6 grid grid-cols-3 overflow-hidden rounded-[0.75rem] bg-white/12 text-center ring-1 ring-white/18">
+                <div className="mt-6 grid grid-cols-1 overflow-hidden rounded-[0.75rem] bg-white/12 text-center ring-1 ring-white/18 xs:grid-cols-3">
                   {["Care", "Launch", "Growth"].map((item) => (
-                    <div className="border-r border-white/16 px-3 py-3 last:border-r-0" key={item}>
+                    <div className="border-b border-white/16 px-3 py-3 last:border-b-0 xs:border-b-0 xs:border-r xs:last:border-r-0" key={item}>
                       <p className="font-heading text-sm font-bold text-white sm:text-base">{item}</p>
                     </div>
                   ))}

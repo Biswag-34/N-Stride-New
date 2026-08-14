@@ -25,13 +25,13 @@ export function HomeStatsRibbon() {
           variants={staggerContainer}
         >
           <div aria-hidden="true" className="absolute inset-0 bg-[radial-gradient(circle_at_12%_20%,rgba(255,255,255,0.22),transparent_28%),radial-gradient(circle_at_86%_80%,rgba(255,255,255,0.28),transparent_26%)]" />
-          <div className="relative grid grid-cols-2 gap-3 lg:grid-cols-4">
+          <div className="relative grid grid-cols-1 gap-3 xs:grid-cols-2 lg:grid-cols-4">
             {stats.map((stat, index) => {
               const Icon = stat.icon;
 
               return (
                 <motion.div
-                  className="flex items-center gap-4 rounded-[0.9rem] bg-white px-4 py-4 shadow-[0_14px_34px_rgba(7,59,102,0.09)]"
+                  className="flex min-w-0 items-center gap-4 rounded-[0.9rem] bg-white px-4 py-4 shadow-[0_14px_34px_rgba(7,59,102,0.09)]"
                   key={stat.label}
                   variants={staggerItem}
                   custom={index}
@@ -39,7 +39,7 @@ export function HomeStatsRibbon() {
                   <span className="flex h-11 w-11 items-center justify-center rounded-[0.8rem] bg-soft-sky text-primary">
                     <Icon aria-hidden="true" className="h-5 w-5" />
                   </span>
-                  <span>
+                  <span className="min-w-0">
                     <span className="block font-heading text-2xl font-semibold text-primary-dark">{stat.value}</span>
                     <span className="block text-xs font-bold text-primary-dark/70">{stat.label}</span>
                   </span>

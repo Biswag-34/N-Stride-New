@@ -64,18 +64,18 @@ export default function FitRxPage() {
             <p className="mt-5 max-w-[39rem] text-base leading-8 text-text-secondary">
               FitRx turns assessment, insole selection and therapeutic footwear pairing into a clean partner-ready system for clinics, care teams and business operators.
             </p>
-            <div className="mt-7 flex flex-col gap-3 sm:flex-row">
-              <Button className="rounded-[0.6rem]" href="/contact?type=fitrx" size="lg">
+            <div className="mt-7 flex flex-col gap-3 xs:flex-row xs:flex-wrap">
+              <Button className="w-full rounded-[0.6rem] xs:w-auto" href="/contact?type=fitrx" size="lg">
                 Bring FitRx to Your Business
                 <ArrowRight aria-hidden="true" className="h-4 w-4" />
               </Button>
-              <Button className="rounded-[0.6rem] bg-white/80" href="/contact?type=partner" size="lg" variant="outline">
+              <Button className="w-full rounded-[0.6rem] bg-white/80 xs:w-auto" href="/contact?type=partner" size="lg" variant="outline">
                 Talk to Partnerships
               </Button>
             </div>
           </div>
 
-          <div className="relative min-h-[22rem] overflow-hidden rounded-[1.15rem] bg-[#edf8fb] shadow-[0_24px_70px_rgba(20,121,201,0.1)] ring-1 ring-[#c9e6f8] sm:min-h-[28rem]">
+          <div className="relative aspect-[4/3] min-h-0 overflow-hidden rounded-[1.15rem] bg-[#edf8fb] shadow-[0_24px_70px_rgba(20,121,201,0.1)] ring-1 ring-[#c9e6f8] md:min-h-[28rem]">
             <Image
               alt="FitRx insole and clinical footwear customization system"
               className="object-cover object-center"
@@ -84,7 +84,7 @@ export default function FitRxPage() {
               sizes="(min-width: 1024px) 48vw, 100vw"
               src="/home/fitrx-insoles-clinic.png"
             />
-            <div className="absolute bottom-5 left-5 right-5 grid gap-2 rounded-[0.85rem] bg-white/92 p-3 shadow-[0_16px_42px_rgba(7,59,102,0.1)] ring-1 ring-white/80 sm:grid-cols-3">
+            <div className="absolute bottom-4 left-4 right-4 grid gap-2 rounded-[0.85rem] bg-white/92 p-3 shadow-[0_16px_42px_rgba(7,59,102,0.1)] ring-1 ring-white/80 md:bottom-5 md:left-5 md:right-5 md:grid-cols-3">
               {["Assess", "Configure", "Fit"].map((item) => (
                 <div className="rounded-[0.65rem] bg-[#f8fcff] px-3 py-2 text-center font-heading text-xs font-extrabold text-primary-dark ring-1 ring-[#d8ecf8]" key={item}>
                   {item}

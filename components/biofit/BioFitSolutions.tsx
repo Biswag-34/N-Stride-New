@@ -64,12 +64,12 @@ export function BioFitSolutions({ vertical }: BioFitSolutionsProps) {
   return (
     <BioFitSection className="bg-white pb-16 pt-12">
       <BioFitWaveImage
-        className="left-[-13rem] top-[-8rem] h-[52rem] w-[45rem] rotate-90 opacity-18 blur-sm [mask-image:linear-gradient(90deg,transparent_0%,black_18%,black_70%,transparent_100%)]"
+        className="hidden left-[-13rem] top-[-8rem] h-[52rem] w-[45rem] rotate-90 opacity-18 blur-sm [mask-image:linear-gradient(90deg,transparent_0%,black_18%,black_70%,transparent_100%)] md:block"
         src="/biofit/wave-divider-thin.png"
       />
-      <div aria-hidden="true" className="absolute left-[-15rem] top-[-5rem] h-[50rem] w-[50rem] rounded-[48%] border border-[#b8a9fb]/30" />
-      <div aria-hidden="true" className="absolute left-[-17rem] top-[-2rem] h-[43rem] w-[43rem] rounded-[48%] border border-[#b8a9fb]/12" />
-      <BioFitDottedField className="-right-28 bottom-0 h-72 w-[42rem]" />
+      <div aria-hidden="true" className="absolute left-[-15rem] top-[-5rem] hidden h-[50rem] w-[50rem] rounded-[48%] border border-[#b8a9fb]/30 md:block" />
+      <div aria-hidden="true" className="absolute left-[-17rem] top-[-2rem] hidden h-[43rem] w-[43rem] rounded-[48%] border border-[#b8a9fb]/12 md:block" />
+      <BioFitDottedField className="hidden -right-28 bottom-0 h-72 w-[42rem] md:block" />
       <BioFitContainer>
         <div className="grid gap-8 lg:grid-cols-[0.22fr_0.78fr]">
           <BioFitReveal>
@@ -85,7 +85,7 @@ export function BioFitSolutions({ vertical }: BioFitSolutionsProps) {
                 return (
                   <button
                     aria-label={`Open ${card.title} gallery`}
-                    className="group/card relative min-h-[305px] overflow-hidden rounded-tl-[2.35rem] rounded-tr-[0.75rem] rounded-br-[3.4rem] rounded-bl-[0.75rem] bg-primary-dark text-left shadow-[0_20px_50px_rgba(90,103,216,0.11)] ring-1 ring-[#d8d0ff] transition duration-500 hover:-translate-y-2 hover:shadow-[0_30px_70px_rgba(90,103,216,0.18)] focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-[#7357d8]/28"
+                    className="group/card relative min-h-[24rem] overflow-hidden rounded-tl-[2.35rem] rounded-tr-[0.75rem] rounded-br-[3.4rem] rounded-bl-[0.75rem] bg-primary-dark text-left shadow-[0_20px_50px_rgba(90,103,216,0.11)] ring-1 ring-[#d8d0ff] transition duration-500 hover:-translate-y-2 hover:shadow-[0_30px_70px_rgba(90,103,216,0.18)] focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-[#7357d8]/28 md:min-h-[305px]"
                     key={card.title}
                     onClick={() => setActiveGallery(card)}
                     type="button"
@@ -102,7 +102,7 @@ export function BioFitSolutions({ vertical }: BioFitSolutionsProps) {
                     <div className="absolute inset-x-0 bottom-0 p-5">
                       <div className="relative rounded-[0.85rem] bg-black/42 px-4 py-3 text-white shadow-[0_16px_40px_rgba(0,0,0,0.34)] backdrop-blur-[2px] transition duration-500 group-hover/card:bg-black/76 group-focus-visible/card:bg-black/76">
                         <h3 className="font-heading text-2xl font-bold text-white drop-shadow-[0_3px_10px_rgba(0,0,0,0.75)]">{card.title}</h3>
-                        <div className="max-h-0 translate-y-5 overflow-hidden opacity-0 transition-all duration-500 group-hover/card:max-h-56 group-hover/card:translate-y-0 group-hover/card:opacity-100 group-focus-visible/card:max-h-56 group-focus-visible/card:translate-y-0 group-focus-visible/card:opacity-100">
+                        <div className="max-h-56 translate-y-0 overflow-hidden opacity-100 transition-all duration-500 md:max-h-0 md:translate-y-5 md:opacity-0 md:group-hover/card:max-h-56 md:group-hover/card:translate-y-0 md:group-hover/card:opacity-100 md:group-focus-visible/card:max-h-56 md:group-focus-visible/card:translate-y-0 md:group-focus-visible/card:opacity-100">
                           <p className="mt-2 text-sm font-extrabold text-white">{card.subtitle}</p>
                           <ul className="mt-3 space-y-2">
                           {card.items.map((item) => (

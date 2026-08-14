@@ -138,7 +138,7 @@ export function VerticalsPromiseTimeline() {
                       <p className="mt-1 font-heading text-base font-semibold leading-5 text-primary-dark">{item.chapterTitle}</p>
                       <p className="mt-3 text-xs leading-5 text-text-secondary">{vertical.shortDescription}</p>
                       <Link
-                        className={`mt-4 inline-flex items-center gap-2 text-xs font-bold ${tone.text} rounded-sm focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-primary/20`}
+                        className={`mt-4 inline-flex min-h-11 items-center gap-2 rounded-sm text-xs font-bold ${tone.text} focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-primary/20`}
                         href={vertical.href}
                       >
                         Explore {vertical.shortName}

@@ -20,27 +20,27 @@ const iconForStep: Record<string, keyof typeof homeIconMap> = {
 
 export function HomeCareJourney() {
   return (
-    <section className="bg-white py-8">
+    <section className="bg-white py-6 md:py-8">
       <Container>
         <motion.div
-          className="relative overflow-hidden rounded-[1.35rem] border border-border-soft bg-white px-4 py-7 shadow-[0_24px_70px_rgba(20,121,201,0.08)] xs:px-5 sm:rounded-[2.25rem] sm:px-8 sm:py-8 lg:px-12"
+          className="relative overflow-hidden rounded-[1.1rem] border border-border-soft bg-white px-3 py-5 shadow-[0_18px_48px_rgba(20,121,201,0.08)] xs:px-4 sm:rounded-[2.25rem] sm:px-8 sm:py-8 sm:shadow-[0_24px_70px_rgba(20,121,201,0.08)] lg:px-12"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.22 }}
           variants={staggerContainer}
         >
-          <div className="grid gap-5 lg:grid-cols-[0.86fr_1.14fr] lg:items-start">
+          <div className="grid gap-3 sm:gap-5 lg:grid-cols-[0.86fr_1.14fr] lg:items-start">
             <motion.div variants={staggerItem}>
               <h2 className="max-w-[24rem] text-2xl font-semibold leading-tight text-primary-dark sm:text-3xl">
                 Guided care. Every step of the way.
               </h2>
             </motion.div>
-            <motion.div className="flex flex-col gap-4 lg:flex-row lg:items-start lg:justify-between" variants={staggerItem}>
-              <p className="max-w-[34rem] text-sm leading-6 text-text-secondary">
+            <motion.div className="flex flex-col gap-3 sm:gap-4 lg:flex-row lg:items-start lg:justify-between" variants={staggerItem}>
+              <p className="max-w-[34rem] text-xs leading-5 text-text-secondary sm:text-sm sm:leading-6">
                 From your first concern to long-term recovery, we are with you at every step to assess, treat, protect
                 and restore.
               </p>
-              <Button className="w-full shrink-0 rounded-[0.65rem] xs:w-auto" href="/contact?type=general" size="sm" variant="outline">
+              <Button className="min-h-10 w-full shrink-0 rounded-[0.65rem] xs:w-auto sm:min-h-11" href="/contact?type=general" size="sm" variant="outline">
                 See the full journey
                 <ArrowRight aria-hidden="true" className="h-4 w-4" />
               </Button>
@@ -91,19 +91,19 @@ export function HomeCareJourney() {
             </div>
           </div>
 
-          <div className="mt-8 grid gap-4 lg:hidden">
+          <div className="mt-5 grid grid-cols-2 gap-2 sm:mt-8 sm:gap-4 lg:hidden">
             {carePathway.map((step) => {
               const Icon = homeIconMap[iconForStep[step.icon] ?? "activity"];
 
               return (
-                <motion.article className="flex gap-3 rounded-[1rem] border border-border-soft bg-background-soft/60 p-3 xs:gap-4 xs:rounded-[1.2rem] xs:p-4" key={step.id} variants={staggerItem}>
-                  <IconBubble className="h-12 w-12 shrink-0" tone="blue">
-                    <Icon aria-hidden="true" className="h-5 w-5" />
+                <motion.article className="rounded-[0.85rem] border border-border-soft bg-background-soft/60 p-2.5 sm:flex sm:gap-4 sm:rounded-[1.2rem] sm:p-4" key={step.id} variants={staggerItem}>
+                  <IconBubble className="h-9 w-9 shrink-0 sm:h-12 sm:w-12" tone="blue">
+                    <Icon aria-hidden="true" className="h-4 w-4 sm:h-5 sm:w-5" />
                   </IconBubble>
-                  <div>
+                  <div className="mt-2 sm:mt-0">
                     <p className="text-xs font-bold text-primary">{step.step}</p>
-                    <h3 className="mt-1 font-heading text-lg font-semibold text-primary-dark">{step.title}</h3>
-                    <p className="mt-1 text-sm leading-6 text-text-secondary">{step.description}</p>
+                    <h3 className="mt-0.5 font-heading text-sm font-semibold leading-tight text-primary-dark sm:mt-1 sm:text-lg">{step.title}</h3>
+                    <p className="mt-1 hidden text-sm leading-6 text-text-secondary sm:block">{step.description}</p>
                   </div>
                 </motion.article>
               );

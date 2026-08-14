@@ -54,10 +54,10 @@ export function StepAheadHero() {
         </StepReveal>
 
         <StepReveal delay={0.1} className="relative">
-          <div className="relative ml-auto min-h-[230px] max-w-[720px] xs:min-h-[270px] sm:min-h-[330px]" />
+          <div className="relative ml-auto aspect-[16/9] max-w-[720px] md:min-h-[330px]" />
         </StepReveal>
 
-        <div className="col-span-full grid gap-x-7 gap-y-4 pt-0 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="col-span-full grid gap-x-7 gap-y-4 pt-0 md:grid-cols-2 lg:grid-cols-4">
           {proofItems.map((item, index) => {
             const Icon = item.icon;
 

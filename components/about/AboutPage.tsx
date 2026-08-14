@@ -91,28 +91,27 @@ const careSignals = [
 
 function IdentitySection() {
   const [activeIndex, setActiveIndex] = useState(0);
-  const reduceMotion = useReducedMotion();
   const active = identityTabs[activeIndex];
   const ActiveIcon = active.icon;
 
   return (
-    <AboutSection className="bg-[linear-gradient(180deg,#ffffff,#f5fbff)] py-10">
+    <AboutSection className="bg-[linear-gradient(180deg,#ffffff,#f5fbff)] py-6 md:py-10">
       <div aria-hidden="true" className="absolute -right-32 top-10 h-80 w-80 rounded-full bg-[#dff4ff]/70 blur-3xl" />
       <div aria-hidden="true" className="absolute -left-32 bottom-0 h-80 w-96 rounded-full bg-[#eefbf4]/70 blur-3xl" />
       <AboutContainer>
         <AboutReveal className="relative grid gap-4 lg:grid-cols-[0.31fr_0.69fr] lg:items-stretch">
-          <div className="relative rounded-[1rem] bg-white/86 p-4 shadow-[0_16px_42px_rgba(20,121,201,0.06)] ring-1 ring-[#d7ebfa] backdrop-blur">
+          <div className="relative rounded-[1rem] bg-white/86 p-3 shadow-[0_16px_42px_rgba(20,121,201,0.06)] ring-1 ring-[#d7ebfa] backdrop-blur md:p-4">
             <h2 className="font-heading text-[clamp(1.65rem,2.65vw,2.45rem)] font-bold leading-tight text-primary-dark">
               The N-Stride identity, in four clear answers.
             </h2>
-            <p className="mt-3 text-sm leading-6 text-text-secondary">
+            <p className="mt-3 hidden text-sm leading-6 text-text-secondary md:block">
               The model is built to keep care connected, practical and easier to understand at every stage.
             </p>
-            <div className="mt-5 grid gap-2">
+            <div className="mt-4 grid grid-cols-2 gap-2 md:mt-5 md:grid-cols-1">
               {identityTabs.map((tab, index) => (
                 <button
                   aria-pressed={activeIndex === index}
-                  className="group relative overflow-hidden rounded-[0.7rem] bg-[#f6fbff] px-3 py-2.5 text-left font-heading text-xs font-bold text-primary-dark ring-1 ring-[#d7ebfa] transition hover:bg-white aria-pressed:bg-primary aria-pressed:text-white aria-pressed:shadow-[0_12px_26px_rgba(20,121,201,0.16)]"
+                  className="group relative min-h-10 overflow-hidden rounded-[0.7rem] bg-[#f6fbff] px-2 py-2 text-left font-heading text-[0.7rem] font-bold text-primary-dark ring-1 ring-[#d7ebfa] transition hover:bg-white aria-pressed:bg-primary aria-pressed:text-white aria-pressed:shadow-[0_12px_26px_rgba(20,121,201,0.16)] md:min-h-11 md:px-3 md:py-2.5 md:text-xs"
                   key={tab.label}
                   onClick={() => setActiveIndex(index)}
                   type="button"
@@ -136,26 +135,26 @@ function IdentitySection() {
           </div>
 
           <motion.div
-            className="relative overflow-hidden rounded-[1.15rem] border border-[#c9e6f8] bg-white p-3 shadow-[0_20px_60px_rgba(20,121,201,0.1)] md:p-4"
+            className="relative isolate overflow-hidden rounded-[1.15rem] border border-[#c9e6f8] bg-white shadow-[0_20px_60px_rgba(20,121,201,0.1)]"
             key={active.label}
-            initial={reduceMotion ? false : { opacity: 0, y: 16 }}
+            initial={false}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.45, ease: aboutEase }}
           >
-            <div className="relative grid gap-4 md:grid-cols-[0.48fr_0.52fr] md:items-stretch">
-              <div className="relative min-h-[20rem] overflow-hidden rounded-[0.9rem] bg-[#f6fbff] ring-1 ring-[#d7ebfa] sm:min-h-[24rem] lg:min-h-[28rem]">
+            <div className="relative grid md:min-h-[26rem] md:grid-cols-[minmax(0,0.48fr)_minmax(0,0.52fr)] lg:min-h-[30rem]">
+              <div className="relative z-0 aspect-[4/3] min-h-0 overflow-hidden bg-[#f6fbff] md:aspect-auto md:h-full">
                 <Image
                   alt={active.imageAlt}
-                  className="object-cover object-center"
+                  className="z-0 object-cover object-center md:object-[center_48%]"
                   fill
-                  sizes="(min-width: 1024px) 390px, 100vw"
+                  sizes="(min-width: 1024px) 470px, (min-width: 768px) 48vw, 100vw"
                   src={active.image}
                 />
-                <div className="absolute inset-x-0 bottom-0 bg-[linear-gradient(180deg,rgba(7,59,102,0),rgba(7,59,102,0.74))] px-4 pb-4 pt-20 text-white">
+                <div className="absolute inset-x-0 bottom-0 z-10 bg-[linear-gradient(180deg,rgba(7,59,102,0),rgba(7,59,102,0.74))] px-4 pb-4 pt-20 text-white md:hidden">
                   <p className="font-heading text-lg font-bold">{active.label}</p>
                 </div>
               </div>
-              <div className="flex flex-col justify-center rounded-[0.9rem] bg-[linear-gradient(135deg,#f8fcff,#ffffff)] p-4 ring-1 ring-[#d7ebfa] md:p-5">
+              <div className="relative z-20 flex flex-col justify-center bg-[linear-gradient(135deg,rgba(248,252,255,0.98),#ffffff)] p-4 ring-1 ring-[#d7ebfa] md:border-l md:border-[#d7ebfa] md:p-6 lg:p-8">
                 <div className="flex items-center gap-3">
                   <AboutIconBubble className="h-11 w-11 shadow-none" size="sm">
                     <ActiveIcon aria-hidden="true" className="h-5 w-5" />
@@ -163,9 +162,9 @@ function IdentitySection() {
                 </div>
                 <h3 className="mt-4 font-heading text-[clamp(1.35rem,2vw,2rem)] font-bold leading-tight text-primary-dark">{active.title}</h3>
                 <p className="mt-3 text-sm leading-6 text-text-secondary">{active.text}</p>
-                <div className="mt-4 grid gap-2 sm:grid-cols-3">
+                <div className="mt-4 flex snap-x gap-2 overflow-x-auto pb-1 md:grid md:overflow-visible md:pb-0 xl:grid-cols-3">
                   {active.points.map((point) => (
-                    <div className="rounded-[0.65rem] bg-white px-3 py-2 text-xs font-bold leading-5 text-primary-dark shadow-[0_8px_20px_rgba(20,121,201,0.04)] ring-1 ring-[#d7ebfa]" key={point}>
+                    <div className="min-w-[8.7rem] snap-start rounded-[0.65rem] bg-white px-3 py-2 text-xs font-bold leading-5 text-primary-dark shadow-[0_8px_20px_rgba(20,121,201,0.04)] ring-1 ring-[#d7ebfa] md:min-w-0" key={point}>
                       {point}
                     </div>
                   ))}
@@ -301,7 +300,7 @@ export function AboutPage() {
   return (
     <>
       <AboutSection className="isolate bg-[#eef8ff]">
-        <div aria-hidden="true" className="absolute inset-0 bg-[url('/about/about-hero-banner.png')] bg-cover bg-center" />
+        <div aria-hidden="true" className="absolute inset-0 bg-[url('/about/about-hero-banner.png')] bg-cover bg-[58%_center] md:bg-center" />
         <div aria-hidden="true" className="absolute inset-0 bg-[linear-gradient(90deg,rgba(255,255,255,0.96)_0%,rgba(255,255,255,0.86)_36%,rgba(255,255,255,0.36)_65%,rgba(255,255,255,0.06)_100%)]" />
         <div aria-hidden="true" className="absolute inset-x-0 bottom-0 h-28 bg-[linear-gradient(180deg,transparent,#ffffff_86%)]" />
         <AboutContainer className="relative z-10 grid items-center pb-12 pt-14 lg:min-h-[640px] lg:pb-16 lg:pt-16">
@@ -312,26 +311,26 @@ export function AboutPage() {
               Complete mobility care.
             </h1>
             <p className="mt-5 max-w-[570px] text-sm font-semibold leading-7 text-text-secondary sm:text-base sm:leading-8">{brand.shortIntro}</p>
-            <div className="mt-7 flex flex-col gap-3 sm:flex-row">
-              <Button className="rounded-[0.5rem] px-7 text-sm" href={ctas.primary.href} size="lg">
+            <div className="mt-7 flex flex-col gap-3 xs:flex-row xs:flex-wrap">
+              <Button className="w-full rounded-[0.5rem] px-7 text-sm xs:w-auto" href={ctas.primary.href} size="lg">
                 {ctas.primary.label}
                 <ArrowRight aria-hidden="true" className="h-4 w-4" />
               </Button>
-              <Button className="rounded-[0.5rem] px-7 text-sm" href={ctas.verticals.href} size="lg" variant="outline">
+              <Button className="w-full rounded-[0.5rem] px-7 text-sm xs:w-auto" href={ctas.verticals.href} size="lg" variant="outline">
                 {ctas.verticals.label}
               </Button>
             </div>
           </AboutReveal>
 
-          <AboutReveal className="col-span-full grid gap-3 pt-1 sm:grid-cols-2 lg:grid-cols-4" delay={0.12}>
+          <AboutReveal className="col-span-full grid grid-cols-2 gap-2 pt-1 md:grid-cols-2 md:gap-3 lg:grid-cols-4" delay={0.12}>
             {careSignals.map((item) => {
               const Icon = item.icon;
               return (
-                <div className="flex items-center gap-3 rounded-[0.8rem] bg-white/72 px-4 py-3 shadow-[0_10px_28px_rgba(20,121,201,0.06)] ring-1 ring-[#d7ebfa]" key={item.label}>
-                  <AboutIconBubble className="h-12 w-12 shadow-none" size="sm">
+                <div className="flex items-center gap-2 rounded-[0.8rem] bg-white/72 px-2.5 py-2.5 shadow-[0_10px_28px_rgba(20,121,201,0.06)] ring-1 ring-[#d7ebfa] md:gap-3 md:px-4 md:py-3" key={item.label}>
+                  <AboutIconBubble className="h-9 w-9 shadow-none md:h-12 md:w-12" size="sm">
                     <Icon aria-hidden="true" className="h-5 w-5" />
                   </AboutIconBubble>
-                  <span className="font-heading text-sm font-bold text-primary-dark">{item.label}</span>
+                  <span className="font-heading text-xs font-bold leading-tight text-primary-dark md:text-sm">{item.label}</span>
                 </div>
               );
             })}

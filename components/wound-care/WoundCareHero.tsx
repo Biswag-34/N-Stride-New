@@ -32,9 +32,9 @@ export function WoundCareHero({ vertical }: WoundCareHeroProps) {
         <div className="grid items-start gap-7 lg:min-h-[445px] lg:grid-cols-[0.52fr_0.48fr] lg:gap-9">
           <WoundReveal>
             <h1 className="max-w-[42rem] font-heading text-[clamp(1.7rem,5.4vw,3.62rem)] font-bold leading-[1.04] text-primary-dark">
-              <span className="block whitespace-nowrap">N-Stride NPWT VAC &</span>
+              <span className="block md:whitespace-nowrap">N-Stride NPWT VAC &</span>
               {" "}
-              <span className="block whitespace-nowrap">Wound Care</span>
+              <span className="block md:whitespace-nowrap">Wound Care</span>
             </h1>
             <p className="mt-5 max-w-[36rem] font-heading text-lg font-semibold leading-7 text-[#b86b00] sm:text-xl sm:leading-8">
               Advanced wound-care support for complex foot and lower-limb needs.
@@ -55,11 +55,11 @@ export function WoundCareHero({ vertical }: WoundCareHeroProps) {
           </WoundReveal>
 
           <WoundReveal delay={0.08}>
-            <div className="relative min-h-[250px] xs:min-h-[300px] sm:min-h-[335px]">
+            <div className="relative aspect-[4/3] min-h-0 md:min-h-[335px]">
               <div className="absolute right-[4%] top-[10%] h-[78%] w-[82%] rounded-[3.5rem] bg-[#fff2dd]/38 blur-[48px]" />
               <WoundAsset
                 alt="NPWT VAC dressing setup with device and wound dressing"
-                className="relative z-10 ml-auto min-h-[250px] max-w-[590px] overflow-visible shadow-none xs:min-h-[300px] sm:min-h-[335px]"
+                className="relative z-10 ml-auto min-h-full max-w-[590px] overflow-visible shadow-none md:min-h-[335px]"
                 imageClassName="object-contain object-right"
                 priority
                 sizes="(max-width: 1024px) 100vw, 52vw"

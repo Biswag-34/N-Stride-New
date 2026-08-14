@@ -4,7 +4,7 @@ import { ArrowRight, ChevronDown, ExternalLink, Menu, X } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 import { MobileMenu } from "@/components/layout/MobileMenu";
 import { Button } from "@/components/ui/Button";
@@ -25,6 +25,7 @@ const verticalShortNames = ["Kinetics", "Insight", "Wound Care", "Bio-Fit"];
 export function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
+  const menuButtonRef = useRef<HTMLButtonElement>(null);
   const pathname = usePathname() ?? "";
   const bioFitPage = pathname?.startsWith("/verticals/bio-fit") ?? false;
 
@@ -41,11 +42,11 @@ export function Header() {
   }, [pathname]);
 
   return (
-    <header className="sticky top-0 z-50 border-b border-border-soft/70 bg-white/96 shadow-[0_8px_28px_rgba(16,42,67,0.045)] backdrop-blur-xl">
-      <div className="mx-auto flex h-14 max-w-container items-center justify-between gap-3 px-4 xs:px-5 sm:px-6 lg:px-8">
+    <header className="sticky top-0 z-50 border-b border-white/55 bg-white/66 shadow-[0_18px_48px_rgba(16,42,67,0.12),inset_0_1px_0_rgba(255,255,255,0.72)] backdrop-blur-2xl backdrop-saturate-150 before:pointer-events-none before:absolute before:inset-0 before:bg-[linear-gradient(90deg,rgba(255,255,255,0.72),rgba(255,255,255,0.36)_48%,rgba(221,241,255,0.54))] before:content-['']">
+      <div className="relative z-10 mx-auto flex h-14 max-w-container items-center justify-between gap-3 px-4 xs:px-5 sm:px-6 lg:px-8">
         <Link
           aria-label={`${SITE_NAME} home`}
-          className="flex min-w-0 items-center gap-3 rounded-md focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-primary/25"
+          className="flex min-h-11 min-w-0 items-center gap-3 rounded-md focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-primary/25"
           href="/"
           onClick={() => setMenuOpen(false)}
         >
@@ -114,7 +115,7 @@ export function Header() {
                       dropdownOpen && "pointer-events-auto visible translate-y-0 opacity-100",
                     )}
                   >
-                    <div className="overflow-hidden rounded-[0.85rem] border border-[#d6ecf8] bg-white p-1.5 shadow-[0_18px_46px_rgba(16,42,67,0.14)]">
+                    <div className="overflow-hidden rounded-[0.85rem] border border-white/70 bg-white/76 p-1.5 shadow-[0_18px_46px_rgba(16,42,67,0.18)] backdrop-blur-2xl backdrop-saturate-150">
                       <div className="grid gap-1">
                         {item.children.map((child, index) => {
                           const childActive = pathname.startsWith(child.href);
@@ -161,17 +162,19 @@ export function Header() {
 
         <button
           aria-expanded={menuOpen}
+          aria-controls="mobile-navigation-drawer"
           aria-label={menuOpen ? "Close menu" : "Open menu"}
           className={cn(
-            "inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-md border border-border-soft bg-white text-primary-dark shadow-soft transition hover:bg-background-soft xs:h-11 xs:w-11 lg:hidden",
+            "inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-md border border-white/70 bg-white/72 text-primary-dark shadow-[0_10px_26px_rgba(16,42,67,0.12)] backdrop-blur-xl transition hover:bg-white/86 lg:hidden",
           )}
           onClick={() => setMenuOpen((current) => !current)}
+          ref={menuButtonRef}
           type="button"
         >
           {menuOpen ? <X aria-hidden="true" className="h-5 w-5" /> : <Menu aria-hidden="true" className="h-5 w-5" />}
         </button>
       </div>
-      <MobileMenu onClose={() => setMenuOpen(false)} open={menuOpen} />
+      <MobileMenu onClose={() => setMenuOpen(false)} open={menuOpen} triggerRef={menuButtonRef} />
     </header>
   );
 }

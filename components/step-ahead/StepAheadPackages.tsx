@@ -59,7 +59,7 @@ export function StepAheadPackages() {
         <StepReveal className="mt-7" delay={0.06}>
           <div className="relative overflow-hidden rounded-[1rem] border border-[#c9e6f8]/80 bg-white/76 p-4 shadow-[0_18px_58px_rgba(20,121,201,0.07)] backdrop-blur lg:p-5">
             <div aria-hidden="true" className="absolute left-8 right-8 top-[3.4rem] hidden h-px bg-[linear-gradient(90deg,transparent,#8acdf1,#80d8bf,#8acdf1,transparent)] lg:block" />
-            <div className="relative grid gap-4 md:grid-cols-5">
+            <div className="relative grid gap-4 sm:grid-cols-2 md:grid-cols-5">
               {process.map((item, index) => {
                 const Icon = item.icon;
 

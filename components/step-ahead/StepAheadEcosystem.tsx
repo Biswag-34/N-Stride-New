@@ -25,7 +25,7 @@ export function StepAheadEcosystem() {
             <p className="mt-4 max-w-[22rem] text-sm leading-7 text-text-secondary">
               Step-Ahead is backed by N-Stride&apos;s integrated ecosystem of diagnostics, insight, therapeutics and restoration.
             </p>
-            <Link className="mt-5 inline-flex text-sm font-bold text-primary transition hover:text-primary-dark" href="/verticals">
+            <Link className="mt-5 inline-flex min-h-11 items-center text-sm font-bold text-primary transition hover:text-primary-dark" href="/verticals">
               Explore the N-Stride ecosystem {"->"}
             </Link>
           </StepReveal>

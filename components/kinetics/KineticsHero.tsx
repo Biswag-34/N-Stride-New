@@ -46,12 +46,12 @@ export function KineticsHero({ vertical }: KineticsHeroProps) {
             comfort and confidence in every step.
           </motion.p>
           <motion.div className="mt-6 flex flex-col gap-3 xs:flex-row xs:flex-wrap" variants={fadeUp}>
-            <Button className="min-h-10 w-full rounded-[0.45rem] px-5 text-xs xs:w-auto xs:px-6" href={vertical.cta.primary.href}>
+            <Button className="min-h-12 w-full rounded-[0.45rem] px-5 text-xs xs:w-auto xs:px-6 md:min-h-11 lg:min-h-10" href={vertical.cta.primary.href}>
               Book Foot Checkup
               <ArrowRight aria-hidden="true" className="h-4 w-4" />
             </Button>
             <Button
-              className="min-h-10 w-full rounded-[0.45rem] px-5 text-xs xs:w-auto xs:px-6"
+              className="min-h-12 w-full rounded-[0.45rem] px-5 text-xs xs:w-auto xs:px-6 md:min-h-11 lg:min-h-10"
               external={secondaryCta.external}
               href={secondaryCta.href}
               variant="outline"
@@ -59,15 +59,15 @@ export function KineticsHero({ vertical }: KineticsHeroProps) {
               Explore Footwear
             </Button>
           </motion.div>
-          <motion.div className="mt-8 grid gap-4 xs:grid-cols-3 lg:mt-10" variants={fadeUp}>
+          <motion.div className="mt-8 grid gap-4 md:grid-cols-3 lg:mt-10" variants={fadeUp}>
             <IconText icon={<GiRunningShoe className="h-5 w-5" />} text="movement" title="Built for everyday" />
             <IconText icon={<HeartPulse className="h-5 w-5" />} text="fit & comfort" title="Clinically guided" />
             <IconText icon={<ShieldCheck className="h-5 w-5" />} text="loved by users" title="Trusted by specialists," />
           </motion.div>
         </motion.div>
 
-        <MotionReveal className="relative min-h-[260px] xs:min-h-[320px] lg:h-[560px]">
-          <div className="relative ml-auto h-full min-h-[260px] w-full max-w-[900px] xs:min-h-[320px] lg:min-h-[350px]">
+        <MotionReveal className="relative aspect-[4/3] min-h-0 md:min-h-[320px] lg:h-[560px]">
+          <div className="relative ml-auto h-full min-h-0 w-full max-w-[900px] md:min-h-[320px] lg:min-h-[350px]">
             <div
               aria-hidden="true"
               className="absolute -bottom-12 right-[-4%] z-0 h-[48%] w-[88%] rounded-[50%] bg-[#bce2fb]/70 blur-[52px]"
@@ -76,10 +76,10 @@ export function KineticsHero({ vertical }: KineticsHeroProps) {
               aria-hidden="true"
               className="absolute right-[3%] top-[1%] z-0 h-[88%] w-[88%] rounded-[42%] bg-[#dff1ff]/84 blur-[72px]"
             />
-            <div className="relative z-10 h-full min-h-[260px] xs:min-h-[320px] lg:min-h-[350px]">
+            <div className="relative z-10 h-full min-h-0 md:min-h-[320px] lg:min-h-[350px]">
               <Image
                 alt="Therapeutic footwear worn indoors"
-                className="object-cover object-center mix-blend-multiply"
+                className="object-cover object-[58%_50%] mix-blend-multiply md:object-center"
                 fill
                 priority
                 sizes="(min-width: 1024px) 900px, 94vw"

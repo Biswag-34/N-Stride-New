@@ -19,16 +19,16 @@ export function VisitLocationSection() {
           <div>
             <p className="text-xs font-bold uppercase tracking-[0.16em] text-primary">Location</p>
             <h2 className="mt-3 text-2xl font-semibold leading-tight text-primary-dark sm:text-3xl">Visit or contact N-Stride</h2>
-            <div className="mt-5 grid gap-3">
+            <div className="mt-5 grid grid-cols-2 gap-2 md:gap-3">
               {rows.map((row) => {
                 const Icon = row.icon;
 
                 return (
-                  <div className="flex gap-3 rounded-[0.8rem] border border-border-soft bg-background-soft p-3" key={row.label}>
-                    <Icon aria-hidden="true" className="mt-0.5 h-5 w-5 shrink-0 text-primary" />
-                    <div>
-                      <p className="text-sm font-bold text-primary-dark">{row.label}</p>
-                      <p className="mt-1 text-[0.82rem] leading-5 text-text-secondary">{row.value}</p>
+                  <div className={`flex gap-2 rounded-[0.8rem] border border-border-soft bg-background-soft p-2.5 md:gap-3 md:p-3 ${row.label === "Address" ? "col-span-2" : ""}`} key={row.label}>
+                    <Icon aria-hidden="true" className="mt-0.5 h-4 w-4 shrink-0 text-primary md:h-5 md:w-5" />
+                    <div className="min-w-0">
+                      <p className="text-xs font-bold text-primary-dark md:text-sm">{row.label}</p>
+                      <p className="mt-1 break-words text-[0.72rem] leading-5 text-text-secondary md:text-[0.82rem]">{row.value}</p>
                     </div>
                   </div>
                 );

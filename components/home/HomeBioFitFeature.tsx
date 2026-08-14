@@ -34,10 +34,10 @@ const capabilityCards = [
 
 export function HomeBioFitFeature() {
   return (
-    <section className="bg-white py-8">
+    <section className="bg-white py-8 md:py-6">
       <Container>
         <motion.div
-          className="relative overflow-hidden rounded-[1.35rem] border border-[#ddd6fe] bg-[linear-gradient(135deg,#ffffff,#fbf8ff_48%,#f0fcff)] p-4 shadow-[0_24px_70px_rgba(90,103,216,0.1)] sm:p-6 lg:p-8"
+          className="relative overflow-hidden rounded-[1.35rem] border border-[#ddd6fe] bg-[linear-gradient(135deg,#ffffff,#fbf8ff_48%,#f0fcff)] p-4 shadow-[0_24px_70px_rgba(90,103,216,0.1)] sm:p-6 md:p-5 lg:p-6"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.2 }}
@@ -46,49 +46,50 @@ export function HomeBioFitFeature() {
           <div aria-hidden="true" className="absolute -right-24 -top-28 h-72 w-72 rounded-full bg-[#e9ddff]/70 blur-3xl" />
           <div aria-hidden="true" className="absolute -bottom-24 left-10 h-72 w-96 rounded-full bg-[#dcf8ff]/70 blur-3xl" />
 
-          <div className="relative grid gap-7 lg:grid-cols-[0.52fr_0.48fr] lg:items-center">
+          <div className="relative grid gap-7 md:gap-5 lg:grid-cols-[0.52fr_0.48fr] lg:items-center">
             <motion.div variants={staggerItem}>
               <p className="inline-flex rounded-full bg-white/82 px-3 py-1 text-[0.64rem] font-extrabold uppercase tracking-[0.2em] text-accent-indigo ring-1 ring-[#ddd6fe]">
                 {bioFit.name}
               </p>
-              <h2 className="mt-4 max-w-[35rem] text-3xl font-semibold leading-tight text-primary-dark sm:text-4xl">
+              <h2 className="mt-4 max-w-[35rem] text-3xl font-semibold leading-tight text-primary-dark sm:text-4xl md:text-[2rem] lg:text-3xl">
                 Bio-Fit: mobility restoration built around real patient needs.
               </h2>
-              <p className="mt-4 max-w-[39rem] text-sm leading-7 text-text-secondary">
-                {bioFit.shortDescription} The pathway connects assessment, fitting, adaptation guidance and rehabilitation support so every recommendation has a clear clinical purpose.
+              <p className="mt-4 max-w-[39rem] text-sm leading-7 text-text-secondary md:max-w-[34rem] md:leading-6">
+                {bioFit.shortDescription}
+                <span className="md:hidden"> The pathway connects assessment, fitting, adaptation guidance and rehabilitation support so every recommendation has a clear clinical purpose.</span>
               </p>
 
-              <div className="mt-7 grid gap-3 sm:grid-cols-3">
+              <div className="mt-5 grid grid-cols-2 gap-2 md:grid-cols-3 md:gap-2">
                 {capabilityCards.map((item) => {
                   const Icon = item.icon;
 
                   return (
-                    <div className={`rounded-[0.9rem] border px-4 py-4 shadow-[0_12px_30px_rgba(90,103,216,0.06)] ${item.className}`} key={item.title}>
-                      <span className="flex h-10 w-10 items-center justify-center rounded-[0.7rem] bg-white/88 shadow-[0_10px_24px_rgba(16,42,67,0.08)]">
-                        <Icon aria-hidden="true" className="h-5 w-5" />
+                    <div className={`flex items-center gap-2 rounded-[0.75rem] border px-2.5 py-2.5 shadow-[0_12px_30px_rgba(90,103,216,0.06)] md:block md:rounded-[0.9rem] md:px-4 md:py-4 ${item.className}`} key={item.title}>
+                      <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-[0.6rem] bg-white/88 shadow-[0_10px_24px_rgba(16,42,67,0.08)] md:h-10 md:w-10 md:rounded-[0.7rem]">
+                        <Icon aria-hidden="true" className="h-4 w-4 md:h-5 md:w-5" />
                       </span>
-                      <p className="mt-4 font-heading text-sm font-bold text-primary-dark">{item.title}</p>
-                      <p className="mt-2 text-xs font-semibold leading-5 text-text-secondary">{item.text}</p>
+                      <p className="font-heading text-xs font-bold leading-tight text-primary-dark md:mt-4 md:text-sm">{item.title}</p>
+                      <p className="mt-2 hidden text-xs font-semibold leading-5 text-text-secondary">{item.text}</p>
                     </div>
                   );
                 })}
               </div>
 
-              <div className="mt-5 grid gap-2 sm:grid-cols-2">
+              <div className="mt-5 grid gap-2 sm:grid-cols-2 md:grid-cols-4">
                 {bioFit.proofPoints.slice(0, 4).map((point) => (
-                  <div className="flex items-start gap-2 rounded-[0.8rem] bg-white/78 px-3 py-3 text-xs font-bold leading-5 text-primary-dark ring-1 ring-[#e2dcff]" key={point}>
+                  <div className="flex items-start gap-2 rounded-[0.8rem] bg-white/78 px-3 py-3 text-xs font-bold leading-5 text-primary-dark ring-1 ring-[#e2dcff] md:px-2.5 md:py-2.5 md:leading-4" key={point}>
                     <CheckCircle2 aria-hidden="true" className="mt-0.5 h-4 w-4 shrink-0 text-accent-indigo" />
                     {point}
                   </div>
                 ))}
               </div>
 
-              <div className="mt-7 flex flex-col gap-3 sm:flex-row">
-                <Button className="rounded-[0.65rem]" href="/verticals/bio-fit">
+              <div className="mt-7 flex flex-col gap-3 xs:flex-row xs:flex-wrap md:mt-5">
+                <Button className="w-full rounded-[0.65rem] xs:w-auto" href="/verticals/bio-fit">
                   Explore Bio-Fit
                   <ArrowRight aria-hidden="true" className="h-4 w-4" />
                 </Button>
-                <Button className="rounded-[0.65rem] bg-white/86" href={bioFit.cta.primary.href} variant="outline">
+                <Button className="w-full rounded-[0.65rem] bg-white/86 xs:w-auto" href={bioFit.cta.primary.href} variant="outline">
                   {bioFit.cta.primary.label}
                 </Button>
               </div>
@@ -103,11 +104,11 @@ export function HomeBioFitFeature() {
                   sizes="(min-width: 1024px) 520px, 100vw"
                   src="/requested-assets/biofit-who-help.png"
                 />
-                <div className="absolute inset-x-0 bottom-0 bg-[linear-gradient(180deg,rgba(10,26,44,0),rgba(10,26,44,0.78))] px-5 pb-5 pt-24 text-white">
+                <div className="absolute inset-x-0 bottom-0 bg-[linear-gradient(180deg,rgba(10,26,44,0),rgba(10,26,44,0.78))] px-4 pb-4 pt-20 text-white sm:px-5 sm:pb-5 sm:pt-24 md:hidden">
                   <p className="text-xs font-extrabold uppercase tracking-[0.18em] text-white/74">Core pathway</p>
-                  <div className="mt-3 grid gap-2 sm:grid-cols-2">
+                  <div className="mt-2 flex flex-wrap gap-1.5 sm:mt-3 sm:grid sm:grid-cols-2 sm:gap-2">
                     {bioFit.process.slice(0, 4).map((step) => (
-                      <div className="rounded-[0.75rem] bg-white/12 px-3 py-3 text-xs font-bold leading-5 ring-1 ring-white/18 backdrop-blur-sm" key={step.title}>
+                      <div className="rounded-full bg-white/14 px-2.5 py-1.5 text-[0.62rem] font-bold leading-tight ring-1 ring-white/18 backdrop-blur-sm sm:rounded-[0.75rem] sm:px-3 sm:py-3 sm:text-xs sm:leading-5" key={step.title}>
                         {step.title}
                       </div>
                     ))}

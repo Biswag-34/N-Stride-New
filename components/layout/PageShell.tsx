@@ -7,9 +7,12 @@ import { ScrollProgress } from "@/components/motion/ScrollProgress";
 export function PageShell({ children }: PropsWithChildren) {
   return (
     <>
+      <a className="skip-link" href="#main-content">
+        Skip to main content
+      </a>
       <ScrollProgress />
       <Header />
-      <main>{children}</main>
+      <main id="main-content" tabIndex={-1}>{children}</main>
       <Footer />
     </>
   );

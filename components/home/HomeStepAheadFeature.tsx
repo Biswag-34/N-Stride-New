@@ -28,12 +28,12 @@ export function HomeStepAheadFeature() {
           viewport={{ once: true, amount: 0.25 }}
           variants={staggerContainer}
         >
-          <motion.div variants={staggerItem}>
+          <motion.div className="order-2 lg:order-1" variants={staggerItem}>
             <ImageDrop
-              className="min-h-[22rem] shadow-[0_22px_55px_rgba(16,42,67,0.12)]"
+              className="min-h-[18rem] shadow-[0_22px_55px_rgba(16,42,67,0.12)] sm:min-h-[22rem]"
               label=""
             >
-              <div className="relative flex h-full min-h-[22rem] items-end overflow-hidden p-7 text-white">
+              <div className="relative flex h-full min-h-[18rem] items-end overflow-hidden p-5 text-white sm:min-h-[22rem] sm:p-7">
                 <Image
                   alt="Patient walking in supportive footwear for the Step-Ahead program"
                   className="object-cover"
@@ -53,23 +53,23 @@ export function HomeStepAheadFeature() {
             </ImageDrop>
           </motion.div>
 
-          <motion.div variants={staggerItem}>
+          <motion.div className="order-1 lg:order-2" variants={staggerItem}>
             <h2 className="max-w-[31rem] text-3xl font-semibold leading-tight text-primary-dark sm:text-4xl">
               Step-Ahead: Structured care. Stronger outcomes.
             </h2>
             <p className="mt-4 max-w-[36rem] text-sm leading-7 text-text-secondary">
               {stepAheadProgram.overview}
             </p>
-            <div className="mt-8 grid gap-4 sm:grid-cols-4">
+            <div className="mt-6 grid grid-cols-2 gap-3 sm:mt-8 sm:grid-cols-4 sm:gap-4">
               {programItems.map((item) => {
                 const Icon = item.icon;
 
                 return (
-                  <div className="text-center" key={item.label}>
-                    <span className="mx-auto flex h-14 w-14 items-center justify-center rounded-full bg-soft-sky text-primary shadow-soft">
-                      <Icon aria-hidden="true" className="h-6 w-6" />
+                  <div className="rounded-[0.85rem] border border-border-soft bg-white px-3 py-3 text-center shadow-[0_10px_24px_rgba(20,121,201,0.06)] sm:border-0 sm:bg-transparent sm:px-0 sm:py-0 sm:shadow-none" key={item.label}>
+                    <span className="mx-auto flex h-10 w-10 items-center justify-center rounded-full bg-soft-sky text-primary shadow-soft sm:h-14 sm:w-14">
+                      <Icon aria-hidden="true" className="h-5 w-5 sm:h-6 sm:w-6" />
                     </span>
-                    <p className="mt-3 text-xs font-semibold leading-5 text-primary-dark">{item.label}</p>
+                    <p className="mt-2 text-xs font-semibold leading-5 text-primary-dark sm:mt-3">{item.label}</p>
                   </div>
                 );
               })}

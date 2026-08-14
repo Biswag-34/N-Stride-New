@@ -45,7 +45,21 @@ export function ContactHero() {
             </div>
           </div>
 
-          <div className="relative mx-auto h-[18rem] w-full max-w-[32rem] overflow-hidden rounded-[1.25rem] border border-border-soft bg-white/90 shadow-[0_18px_52px_rgba(16,42,67,0.07)] xs:h-[19rem]">
+          <div className="grid grid-cols-2 gap-2 md:hidden">
+            {nodes.map((node, index) => (
+              <div
+                className="flex min-h-11 items-center gap-2 rounded-[0.75rem] border border-border-soft bg-white px-2.5 py-2 text-xs font-bold text-primary-dark shadow-[0_10px_24px_rgba(16,42,67,0.05)]"
+                key={node.label}
+              >
+                <span className="grid h-7 w-7 shrink-0 place-items-center rounded-[0.55rem] bg-soft-sky text-[0.68rem] text-primary">
+                  {String(index + 1).padStart(2, "0")}
+                </span>
+                <span>{node.mobileLabel}</span>
+              </div>
+            ))}
+          </div>
+
+          <div className="relative mx-auto hidden h-[18rem] w-full max-w-[32rem] overflow-hidden rounded-[1.25rem] border border-border-soft bg-white/90 shadow-[0_18px_52px_rgba(16,42,67,0.07)] xs:h-[19rem] md:block">
             <svg className="absolute inset-0 h-full w-full" viewBox="0 0 560 352" aria-hidden="true">
               <path d="M280 176 L112 80 M280 176 L280 58 M280 176 L448 80 M280 176 L112 272 M280 176 L280 294 M280 176 L448 272" fill="none" stroke="#C9E6F8" strokeLinecap="round" strokeWidth="3" />
               <path d="M280 176 L112 80 M280 176 L280 58 M280 176 L448 80 M280 176 L112 272 M280 176 L280 294 M280 176 L448 272" fill="none" stroke="#1479C9" strokeLinecap="round" strokeOpacity="0.35" strokeWidth="1.5" />

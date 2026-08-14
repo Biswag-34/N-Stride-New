@@ -43,7 +43,7 @@ export function KineticsEcosystemBand() {
           <MotionReveal className="relative overflow-hidden py-3">
             <div className="absolute left-[7%] right-[5%] top-[4.72rem] hidden h-px bg-[linear-gradient(90deg,transparent,#9ecdf2_11%,#9ecdf2_88%,transparent)] lg:block" />
             <div className="absolute left-[23%] right-[18%] top-[4.72rem] hidden h-px bg-white/70 blur-[2px] lg:block" />
-            <div className="grid gap-5 sm:grid-cols-3 lg:grid-cols-5 lg:items-start">
+            <div className="grid gap-5 md:grid-cols-3 lg:grid-cols-5 lg:items-start">
               {nodes.map((node, index) => {
                 const Icon = node.icon;
                 return (

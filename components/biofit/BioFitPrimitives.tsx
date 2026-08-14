@@ -119,7 +119,7 @@ export function BioFitCurveDivider({ className, flip }: { className?: string; fl
     <svg
       aria-hidden="true"
       className={cn(
-        "pointer-events-none absolute left-0 right-0 z-10 h-28 w-full text-[#b8a9fb]",
+        "pointer-events-none absolute left-0 right-0 z-10 h-28 w-full overflow-hidden text-[#b8a9fb]",
         flip && "rotate-180",
         className,
       )}
@@ -136,7 +136,7 @@ export function BioFitCurveDivider({ className, flip }: { className?: string; fl
 
 export function BioFitDottedField({ className }: { className?: string }) {
   return (
-    <svg aria-hidden="true" className={cn("pointer-events-none absolute text-[#b8a9fb]/35", className)} fill="none" viewBox="0 0 520 260">
+    <svg aria-hidden="true" className={cn("pointer-events-none absolute overflow-hidden text-[#b8a9fb]/35", className)} fill="none" viewBox="0 0 520 260">
       {Array.from({ length: 8 }).map((_, index) => (
         <path
           d={`M${-12 + index * 8} ${175 + index * 5}C108 ${105 + index * 6} 208 ${245 - index * 3} 356 ${150 + index * 4}C422 ${108 + index * 4} 472 ${108 + index * 2} 536 ${132 + index * 3}`}
@@ -152,7 +152,7 @@ export function BioFitDottedField({ className }: { className?: string }) {
 
 export function BioFitSkeletonField({ className }: { className?: string }) {
   return (
-    <svg aria-hidden="true" className={cn("pointer-events-none absolute text-[#b8a9fb]/35", className)} fill="none" viewBox="0 0 320 420">
+    <svg aria-hidden="true" className={cn("pointer-events-none absolute overflow-hidden text-[#b8a9fb]/35", className)} fill="none" viewBox="0 0 320 420">
       <path d="M102 16c-25 52-12 92 12 128 28 42 31 74-4 118-30 38-38 82 0 132" stroke="currentColor" strokeWidth="1.6" />
       <path d="M170 18c-36 75-27 123 12 181 26 39 21 88-18 151" stroke="currentColor" strokeOpacity=".55" />
       <path d="M64 178c42 18 92 15 140-4M62 246c52 16 96 13 134-7M84 330c35 14 72 11 114-3" stroke="currentColor" strokeDasharray="2 8" strokeLinecap="round" strokeOpacity=".65" />
@@ -174,7 +174,7 @@ export function BioFitSoftDivider({
   color?: string;
 }) {
   return (
-    <svg aria-hidden="true" className={cn("pointer-events-none absolute left-0 right-0 z-10 h-24 w-full", className)} fill="none" preserveAspectRatio="none" viewBox="0 0 1440 110">
+    <svg aria-hidden="true" className={cn("pointer-events-none absolute left-0 right-0 z-10 h-24 w-full overflow-hidden", className)} fill="none" preserveAspectRatio="none" viewBox="0 0 1440 110">
       <path d="M-20 64C190 104 370 40 582 54c238 16 406 78 656 11 91-24 154-45 222-50" stroke={color} strokeLinecap="round" strokeOpacity=".72" strokeWidth="2.1" />
       <path d="M-20 76C200 110 362 64 584 72c242 9 405 44 656 9 98-14 162-29 222-34" stroke={color} strokeDasharray="3 10" strokeLinecap="round" strokeOpacity=".24" />
     </svg>

@@ -29,7 +29,7 @@ export function InquiryPathwaySelector({ onSelect, selectedType }: InquiryPathwa
           <h2 className="text-2xl font-semibold leading-tight text-primary-dark sm:text-3xl">Choose your enquiry path.</h2>
           <p className="mt-3 text-sm leading-6 text-text-secondary">Tap one option and we will take you straight to the compact enquiry form.</p>
         </div>
-        <div className="mx-auto mt-7 flex max-w-[1040px] flex-wrap justify-center gap-2.5">
+        <div className="mx-auto mt-7 grid max-w-[1040px] grid-cols-1 gap-2.5 xs:grid-cols-2 md:flex md:flex-wrap md:justify-center">
           {inquiryTypes.map((type) => {
             const selected = selectedType === type.queryValue;
             const theme = getThemeClasses(type.theme);
@@ -39,7 +39,7 @@ export function InquiryPathwaySelector({ onSelect, selectedType }: InquiryPathwa
               <button
                 aria-pressed={selected}
                 className={cn(
-                  "group inline-flex min-h-12 items-center gap-2.5 rounded-full border border-border-soft bg-white px-4 text-left text-sm font-bold text-primary-dark shadow-[0_10px_26px_rgba(20,121,201,0.05)] transition hover:-translate-y-0.5 hover:border-primary/35 hover:bg-[#f8fcff] focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-primary/18",
+                  "group inline-flex min-h-12 w-full items-center gap-2.5 rounded-[0.75rem] border border-border-soft bg-white px-4 py-2 text-left text-sm font-bold text-primary-dark shadow-[0_10px_26px_rgba(20,121,201,0.05)] transition hover:-translate-y-0.5 hover:border-primary/35 hover:bg-[#f8fcff] focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-primary/18 md:w-auto md:rounded-full",
                   selected ? `${theme.borderColor} ${theme.softBackground} ${theme.textColor} ring-2 ${theme.ringClass}` : "",
                 )}
                 key={type.queryValue}

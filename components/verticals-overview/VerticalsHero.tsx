@@ -33,7 +33,7 @@ export function VerticalsHero() {
       <div aria-hidden="true" className="absolute inset-y-0 left-0 z-0 w-36 bg-[linear-gradient(90deg,#ffffff,rgba(255,255,255,0))]" />
       <div aria-hidden="true" className="absolute inset-x-0 bottom-0 z-0 h-28 bg-[linear-gradient(180deg,rgba(244,250,255,0),#ffffff_88%)]" />
       <Container className="relative z-10">
-        <div className="flex min-h-[540px] items-center">
+        <div className="flex min-h-0 items-center py-4 md:min-h-[540px] md:py-0">
           <motion.div initial={reduceMotion ? false : "hidden"} animate={reduceMotion ? undefined : "visible"} variants={staggerContainer}>
             <motion.h1 className="max-w-[32rem] text-[clamp(2.08rem,10vw,2.8rem)] font-semibold leading-[1.05] text-primary-dark sm:text-5xl lg:text-[3.55rem]" variants={fadeUp}>
               One Ecosystem.
@@ -54,7 +54,7 @@ export function VerticalsHero() {
                 Partner with Step-Ahead
               </Button>
             </motion.div>
-            <motion.div className="mt-9 grid max-w-[42rem] grid-cols-2 gap-4 sm:grid-cols-4" variants={staggerContainer}>
+            <motion.div className="mt-9 grid max-w-[42rem] grid-cols-1 gap-3 xs:grid-cols-2 sm:grid-cols-4" variants={staggerContainer}>
               {heroMetrics.map((metric) => {
                 const Icon = metric.icon;
                 return (
@@ -72,7 +72,7 @@ export function VerticalsHero() {
       </Container>
 
       <div className="mt-6 flex justify-center lg:hidden">
-        <Link className="inline-flex items-center gap-2 text-sm font-bold text-primary" href={brand.ecommerceUrl} target="_blank" rel="noreferrer">
+        <Link className="inline-flex min-h-11 items-center gap-2 text-sm font-bold text-primary" href={brand.ecommerceUrl} target="_blank" rel="noreferrer">
           Visit Store
           <ArrowRight aria-hidden="true" className="h-4 w-4" />
         </Link>
