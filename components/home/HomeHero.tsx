@@ -1,6 +1,6 @@
 "use client";
 
-import { ArrowRight, BadgeCheck, CalendarCheck, ExternalLink, Network, ShieldCheck } from "lucide-react";
+import { ArrowRight, BadgeCheck, Building2, CalendarCheck, ExternalLink, Footprints, HeartPulse, Network, ShieldCheck, UserRound } from "lucide-react";
 import { motion, useReducedMotion } from "framer-motion";
 
 import { Button } from "@/components/ui/Button";
@@ -15,12 +15,81 @@ const trustItems = [
   { title: "Outcome-first", subtitle: "Clearer care", icon: BadgeCheck },
 ];
 
+const mobileHelpItems = [
+  { label: "Foot pain", href: "/contact?type=foot-checkup", icon: Footprints },
+  { label: "Footwear", href: "/verticals/kinetics", icon: ShieldCheck },
+  { label: "Wound care", href: "/contact?type=wound-care", icon: HeartPulse },
+  { label: "Bio-Fit", href: "/verticals/bio-fit", icon: UserRound },
+];
+
 export function HomeHero() {
   const reduceMotion = useReducedMotion();
 
   return (
+    <>
+      <section className="relative isolate overflow-hidden bg-white md:hidden">
+        <div className="absolute inset-x-0 top-0 h-[27rem] bg-[linear-gradient(180deg,#eef8ff,#ffffff)]" />
+        <div className="relative min-h-[31rem] overflow-hidden px-4 pb-5 pt-5">
+          <div className="absolute inset-0 bg-[linear-gradient(90deg,#ffffff_0%,rgba(255,255,255,0.93)_46%,rgba(255,255,255,0.18)_100%),url('/requested-assets/home-hero.png')] bg-cover bg-[58%_center]" />
+          <div className="absolute inset-x-0 bottom-0 h-28 bg-[linear-gradient(180deg,transparent,#ffffff_82%)]" />
+          <div className="relative z-10 max-w-[18.5rem] pt-3">
+            <p className="font-heading text-[0.68rem] font-extrabold uppercase tracking-[0.16em] text-primary">Connected care</p>
+            <h1 className="mt-3 font-heading text-[2.35rem] font-extrabold leading-[1.03] text-primary-dark">
+              Complete care. Clearer steps.
+            </h1>
+            <p className="mt-3 text-[0.9rem] font-medium leading-6 text-[#36536a]">
+              Foot and lower-limb care with the right next step, from checkup to support.
+            </p>
+            <div className="mt-5 grid gap-2">
+              <Button className="nstride-mobile-action w-full rounded-[0.7rem]" href={ctas.primary.href}>
+                I need care
+                <ArrowRight aria-hidden="true" className="h-4 w-4" />
+              </Button>
+              <Button className="nstride-mobile-action w-full border-primary/45 bg-white/88 text-primary" href="/contact?type=step-ahead" variant="outline">
+                <Building2 aria-hidden="true" className="h-4 w-4" />
+                For clinics
+              </Button>
+            </div>
+          </div>
+        </div>
+
+        <div className="relative z-10 -mt-12 px-4 pb-6">
+          <div className="nstride-mobile-card grid grid-cols-3 divide-x divide-[#d7ebfa] overflow-hidden p-2.5">
+            {trustItems.map((item) => {
+              const Icon = item.icon;
+              return (
+                <div className="grid justify-items-center gap-1 px-1.5 py-1 text-center" key={item.title}>
+                  <span className="grid h-8 w-8 place-items-center rounded-[0.65rem] bg-soft-sky text-primary">
+                    <Icon aria-hidden="true" className="h-4 w-4" />
+                  </span>
+                  <span className="text-[0.66rem] font-extrabold leading-tight text-primary-dark">{item.title}</span>
+                </div>
+              );
+            })}
+          </div>
+
+          <div className="mt-5">
+            <h2 className="font-heading text-lg font-extrabold text-primary-dark">What do you need help with?</h2>
+            <div className="nstride-mobile-chip-grid mt-3">
+              {mobileHelpItems.map((item) => {
+                const Icon = item.icon;
+                return (
+                  <a className="nstride-mobile-card flex min-h-[4.3rem] items-center gap-2.5 px-3 py-2.5 text-xs font-extrabold text-primary-dark" href={item.href} key={item.label}>
+                    <span className="grid h-9 w-9 shrink-0 place-items-center rounded-[0.7rem] bg-[#eef8ff] text-primary">
+                      <Icon aria-hidden="true" className="h-[1.125rem] w-[1.125rem]" />
+                    </span>
+                    <span>{item.label}</span>
+                    <ArrowRight aria-hidden="true" className="ml-auto h-3.5 w-3.5 text-primary" />
+                  </a>
+                );
+              })}
+            </div>
+          </div>
+        </div>
+      </section>
+
     <section
-      className="relative isolate overflow-hidden bg-cover bg-center pb-8 pt-8 xs:pt-10 sm:pt-12 lg:min-h-[620px] lg:pb-12"
+      className="relative isolate hidden overflow-hidden bg-cover bg-center pb-8 pt-8 xs:pt-10 sm:pt-12 md:block lg:min-h-[620px] lg:pb-12"
       style={{
         backgroundImage: "url('/requested-assets/home-hero.png')",
         backgroundPosition: "center right",
@@ -94,5 +163,6 @@ export function HomeHero() {
         </div>
       </Container>
     </section>
+    </>
   );
 }

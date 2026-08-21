@@ -27,18 +27,21 @@ export function ContactHero() {
             <h1 className="mt-4 max-w-3xl text-[clamp(2rem,9vw,2.6rem)] font-semibold leading-tight text-primary-dark sm:text-5xl lg:text-[3rem]">
               Find the right N-Stride pathway for your next step.
             </h1>
-            <p className="mt-4 max-w-2xl text-base leading-7 text-text-secondary">
+            <p className="mt-4 max-w-2xl text-sm font-medium leading-6 text-text-secondary md:text-base md:leading-7">
+              <span className="md:hidden">Tell us what you need and the team will guide you to the right care path.</span>
+              <span className="hidden md:inline">
               Whether you need a foot checkup, therapeutic footwear guidance, wound-care support, Bio-Fit consultation or Step-Ahead partnership, the N-Stride team can guide you to the right care pathway.
+              </span>
             </p>
             <div className="mt-6 flex flex-col gap-3 xs:flex-row xs:flex-wrap">
-              <Button className="w-full xs:w-auto" href="#enquiry-form" size="lg">
+              <Button className="nstride-mobile-action w-full xs:w-auto md:min-h-12" href="#enquiry-form" size="lg">
                 Start Enquiry
                 <ArrowRight aria-hidden="true" className="h-4 w-4" />
               </Button>
-              <Button className="w-full xs:w-auto" href={`tel:${brand.contact.phone}`} size="lg" variant="outline">
+              <Button className="hidden w-full xs:w-auto md:inline-flex" href={`tel:${brand.contact.phone}`} size="lg" variant="outline">
                 Call N-Stride
               </Button>
-              <Button className="w-full xs:w-auto" external href={brand.ecommerceUrl} size="lg" variant="ghost">
+              <Button className="hidden w-full xs:w-auto md:inline-flex" external href={brand.ecommerceUrl} size="lg" variant="ghost">
                 Visit Store
                 <ExternalLink aria-hidden="true" className="h-4 w-4" />
               </Button>

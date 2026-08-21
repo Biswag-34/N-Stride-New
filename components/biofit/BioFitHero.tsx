@@ -27,7 +27,44 @@ const proof = [
 
 export function BioFitHero({ vertical }: BioFitHeroProps) {
   return (
-    <BioFitSection className="isolate bg-[linear-gradient(112deg,#ffffff,#fbf9ff_50%,#f2efff)] py-10 md:py-0">
+    <>
+    <section className="relative isolate overflow-hidden bg-white px-4 pb-6 pt-6 md:hidden">
+      <div className="absolute inset-x-0 top-0 h-[27rem] bg-[linear-gradient(180deg,#f5f1ff,#ffffff)]" />
+      <div className="relative z-10">
+        <div className="relative min-h-[27rem] overflow-hidden rounded-b-[1.25rem]">
+          <div className="absolute inset-0 bg-[linear-gradient(90deg,#ffffff_0%,rgba(255,255,255,0.94)_46%,rgba(255,255,255,0.18)_100%),url('/requested-assets/biofit-hero.png')] bg-cover bg-[65%_center]" />
+          <div className="absolute inset-x-0 bottom-0 h-20 bg-[linear-gradient(180deg,transparent,#ffffff_86%)]" />
+          <div className="relative max-w-[18rem] pt-2">
+            <p className="font-heading text-[0.68rem] font-extrabold uppercase tracking-[0.16em] text-[#7357d8]">Bio-Fit</p>
+            <h1 className="mt-3 font-heading text-[2rem] font-extrabold leading-[1.06] text-primary-dark">
+              Custom solutions, made around you.
+            </h1>
+            <p className="mt-3 text-[0.88rem] font-medium leading-6 text-[#4d4668]">
+              Prosthetics, orthotics and silicone restoration support.
+            </p>
+            <Button className="nstride-mobile-action mt-5 w-full bg-[#7357d8] hover:bg-[#5a42bd]" href={vertical.cta.primary.href}>
+              Request Bio-Fit consultation
+              <ArrowRight aria-hidden="true" className="h-4 w-4" />
+            </Button>
+          </div>
+        </div>
+        <div className="mt-4 grid grid-cols-2 gap-2">
+          {proof.map((item) => {
+            const Icon = item.icon;
+            return (
+              <div className="nstride-mobile-card flex min-h-[4rem] items-center gap-2.5 px-3 py-2.5" key={item.label}>
+                <span className="grid h-9 w-9 shrink-0 place-items-center rounded-[0.7rem] bg-[#f0ebff] text-[#7357d8]">
+                  <Icon aria-hidden="true" className="h-5 w-5" />
+                </span>
+                <span className="text-[0.72rem] font-extrabold leading-tight text-primary-dark">{item.label}</span>
+              </div>
+            );
+          })}
+        </div>
+      </div>
+    </section>
+
+    <BioFitSection className="isolate hidden bg-[linear-gradient(112deg,#ffffff,#fbf9ff_50%,#f2efff)] py-10 md:block md:py-0">
       <div
         aria-hidden="true"
         className="absolute inset-0 z-0 hidden bg-[linear-gradient(90deg,#ffffff_0%,rgba(255,255,255,0.98)_33%,rgba(255,255,255,0.74)_52%,rgba(255,255,255,0.18)_76%,rgba(255,255,255,0)_100%),url('/requested-assets/biofit-hero.png')] bg-cover bg-[center_42%] bg-no-repeat md:block"
@@ -86,5 +123,6 @@ export function BioFitHero({ vertical }: BioFitHeroProps) {
         </BioFitReveal>
       </BioFitContainer>
     </BioFitSection>
+    </>
   );
 }

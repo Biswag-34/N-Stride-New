@@ -135,6 +135,7 @@ li {
   }
 
   body {
+    padding-bottom: calc(4.75rem + env(safe-area-inset-bottom));
     background:
       radial-gradient(circle at top left, rgba(221, 241, 255, 0.42), transparent 20rem),
       var(--background);
@@ -144,6 +145,18 @@ li {
   h2,
   h3 {
     text-wrap: pretty;
+  }
+
+  header [data-mobile-menu-button="true"] {
+    display: inline-flex !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    pointer-events: auto;
+  }
+
+  header [data-desktop-header-nav="true"],
+  header [data-desktop-header-actions="true"] {
+    display: none !important;
   }
 
   main > section {
@@ -208,6 +221,35 @@ li {
 
   main section iframe {
     min-height: 14rem !important;
+  }
+
+  main section .nstride-mobile-card {
+    border: 1px solid rgba(201, 230, 248, 0.92);
+    border-radius: 0.9rem;
+    background: rgba(255, 255, 255, 0.92);
+    box-shadow: 0 12px 30px rgba(7, 59, 102, 0.075);
+  }
+
+  main section .nstride-mobile-card p {
+    font-size: 0.75rem !important;
+    line-height: 1.35 !important;
+  }
+
+  main section .nstride-mobile-chip-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.55rem;
+  }
+
+  main section .nstride-mobile-action {
+    min-height: 3.25rem;
+    border-radius: 0.65rem;
+    font-size: 0.86rem;
+    font-weight: 800;
+  }
+
+  footer {
+    padding-bottom: 4.75rem;
   }
 
   input,

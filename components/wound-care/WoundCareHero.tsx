@@ -26,7 +26,44 @@ const proof = [
 
 export function WoundCareHero({ vertical }: WoundCareHeroProps) {
   return (
-    <WoundSection className="bg-[linear-gradient(105deg,#ffffff,#fbfdff_56%,#fff7e8)] pb-12 pt-8">
+    <>
+    <section className="relative isolate overflow-hidden bg-white px-4 pb-6 pt-6 md:hidden">
+      <div className="absolute inset-x-0 top-0 h-[27rem] bg-[linear-gradient(180deg,#fff5f1,#ffffff)]" />
+      <div className="relative z-10">
+        <div className="relative min-h-[26rem] overflow-hidden rounded-b-[1.25rem]">
+          <div className="absolute inset-0 bg-[linear-gradient(90deg,#ffffff_0%,rgba(255,255,255,0.93)_45%,rgba(255,255,255,0.25)_100%),url('/wound-care/hero-vac-setup-cutout.png')] bg-contain bg-[right_1.25rem] bg-no-repeat" />
+          <div className="relative max-w-[18rem] pt-2">
+            <p className="font-heading text-[0.68rem] font-extrabold uppercase tracking-[0.16em] text-[#df4a46]">Wound Care</p>
+            <h1 className="mt-3 font-heading text-[2rem] font-extrabold leading-[1.06] text-primary-dark">
+              Specialist support for foot wounds.
+            </h1>
+            <p className="mt-3 text-[0.88rem] font-medium leading-6 text-[#5f4a42]">
+              Coordinated wound-care support with clinician-led direction.
+            </p>
+            <Button className="nstride-mobile-action mt-5 w-full bg-[#ef4444] hover:bg-[#cf2f2f]" href={vertical.cta.primary.href}>
+              Request wound-care support
+              <ArrowRight aria-hidden="true" className="h-4 w-4" />
+            </Button>
+          </div>
+        </div>
+        <div className="mt-4 rounded-[0.9rem] border border-[#facaca] bg-[#fff3f1] px-3 py-3 text-[0.74rem] font-bold leading-5 text-[#8c1f1b]">
+          If a wound has redness, swelling, pain, discharge or fever, seek urgent medical care.
+        </div>
+        <div className="mt-3 grid grid-cols-3 gap-2">
+          {proof.slice(0, 3).map((item) => {
+            const Icon = item.icon;
+            return (
+              <div className="nstride-mobile-card grid justify-items-center gap-1 px-2 py-3 text-center" key={item.label}>
+                <Icon aria-hidden="true" className="h-5 w-5 text-[#df4a46]" />
+                <span className="text-[0.62rem] font-extrabold leading-tight text-primary-dark">{item.label.replace(" care", "")}</span>
+              </div>
+            );
+          })}
+        </div>
+      </div>
+    </section>
+
+    <WoundSection className="hidden bg-[linear-gradient(105deg,#ffffff,#fbfdff_56%,#fff7e8)] pb-12 pt-8 md:block">
       <WoundBackgroundImage className="bottom-[-2rem] right-0 h-[24rem] w-[54rem] opacity-20 sm:h-[31rem] sm:w-[70rem] sm:opacity-30" src="/wound-care/blue-amber-wave.png" />
       <WoundContainer className="relative">
         <div className="grid items-start gap-7 lg:min-h-[445px] lg:grid-cols-[0.52fr_0.48fr] lg:gap-9">
@@ -83,5 +120,6 @@ export function WoundCareHero({ vertical }: WoundCareHeroProps) {
         </WoundReveal>
       </WoundContainer>
     </WoundSection>
+    </>
   );
 }

@@ -299,7 +299,44 @@ function FinalCTA() {
 export function AboutPage() {
   return (
     <>
-      <AboutSection className="isolate bg-[#eef8ff]">
+      <section className="relative isolate overflow-hidden bg-white px-4 pb-6 pt-6 md:hidden">
+        <div className="absolute inset-x-0 top-0 h-[25rem] bg-[linear-gradient(180deg,#eef8ff,#ffffff)]" />
+        <div className="relative z-10">
+          <p className="font-heading text-[0.68rem] font-extrabold uppercase tracking-[0.16em] text-primary">About N-Stride</p>
+          <h1 className="mt-3 font-heading text-[2rem] font-extrabold leading-[1.08] text-primary-dark">
+            Connected care, built around every step.
+          </h1>
+          <p className="mt-3 text-[0.88rem] font-medium leading-6 text-text-secondary">
+            Clinicians, technology and care pathways working together for foot and lower-limb health.
+          </p>
+          <div className="relative mt-5 aspect-[16/10] overflow-hidden rounded-[1rem] shadow-[0_18px_44px_rgba(7,59,102,0.12)]">
+            <Image
+              alt="N-Stride consultation care team"
+              className="object-cover object-center"
+              fill
+              sizes="100vw"
+              src="/about/about-hero-banner.png"
+            />
+          </div>
+          <div className="mt-3 grid grid-cols-3 gap-2">
+            {careSignals.slice(0, 3).map((item) => {
+              const Icon = item.icon;
+              return (
+                <div className="nstride-mobile-card grid justify-items-center gap-1 px-2 py-3 text-center" key={item.label}>
+                  <Icon aria-hidden="true" className="h-5 w-5 text-primary" />
+                  <span className="text-[0.64rem] font-extrabold leading-tight text-primary-dark">{item.label.replace("therapeutic ", "")}</span>
+                </div>
+              );
+            })}
+          </div>
+          <Button className="nstride-mobile-action mt-4 w-full rounded-[0.75rem]" href={ctas.primary.href} size="lg">
+            Talk to our team
+            <ArrowRight aria-hidden="true" className="h-4 w-4" />
+          </Button>
+        </div>
+      </section>
+
+      <AboutSection className="isolate hidden bg-[#eef8ff] md:block">
         <div aria-hidden="true" className="absolute inset-0 bg-[url('/about/about-hero-banner.png')] bg-cover bg-[58%_center] md:bg-center" />
         <div aria-hidden="true" className="absolute inset-0 bg-[linear-gradient(90deg,rgba(255,255,255,0.96)_0%,rgba(255,255,255,0.86)_36%,rgba(255,255,255,0.36)_65%,rgba(255,255,255,0.06)_100%)]" />
         <div aria-hidden="true" className="absolute inset-x-0 bottom-0 h-28 bg-[linear-gradient(180deg,transparent,#ffffff_86%)]" />

@@ -39,7 +39,43 @@ const proof = [
 
 export function InsightHero({ vertical }: InsightHeroProps) {
   return (
-    <InsightSection className="bg-[linear-gradient(112deg,#ffffff_0%,#fbfdff_38%,#edf8ff_100%)] pb-9 pt-10 xs:pb-11 xs:pt-11">
+    <>
+    <section className="relative isolate overflow-hidden bg-white px-4 pb-6 pt-6 md:hidden">
+      <div className="absolute inset-x-0 top-0 h-[28rem] bg-[linear-gradient(180deg,#eefaff,#ffffff)]" />
+      <div className="relative z-10">
+        <div className="relative min-h-[25.5rem] overflow-hidden rounded-b-[1.25rem]">
+          <div className="absolute inset-0 bg-[linear-gradient(90deg,#ffffff_0%,rgba(255,255,255,0.94)_44%,rgba(255,255,255,0.28)_100%),url('/insight/hero-diagnostics.png')] bg-contain bg-[right_1rem] bg-no-repeat" />
+          <div className="relative max-w-[17.75rem] pt-2">
+            <p className="font-heading text-[0.68rem] font-extrabold uppercase tracking-[0.16em] text-[#0f9ed8]">Insight</p>
+            <h1 className="mt-3 font-heading text-[2rem] font-extrabold leading-[1.06] text-primary-dark">
+              Understand your feet better.
+            </h1>
+            <p className="mt-3 text-[0.88rem] font-medium leading-6 text-[#36536a]">
+              Foot scans, pressure checks and guided next-step recommendations.
+            </p>
+            <Button className="nstride-mobile-action mt-5 w-full" href={vertical.cta.primary.href}>
+              Book a foot checkup
+              <ArrowRight aria-hidden="true" className="h-4 w-4" />
+            </Button>
+          </div>
+        </div>
+        <div className="nstride-mobile-card mt-4 grid grid-cols-4 gap-1 p-2.5">
+          {proof.slice(0, 4).map((item) => {
+            const Icon = item.icon;
+            return (
+              <div className="grid justify-items-center gap-1 text-center" key={item.label}>
+                <span className="grid h-9 w-9 place-items-center rounded-full bg-[#eaf8ff] text-primary">
+                  <Icon aria-hidden="true" className="h-[1.125rem] w-[1.125rem]" />
+                </span>
+                <span className="text-[0.62rem] font-extrabold leading-tight text-primary-dark">{item.label}</span>
+              </div>
+            );
+          })}
+        </div>
+      </div>
+    </section>
+
+    <InsightSection className="hidden bg-[linear-gradient(112deg,#ffffff_0%,#fbfdff_38%,#edf8ff_100%)] pb-9 pt-10 xs:pb-11 xs:pt-11 md:block">
       <div aria-hidden="true" className="absolute inset-0 bg-[radial-gradient(circle_at_73%_34%,rgba(38,182,200,0.13),transparent_32%)]" />
       <InsightWaveImage className="-bottom-36 right-0 h-64 w-[48rem] opacity-24 sm:h-80 sm:w-[72rem] sm:opacity-38" src="/insight/diagnostic-bg-soft.png" />
       <InsightContainer className="relative">
@@ -99,5 +135,6 @@ export function InsightHero({ vertical }: InsightHeroProps) {
         </div>
       </InsightContainer>
     </InsightSection>
+    </>
   );
 }

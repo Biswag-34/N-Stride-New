@@ -103,7 +103,7 @@ export function MobileMenu({ onClose, open, triggerRef }: MobileMenuProps) {
     <AnimatePresence>
       {open ? (
         <motion.div
-          className="fixed inset-x-0 bottom-0 top-14 z-50 lg:hidden"
+          className="fixed inset-x-0 bottom-0 top-14 z-[80] lg:hidden"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}

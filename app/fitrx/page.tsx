@@ -54,7 +54,39 @@ const fitRxProducts = productShowcase.filter((item) =>
 export default function FitRxPage() {
   return (
     <>
-      <section className="relative overflow-hidden bg-[linear-gradient(112deg,#ffffff_0%,#f8fcff_48%,#eefbf7_100%)] py-10 lg:py-14">
+      <section className="relative isolate overflow-hidden bg-white md:hidden">
+        <div className="relative min-h-[29rem] overflow-hidden px-4 pb-5 pt-6 text-white">
+          <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(7,59,102,0.94)_0%,rgba(7,59,102,0.78)_42%,rgba(7,59,102,0.18)_100%),url('/home/fitrx-insoles-clinic.png')] bg-cover bg-[63%_center]" />
+          <div className="relative z-10 max-w-[18.5rem]">
+            <p className="font-heading text-[0.68rem] font-extrabold uppercase tracking-[0.16em] text-[#51d8cf]">FitRx</p>
+            <h1 className="mt-3 font-heading text-[2rem] font-extrabold leading-[1.06] text-white">
+              Bring better-fit footwear to your business.
+            </h1>
+            <p className="mt-3 text-[0.88rem] font-medium leading-6 text-white/88">
+              A consultation-led footwear and insole program for clinics and partners.
+            </p>
+          </div>
+        </div>
+        <div className="-mt-12 px-4 pb-6">
+          <div className="nstride-mobile-card grid grid-cols-3 divide-x divide-[#d7ebfa] p-3 text-center">
+            {partnerStack.slice(0, 3).map((item) => {
+              const Icon = item.icon;
+              return (
+                <div className="grid justify-items-center gap-1 px-1.5" key={item.label}>
+                  <Icon aria-hidden="true" className="h-5 w-5 text-primary" />
+                  <span className="text-[0.64rem] font-extrabold leading-tight text-primary-dark">{item.label}</span>
+                </div>
+              );
+            })}
+          </div>
+          <Button className="nstride-mobile-action mt-4 w-full rounded-[0.75rem]" href="/contact?type=fitrx" size="lg">
+            Discuss FitRx partnership
+            <ArrowRight aria-hidden="true" className="h-4 w-4" />
+          </Button>
+        </div>
+      </section>
+
+      <section className="relative hidden overflow-hidden bg-[linear-gradient(112deg,#ffffff_0%,#f8fcff_48%,#eefbf7_100%)] py-10 md:block lg:py-14">
         <Container className="relative grid gap-8 lg:grid-cols-[0.52fr_0.48fr] lg:items-center">
           <div>
             <p className="font-heading text-xs font-bold uppercase tracking-[0.18em] text-primary">N-Stride FitRx</p>

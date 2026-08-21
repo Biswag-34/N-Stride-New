@@ -21,7 +21,36 @@ export function KineticsHero({ vertical }: KineticsHeroProps) {
   };
 
   return (
-    <section className="relative isolate overflow-hidden bg-[linear-gradient(115deg,#ffffff_0%,#fbfdff_42%,#eef8ff_100%)]">
+    <>
+    <section className="relative isolate overflow-hidden bg-white md:hidden">
+      <div className="relative min-h-[28rem] overflow-hidden px-4 pb-5 pt-6">
+        <div className="absolute inset-0 bg-[linear-gradient(90deg,#ffffff_0%,rgba(255,255,255,0.94)_43%,rgba(255,255,255,0.2)_100%),url('/kinetics/hero.png')] bg-cover bg-[62%_center]" />
+        <div className="absolute inset-x-0 bottom-0 h-24 bg-[linear-gradient(180deg,transparent,#ffffff_86%)]" />
+        <div className="relative z-10 max-w-[18rem]">
+          <p className="font-heading text-[0.68rem] font-extrabold uppercase tracking-[0.16em] text-[#009b92]">Kinetics</p>
+          <h1 className="mt-3 font-heading text-[2rem] font-extrabold leading-[1.06] text-primary-dark">
+            Move with greater confidence.
+          </h1>
+          <p className="mt-3 text-[0.88rem] font-medium leading-6 text-[#36536a]">
+            Therapeutic footwear and fit support for protected everyday movement.
+          </p>
+          <Button className="nstride-mobile-action mt-5 w-full bg-[#009b92] hover:bg-[#087a74]" href={vertical.cta.primary.href}>
+            Book an assessment
+            <ArrowRight aria-hidden="true" className="h-4 w-4" />
+          </Button>
+        </div>
+      </div>
+      <div className="grid grid-cols-3 divide-x divide-[#cdebf0] px-4 pb-6">
+        {["Assessment", "Fit support", "Mobility"].map((item) => (
+          <div className="grid justify-items-center gap-1 bg-[#f5fcfd] px-2 py-3 text-center first:rounded-l-[0.9rem] last:rounded-r-[0.9rem]" key={item}>
+            <GiRunningShoe className="h-5 w-5 text-[#009b92]" />
+            <span className="text-[0.68rem] font-extrabold leading-tight text-primary-dark">{item}</span>
+          </div>
+        ))}
+      </div>
+    </section>
+
+    <section className="relative isolate hidden overflow-hidden bg-[linear-gradient(115deg,#ffffff_0%,#fbfdff_42%,#eef8ff_100%)] md:block">
       <div
         aria-hidden="true"
         className="absolute inset-0 bg-[radial-gradient(circle_at_78%_42%,rgba(20,121,201,0.18),transparent_32%),radial-gradient(circle_at_62%_80%,rgba(221,241,255,0.68),transparent_33%)]"
@@ -132,5 +161,6 @@ export function KineticsHero({ vertical }: KineticsHeroProps) {
         </MotionReveal>
       </KineticsContainer>
     </section>
+    </>
   );
 }
