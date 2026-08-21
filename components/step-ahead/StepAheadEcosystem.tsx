@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { CheckCircle2 } from "lucide-react";
+import { ArrowRight, CheckCircle2 } from "lucide-react";
 
 import { StepContainer, StepReveal, StepSection } from "./StepAheadPrimitives";
 
@@ -43,15 +43,23 @@ export function StepAheadEcosystem() {
           </StepReveal>
 
           <StepReveal delay={0.12}>
-            <div className="rounded-[1.45rem] bg-white/95 p-7 shadow-[16px_24px_55px_rgba(20,121,201,0.075)] ring-1 ring-[#d3eafa]">
-              <ul className="space-y-4">
-                {bullets.map((item) => (
-                  <li className="flex gap-3 text-[0.84rem] font-semibold leading-6 text-text-secondary" key={item}>
-                    <CheckCircle2 aria-hidden="true" className="mt-0.5 h-5 w-5 shrink-0 text-primary" />
-                    {item}
-                  </li>
-                ))}
-              </ul>
+            <div className="overflow-hidden rounded-[1.25rem] bg-[#071f3a] p-2 text-white shadow-[16px_24px_55px_rgba(20,121,201,0.13)] ring-1 ring-[#bfe5f7]">
+              <div className="rounded-[1rem] border border-white/10 bg-white/[0.06] p-4">
+                <p className="font-heading text-[0.68rem] font-extrabold uppercase tracking-[0.18em] text-[#8edbd0]">Connected care loop</p>
+                <div className="mt-4 grid gap-2.5">
+                  {bullets.map((item, index) => (
+                    <div className="grid grid-cols-[2.4rem_1fr_auto] items-center gap-3 rounded-[0.85rem] bg-white p-2.5 text-primary-dark shadow-[0_12px_28px_rgba(0,0,0,0.1)]" key={item}>
+                      <span className="grid h-9 w-9 place-items-center rounded-[0.7rem] bg-soft-sky font-heading text-xs font-extrabold text-primary">0{index + 1}</span>
+                      <span className="text-[0.82rem] font-bold leading-5 text-text-secondary">{item}</span>
+                      <CheckCircle2 aria-hidden="true" className="h-4 w-4 text-primary" />
+                    </div>
+                  ))}
+                </div>
+                <Link className="mt-4 inline-flex min-h-10 items-center gap-2 rounded-[0.65rem] bg-[#8edbd0] px-4 text-xs font-extrabold text-[#06223e] transition hover:bg-white" href="/contact?type=step-ahead">
+                  Build the loop
+                  <ArrowRight aria-hidden="true" className="h-4 w-4" />
+                </Link>
+              </div>
             </div>
           </StepReveal>
         </div>
