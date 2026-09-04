@@ -13,7 +13,7 @@ function whatsappHref() {
 
 export function DirectContactOptions() {
   const options = [
-    { icon: Phone, title: "Call", value: brand.contact.phone, href: `tel:${brand.contact.phone}`, tone: "text-[#0f6eb9] bg-[#e9f7ff]" },
+    { icon: Phone, title: "Call", value: brand.contact.phone, href: `tel:${brand.contact.phoneHref}`, tone: "text-[#0f6eb9] bg-[#e9f7ff]" },
     { icon: FaWhatsapp, title: "WhatsApp", value: "Start chat", href: whatsappHref(), external: true, tone: "text-[#25D366] bg-[#e9fff2]" },
     { icon: Mail, title: "Email", value: brand.contact.email, href: `mailto:${brand.contact.email}`, tone: "text-[#5a67d8] bg-[#f2f0ff]" },
     { icon: ShoppingBag, title: "Store", value: "N-Stride Shop", href: brand.ecommerceUrl, external: true, tone: "text-[#f59f00] bg-[#fff7e6]" },

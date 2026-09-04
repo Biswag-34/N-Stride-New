@@ -10,6 +10,8 @@ import { InquiryPathwaySelector } from "./InquiryPathwaySelector";
 
 export function ContactPageClient() {
   const searchParams = useSearchParams();
+  const sourcePage = searchParams.get("source") ?? "";
+  const ctaName = searchParams.get("cta") ?? "";
   const initialType = useMemo(() => {
     const queryType = searchParams.get("type");
     return inquiryTypes.some((type) => type.queryValue === queryType) ? queryType ?? "general" : "general";
@@ -26,7 +28,7 @@ export function ContactPageClient() {
   return (
     <>
       <InquiryPathwaySelector onSelect={handleSelect} selectedType={selectedType} />
-      <ContactFormSection onTypeChange={setSelectedType} selectedType={selectedType} />
+      <ContactFormSection ctaName={ctaName} onTypeChange={setSelectedType} selectedType={selectedType} sourcePage={sourcePage} />
     </>
   );
 }

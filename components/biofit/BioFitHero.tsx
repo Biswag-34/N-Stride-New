@@ -32,7 +32,8 @@ export function BioFitHero({ vertical }: BioFitHeroProps) {
       <div className="absolute inset-x-0 top-0 h-[27rem] bg-[linear-gradient(180deg,#f5f1ff,#ffffff)]" />
       <div className="relative z-10">
         <div className="relative min-h-[27rem] overflow-hidden rounded-b-[1.25rem]">
-          <div className="absolute inset-0 bg-[linear-gradient(90deg,#ffffff_0%,rgba(255,255,255,0.94)_46%,rgba(255,255,255,0.18)_100%),url('/requested-assets/biofit-hero.png')] bg-cover bg-[65%_center]" />
+          <div className="absolute inset-0 bg-[linear-gradient(95deg,#ffffff_0%,rgba(255,255,255,0.98)_43%,rgba(255,255,255,0.58)_64%,rgba(255,255,255,0.08)_100%),url('/requested-assets/biofit-hero.png')] bg-cover bg-[72%_center]" />
+          <div className="absolute inset-y-0 left-0 w-[70%] bg-[radial-gradient(circle_at_24%_22%,rgba(245,241,255,0.92),rgba(255,255,255,0.72)_48%,transparent_76%)]" />
           <div className="absolute inset-x-0 bottom-0 h-20 bg-[linear-gradient(180deg,transparent,#ffffff_86%)]" />
           <div className="relative max-w-[18rem] pt-2">
             <p className="font-heading text-[0.68rem] font-extrabold uppercase tracking-[0.16em] text-[#7357d8]">Bio-Fit</p>
@@ -78,20 +79,18 @@ export function BioFitHero({ vertical }: BioFitHeroProps) {
       <BioFitContainer className="relative z-20 grid gap-8 md:min-h-[610px] md:grid-cols-[minmax(0,0.47fr)_minmax(0,0.53fr)] md:items-center">
         <BioFitReveal className="relative z-20 md:py-14">
           <h1 className="max-w-[38rem] font-heading text-[clamp(2.2rem,5.3vw,4.6rem)] font-bold leading-[1.02] text-primary-dark">
-            <span className="block md:whitespace-nowrap">Restoring form.</span>
-            <span className="block md:whitespace-nowrap">Restoring life.</span>
+            <span className="block">Prosthetic, orthotic and silicone restoration solutions shaped around the individual.</span>
           </h1>
           <p className="mt-5 max-w-[34rem] text-sm leading-7 text-text-secondary sm:text-base sm:leading-8">
-            Orthotics, prosthetics, silicone restoration. Personalized solutions that fit you, support your journey,
-            and help you move forward with confidence.
+            Assessment, fitting, refinement and adaptation support focused on comfort, function and daily confidence.
           </p>
           <div className="mt-7 flex flex-col gap-3 xs:flex-row xs:flex-wrap">
             <Button className="w-full rounded-[0.45rem] bg-[#7357d8] px-5 hover:bg-[#5a42bd] xs:w-auto xs:px-7" href={vertical.cta.primary.href}>
               Request Bio-Fit Consultation
               <ArrowRight aria-hidden="true" className="h-4 w-4" />
             </Button>
-            <Button className="w-full rounded-[0.45rem] border-[#7357d8] px-5 text-[#7357d8] xs:w-auto xs:px-7" href="/contact?type=bio-fit" variant="outline">
-              Explore Care Pathways
+            <Button className="w-full rounded-[0.45rem] border-[#7357d8] px-5 text-[#7357d8] xs:w-auto xs:px-7" href="#bio-fit-pathway" variant="outline">
+              See How Bio-Fit Works
             </Button>
           </div>
           <div className="mt-6 grid grid-cols-2 gap-2 md:mt-8 md:gap-3">

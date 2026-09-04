@@ -3,18 +3,19 @@
 import { ArrowRight, BarChart3, FileCheck2, Handshake, RefreshCcw } from "lucide-react";
 
 import { Button } from "@/components/ui/Button";
+import { leadCaptureHref } from "@/data/leadCapture";
 
 import { StepContainer, StepIconBubble, StepReveal, StepSection } from "./StepAheadPrimitives";
 
 const proofItems = [
   {
     icon: FileCheck2,
-    title: "Proven Clinical Model",
+    title: "Structured Care Model",
     text: "Evidence-aligned pathways and protocols",
   },
   {
     icon: RefreshCcw,
-    title: "End-to-End Support",
+    title: "Connected Support",
     text: "From setup to scale - we are with you at every step",
   },
   {
@@ -24,8 +25,8 @@ const proofItems = [
   },
   {
     icon: BarChart3,
-    title: "Measurable Outcomes",
-    text: "Better patient results, stronger clinic outcomes",
+    title: "Clearer Tracking",
+    text: "Documentation, follow-up and service visibility",
   },
 ];
 
@@ -38,10 +39,10 @@ export function StepAheadHero() {
         <div className="relative z-10 max-w-[18.5rem]">
           <p className="font-heading text-[0.68rem] font-extrabold uppercase tracking-[0.16em] text-[#73dcff]">Step-Ahead</p>
           <h1 className="mt-3 font-heading text-[2rem] font-extrabold leading-[1.06] text-white">
-            Build a stronger foot-care pathway.
+            Launch a structured diabetic foot-care service.
           </h1>
           <p className="mt-3 text-[0.88rem] font-medium leading-6 text-white/88">
-            A clinic and hospital partnership program for coordinated diabetic foot care.
+            Equipment, training, starter inventory and launch support in one configurable program.
           </p>
         </div>
       </div>
@@ -63,7 +64,7 @@ export function StepAheadHero() {
             );
           })}
         </div>
-        <Button className="nstride-mobile-action mt-4 w-full rounded-[0.75rem]" href="/contact?type=step-ahead" size="lg">
+        <Button className="nstride-mobile-action mt-4 w-full rounded-[0.75rem]" href={leadCaptureHref({ cta: "discuss_stepahead_partnership", source: "/step-ahead", type: "step-ahead" })} size="lg">
           Discuss Step-Ahead partnership
           <ArrowRight aria-hidden="true" className="h-4 w-4" />
         </Button>
@@ -74,20 +75,19 @@ export function StepAheadHero() {
       <StepContainer className="relative grid items-center gap-8 pb-12 pt-8 xs:pb-14 xs:pt-10 sm:gap-10 lg:min-h-[560px] lg:grid-cols-[0.95fr_1.05fr] lg:py-10">
         <StepReveal className="max-w-[690px]">
           <h1 className="max-w-[650px] font-heading text-[clamp(2rem,6.5vw,3.9rem)] font-bold leading-[1.04] text-primary-dark lg:leading-[1.02]">
-            <span className="block">Launch diabetic foot-care services with confidence.</span>
+            <span className="block">Launch a structured diabetic foot-care service in your clinic.</span>
           </h1>
           <p className="mt-5 max-w-[610px] text-sm leading-7 text-text-secondary sm:text-[1rem] sm:leading-8">
-            A complete program to help clinics launch and scale a modern diabetic foot care service - with the right technology,
-            training, inventory and step-by-step service development support.
+            A configurable partnership program combining equipment, training, starter inventory, operating procedures and launch support.
           </p>
 
           <div className="mt-7 flex flex-col gap-3 xs:flex-row xs:flex-wrap sm:gap-4">
-            <Button className="w-full rounded-[0.55rem] px-5 shadow-[0_16px_32px_rgba(20,121,201,0.18)] xs:w-auto xs:px-7" href="/contact?type=step-ahead" size="lg">
+            <Button className="w-full rounded-[0.55rem] px-5 shadow-[0_16px_32px_rgba(20,121,201,0.18)] xs:w-auto xs:px-7" href={leadCaptureHref({ cta: "discuss_stepahead_partnership", source: "/step-ahead", type: "step-ahead" })} size="lg">
               Book a Strategy Call
               <ArrowRight aria-hidden="true" className="h-4 w-4" />
             </Button>
-            <Button className="w-full rounded-[0.55rem] bg-white/80 px-5 xs:w-auto xs:px-7" href="/contact?type=step-ahead" size="lg" variant="outline">
-              Download Program Overview
+            <Button className="w-full rounded-[0.55rem] bg-white/80 px-5 xs:w-auto xs:px-7" href={leadCaptureHref({ cta: "request_program_overview", source: "/step-ahead", type: "step-ahead" })} size="lg" variant="outline">
+              Request Program Overview
             </Button>
           </div>
         </StepReveal>

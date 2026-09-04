@@ -30,16 +30,16 @@ const identityTabs = [
   {
     label: "Who We Are",
     title: "A connected care ecosystem for foot and lower-limb health.",
-    text: "N-Stride brings diagnostics, therapeutic footwear, wound care, prosthetics, orthotics and clinical consultation into one coordinated journey.",
+    text: "N-Stride brings assessment, therapeutic footwear, wound-care support, prosthetics, orthotics and consultation pathways into one coordinated journey.",
     icon: HeartHandshake,
     image: "/about/identity-who-we-are.png",
     imageAlt: "N-Stride care team reviewing footwear and lower-limb care planning",
-    points: ["Doctor-led care thinking", "Integrated verticals", "Patient-first guidance"],
+    points: ["Scientifically guided care thinking", "Integrated verticals", "Patient-first guidance"],
   },
   {
     label: "What We Are",
     title: "More than a product brand. More than a single clinic service.",
-    text: "We are a practical care platform built around assessment, protection, treatment, restoration and long-term support.",
+    text: "We are a practical care platform built around assessment, protection, support, restoration and long-term follow-up.",
     icon: Layers3,
     image: "/about/identity-what-we-are.png",
     imageAlt: "N-Stride clinical care ecosystem with diagnostics, footwear and wound care support",
@@ -141,7 +141,7 @@ function IdentitySection() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.45, ease: aboutEase }}
           >
-            <div className="relative grid md:min-h-[26rem] md:grid-cols-[minmax(0,0.48fr)_minmax(0,0.52fr)] lg:min-h-[30rem]">
+            <div className="relative grid md:min-h-[26rem] md:grid-cols-[minmax(0,0.42fr)_minmax(0,0.58fr)] lg:min-h-[30rem]">
               <div className="relative z-0 aspect-[4/3] min-h-0 overflow-hidden bg-[#f6fbff] md:aspect-auto md:h-full">
                 <Image
                   alt={active.imageAlt}
@@ -154,7 +154,7 @@ function IdentitySection() {
                   <p className="font-heading text-lg font-bold">{active.label}</p>
                 </div>
               </div>
-              <div className="relative z-20 flex flex-col justify-center bg-[linear-gradient(135deg,rgba(248,252,255,0.98),#ffffff)] p-4 ring-1 ring-[#d7ebfa] md:border-l md:border-[#d7ebfa] md:p-6 lg:p-8">
+              <div className="relative z-30 flex flex-col justify-center bg-[linear-gradient(135deg,#f8fcff,#ffffff)] p-4 ring-1 ring-[#d7ebfa] md:border-l md:border-[#d7ebfa] md:p-6 lg:p-8">
                 <div className="flex items-center gap-3">
                   <AboutIconBubble className="h-11 w-11 shadow-none" size="sm">
                     <ActiveIcon aria-hidden="true" className="h-5 w-5" />
@@ -300,39 +300,40 @@ export function AboutPage() {
   return (
     <>
       <section className="relative isolate overflow-hidden bg-white px-4 pb-6 pt-6 md:hidden">
-        <div className="absolute inset-x-0 top-0 h-[25rem] bg-[linear-gradient(180deg,#eef8ff,#ffffff)]" />
+        <div className="absolute inset-x-0 top-0 h-[30rem] bg-[linear-gradient(180deg,#eef8ff,#ffffff)]" />
         <div className="relative z-10">
-          <p className="font-heading text-[0.68rem] font-extrabold uppercase tracking-[0.16em] text-primary">About N-Stride</p>
-          <h1 className="mt-3 font-heading text-[2rem] font-extrabold leading-[1.08] text-primary-dark">
-            Connected care, built around every step.
-          </h1>
-          <p className="mt-3 text-[0.88rem] font-medium leading-6 text-text-secondary">
-            Clinicians, technology and care pathways working together for foot and lower-limb health.
-          </p>
-          <div className="relative mt-5 aspect-[16/10] overflow-hidden rounded-[1rem] shadow-[0_18px_44px_rgba(7,59,102,0.12)]">
-            <Image
-              alt="N-Stride consultation care team"
-              className="object-cover object-center"
-              fill
-              sizes="100vw"
-              src="/about/about-hero-banner.png"
+          <div className="relative min-h-[30rem] overflow-hidden rounded-[1.15rem] px-4 pb-4 pt-5 shadow-[0_22px_54px_rgba(7,59,102,0.12)] ring-1 ring-[#d7ebfa]">
+            <div
+              aria-hidden="true"
+              className="absolute inset-0 bg-[linear-gradient(96deg,#ffffff_0%,rgba(255,255,255,0.98)_39%,rgba(255,255,255,0.62)_63%,rgba(255,255,255,0.08)_100%),linear-gradient(180deg,rgba(238,248,255,0.12),#ffffff_98%),url('/about/about-hero-banner.png')] bg-cover bg-[61%_center]"
             />
+            <div className="relative flex min-h-[27.75rem] flex-col justify-between">
+              <div className="max-w-[17.5rem]">
+                <p className="font-heading text-[0.68rem] font-extrabold uppercase tracking-[0.16em] text-primary">About N-Stride</p>
+                <h1 className="mt-3 font-heading text-[2rem] font-extrabold leading-[1.08] text-primary-dark">
+                  Connected care, built around every step.
+                </h1>
+                <p className="mt-3 text-[0.86rem] font-medium leading-6 text-text-secondary">
+                  Clinicians, technology and care pathways working together for foot and lower-limb health.
+                </p>
+                <Button className="nstride-mobile-action mt-5 w-full max-w-[16rem] rounded-[0.75rem]" href={ctas.primary.href} size="lg">
+                  Talk to our team
+                  <ArrowRight aria-hidden="true" className="h-4 w-4" />
+                </Button>
+              </div>
+              <div className="grid grid-cols-3 gap-2">
+                {careSignals.slice(0, 3).map((item) => {
+                  const Icon = item.icon;
+                  return (
+                    <div className="grid min-h-[4rem] justify-items-center gap-1 rounded-[0.75rem] bg-white/86 px-2 py-2.5 text-center shadow-[0_10px_24px_rgba(20,121,201,0.08)] ring-1 ring-[#d7ebfa] backdrop-blur" key={item.label}>
+                      <Icon aria-hidden="true" className="h-5 w-5 text-primary" />
+                      <span className="text-[0.62rem] font-extrabold leading-tight text-primary-dark">{item.label.replace("therapeutic ", "")}</span>
+                    </div>
+                  );
+                })}
+              </div>
+            </div>
           </div>
-          <div className="mt-3 grid grid-cols-3 gap-2">
-            {careSignals.slice(0, 3).map((item) => {
-              const Icon = item.icon;
-              return (
-                <div className="nstride-mobile-card grid justify-items-center gap-1 px-2 py-3 text-center" key={item.label}>
-                  <Icon aria-hidden="true" className="h-5 w-5 text-primary" />
-                  <span className="text-[0.64rem] font-extrabold leading-tight text-primary-dark">{item.label.replace("therapeutic ", "")}</span>
-                </div>
-              );
-            })}
-          </div>
-          <Button className="nstride-mobile-action mt-4 w-full rounded-[0.75rem]" href={ctas.primary.href} size="lg">
-            Talk to our team
-            <ArrowRight aria-hidden="true" className="h-4 w-4" />
-          </Button>
         </div>
       </section>
 

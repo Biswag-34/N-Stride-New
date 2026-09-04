@@ -1,4 +1,5 @@
 import type { Vertical } from "@/data/types";
+import { leadCaptureHref } from "@/data/leadCapture";
 
 export type { Vertical } from "@/data/types";
 
@@ -82,7 +83,7 @@ export const verticals = [
       "Patient footwear fitting or consultation moment",
     ],
     cta: {
-      primary: { label: "Book Foot Checkup", href: "/contact?type=foot-checkup" },
+      primary: { label: "Book Foot Checkup", href: leadCaptureHref({ cta: "book_foot_checkup", source: "/verticals/kinetics", type: "foot-checkup" }) },
       secondary: { label: "Visit N-Stride Shop", href: "https://nstride.shop", external: true },
     },
     seo: {
@@ -171,7 +172,7 @@ export const verticals = [
       "Clinical diagnostic tools on an ice-blue surface",
     ],
     cta: {
-      primary: { label: "Book Foot Checkup", href: "/contact?type=foot-checkup" },
+      primary: { label: "Book Foot Checkup", href: leadCaptureHref({ cta: "book_foot_checkup", source: "/verticals/insight", type: "foot-checkup" }) },
       secondary: { label: "Explore Care Verticals", href: "/verticals" },
     },
     seo: {
@@ -259,8 +260,8 @@ export const verticals = [
       "Off-loading footwear shown as part of wound protection planning",
     ],
     cta: {
-      primary: { label: "Request Wound Care Support", href: "/contact?type=wound-care" },
-      secondary: { label: "Partner with Step-Ahead", href: "/contact?type=step-ahead" },
+      primary: { label: "Request Wound Care Support", href: leadCaptureHref({ cta: "request_wound_care_support", source: "/verticals/wound-care", type: "wound-care" }) },
+      secondary: { label: "Partner with Step-Ahead", href: leadCaptureHref({ cta: "discuss_stepahead_partnership", source: "/verticals/wound-care", type: "step-ahead" }) },
     },
     seo: {
       title: "N-Stride NPWT VAC & Wound Care | Modern Wound-Care Support",
@@ -346,7 +347,7 @@ export const verticals = [
       "Patient walking support or rehabilitation guidance scene",
     ],
     cta: {
-      primary: { label: "Request Bio-Fit Consultation", href: "/contact?type=bio-fit" },
+      primary: { label: "Request Bio-Fit Consultation", href: leadCaptureHref({ cta: "request_biofit_consultation", source: "/verticals/bio-fit", type: "bio-fit" }) },
       secondary: { label: "Explore Care Verticals", href: "/verticals" },
     },
     seo: {

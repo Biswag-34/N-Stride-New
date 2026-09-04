@@ -1,12 +1,7 @@
-import { ArrowRight } from "lucide-react";
-import Link from "next/link";
-
 import { PageHero } from "@/components/page-sections/PageHero";
-import { ThemeBadge } from "@/components/page-sections/ThemeBadge";
 import { Container } from "@/components/ui/Container";
-import { ImagePlaceholder } from "@/components/ui/ImagePlaceholder";
 import { Section } from "@/components/ui/Section";
-import { resources } from "@/data/resources";
+import { resourceReviewNotice, resourceReviewTopics } from "@/data/resources";
 
 export default function ResourcesPage() {
   return (
@@ -22,7 +17,7 @@ export default function ResourcesPage() {
             Practical explainers for better foot health decisions.
           </p>
           <div className="mt-5 flex gap-2 overflow-x-auto pb-1">
-            {["All", "Diabetic foot", "Footwear", "Wound care", "Bio-Fit"].map((chip, index) => (
+            {["Clinical review", "Diabetic foot", "Footwear", "Wound care", "Bio-Fit"].map((chip, index) => (
               <span className={`shrink-0 rounded-full px-3 py-1.5 text-xs font-extrabold ${index === 0 ? "bg-white text-primary-dark" : "bg-white/12 text-white ring-1 ring-white/22"}`} key={chip}>
                 {chip}
               </span>
@@ -32,44 +27,39 @@ export default function ResourcesPage() {
       </section>
 
       <section className="bg-white px-4 py-5 md:hidden">
-        <div className="grid gap-3">
-          {resources.map((resource) => (
-            <Link className="nstride-mobile-card grid grid-cols-[5.8rem_1fr_auto] items-center gap-3 p-2.5" href={resource.href} key={resource.id}>
-              <ImagePlaceholder aspect="square" label={resource.image} />
-              <span>
-                <span className="block text-[0.64rem] font-extrabold uppercase tracking-[0.1em] text-primary">{resource.category}</span>
-                <span className="mt-1 block font-heading text-sm font-extrabold leading-tight text-primary-dark">{resource.title}</span>
-                <span className="mt-1 block text-[0.74rem] font-medium leading-5 text-text-secondary">{resource.summary}</span>
+        <div className="nstride-mobile-card p-4">
+          <p className="font-heading text-lg font-extrabold text-primary-dark">Resources are under clinical review.</p>
+          <p className="mt-2 text-sm font-medium leading-6 text-text-secondary">{resourceReviewNotice}</p>
+          <div className="mt-4 flex flex-wrap gap-2">
+            {resourceReviewTopics.map((topic) => (
+              <span className="rounded-full bg-[#eef8ff] px-3 py-1.5 text-[0.68rem] font-extrabold text-primary" key={topic}>
+                {topic}
               </span>
-              <ArrowRight aria-hidden="true" className="h-4 w-4 text-primary" />
-            </Link>
-          ))}
+            ))}
+          </div>
         </div>
       </section>
 
       <div className="hidden md:block">
         <PageHero
-          description="Simple education for diabetic foot care, footwear decisions, wound-care support and mobility restoration."
+          description="Practical, clinician-reviewed guidance will be published after author, reviewer, publication date, clinical review date, references, disclaimer and CTA details are finalized."
           eyebrow="Resources"
-          title="Learn before the next step"
+          title="Practical guidance for foot health and mobility"
           variant="aqua"
         />
       </div>
       <Section className="hidden py-16 md:block sm:py-20 lg:py-24" variant="white">
         <Container>
-          <div className="grid gap-5 lg:grid-cols-3">
-            {resources.map((resource) => (
-              <article className="rounded-[1.35rem] border border-border-soft bg-white p-5 shadow-soft" key={resource.id}>
-                <ImagePlaceholder aspect="video" label={resource.image} />
-                <ThemeBadge theme="aqua">{resource.category}</ThemeBadge>
-                <h2 className="mt-4 text-xl font-semibold text-primary-dark">{resource.title}</h2>
-                <p className="mt-2 text-sm leading-6 text-text-secondary">{resource.summary}</p>
-                <Link className="mt-5 inline-flex min-h-11 items-center gap-2 text-sm font-bold text-primary" href={resource.href}>
-                  Read guide
-                  <ArrowRight aria-hidden="true" className="h-4 w-4" />
-                </Link>
-              </article>
-            ))}
+          <div className="rounded-[1.2rem] border border-border-soft bg-white p-6 shadow-soft">
+            <h2 className="text-2xl font-semibold text-primary-dark">Resources are under clinical review.</h2>
+            <p className="mt-3 max-w-3xl text-sm leading-7 text-text-secondary">{resourceReviewNotice}</p>
+            <div className="mt-6 flex flex-wrap gap-2">
+              {resourceReviewTopics.map((topic) => (
+                <span className="rounded-full bg-[#eef8ff] px-3 py-2 text-xs font-extrabold text-primary" key={topic}>
+                  {topic}
+                </span>
+              ))}
+            </div>
           </div>
         </Container>
       </Section>

@@ -44,6 +44,7 @@ export function Button({
   ...props
 }: ButtonProps) {
   const classes = cn(baseClasses, variants[variant], sizes[size], className);
+  const isLeadCaptureHref = typeof href === "string" && href.startsWith("/contact");
 
   if (href) {
     if (external) {
@@ -61,7 +62,7 @@ export function Button({
     }
 
     return (
-      <Link className={classes} href={href} {...(props as AnchorHTMLAttributes<HTMLAnchorElement>)}>
+      <Link className={classes} data-lead-capture={isLeadCaptureHref ? "true" : undefined} href={href} {...(props as AnchorHTMLAttributes<HTMLAnchorElement>)}>
         {children}
       </Link>
     );

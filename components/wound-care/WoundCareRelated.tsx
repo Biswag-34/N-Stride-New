@@ -28,7 +28,7 @@ export function WoundCareRelated() {
           <div className="rounded-[1.25rem] bg-white/96 px-6 py-5 shadow-[0_18px_55px_rgba(16,42,67,0.08)] ring-1 ring-[#c9e6f8] backdrop-blur">
             <p className="font-heading text-[0.68rem] font-bold uppercase tracking-[0.16em] text-[#b86b00]">Related solutions</p>
             <div className="mt-5 grid gap-4 lg:grid-cols-[0.28fr_0.18fr_0.18fr_0.18fr_0.18fr] lg:items-center">
-              <h2 className="font-heading text-lg font-bold text-primary-dark">Complete care beyond wound dressing.</h2>
+              <h2 className="font-heading text-lg font-bold text-primary-dark">Connected support beyond wound dressing.</h2>
               {related.map((item) => {
                 const Icon = item.icon;
                 const content = (

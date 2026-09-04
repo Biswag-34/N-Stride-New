@@ -16,10 +16,10 @@ type WoundCareTechnologyProps = {
 };
 
 const advantages = [
-  { icon: Droplets, title: "Removes Exudate", text: "Helps manage fluid & reduces edema." },
-  { icon: Waves, title: "Improves Perfusion", text: "Enhances blood flow & tissue oxygenation." },
-  { icon: Sparkles, title: "Promotes Granulation", text: "Supports tissue formation & wound closure." },
-  { icon: ShieldCheck, title: "Reduces Infection Risk", text: "Helps reduce bacterial load & infection risk." },
+  { icon: Droplets, title: "Manages Wound Fluid", text: "Helps manage wound fluid in selected cases." },
+  { icon: Waves, title: "Supports Assessment", text: "Used within a qualified wound-care plan." },
+  { icon: Sparkles, title: "May Support Granulation", text: "May support granulation in selected wounds." },
+  { icon: ShieldCheck, title: "Requires Clinical Review", text: "Infection concerns need clinical assessment." },
 ];
 
 export function WoundCareTechnology({ vertical }: WoundCareTechnologyProps) {
@@ -33,7 +33,7 @@ export function WoundCareTechnology({ vertical }: WoundCareTechnologyProps) {
               The NPWT VAC advantage
             </h2>
             <p className="mt-5 max-w-[24rem] text-sm leading-7 text-text-secondary">
-              Negative Pressure Wound Therapy helps create an optimal healing environment.
+              Negative Pressure Wound Therapy may support wound management in appropriately selected cases under qualified clinical supervision.
             </p>
             <a className="mt-5 inline-flex min-h-11 items-center gap-2 text-sm font-bold text-primary" href="/contact?type=wound-care">
               Learn about NPWT VAC

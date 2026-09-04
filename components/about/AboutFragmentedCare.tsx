@@ -4,8 +4,8 @@ import { CheckCircle2, XCircle } from "lucide-react";
 
 import { AboutArtImage, AboutBackgroundArt, AboutContainer, AboutKicker, AboutReveal, AboutSection } from "./AboutPrimitives";
 
-const traditional = ["Multiple appointments", "Disconnected providers", "Repeat assessments", "Gaps in care", "Uncertain outcomes"];
-const connected = ["One connected ecosystem", "Coordinated care", "Streamlined experience", "No care gaps", "Better outcomes"];
+const traditional = ["Multiple appointments", "Disconnected providers", "Repeat assessments", "Gaps in care", "Unclear next steps"];
+const connected = ["One connected ecosystem", "Coordinated care", "Streamlined experience", "Clearer handoffs", "Better continuity"];
 
 export function AboutFragmentedCare() {
   return (
@@ -18,11 +18,11 @@ export function AboutFragmentedCare() {
             <h2 className="mt-5 font-heading text-[clamp(2rem,3.25vw,3.05rem)] font-bold leading-[1.08] text-primary-dark">
               Fragmented care.
               <br />
-              <span className="text-primary">Unified outcomes.</span>
+              <span className="text-primary">Clearer next steps.</span>
             </h2>
             <p className="mt-6 max-w-[360px] text-[0.95rem] leading-7 text-text-secondary">
-              Foot and lower-limb conditions require more than one solution. N-Stride eliminates fragmentation by aligning assessment,
-              treatment and support across every step of the care journey.
+              Foot and lower-limb conditions often require more than one solution. N-Stride reduces fragmentation by aligning assessment,
+              support and follow-up across the care journey.
             </p>
           </AboutReveal>
 

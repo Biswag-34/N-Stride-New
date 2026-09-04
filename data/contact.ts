@@ -47,10 +47,26 @@ export const inquiryTypes = [
   {
     title: "Step-Ahead Partnership",
     description:
-      "For doctors, clinics, nursing homes and hospitals interested in the Diabetic Foot Care Business-in-a-Box program.",
+      "For doctors, clinics, nursing homes and hospitals interested in launching a structured diabetic foot-care service.",
     theme: "stepAhead",
     queryValue: "step-ahead",
     icon: "partner",
+  },
+  {
+    title: "FitRx Partnership",
+    description:
+      "For clinics and partners interested in a guided therapeutic-footwear and insole workflow.",
+    theme: "kinetics",
+    queryValue: "fitrx",
+    icon: "shoe",
+  },
+  {
+    title: "Order & After-Sales Support",
+    description:
+      "For order status, fulfilment, product support, fitting follow-up or repeat-service questions.",
+    theme: "default",
+    queryValue: "order-after-sales",
+    icon: "message",
   },
   {
     title: "General Enquiry",
@@ -86,6 +102,16 @@ export const prepGuides = [
     queryValue: "step-ahead",
     title: "For Step-Ahead",
     items: ["Facility type", "Available space", "Patient profile", "Interest in Basic or Premium package", "Existing diabetic or wound-care setup"],
+  },
+  {
+    queryValue: "fitrx",
+    title: "For FitRx Partnership",
+    items: ["Clinic or partner type", "Current footwear or insole workflow", "Expected monthly referrals", "Training and fulfilment questions"],
+  },
+  {
+    queryValue: "order-after-sales",
+    title: "For order and after-sales support",
+    items: ["Order or invoice number if available", "Product or service name", "Fitting concern or support need", "Preferred callback time"],
   },
 ] satisfies PrepGuide[];
 

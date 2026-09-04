@@ -4,7 +4,6 @@ import {
   Activity,
   ArrowRight,
   BadgeCheck,
-  BrainCircuit,
   ClipboardCheck,
   Gauge,
   Radar,
@@ -31,7 +30,7 @@ const proof = [
   { icon: Activity, label: "Pressure" },
   { icon: Gauge, label: "Gait" },
   { icon: Radar, label: "Risk" },
-  { icon: BrainCircuit, label: "AI read" },
+  { icon: ClipboardCheck, label: "Professional review" },
   { icon: ShieldCheck, label: "Triage" },
   { icon: BadgeCheck, label: "Decision" },
   { icon: ClipboardCheck, label: "Handoff" },
@@ -86,16 +85,15 @@ export function InsightHero({ vertical }: InsightHeroProps) {
               <span className="block md:whitespace-nowrap">Direct the care.</span>
             </h1>
             <p className="mt-5 max-w-[33rem] text-sm leading-7 text-text-secondary sm:text-[1rem] sm:leading-8">
-              N-Stride Insight delivers advanced foot analysis and wound care assessment through intelligent
-              diagnostics, precise scanning and clinical decision support.
+              3D scanning, pressure mapping, gait observation and structured risk assessment are interpreted by trained professionals and do not replace professional judgment.
             </p>
             <div className="mt-7 flex flex-col gap-3 xs:flex-row xs:flex-wrap">
               <Button className="w-full rounded-[0.45rem] px-5 xs:w-auto xs:px-7" href={vertical.cta.primary.href}>
                 Book Foot Checkup
                 <ArrowRight aria-hidden="true" className="h-4 w-4" />
               </Button>
-              <Button className="w-full rounded-[0.45rem] px-5 xs:w-auto xs:px-7" href="/contact?type=foot-checkup" variant="outline">
-                Explore Our Technology
+              <Button className="w-full rounded-[0.45rem] px-5 xs:w-auto xs:px-7" href="#technology" variant="outline">
+                View Assessment Technology
               </Button>
             </div>
           </InsightReveal>

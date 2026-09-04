@@ -40,7 +40,7 @@ export function HomeCareJourney() {
                 From your first concern to long-term recovery, we are with you at every step to assess, treat, protect
                 and restore.
               </p>
-              <Button className="min-h-10 w-full shrink-0 rounded-[0.65rem] xs:w-auto sm:min-h-11" href="/contact?type=general" size="sm" variant="outline">
+              <Button className="min-h-10 w-full shrink-0 rounded-[0.65rem] xs:w-auto sm:min-h-11" href="/verticals" size="sm" variant="outline">
                 See the full journey
                 <ArrowRight aria-hidden="true" className="h-4 w-4" />
               </Button>

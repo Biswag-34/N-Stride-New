@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { ArrowRight, CheckCircle2, ClipboardList, Headphones, MonitorCog, PackageCheck, Settings2 } from "lucide-react";
 
 import { Button } from "@/components/ui/Button";
+import { leadCaptureHref } from "@/data/leadCapture";
 
 import { StepContainer, StepIconBubble, StepReveal, StepSection, stepEase } from "./StepAheadPrimitives";
 
@@ -18,7 +19,7 @@ const process = [
 const programs = [
   {
     name: "Step-Ahead Essential",
-    price: "Rs. 3.5L",
+    price: "₹3.5 lakh",
     line: "For clinics launching a focused diabetic foot-care service.",
     features: [
       "Essential assessment and care setup",
@@ -30,7 +31,7 @@ const programs = [
   },
   {
     name: "Step-Ahead Advanced",
-    price: "Rs. 5L",
+    price: "₹5 lakh",
     line: "For clinics that want stronger diagnostics and growth support.",
     featured: true,
     features: [
@@ -55,7 +56,7 @@ export function StepAheadPackages() {
             </h2>
           </div>
           <p className="max-w-[43rem] text-sm leading-7 text-text-secondary lg:justify-self-end">
-            Each level is built around the same operating spine, then tuned by depth of equipment, training and support.
+            Each level is built around the same operating spine, then tuned by depth of equipment, training and support. Pricing is indicative; GST treatment, effective date, fulfilment process and final scope are confirmed during onboarding.
           </p>
         </StepReveal>
 
@@ -113,7 +114,7 @@ export function StepAheadPackages() {
                     <p className="mt-3 font-heading text-2xl font-bold leading-tight">{program.name}</p>
                     <p className="mt-4 font-heading text-[3rem] font-bold leading-none">{program.price}</p>
                     <p className="mt-4 text-sm font-semibold leading-6 text-white/75">{program.line}</p>
-                    <Button className="mt-6 w-full justify-center rounded-[0.55rem] bg-white text-primary hover:bg-[#eef8ff]" href="/contact?type=step-ahead">
+                    <Button className="mt-6 w-full justify-center rounded-[0.55rem] bg-white text-primary hover:bg-[#eef8ff]" href={leadCaptureHref({ cta: "discuss_stepahead_partnership", source: "/step-ahead", type: "step-ahead" })}>
                       Enquire Now
                       <ArrowRight aria-hidden="true" className="h-4 w-4" />
                     </Button>

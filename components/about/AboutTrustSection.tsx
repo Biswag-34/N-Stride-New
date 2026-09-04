@@ -13,13 +13,13 @@ const pillars = [
   },
   {
     title: "Advanced Technology",
-    description: "Diagnostics and treatments driven by modern technology.",
+    description: "Assessment and support workflows strengthened by modern technology.",
     icon: ShieldCheck,
     color: "#58b96c",
   },
   {
     title: "Expert-Led Care",
-    description: "Multi-disciplinary specialists with clinical excellence.",
+    description: "Multi-disciplinary guidance with professional review.",
     icon: ClipboardCheck,
     color: "#2d82d8",
   },
@@ -36,8 +36,8 @@ const pillars = [
     color: "#2d82d8",
   },
   {
-    title: "Long-Term Outcomes",
-    description: "Focus on prevention, recovery and quality of life.",
+    title: "Long-Term Continuity",
+    description: "Focus on prevention, recovery support and ongoing follow-up.",
     icon: Activity,
     color: "#58b96c",
   },
@@ -57,7 +57,7 @@ export function AboutTrustSection() {
                 src="/about/trust-collage.png"
               />
               <div className="relative z-10 ml-auto flex min-h-[360px] max-w-[360px] flex-col justify-center bg-[linear-gradient(90deg,rgba(244,250,255,0)_0%,rgba(244,250,255,0.86)_34%,rgba(244,250,255,0.96)_100%)] p-8">
-                <AboutKicker>Complete care, real impact</AboutKicker>
+                <AboutKicker>Connected care, clearer impact</AboutKicker>
                 <h2 className="mt-5 font-heading text-[2rem] font-bold leading-tight text-primary-dark">
                   Expert care.
                   <br />

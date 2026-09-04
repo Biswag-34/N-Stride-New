@@ -31,7 +31,7 @@ const machines = [
   {
     icon: Camera,
     title: "Wound Assessment Capture",
-    text: "Documents wound visuals and healing indicators for follow-up decisions.",
+    text: "Documents wound visuals and follow-up indicators for professional review.",
     src: "/requested-assets/vasosense.png",
     className: "lg:col-span-3",
   },
@@ -50,7 +50,7 @@ export function InsightConnectedEcosystem() {
       <InsightWaveImage className="inset-x-0 top-16 h-64 w-full opacity-72" src="/insight/connected-flow-bg.png" />
       <InsightContainer>
         <InsightReveal className="text-center">
-          <h2 className="font-heading text-3xl font-bold text-primary-dark md:text-[2.35rem]">One platform. Complete care continuity.</h2>
+          <h2 className="font-heading text-3xl font-bold text-primary-dark md:text-[2.35rem]">One platform. Connected care continuity.</h2>
         </InsightReveal>
         <InsightReveal className="relative mt-9 overflow-hidden rounded-[1.2rem] border border-[#c9e6f8]/70 bg-white/58 p-4 shadow-[0_26px_76px_rgba(20,121,201,0.08)] backdrop-blur sm:p-5 lg:p-6" delay={0.08}>
           <div aria-hidden="true" className="absolute left-8 right-8 top-1/2 hidden h-px bg-[linear-gradient(90deg,transparent,#8fcff4,#72d7c0,#8fcff4,transparent)] lg:block" />

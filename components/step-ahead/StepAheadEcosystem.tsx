@@ -4,12 +4,13 @@ import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, CheckCircle2 } from "lucide-react";
 
+import { leadCaptureHref } from "@/data/leadCapture";
 import { StepContainer, StepReveal, StepSection } from "./StepAheadPrimitives";
 
 const bullets = [
   "Unified patient journey across needs",
   "Seamless referrals and shared insights",
-  "Better outcomes through coordinated care",
+  "Clearer follow-up through coordinated care",
   "More value for your clinic and your patients",
 ];
 
@@ -55,8 +56,8 @@ export function StepAheadEcosystem() {
                     </div>
                   ))}
                 </div>
-                <Link className="mt-4 inline-flex min-h-10 items-center gap-2 rounded-[0.65rem] bg-[#8edbd0] px-4 text-xs font-extrabold text-[#06223e] transition hover:bg-white" href="/contact?type=step-ahead">
-                  Build the loop
+                <Link className="mt-4 inline-flex min-h-10 items-center gap-2 rounded-[0.65rem] bg-[#8edbd0] px-4 text-xs font-extrabold text-[#06223e] transition hover:bg-white" href={leadCaptureHref({ cta: "discuss_stepahead_partnership", source: "/step-ahead", type: "step-ahead" })}>
+                  Discuss a Step-Ahead Partnership
                   <ArrowRight aria-hidden="true" className="h-4 w-4" />
                 </Link>
               </div>

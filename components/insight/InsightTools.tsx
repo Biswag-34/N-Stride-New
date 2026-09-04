@@ -30,6 +30,7 @@ const tools = [
 export function InsightTools({ vertical }: InsightToolsProps) {
   return (
     <InsightSection className="bg-[linear-gradient(180deg,#ffffff,#f7fcff)] py-10">
+      <span id="technology" className="absolute -top-24" />
       <InsightWaveImage className="-right-20 bottom-0 h-[30rem] w-[42rem] opacity-24" src="/insight/diagnostic-bg-soft.png" />
       <InsightWaveImage className="-left-28 top-0 h-72 w-[34rem] opacity-16" src="/insight/wave-ecosystem.png" />
       <InsightContainer>

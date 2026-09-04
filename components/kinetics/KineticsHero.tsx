@@ -67,11 +67,10 @@ export function KineticsHero({ vertical }: KineticsHeroProps) {
             className="max-w-[28rem] font-heading text-[clamp(2rem,6vw,3.45rem)] font-bold leading-[1.04] text-primary-dark lg:leading-[1.02]"
             variants={fadeUp}
           >
-            <span className="block">Protected steps.</span>
-            <span className="block">Confident movement.</span>
+            <span className="block">Therapeutic footwear for safer, more comfortable movement.</span>
           </motion.h1>
           <motion.p className="mt-5 max-w-[30rem] text-sm leading-7 text-text-secondary sm:text-base" variants={fadeUp}>
-            N-Stride Kinetics brings therapeutic footwear and performance-driven design together for protection,
+            N-Stride Kinetics brings therapeutic footwear and fit-focused design together for protection,
             comfort and confidence in every step.
           </motion.p>
           <motion.div className="mt-6 flex flex-col gap-3 xs:flex-row xs:flex-wrap" variants={fadeUp}>
@@ -91,7 +90,7 @@ export function KineticsHero({ vertical }: KineticsHeroProps) {
           <motion.div className="mt-8 grid gap-4 md:grid-cols-3 lg:mt-10" variants={fadeUp}>
             <IconText icon={<GiRunningShoe className="h-5 w-5" />} text="movement" title="Built for everyday" />
             <IconText icon={<HeartPulse className="h-5 w-5" />} text="fit & comfort" title="Clinically guided" />
-            <IconText icon={<ShieldCheck className="h-5 w-5" />} text="loved by users" title="Trusted by specialists," />
+            <IconText icon={<ShieldCheck className="h-5 w-5" />} text="reviewed for fit" title="Clinician guided" />
           </motion.div>
         </motion.div>
 
@@ -125,7 +124,7 @@ export function KineticsHero({ vertical }: KineticsHeroProps) {
               <div className="absolute -left-10 bottom-0 h-36 w-[78%] rounded-full bg-[#dff1ff]/62 blur-3xl" />
               <div className="absolute bottom-[7%] right-[14%] z-20 flex items-center gap-2 rounded-full border border-white/82 bg-white/46 px-4 py-2 text-xs font-bold text-primary-dark shadow-[0_14px_34px_rgba(7,59,102,0.12)] backdrop-blur-md">
                 <span className="h-2 w-2 rounded-full bg-primary" />
-                Comfort fit tested
+                Fit reviewed for comfort
               </div>
               <svg
                 aria-hidden="true"

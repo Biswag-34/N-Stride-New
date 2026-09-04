@@ -1,4 +1,5 @@
 export type StepAheadComponentGroup = "Diagnostic Technology" | "Training & Workflow" | "Product Inventory" | "Premium Add-ons";
+import { leadCaptureHref } from "@/data/leadCapture";
 
 export type StepAheadPackage = {
   bestFit: string;
@@ -12,32 +13,32 @@ export type StepAheadPackage = {
 
 export const stepAheadProgram = {
   name: "N-Stride Step-Ahead",
-  headline: "Diabetic Foot Care Business-in-a-Box",
+  headline: "Structured Diabetic Foot-Care Partnership Program",
   coreDescription:
-    "Step-Ahead is N-Stride's integrated clinic-enablement program that combines modern diabetic foot-screening technology, practical training, product inventory and clinic setup support. It enables healthcare providers to establish a structured, all-in-one foot-care and wound-care service without building each component separately.",
+    "Step-Ahead is N-Stride's integrated clinic-enablement program that combines diabetic foot-screening technology, practical training, starter inventory and clinic setup support. It enables healthcare providers to establish a structured foot-care and wound-care support service without building each component separately.",
   overview:
     "Step-Ahead is designed to help healthcare providers introduce or strengthen preventive foot care, diabetic foot-risk assessment, wound-care support and clinically guided footwear pathways within their existing practice.",
   cumulativeDescription:
     "The program is cumulative by design: equipment, training, inventory and clinic-support elements are brought together as one implementation package. This creates a practical bridge between patient screening, risk identification, wound-care management, off-loading and protective footwear, and follow-up care.",
   communicationLines: [
     "Advance diabetic foot care. Strengthen your clinic. Empower better outcomes.",
-    "A complete foot-care and wound-care setup - technology, training and inventory in one program.",
+    "A structured foot-care and wound-care setup - technology, training and inventory in one program.",
     "From screening to support: one structured pathway for safer feet.",
     "Build a modern diabetic foot-care service without starting from zero.",
     "Healthy Feet. Better Life.",
   ],
   whyExists:
-    "Many clinics identify diabetic patients and chronic wounds but lack a complete foot-care setup, dedicated diagnostic tools, trained workflow and immediate access to suitable footwear or wound-care support. Step-Ahead addresses this gap through a ready-to-deploy model.",
+    "Many clinics identify diabetic patients and chronic wounds but lack a structured foot-care setup, dedicated assessment tools, trained workflow and immediate access to suitable footwear or wound-care support. Step-Ahead addresses this gap through a ready-to-deploy model.",
   clinicGap: [
     "Diabetic patients identified",
     "Chronic wounds seen",
-    "No complete foot-care setup",
+    "No structured foot-care setup",
     "Limited diagnostic tools",
     "No trained workflow",
     "Limited immediate footwear or wound-care support",
   ],
   response: [
-    "All-in-one setup",
+    "Coordinated setup",
     "Screening technology",
     "Structured training",
     "Footwear and socks inventory",
@@ -45,7 +46,7 @@ export const stepAheadProgram = {
     "Scalable clinical service model",
   ],
   keyAdvantages: [
-    "All-in-one setup for diabetic foot care and wound-care support.",
+    "Coordinated setup for diabetic foot care and wound-care support.",
     "Modern equipment for neuropathy, temperature, vascular-flow and plantar-pressure assessment.",
     "Structured training so the clinical team can use the equipment and follow a consistent workflow.",
     "Initial footwear and socks inventory to connect assessment with practical preventive solutions.",
@@ -167,14 +168,14 @@ export const stepAheadProgram = {
     {
       name: "Basic Package",
       tone: "basic",
-      investment: "Rs. 3,50,000",
+      investment: "₹3.5 lakh",
       training: "2 days intensive training",
       features: [
         { label: "Technology", value: "Advanced foot scanning" },
         { label: "VIBRASENSE+T", value: "Neuropathy and temperature detection" },
         { label: "VASOSENSE AUTO ABI", value: "Ankle-Brachial Index - blood-flow assessment" },
         { label: "PODOGRAPH_P", value: "2D pressure-point mapping" },
-        { label: "Inventory", value: "Rs. 1,00,000 worth of footwear and socks, supplied at 50% discount on MRP" },
+        { label: "Inventory", value: "₹1 lakh worth of footwear and socks, supplied at 50% discount on MRP" },
         { label: "Hand-held Doppler", value: "Not included" },
         { label: "Advanced Wound Care", value: "Not included" },
         { label: "Clinic Presentation", value: "Not included" },
@@ -192,16 +193,16 @@ export const stepAheadProgram = {
     {
       name: "Premium Package",
       tone: "premium",
-      investment: "Rs. 5,00,000",
+      investment: "₹5 lakh",
       training: "4 days intensive training",
       features: [
         { label: "Technology", value: "Advanced foot scanning" },
         { label: "VIBRASENSE+T", value: "Neuropathy and temperature detection" },
         { label: "VASOSENSE AUTO ABI", value: "Ankle-Brachial Index - blood-flow assessment" },
         { label: "PODOGRAPH_P", value: "2D pressure-point mapping" },
-        { label: "Inventory", value: "Rs. 2,00,000 worth of footwear and socks, supplied at 50% discount on MRP" },
+        { label: "Inventory", value: "₹2 lakh worth of footwear and socks, supplied at 50% discount on MRP" },
         { label: "Hand-held Doppler", value: "Included, as required" },
-        { label: "Advanced Wound Care", value: "Rs. 1,00,000 worth of NPWT machines and kits" },
+        { label: "Advanced Wound Care", value: "₹1 lakh worth of NPWT machines and kits" },
         { label: "Clinic Presentation", value: "Orthotics and prosthetics models - display only" },
         { label: "Furniture", value: "Branded display rack" },
       ],
@@ -245,7 +246,7 @@ export const stepAheadProgram = {
     {
       question: "What is N-Stride Step-Ahead?",
       answer:
-        "Step-Ahead is N-Stride's Diabetic Foot Care Business-in-a-Box. It combines screening technology, training, inventory and setup support to help providers build a structured foot-care and wound-care service.",
+        "Step-Ahead is N-Stride's structured diabetic foot-care partnership program. It combines screening technology, training, inventory and setup support to help providers build a coordinated foot-care and wound-care support service.",
     },
     {
       question: "Who is Step-Ahead for?",
@@ -255,12 +256,12 @@ export const stepAheadProgram = {
     {
       question: "What is included in the Basic Package?",
       answer:
-        "The Basic Package includes advanced foot scanning, VIBRASENSE+T, VASOSENSE AUTO ABI, PODOGRAPH_P, two days of intensive training and Rs. 1,00,000 worth of footwear and socks supplied at 50% discount on MRP.",
+        "The Basic Package includes advanced foot scanning, VIBRASENSE+T, VASOSENSE AUTO ABI, PODOGRAPH_P, two days of intensive training and ₹1 lakh worth of footwear and socks supplied at 50% discount on MRP.",
     },
     {
       question: "What is included in the Premium Package?",
       answer:
-        "The Premium Package includes the core diagnostic platform, four days of intensive training, Rs. 2,00,000 worth of footwear and socks supplied at 50% discount on MRP, hand-held Doppler as required, Rs. 1,00,000 worth of NPWT machines and kits, orthotics and prosthetics display models and a branded display rack.",
+        "The Premium Package includes the core diagnostic platform, four days of intensive training, ₹2 lakh worth of footwear and socks supplied at 50% discount on MRP, hand-held Doppler as required, ₹1 lakh worth of NPWT machines and kits, orthotics and prosthetics display models and a branded display rack.",
     },
     {
       question: "Does Step-Ahead include training?",
@@ -283,13 +284,13 @@ export const stepAheadProgram = {
   ],
   finalBadges: ["Screening", "Training", "Inventory", "Wound Care", "Off-loading", "Follow-up"],
   ctas: {
-    primary: { label: "Partner with N-Stride", href: "/contact?type=step-ahead" },
+    primary: { label: "Partner with N-Stride", href: leadCaptureHref({ cta: "discuss_stepahead_partnership", source: "/step-ahead", type: "step-ahead" }) },
     compare: { label: "Compare Packages", href: "#packages" },
     workflow: { label: "Explore Workflow", href: "#workflow" },
     contact: { label: "Contact N-Stride", href: "/contact" },
   },
   seo: {
-    title: "N-Stride Step-Ahead | Diabetic Foot Care Business-in-a-Box",
+    title: "N-Stride Step-Ahead | Structured Diabetic Foot-Care Program",
     description:
       "Step-Ahead is N-Stride's clinic-enablement program for doctors, clinics, nursing homes and hospitals, combining diabetic foot-screening technology, practical training, footwear inventory and optional wound-care setup support.",
   },

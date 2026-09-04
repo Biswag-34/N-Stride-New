@@ -12,8 +12,8 @@ import {
 } from "@/components/kinetics/KineticsPrimitives";
 
 const bullets = [
-  "Ergonomic lasts for natural alignment",
-  "Breathable, antimicrobial & skin-friendly lining",
+  "Ergonomic lasts selected for supportive alignment",
+  "Breathable materials selected for skin comfort",
   "Shock-absorbing midsoles for less impact",
   "Durable outsoles for grip & stability",
   "Removable insoles for custom orthotics",

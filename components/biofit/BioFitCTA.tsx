@@ -60,7 +60,7 @@ export function BioFitCTA({ vertical }: BioFitCTAProps) {
                     Request Bio-Fit Consultation
                     <ArrowRight aria-hidden="true" className="h-4 w-4" />
                   </Button>
-                  <Button className="justify-center rounded-[0.55rem] border-white/65 bg-transparent px-7 text-white hover:bg-white/10" href="/contact?type=bio-fit" variant="outline">
+                  <Button className="justify-center rounded-[0.55rem] border-white/65 bg-transparent px-7 text-white hover:bg-white/10" href="/verticals" variant="outline">
                     Explore All Verticals
                   </Button>
                 </div>

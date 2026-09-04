@@ -26,9 +26,7 @@ export function AboutHero() {
         <AboutReveal>
           <AboutKicker>About N-Stride</AboutKicker>
           <h1 className="mt-7 max-w-[570px] font-heading text-[clamp(2.55rem,5.7vw,4.7rem)] font-bold leading-[1.06] text-primary-dark">
-            One ecosystem.
-            <br />
-            <span className="text-primary">Complete foot & lower-limb care.</span>
+            Connected foot and lower-limb care, built around each person.
           </h1>
           <p className="mt-7 max-w-[560px] text-[1.02rem] leading-8 text-text-secondary">{brand.shortIntro}</p>
           <div className="mt-8 flex flex-col gap-4 sm:flex-row">

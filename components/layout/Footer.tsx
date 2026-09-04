@@ -63,14 +63,14 @@ export function Footer() {
           <div className="space-y-3">
             <h2 className="text-[0.68rem] font-extrabold uppercase tracking-[0.18em] text-primary">Reach N-Stride</h2>
             <div className="grid gap-2 text-[0.8rem] leading-5 text-text-secondary">
-              <p className="flex min-w-0 items-start gap-2">
+              <a className="flex min-w-0 items-start gap-2 transition hover:text-primary" href={`tel:${brand.contact.phoneHref}`}>
                 <Phone aria-hidden="true" className="mt-0.5 h-4 w-4 shrink-0 text-primary" />
                 <span className="font-extrabold text-primary-dark">{brand.contact.phone}</span>
-              </p>
-              <p className="flex min-w-0 items-start gap-2">
+              </a>
+              <a className="flex min-w-0 items-start gap-2 transition hover:text-primary" href={`mailto:${brand.contact.email}`}>
                 <Mail aria-hidden="true" className="mt-0.5 h-4 w-4 shrink-0 text-primary" />
                 <span className="font-extrabold text-primary-dark">{brand.contact.email}</span>
-              </p>
+              </a>
               <p className="flex min-w-0 items-start gap-2">
                 <MapPin aria-hidden="true" className="mt-0.5 h-4 w-4 shrink-0 text-primary" />
                 <span>{brand.contact.address}</span>
@@ -145,7 +145,14 @@ export function Footer() {
           <div aria-hidden="true" className="absolute inset-y-0 left-1/2 w-24 -translate-x-1/2 bg-white/18 blur-2xl" />
           <div className="relative z-10 flex flex-col gap-1 text-[0.74rem] font-semibold xs:flex-row xs:items-center xs:justify-between">
             <p>&copy; 2026 Nayapada&apos;s N-Stride. All rights reserved.</p>
-            <p className="font-heading font-extrabold">Crafted By Biswa</p>
+            <div className="flex gap-4 font-heading font-extrabold">
+              <Link className="hover:underline" href="/privacy">
+                Privacy Policy
+              </Link>
+              <Link className="hover:underline" href="/terms">
+                Terms
+              </Link>
+            </div>
           </div>
         </div>
       </Container>

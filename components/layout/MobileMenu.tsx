@@ -2,9 +2,9 @@
 
 import { AnimatePresence, motion } from "framer-motion";
 import Link from "next/link";
-import { ExternalLink, X } from "lucide-react";
+import { ChevronDown, ExternalLink, X } from "lucide-react";
 import { usePathname } from "next/navigation";
-import { RefObject, useEffect, useRef } from "react";
+import { RefObject, useEffect, useRef, useState } from "react";
 
 import { Button } from "@/components/ui/Button";
 import { brand } from "@/data/brand";
@@ -21,6 +21,7 @@ export function MobileMenu({ onClose, open, triggerRef }: MobileMenuProps) {
   const pathname = usePathname();
   const panelRef = useRef<HTMLDivElement>(null);
   const previousPathname = useRef(pathname);
+  const [openGroup, setOpenGroup] = useState<string | null>("/verticals");
 
   useEffect(() => {
     if (!open) {
@@ -150,19 +151,46 @@ export function MobileMenu({ onClose, open, triggerRef }: MobileMenuProps) {
                 <div className="grid gap-2">
                   {navigationLinks.map((item) => (
                     <div key={item.href}>
-                      <Link
-                        aria-current={isActive(item.href) ? "page" : undefined}
-                        className={cn(
-                          "flex min-h-12 items-center rounded-md px-3 text-sm font-semibold text-primary-dark transition hover:bg-background-soft",
-                          isActive(item.href) && "bg-background-soft text-primary",
-                        )}
-                        href={item.href}
-                        onClick={onClose}
-                      >
-                        {item.label}
-                      </Link>
                       {item.children ? (
-                        <div className="mt-1 grid gap-1 border-l border-border-soft pl-3">
+                        <button
+                          aria-controls={`mobile-group-${item.href.replace(/\W/g, "")}`}
+                          aria-expanded={openGroup === item.href}
+                          className={cn(
+                            "flex min-h-12 w-full items-center justify-between rounded-md px-3 text-left text-sm font-semibold text-primary-dark transition hover:bg-background-soft",
+                            isActive(item.href) && "bg-background-soft text-primary",
+                          )}
+                          onClick={() => setOpenGroup((current) => (current === item.href ? null : item.href))}
+                          type="button"
+                        >
+                          <span>{item.label}</span>
+                          <ChevronDown aria-hidden="true" className={cn("h-4 w-4 transition", openGroup === item.href && "rotate-180")} />
+                        </button>
+                      ) : (
+                        <Link
+                          aria-current={isActive(item.href) ? "page" : undefined}
+                          className={cn(
+                            "flex min-h-12 items-center rounded-md px-3 text-sm font-semibold text-primary-dark transition hover:bg-background-soft",
+                            isActive(item.href) && "bg-background-soft text-primary",
+                          )}
+                          href={item.href}
+                          onClick={onClose}
+                        >
+                          {item.label}
+                        </Link>
+                      )}
+                      {item.children ? (
+                        <div className={cn("mt-1 grid gap-1 border-l border-border-soft pl-3", openGroup !== item.href && "hidden")} id={`mobile-group-${item.href.replace(/\W/g, "")}`}>
+                          <Link
+                            aria-current={pathname === item.href ? "page" : undefined}
+                            className={cn(
+                              "flex min-h-11 items-center rounded-md px-3 text-sm font-semibold text-text-secondary transition hover:bg-background-soft hover:text-primary-dark",
+                              pathname === item.href && "bg-background-soft text-primary",
+                            )}
+                            href={item.href}
+                            onClick={onClose}
+                          >
+                            All Verticals
+                          </Link>
                           {item.children.map((child) => (
                             <Link
                               aria-current={isActive(child.href) ? "page" : undefined}

@@ -4,13 +4,13 @@ import { ArrowRight, Boxes, CheckCircle2, ClipboardCheck, Footprints, Graduation
 
 import { Button } from "@/components/ui/Button";
 import { Container } from "@/components/ui/Container";
-import { brand } from "@/data/brand";
+import { leadCaptureHref } from "@/data/leadCapture";
 import { productShowcase } from "@/data/products";
 
 export const metadata: Metadata = {
-  title: "FitRx | Clinical Footwear Customization for Partners",
+  title: "FitRx | Guided Therapeutic Footwear for Partners",
   description:
-    "FitRx is N-Stride's partner-enabled clinical footwear customization system for assessment, insole configuration and fulfilment.",
+    "FitRx is N-Stride's partner workflow for therapeutic footwear assessment, insole configuration and fulfilment.",
 };
 
 const workflow = [
@@ -57,6 +57,15 @@ const fitRxProducts = productShowcase.filter((item) =>
   ["diabetic-footwear", "custom-footwear", "off-loading-footwear", "insoles-inserts"].includes(item.id),
 );
 
+const mobileFitRxPath = [
+  { title: "Qualify", text: "Partner type, patient profile and monthly need.", icon: ClipboardCheck },
+  { title: "Map", text: "Solution categories for footwear and insole support.", icon: Settings2 },
+  { title: "Train", text: "Team workflow, fitting language and repeat process.", icon: GraduationCap },
+  { title: "Fulfil", text: "Order flow, after-sales support and repeat supply.", icon: Repeat2 },
+];
+
+const mobileFitRxChecks = ["Eligibility", "Kit contents", "Training scope", "Commercial terms"];
+
 export default function FitRxPage() {
   return (
     <>
@@ -85,11 +94,54 @@ export default function FitRxPage() {
               );
             })}
           </div>
-          <Button className="nstride-mobile-action mt-4 w-full rounded-[0.75rem]" href="/contact?type=fitrx" size="lg">
+          <Button className="nstride-mobile-action mt-4 w-full rounded-[0.75rem]" href={leadCaptureHref({ cta: "discuss_fitrx_partnership", source: "/fitrx", type: "fitrx" })} size="lg">
             Discuss FitRx partnership
             <ArrowRight aria-hidden="true" className="h-4 w-4" />
           </Button>
         </div>
+      </section>
+
+      <section className="bg-[linear-gradient(180deg,#ffffff,#eefbf7)] px-4 pb-8 pt-2 md:hidden">
+        <div className="rounded-[1rem] border border-[#c9e6f8] bg-white p-4 shadow-[0_18px_46px_rgba(20,121,201,0.08)]">
+          <p className="font-heading text-[0.68rem] font-extrabold uppercase tracking-[0.16em] text-[#009b92]">Partner workflow</p>
+          <h2 className="mt-2 font-heading text-[1.55rem] font-extrabold leading-tight text-primary-dark">
+            FitRx in four practical partner moves.
+          </h2>
+          <div className="mt-4 grid gap-2">
+            {mobileFitRxPath.map((item, index) => {
+              const Icon = item.icon;
+
+              return (
+                <div className="grid grid-cols-[2rem_2.75rem_1fr] items-center gap-2 rounded-[0.85rem] bg-[#f8fcff] px-3 py-2.5 ring-1 ring-[#d8edf8]" key={item.title}>
+                  <span className="font-heading text-xs font-extrabold text-[#009b92]">0{index + 1}</span>
+                  <span className="grid h-10 w-10 place-items-center rounded-[0.7rem] bg-white text-[#009b92] shadow-[0_8px_20px_rgba(20,121,201,0.08)]">
+                    <Icon aria-hidden="true" className="h-5 w-5" />
+                  </span>
+                  <span>
+                    <span className="block font-heading text-sm font-extrabold text-primary-dark">{item.title}</span>
+                    <span className="mt-0.5 block text-[0.72rem] font-semibold leading-4 text-text-secondary">{item.text}</span>
+                  </span>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+
+        <div className="mt-3 rounded-[0.9rem] bg-[#073b66] p-3 text-white">
+          <p className="font-heading text-sm font-extrabold">Discuss before onboarding</p>
+          <div className="mt-2 grid grid-cols-2 gap-2">
+            {mobileFitRxChecks.map((item) => (
+              <span className="rounded-full bg-white/10 px-3 py-2 text-center text-[0.68rem] font-extrabold ring-1 ring-white/14" key={item}>
+                {item}
+              </span>
+            ))}
+          </div>
+        </div>
+
+        <Button className="nstride-mobile-action mt-4 w-full rounded-[0.75rem] bg-[#009b92] hover:bg-[#087a74]" href={leadCaptureHref({ cta: "discuss_fitrx_partnership", source: "/fitrx", type: "fitrx" })}>
+          Discuss FitRx Partnership
+          <ArrowRight aria-hidden="true" className="h-4 w-4" />
+        </Button>
       </section>
 
       <section className="relative hidden overflow-hidden bg-[linear-gradient(112deg,#ffffff_0%,#f8fcff_48%,#eefbf7_100%)] py-10 md:block lg:py-14">
@@ -97,26 +149,26 @@ export default function FitRxPage() {
           <div>
             <p className="font-heading text-xs font-bold uppercase tracking-[0.18em] text-primary">N-Stride FitRx</p>
             <h1 className="mt-4 max-w-[42rem] font-heading text-[clamp(2.45rem,5vw,5.35rem)] font-extrabold leading-[1.02] text-primary-dark">
-              Clinical footwear customization for partners.
+              A guided therapeutic-footwear and insole program for clinical partners.
             </h1>
             <p className="mt-5 max-w-[39rem] text-base leading-8 text-text-secondary">
-              FitRx turns assessment, insole selection and therapeutic footwear pairing into a clean partner-ready system for clinics, care teams and business operators.
+              FitRx helps clinics assess patient needs, configure an appropriate insole and footwear pathway, and manage repeat fulfilment.
             </p>
             <div className="mt-7 flex flex-col gap-3 xs:flex-row xs:flex-wrap">
-              <Button className="w-full rounded-[0.6rem] xs:w-auto" href="/contact?type=fitrx" size="lg">
+              <Button className="w-full rounded-[0.6rem] xs:w-auto" href={leadCaptureHref({ cta: "discuss_fitrx_partnership", source: "/fitrx", type: "fitrx" })} size="lg">
                 Bring FitRx to Your Business
                 <ArrowRight aria-hidden="true" className="h-4 w-4" />
               </Button>
-              <Button className="w-full rounded-[0.6rem] bg-white/80 xs:w-auto" href="/contact?type=partner" size="lg" variant="outline">
+              <Button className="w-full rounded-[0.6rem] bg-white/80 xs:w-auto" href={leadCaptureHref({ cta: "discuss_fitrx_partnership", source: "/fitrx", type: "fitrx" })} size="lg" variant="outline">
                 Talk to Partnerships
               </Button>
             </div>
           </div>
 
-          <div className="relative aspect-[4/3] min-h-0 overflow-hidden rounded-[1.15rem] bg-[#edf8fb] shadow-[0_24px_70px_rgba(20,121,201,0.1)] ring-1 ring-[#c9e6f8] md:min-h-[28rem]">
+          <div className="relative aspect-[16/11] min-h-0 overflow-hidden rounded-[1.15rem] bg-[#edf8fb] shadow-[0_24px_70px_rgba(20,121,201,0.1)] ring-1 ring-[#c9e6f8] md:min-h-[28rem]">
             <Image
               alt="FitRx insole and clinical footwear customization system"
-              className="object-cover object-center"
+              className="object-contain object-center p-2"
               fill
               priority
               sizes="(min-width: 1024px) 48vw, 100vw"
@@ -133,17 +185,17 @@ export default function FitRxPage() {
         </Container>
       </section>
 
-      <section className="relative overflow-hidden bg-white py-10 md:py-14">
+      <section className="relative hidden overflow-hidden bg-white py-10 md:block md:py-14">
         <Container>
           <div className="grid gap-6 lg:grid-cols-[0.34fr_0.66fr] lg:items-end">
             <div>
-              <p className="font-heading text-xs font-bold uppercase tracking-[0.18em] text-primary">Operating rhythm</p>
+              <p className="font-heading text-xs font-bold uppercase tracking-[0.18em] text-primary">Partner workflow</p>
               <h2 className="mt-3 max-w-[32rem] font-heading text-3xl font-bold leading-tight text-primary-dark sm:text-4xl">
                 A footwear service line that behaves like a system.
               </h2>
             </div>
             <p className="max-w-[48rem] text-sm leading-7 text-text-secondary lg:justify-self-end">
-              Instead of listing steps, FitRx packages the partner workflow as one guided console: qualify the need, configure the right support path, and keep fulfilment repeatable.
+              FitRx packages the partner workflow as one guided console: confirm eligibility, understand the kit, train the team, configure the right support path and keep fulfilment repeatable.
             </p>
           </div>
 
@@ -177,7 +229,7 @@ export default function FitRxPage() {
                   <span>
                     <Sparkles aria-hidden="true" className="mx-auto h-8 w-8 text-primary" />
                     <span className="mt-2 block font-heading text-xl font-extrabold">FitRx</span>
-                    <span className="mt-1 block text-[0.68rem] font-bold uppercase tracking-[0.16em] text-text-secondary">Partner OS</span>
+                    <span className="mt-1 block text-[0.68rem] font-bold uppercase tracking-[0.16em] text-text-secondary">Partner Workflow</span>
                   </span>
                 </div>
 
@@ -204,11 +256,11 @@ export default function FitRxPage() {
               <div>
                 <p className="font-heading text-lg font-extrabold">Partner-ready outputs</p>
                 <p className="mt-2 text-xs font-semibold leading-5 text-white/66">
-                  What the clinic gets after the workflow is translated into service delivery.
+                  What the clinic gets after eligibility, kit contents, training scope and fulfilment terms are aligned.
                 </p>
               </div>
               <div className="grid gap-2.5">
-                {["Clear recommendation path", "Product and insole logic", "Training-backed fulfilment", "Repeat business rhythm"].map((item) => (
+                {["Eligibility check", "Kit and category mapping", "Training-backed fulfilment", "Commercial terms review"].map((item) => (
                   <div className="flex items-center gap-2 rounded-full bg-white/[0.08] px-3 py-2 text-xs font-extrabold ring-1 ring-white/10" key={item}>
                     <CheckCircle2 aria-hidden="true" className="h-4 w-4 shrink-0 text-[#8edbd0]" />
                     {item}
@@ -220,7 +272,7 @@ export default function FitRxPage() {
         </Container>
       </section>
 
-      <section className="bg-[linear-gradient(180deg,#ffffff,#f7fcff)] py-10 md:py-14">
+      <section className="hidden bg-[linear-gradient(180deg,#ffffff,#f7fcff)] py-10 md:block md:py-14">
         <Container>
           <div className="grid gap-6 lg:grid-cols-[0.36fr_0.64fr] lg:items-center">
             <div>
@@ -259,15 +311,15 @@ export default function FitRxPage() {
         </Container>
       </section>
 
-      <section className="bg-white py-10 md:py-14">
+      <section className="hidden bg-white py-10 md:block md:py-14">
         <Container>
           <div className="mb-6 flex flex-col justify-between gap-3 md:flex-row md:items-end">
             <div>
               <p className="font-heading text-xs font-bold uppercase tracking-[0.18em] text-primary">Product logic</p>
-              <h2 className="mt-3 font-heading text-3xl font-bold text-primary-dark">The FitRx recommendation shelf.</h2>
+              <h2 className="mt-3 font-heading text-3xl font-bold text-primary-dark">FitRx solution categories.</h2>
             </div>
             <p className="max-w-[31rem] text-sm leading-7 text-text-secondary">
-              The page uses current N-Stride product data: therapeutic footwear, custom footwear, pressure protection and insole support.
+              Solution categories are selected around therapeutic footwear, custom footwear, pressure protection and insole support needs.
             </p>
           </div>
           <div className="overflow-hidden rounded-[1.1rem] border border-[#d7ebfa] bg-[#fbfdff] shadow-[0_18px_54px_rgba(20,121,201,0.06)]">
@@ -285,7 +337,7 @@ export default function FitRxPage() {
         </Container>
       </section>
 
-      <section className="bg-[linear-gradient(120deg,#073b66,#0f6eb9_62%,#eafaf0)] py-10">
+      <section className="hidden bg-[linear-gradient(120deg,#073b66,#0f6eb9_62%,#eafaf0)] py-10 md:block">
         <Container>
           <div className="grid gap-6 text-white lg:grid-cols-[0.56fr_0.44fr] lg:items-center">
             <div>
@@ -294,11 +346,11 @@ export default function FitRxPage() {
                 Build FitRx as a practical service line, not just a product shelf.
               </h2>
               <p className="mt-4 max-w-[42rem] text-sm leading-7 text-white/82">
-                FitRx can support clinics and care businesses that want guided footwear customization, repeat product fulfilment and a clear handoff back into the wider N-Stride care ecosystem.
+                FitRx can support clinics and care businesses that want guided footwear customization, onboarding clarity, repeat product fulfilment and a clear handoff back into the wider N-Stride care ecosystem.
               </p>
             </div>
             <div className="grid gap-3">
-              {["Screen the need", "Select the insole and footwear path", "Train the partner team", "Repeat fulfilment through N-Stride"].map((item) => (
+              {["Confirm partner eligibility", "Review kit contents and training scope", "Select the insole and footwear path", "Repeat fulfilment through N-Stride"].map((item) => (
                 <div className="flex items-center gap-3 rounded-[0.75rem] bg-white/12 px-4 py-3 text-sm font-bold ring-1 ring-white/18" key={item}>
                   <CheckCircle2 aria-hidden="true" className="h-5 w-5 shrink-0 text-[#8edbd0]" />
                   {item}
@@ -309,7 +361,7 @@ export default function FitRxPage() {
         </Container>
       </section>
 
-      <section className="bg-white py-10">
+      <section className="hidden bg-white py-10 md:block">
         <Container>
           <div className="grid gap-5 rounded-[1rem] border border-[#d7ebfa] bg-[linear-gradient(135deg,#f8fcff,#ffffff_58%,#eefbf7)] p-5 shadow-[0_20px_54px_rgba(20,121,201,0.07)] md:grid-cols-[auto_1fr_auto] md:items-center">
             <span className="grid h-14 w-14 place-items-center rounded-[0.85rem] bg-white text-primary shadow-soft ring-1 ring-[#d7ebfa]">
@@ -321,7 +373,7 @@ export default function FitRxPage() {
                 Share your partner model, patient profile or clinic setup and N-Stride can help shape the right FitRx pathway.
               </p>
             </div>
-            <Button className="rounded-[0.6rem]" href={brand.consultationUrl + "?type=fitrx"}>
+            <Button className="rounded-[0.6rem]" href={leadCaptureHref({ cta: "discuss_fitrx_partnership", source: "/fitrx", type: "fitrx" })}>
               Start FitRx Discussion
               <ArrowRight aria-hidden="true" className="h-4 w-4" />
             </Button>

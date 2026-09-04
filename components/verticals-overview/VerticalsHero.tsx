@@ -13,10 +13,10 @@ import { fadeUp, staggerContainer, staggerItem } from "@/lib/motion";
 import { overviewIconMap } from "./VerticalsOverviewPrimitives";
 
 const heroMetrics = [
-  { label: "Clinical-led solutions", icon: overviewIconMap.protect },
+  { label: "Scientifically guided", icon: overviewIconMap.protect },
   { label: "Integrated care journey", icon: overviewIconMap.partner },
-  { label: "Technology powered", icon: overviewIconMap.analysis },
-  { label: "Outcome focused", icon: overviewIconMap.outcome },
+  { label: "Technology-powered", icon: overviewIconMap.analysis },
+  { label: "Outcome-focused", icon: overviewIconMap.outcome },
 ];
 
 export function VerticalsHero() {
@@ -29,10 +29,10 @@ export function VerticalsHero() {
       <div className="relative z-10">
         <p className="font-heading text-[0.68rem] font-extrabold uppercase tracking-[0.16em] text-primary">Choose care</p>
         <h1 className="mt-3 font-heading text-[1.82rem] font-extrabold leading-[1.08] text-primary-dark">
-          Find the N-Stride care path you need.
+          Choose the care pathway that fits your need.
         </h1>
         <p className="mt-2 text-[0.86rem] font-medium leading-6 text-text-secondary">
-          Footwear, diagnostics, wound support and restoration, connected in one ecosystem.
+          Footwear, assessment, wound-care support and restoration, connected in one ecosystem.
         </p>
 
         <div className="mt-5 grid gap-2.5">
@@ -76,14 +76,10 @@ export function VerticalsHero() {
         <div className="flex min-h-0 items-center py-4 md:min-h-[540px] md:py-0">
           <motion.div initial={reduceMotion ? false : "hidden"} animate={reduceMotion ? undefined : "visible"} variants={staggerContainer}>
             <motion.h1 className="max-w-[32rem] text-[clamp(2.08rem,10vw,2.8rem)] font-semibold leading-[1.05] text-primary-dark sm:text-5xl lg:text-[3.55rem]" variants={fadeUp}>
-              One Ecosystem.
-              <br />
-              Four Verticals.
-              <br />
-              Complete Care.
+              Choose the care pathway that fits your need.
             </motion.h1>
             <motion.p className="mt-5 max-w-[35rem] text-sm leading-7 text-text-secondary sm:text-base sm:leading-8" variants={fadeUp}>
-              N-Stride brings together four specialized care verticals under one connected ecosystem, so every step is supported with precision, purpose and partnership.
+              Explore therapeutic footwear, foot assessment, wound-care support, prosthetics, orthotics and silicone restoration.
             </motion.p>
             <motion.div className="mt-7 flex flex-col gap-3 xs:flex-row xs:flex-wrap" variants={fadeUp}>
               <Button className="w-full rounded-[0.45rem] px-5 xs:w-auto xs:px-6" href={ctas.primary.href}>

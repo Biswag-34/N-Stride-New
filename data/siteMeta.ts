@@ -1,7 +1,7 @@
 export const siteMeta = {
-  title: "N-Stride | Complete Foot & Lower-Limb Care",
+  title: "N-Stride | Connected Foot & Lower-Limb Care",
   description:
-    "N-Stride is an all-in-one foot, lower-body and limb care ecosystem connecting therapeutic footwear, diagnostics, wound care, prosthetics, orthotics and doctor-led consultation.",
+    "N-Stride is a connected foot and lower-limb care ecosystem linking therapeutic footwear, assessment pathways, wound-care support, prosthetics, orthotics and consultation guidance.",
   keywords: [
     "N-Stride",
     "NSTRIDE",

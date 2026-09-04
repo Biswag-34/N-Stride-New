@@ -3,6 +3,7 @@
 import { ChevronDown } from "lucide-react";
 import Link from "next/link";
 
+import { leadCaptureHref } from "@/data/leadCapture";
 import { StepContainer, StepKicker, StepReveal, StepSection } from "./StepAheadPrimitives";
 
 const faqs = [
@@ -25,7 +26,7 @@ export function StepAheadFAQ() {
               Answers to help you take the next step.
             </h2>
           </div>
-          <Link className="text-sm font-bold text-primary transition hover:text-primary-dark" href="/contact?type=step-ahead">
+          <Link className="text-sm font-bold text-primary transition hover:text-primary-dark" href={leadCaptureHref({ cta: "discuss_stepahead_partnership", source: "/step-ahead", type: "step-ahead" })}>
             Still have questions? Contact our team {"->"}
           </Link>
         </StepReveal>

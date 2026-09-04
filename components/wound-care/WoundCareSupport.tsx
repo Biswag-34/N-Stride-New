@@ -21,7 +21,7 @@ const supportSteps = [
   { icon: MessageCircle, title: "Connect", text: "Share wound details & history with our care team." },
   { icon: ClipboardList, title: "Plan", text: "Receive a personalized wound-care plan & dressing strategy." },
   { icon: HeartHandshake, title: "Support", text: "Get ongoing guidance, dressing management & monitoring." },
-  { icon: ChartNoAxesCombined, title: "Improve", text: "Track progress, adapt care & achieve better outcomes." },
+  { icon: ChartNoAxesCombined, title: "Follow up", text: "Track progress and adapt the support plan." },
 ];
 
 const benefits = ["Expert clinical guidance", "Structured dressing protocols", "Follow-up & monitoring support", "Education for caregivers & self-care"];
@@ -80,7 +80,7 @@ export function WoundCareSupport({ vertical }: WoundCareSupportProps) {
               <div className="mt-8 rounded-[1rem] bg-[#fff2dd] p-5">
                 <ShieldIcon />
                 <p className="mt-3 font-heading text-sm font-bold leading-6 text-[#b86b00]">
-                  Our goal is simple: faster support, fewer complications, better quality of life.
+                  Our goal is simple: clearer support, consistent follow-up and better care coordination.
                 </p>
               </div>
             </div>

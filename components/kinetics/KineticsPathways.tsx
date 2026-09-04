@@ -12,7 +12,7 @@ import {
 const pathways = [
   { image: "/kinetics/signature.png", title: "Signature Footwear", text: "Soft support for daily care" },
   { image: "/kinetics/comfort-slipper.png", title: "Comfort Slipper", text: "Easy comfort for home movement" },
-  { image: "/kinetics/compression-socks.png", title: "Compression Socks", text: "Supportive pressure and fatigue care" },
+  { image: "/kinetics/compression-socks.png", title: "Compression Socks", text: "Guided support when suitable" },
   { image: "/kinetics/premium.png", title: "Premium Footwear", text: "Refined protective footwear" },
   { image: "/kinetics/therapeutic-socks.png", title: "Therapeutic Socks", text: "Cushioning and skin-friendly support" },
   { image: "/kinetics/custom-footwear.png", title: "Custom Shoe", text: "Adapted for unique foot needs" },

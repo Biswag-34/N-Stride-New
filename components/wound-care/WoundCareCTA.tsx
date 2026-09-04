@@ -4,6 +4,7 @@ import { ArrowRight, CheckCircle2 } from "lucide-react";
 import type { Vertical } from "@/data/verticals";
 
 import { Button } from "@/components/ui/Button";
+import { leadCaptureHref } from "@/data/leadCapture";
 import {
   WoundAsset,
   WoundBackgroundImage,
@@ -54,7 +55,7 @@ export function WoundCareCTA({ vertical }: WoundCareCTAProps) {
                   Request Wound Care Support
                   <ArrowRight aria-hidden="true" className="h-4 w-4" />
                 </Button>
-                <Button className="rounded-[0.45rem]" href="/contact?type=general" variant="outline">
+                <Button className="rounded-[0.45rem]" href={leadCaptureHref({ cta: "book_consultation", source: "/verticals/wound-care", type: "general" })} variant="outline">
                   Talk to Our Care Team
                 </Button>
               </div>

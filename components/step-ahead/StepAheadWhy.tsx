@@ -6,9 +6,9 @@ import { CircleOff, FlaskConical, Network } from "lucide-react";
 import { StepContainer, StepIconBubble, StepReveal, StepSection } from "./StepAheadPrimitives";
 
 const stats = [
-  { icon: FlaskConical, value: "80M+", label: "People in India at risk of diabetic foot issues*" },
-  { icon: CircleOff, value: "70%", label: "Amputations are preventable*" },
-  { icon: Network, value: "500+", label: "Clinics can be equipped and supported" },
+  { icon: FlaskConical, value: "89.8M", label: "Adults in India living with diabetes, IDF 2024" },
+  { icon: CircleOff, value: "10.5%", label: "Adult diabetes prevalence reported by IDF" },
+  { icon: Network, value: "Scalable", label: "Designed so more clinics can be equipped and supported" },
 ];
 
 function DemoVideoPanel() {
@@ -144,7 +144,7 @@ export function StepAheadWhy() {
               Bringing structured diabetic foot care to more communities.
             </h2>
             <p className="mt-5 max-w-[675px] text-[0.98rem] leading-8 text-text-secondary">
-              Most clinics want to deliver better diabetic foot care but face real barriers - complete setup, high costs, lack of
+              Most clinics want to deliver better diabetic foot care but face real barriers - setup decisions, high costs, lack of
               training and limited time. Step-Ahead removes the guesswork and gives you a ready-to-execute framework for clinical
               excellence and sustainable growth.
             </p>
@@ -164,7 +164,11 @@ export function StepAheadWhy() {
               })}
             </div>
             <p className="mt-7 max-w-[520px] text-[0.68rem] leading-5 text-text-muted">
-              *References for client verification before publication.
+              Source:{" "}
+              <a className="font-bold text-primary hover:underline" href="https://idf.org/our-network/regions-and-members/south-east-asia/members/india/" rel="noreferrer" target="_blank">
+                International Diabetes Federation India country profile, 2024
+              </a>
+              .
             </p>
           </StepReveal>
 

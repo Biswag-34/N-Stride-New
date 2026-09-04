@@ -13,13 +13,14 @@ export function BioFitConnectedPathways() {
 
   return (
     <BioFitSection className="bg-[linear-gradient(180deg,#ffffff,#fbf9ff)] pb-12 pt-12">
+      <span id="bio-fit-pathway" className="absolute -top-24" />
       <BioFitSoftDivider className="bottom-[-1.95rem] opacity-75" />
       <BioFitContainer>
         <div className="grid gap-8 lg:grid-cols-[0.28fr_0.72fr] lg:items-center">
           <BioFitReveal>
             <h2 className="font-heading text-3xl font-bold text-primary-dark">Connected care pathways</h2>
             <p className="mt-4 max-w-[25rem] text-sm leading-7 text-text-secondary">
-              Bio-Fit works hand-in-hand with our ecosystem to support your complete care.
+              Bio-Fit works hand-in-hand with the N-Stride ecosystem to support a connected care pathway.
             </p>
           </BioFitReveal>
           <BioFitReveal delay={0.08}>

@@ -4,7 +4,7 @@ import { AboutPage as AboutExperience } from "@/components/about/AboutPage";
 import { brand } from "@/data/brand";
 
 export const metadata: Metadata = {
-  title: "About N-Stride | Complete Foot & Lower-Limb Care Ecosystem",
+  title: "About N-Stride | Connected Foot & Lower-Limb Care Ecosystem",
   description: brand.longIntro,
 };
 

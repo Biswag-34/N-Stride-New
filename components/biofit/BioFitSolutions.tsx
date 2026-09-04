@@ -22,19 +22,19 @@ const solutionCards = [
     title: "Orthotics",
     subtitle: "Support. Alignment. Relief.",
     image: "/requested-assets/biofit-orthotics.png",
-    items: ["Custom foot orthotics", "Ankle-foot orthoses (AFO)", "Knee, spinal & upper limb orthotic solutions", "Gait & posture support"],
+    items: ["Custom foot orthotics", "Ankle-foot orthoses (AFO)", "Lower-limb support solutions", "Gait & posture support"],
   },
   {
     title: "Prosthetics",
     subtitle: "Restore. Adapt. Thrive.",
     image: "/requested-assets/biofit-prosthetics.png",
-    items: ["Upper & lower limb prosthetics", "Microprocessor & dynamic knee systems", "Custom sockets & liners", "Rehabilitation & training support"],
+    items: ["Lower-limb prosthetic support", "Socket and liner guidance", "Fit refinement", "Rehabilitation & training support"],
   },
   {
-    title: "Silicone Alteration",
+    title: "Silicone Restoration",
     subtitle: "Restore. Refine. Renew.",
     image: "/requested-assets/biofit-silicone.png",
-    items: ["Silicone socket restoration", "Socket adjustments & relining", "Cosmetic restoration", "Comfort & fit enhancement"],
+    items: ["Silicone socket restoration", "Cosmetic restoration", "Comfort & fit refinement", "Appearance-focused support"],
   },
 ];
 

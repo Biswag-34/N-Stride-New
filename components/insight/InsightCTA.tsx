@@ -35,8 +35,8 @@ export function InsightCTA({ vertical }: InsightCTAProps) {
                 Book Foot Checkup
                 <ArrowRight aria-hidden="true" className="h-4 w-4" />
               </Button>
-              <Button className="rounded-[0.45rem] border-white/70 bg-transparent text-white hover:bg-white/10" href="/contact?type=foot-checkup" variant="outline">
-                Explore Our Technology
+              <Button className="rounded-[0.45rem] border-white/70 bg-transparent text-white hover:bg-white/10" href="#technology" variant="outline">
+                View Assessment Technology
               </Button>
             </div>
           </div>

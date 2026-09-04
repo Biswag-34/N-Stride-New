@@ -13,11 +13,11 @@ import {
 } from "@/components/insight/InsightPrimitives";
 
 const outcomes = [
-  { icon: ShieldAlert, text: "Early detection of risk" },
-  { icon: ClipboardList, text: "Personalized care plans" },
-  { icon: TrendingUp, text: "Stronger patient outcomes" },
-  { icon: BadgeCheck, text: "Reduced complications" },
-  { icon: Footprints, text: "Better compliance & follow-up" },
+  { icon: ShieldAlert, text: "Identifies pressure and fit concerns" },
+  { icon: ClipboardList, text: "Supports consistent documentation" },
+  { icon: TrendingUp, text: "Informs care routing" },
+  { icon: BadgeCheck, text: "Supports follow-up comparison" },
+  { icon: Footprints, text: "Clarifies footwear and support needs" },
 ];
 
 export function InsightResults() {
@@ -27,7 +27,7 @@ export function InsightResults() {
         <div className="grid gap-9 lg:grid-cols-[0.5fr_0.22fr_0.28fr]">
           <InsightReveal>
             <h2 className="font-heading text-3xl font-bold text-primary-dark">
-              Intelligence that drives real-world results
+              Assessment clarity that supports the next step
             </h2>
             <InsightAsset
               alt="Insight diagnostic dashboard with patient overview, pressure maps and wound assessment"
@@ -59,7 +59,7 @@ export function InsightResults() {
                 Turn diagnostic clarity into confident care.
               </h3>
               <p className="relative z-10 mt-4 text-sm leading-7 text-text-secondary">
-                Empower your team with intelligent insights at every step.
+                Support your team with structured assessment information at every step.
               </p>
               <Button className="relative z-10 mt-8 rounded-[0.45rem]" href="/contact?type=foot-checkup">
                 Book Foot Checkup

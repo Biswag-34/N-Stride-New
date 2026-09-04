@@ -36,7 +36,7 @@ export const productShowcase = [
     title: "Therapeutic Socks",
     category: "Socks",
     description:
-      "Diabetic, compression, gel and toe-alignment sock options for comfort, protection and lower-limb support.",
+      "Diabetic, gel, toe-alignment and professionally guided compression sock options for comfort, protection and lower-limb support.",
     image: "Therapeutic socks arranged as a care set",
     link: "https://nstride.shop",
     external: true,

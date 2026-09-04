@@ -6,6 +6,7 @@ import Image from "next/image";
 
 import { Button } from "@/components/ui/Button";
 import { Container } from "@/components/ui/Container";
+import { leadCaptureHref } from "@/data/leadCapture";
 import { stepAheadProgram } from "@/data/stepAhead";
 import { staggerContainer, staggerItem } from "@/lib/motion";
 import { ImageDrop } from "./HomeDesignPrimitives";
@@ -75,11 +76,11 @@ export function HomeStepAheadFeature() {
               })}
             </div>
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-              <Button className="rounded-[0.65rem]" href="/contact?type=step-ahead">
+              <Button className="rounded-[0.65rem]" href={leadCaptureHref({ cta: "discuss_stepahead_partnership", source: "/", type: "step-ahead" })}>
                 Book Consultation
                 <ArrowRight aria-hidden="true" className="h-4 w-4" />
               </Button>
-              <Button className="rounded-[0.65rem]" href="/contact?type=step-ahead" variant="outline">
+              <Button className="rounded-[0.65rem]" href="/step-ahead" variant="outline">
                 View Program Details
               </Button>
             </div>

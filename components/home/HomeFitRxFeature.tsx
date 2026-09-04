@@ -6,6 +6,7 @@ import { motion } from "framer-motion";
 
 import { Button } from "@/components/ui/Button";
 import { Container } from "@/components/ui/Container";
+import { leadCaptureHref } from "@/data/leadCapture";
 import { staggerContainer, staggerItem } from "@/lib/motion";
 
 const fitRxSteps = [
@@ -36,7 +37,7 @@ export function HomeFitRxFeature() {
           <div className="relative grid gap-7 lg:grid-cols-[0.48fr_0.52fr] lg:items-center">
             <motion.div className="relative order-2 min-h-[18rem] overflow-hidden rounded-[1rem] bg-[#eef7fb] shadow-[0_22px_55px_rgba(7,59,102,0.14)] sm:min-h-[22rem] md:aspect-[16/11] md:min-h-0 md:bg-white lg:order-1 lg:aspect-[7/6] xl:aspect-[16/11]" variants={staggerItem}>
               <Image
-                alt="NStride FitRx clinical footwear customization demo"
+                alt="N-Stride FitRx clinical footwear customization demo"
                 className="object-contain object-center md:p-3 lg:p-4"
                 fill
                 sizes="(min-width: 1024px) 560px, 100vw"
@@ -44,7 +45,7 @@ export function HomeFitRxFeature() {
               />
               <div className="absolute inset-x-0 bottom-0 h-32 bg-[linear-gradient(180deg,transparent,rgba(7,59,102,0.62))]" />
               <div className="absolute bottom-6 left-6 right-6 text-white [text-shadow:0_3px_18px_rgba(7,59,102,0.72)]">
-                <p className="font-heading text-4xl font-extrabold leading-none sm:text-5xl">NStride FitRx</p>
+                <p className="font-heading text-4xl font-extrabold leading-none sm:text-5xl">N-Stride FitRx</p>
                 <p className="mt-3 text-base font-extrabold leading-6 sm:text-lg">Assess. Configure. Fit.</p>
               </div>
             </motion.div>
@@ -84,11 +85,11 @@ export function HomeFitRxFeature() {
                 })}
               </div>
               <div className="mt-7 flex flex-col gap-3 xs:flex-row xs:flex-wrap">
-                <Button className="w-full rounded-[0.65rem] xs:w-auto" href="/contact?type=fitrx">
+                <Button className="w-full rounded-[0.65rem] xs:w-auto" href={leadCaptureHref({ cta: "discuss_fitrx_partnership", source: "/", type: "fitrx" })}>
                   Bring FitRx to Your Business
                   <ArrowRight aria-hidden="true" className="h-4 w-4" />
                 </Button>
-                <Button className="w-full rounded-[0.65rem] bg-white/86 xs:w-auto" href="/contact?type=partner" variant="outline">
+                <Button className="w-full rounded-[0.65rem] bg-white/86 xs:w-auto" href={leadCaptureHref({ cta: "discuss_fitrx_partnership", source: "/", type: "fitrx" })} variant="outline">
                   Talk to Partnerships
                 </Button>
               </div>

@@ -1,9 +1,10 @@
 "use client";
 
 import Image from "next/image";
-import { ArrowRight, Download } from "lucide-react";
+import { ArrowRight, Mail } from "lucide-react";
 
 import { Button } from "@/components/ui/Button";
+import { leadCaptureHref } from "@/data/leadCapture";
 
 import { StepContainer, StepReveal, StepSection } from "./StepAheadPrimitives";
 
@@ -28,13 +29,13 @@ export function StepAheadFinalCTA() {
                 Book a strategy call with our team and see how Step-Ahead can transform your clinic and your community.
               </p>
               <div className="mt-7 flex flex-col gap-3 sm:flex-row">
-                <Button className="rounded-[0.5rem]" href="/contact?type=step-ahead" size="lg">
+                <Button className="rounded-[0.5rem]" href={leadCaptureHref({ cta: "discuss_stepahead_partnership", source: "/step-ahead", type: "step-ahead" })} size="lg">
                   Book a Strategy Call
                   <ArrowRight aria-hidden="true" className="h-4 w-4" />
                 </Button>
-                <Button className="rounded-[0.5rem]" href="/contact?type=step-ahead" size="lg" variant="outline">
-                  <Download aria-hidden="true" className="h-4 w-4" />
-                  Download Brochure
+                <Button className="rounded-[0.5rem]" href={leadCaptureHref({ cta: "get_brochure_by_email", source: "/step-ahead", type: "step-ahead" })} size="lg" variant="outline">
+                  <Mail aria-hidden="true" className="h-4 w-4" />
+                  Get Brochure by Email
                 </Button>
               </div>
             </div>

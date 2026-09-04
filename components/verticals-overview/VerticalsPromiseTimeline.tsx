@@ -25,9 +25,9 @@ const verticalDisplay: Record<
   }
 > = {
   kinetics: {
-    chapterTitle: "All Footwear Solutions",
+    chapterTitle: "Therapeutic Footwear & Foot Support",
     deliverables: [
-      "Therapeutic footwear for all foot types",
+      "Therapeutic footwear selected around fit and support needs",
       "Diabetic and pressure-relief footwear",
       "Activity, comfort and lifestyle shoes",
       "Custom footwear solutions",
@@ -54,9 +54,9 @@ const verticalDisplay: Record<
     chapterTitle: "NPWT VAC Dressing System & Support",
     deliverables: [
       "NPWT VAC dressing systems",
-      "Wound management protocols",
+      "Clinician-guided wound management planning",
       "Professional training & support",
-      "Follow-up & healing monitoring",
+      "Follow-up & wound-progress monitoring",
     ],
     imageLabel: "NPWT VAC setup visual",
     imageSrc: "/verticals-overview/wound-care-npwt-cutout.png",
@@ -64,11 +64,11 @@ const verticalDisplay: Record<
     tone: "woundCare",
   },
   "bio-fit": {
-    chapterTitle: "Orthotics, Prosthetics & Silicone Alteration",
+    chapterTitle: "Orthotics, Prosthetics & Silicone Restoration",
     deliverables: [
       "Orthotic solutions custom & prefabricated",
       "Prosthetic fittings & rehabilitation support",
-      "Silicone alteration & restoration",
+      "Silicone restoration support",
       "Fit, function & long-term care",
     ],
     imageLabel: "orthotics/prosthetics/silicone visual",
@@ -84,7 +84,7 @@ export function VerticalsPromiseTimeline() {
       <Container>
         <div className="text-center">
           <h2 className="text-2xl font-semibold leading-tight text-primary-dark xs:text-3xl sm:text-4xl">
-            Care that connects. Outcomes that matter.
+            Care that connects. Clearer next steps.
           </h2>
           <p className="mx-auto mt-3 max-w-[46rem] text-sm leading-7 text-text-secondary">
             Our four verticals work together across every stage of your care journey.

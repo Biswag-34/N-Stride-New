@@ -4,6 +4,7 @@ import { ArrowRight, HeartPulse, ShieldCheck, Stethoscope, UserRoundCheck } from
 import type { Vertical } from "@/data/verticals";
 
 import { Button } from "@/components/ui/Button";
+import { leadCaptureHref } from "@/data/leadCapture";
 import {
   WoundAsset,
   WoundBackgroundImage,
@@ -21,7 +22,7 @@ const proof = [
   { icon: Stethoscope, label: "Evidence-aligned care" },
   { icon: UserRoundCheck, label: "Personalized support" },
   { icon: HeartPulse, label: "Guided pathways" },
-  { icon: ShieldCheck, label: "Better outcomes" },
+  { icon: ShieldCheck, label: "Structured follow-up" },
 ];
 
 export function WoundCareHero({ vertical }: WoundCareHeroProps) {
@@ -69,23 +70,20 @@ export function WoundCareHero({ vertical }: WoundCareHeroProps) {
         <div className="grid items-start gap-7 lg:min-h-[445px] lg:grid-cols-[0.52fr_0.48fr] lg:gap-9">
           <WoundReveal>
             <h1 className="max-w-[42rem] font-heading text-[clamp(1.7rem,5.4vw,3.62rem)] font-bold leading-[1.04] text-primary-dark">
-              <span className="block md:whitespace-nowrap">N-Stride NPWT VAC &</span>
-              {" "}
-              <span className="block md:whitespace-nowrap">Wound Care</span>
+              <span className="block">Clinician-guided support for complex foot and lower-limb wounds.</span>
             </h1>
             <p className="mt-5 max-w-[36rem] font-heading text-lg font-semibold leading-7 text-[#b86b00] sm:text-xl sm:leading-8">
-              Advanced wound-care support for complex foot and lower-limb needs.
+              Wound assessment, dressing planning, pressure off-loading coordination and follow-up.
             </p>
             <p className="mt-4 max-w-[35rem] text-sm leading-7 text-text-secondary sm:text-base sm:leading-8">
-              N-Stride NPWT VAC & Wound Care brings structured support, modern dressing strategy and clinical guidance
-              under one ecosystem.
+              N-Stride includes NPWT support when clinically appropriate, with care routed through qualified supervision.
             </p>
             <div className="mt-7 flex flex-col gap-3 xs:flex-row xs:flex-wrap">
               <Button className="w-full rounded-[0.45rem] px-5 xs:w-auto xs:px-7" href={vertical.cta.primary.href}>
                 Request Wound Care Support
                 <ArrowRight aria-hidden="true" className="h-4 w-4" />
               </Button>
-              <Button className="w-full rounded-[0.45rem] px-5 xs:w-auto xs:px-7" href="/contact?type=step-ahead" variant="outline">
+              <Button className="w-full rounded-[0.45rem] px-5 xs:w-auto xs:px-7" href={leadCaptureHref({ cta: "discuss_stepahead_partnership", source: "/verticals/wound-care", type: "step-ahead" })} variant="outline">
                 Partner with Step-Ahead
               </Button>
             </div>

@@ -1,25 +1,27 @@
 "use client";
 
-import { ArrowRight, BadgeCheck, Building2, CalendarCheck, ExternalLink, Footprints, HeartPulse, Network, ShieldCheck, UserRound } from "lucide-react";
+import { ArrowRight, BadgeCheck, Building2, CalendarCheck, ExternalLink, Footprints, HeartPulse, Network, PackageCheck, ShieldCheck, UserRound } from "lucide-react";
 import { motion, useReducedMotion } from "framer-motion";
 
 import { Button } from "@/components/ui/Button";
 import { Container } from "@/components/ui/Container";
 import { brand } from "@/data/brand";
-import { ctas } from "@/data/ctas";
+import { leadCaptureHref } from "@/data/leadCapture";
 import { fadeUp, staggerContainer, staggerItem } from "@/lib/motion";
 
 const trustItems = [
-  { title: "Clinical-led", subtitle: "Expert care", icon: ShieldCheck },
+  { title: "Scientifically guided", subtitle: "Care team", icon: ShieldCheck },
   { title: "Connected", subtitle: "One ecosystem", icon: Network },
-  { title: "Outcome-first", subtitle: "Clearer care", icon: BadgeCheck },
+  { title: "Outcome-focused", subtitle: "Clearer steps", icon: BadgeCheck },
 ];
 
 const mobileHelpItems = [
-  { label: "Foot pain", href: "/contact?type=foot-checkup", icon: Footprints },
-  { label: "Footwear", href: "/verticals/kinetics", icon: ShieldCheck },
-  { label: "Wound care", href: "/contact?type=wound-care", icon: HeartPulse },
-  { label: "Bio-Fit", href: "/verticals/bio-fit", icon: UserRound },
+  { label: "My foot hurts", text: "Checkup", href: "/contact?type=foot-checkup&source=/&cta=home-intent-foot-pain", icon: Footprints },
+  { label: "I need footwear", text: "Product guidance", href: "/contact?type=product-guidance&source=/&cta=home-intent-footwear", icon: ShieldCheck },
+  { label: "I have a wound", text: "Wound support", href: "/contact?type=wound-care&source=/&cta=home-intent-wound", icon: HeartPulse },
+  { label: "Bio-Fit help", text: "Prosthetic or orthotic", href: "/contact?type=bio-fit&source=/&cta=home-intent-biofit", icon: UserRound },
+  { label: "Clinic partner", text: "Choose a program", href: leadCaptureHref({ cta: "discuss_stepahead_partnership", source: "/", type: "step-ahead" }), icon: Building2 },
+  { label: "Order help", text: "After-sales support", href: "/contact?type=order-after-sales&source=/&cta=home-intent-order", icon: PackageCheck },
 ];
 
 export function HomeHero() {
@@ -35,17 +37,17 @@ export function HomeHero() {
           <div className="relative z-10 max-w-[18.5rem] pt-3">
             <p className="font-heading text-[0.68rem] font-extrabold uppercase tracking-[0.16em] text-primary">Connected care</p>
             <h1 className="mt-3 font-heading text-[2.35rem] font-extrabold leading-[1.03] text-primary-dark">
-              Complete care. Clearer steps.
+              Find the right next step.
             </h1>
             <p className="mt-3 text-[0.9rem] font-medium leading-6 text-[#36536a]">
-              Foot and lower-limb care with the right next step, from checkup to support.
+              Connected foot and lower-limb care, from checkup to support.
             </p>
             <div className="mt-5 grid gap-2">
-              <Button className="nstride-mobile-action w-full rounded-[0.7rem]" href={ctas.primary.href}>
+              <Button className="nstride-mobile-action w-full rounded-[0.7rem]" href={leadCaptureHref({ cta: "book_consultation", source: "/", type: "general" })}>
                 I need care
                 <ArrowRight aria-hidden="true" className="h-4 w-4" />
               </Button>
-              <Button className="nstride-mobile-action w-full border-primary/45 bg-white/88 text-primary" href="/contact?type=step-ahead" variant="outline">
+              <Button className="nstride-mobile-action w-full border-primary/45 bg-white/88 text-primary" href={leadCaptureHref({ cta: "discuss_stepahead_partnership", source: "/", type: "step-ahead" })} variant="outline">
                 <Building2 aria-hidden="true" className="h-4 w-4" />
                 For clinics
               </Button>
@@ -69,16 +71,19 @@ export function HomeHero() {
           </div>
 
           <div className="mt-5">
-            <h2 className="font-heading text-lg font-extrabold text-primary-dark">What do you need help with?</h2>
+            <h2 className="font-heading text-lg font-extrabold text-primary-dark">Find my next step</h2>
             <div className="nstride-mobile-chip-grid mt-3">
               {mobileHelpItems.map((item) => {
                 const Icon = item.icon;
                 return (
-                  <a className="nstride-mobile-card flex min-h-[4.3rem] items-center gap-2.5 px-3 py-2.5 text-xs font-extrabold text-primary-dark" href={item.href} key={item.label}>
+                  <a className="nstride-mobile-card grid min-h-[4.6rem] grid-cols-[2.25rem_1fr_auto] items-center gap-2.5 px-3 py-2.5 text-xs font-extrabold text-primary-dark" href={item.href} key={item.label}>
                     <span className="grid h-9 w-9 shrink-0 place-items-center rounded-[0.7rem] bg-[#eef8ff] text-primary">
                       <Icon aria-hidden="true" className="h-[1.125rem] w-[1.125rem]" />
                     </span>
-                    <span>{item.label}</span>
+                    <span>
+                      <span className="block">{item.label}</span>
+                      <span className="mt-0.5 block text-[0.66rem] font-bold leading-tight text-text-secondary">{item.text}</span>
+                    </span>
                     <ArrowRight aria-hidden="true" className="ml-auto h-3.5 w-3.5 text-primary" />
                   </a>
                 );
@@ -115,18 +120,17 @@ export function HomeHero() {
               className="relative max-w-[34rem] text-[clamp(2.05rem,9vw,3.35rem)] font-semibold leading-[1.03] text-white [text-shadow:0_2px_18px_rgba(0,0,0,0.38)] sm:text-5xl md:text-primary-dark md:[text-shadow:0_2px_22px_rgba(255,255,255,0.72)]"
               variants={fadeUp}
             >
-              Complete care. Clearer steps.
+              Find the right next step for your feet and mobility.
             </motion.h1>
             <motion.p className="relative mt-5 max-w-[34rem] text-sm leading-7 text-white/90 [text-shadow:0_2px_14px_rgba(0,0,0,0.32)] sm:text-base sm:leading-8 md:text-[#375368] md:[text-shadow:0_1px_16px_rgba(255,255,255,0.76)]" variants={fadeUp}>
-              N-Stride connects diagnostics, clinical expertise, advanced products and rehabilitation support across foot health,
-              lower-limb care, wound care and mobility restoration.
+              N-Stride connects foot assessment, therapeutic footwear, wound-care support, orthotics, prosthetics and rehabilitation guidance through one coordinated care ecosystem.
             </motion.p>
             <motion.div className="relative mt-7 flex flex-col gap-3 sm:flex-row sm:flex-wrap" variants={fadeUp}>
-              <Button className="w-full rounded-[0.45rem] px-5 sm:w-auto sm:px-6" href={ctas.primary.href}>
+              <Button className="w-full rounded-[0.45rem] px-5 sm:w-auto sm:px-6" href={leadCaptureHref({ cta: "book_consultation", source: "/", type: "general" })}>
                 Book Consultation
                 <ArrowRight aria-hidden="true" className="h-4 w-4" />
               </Button>
-              <Button className="w-full rounded-[0.45rem] border-primary/30 bg-white/78 px-5 sm:w-auto sm:px-6" href="/contact?type=general" variant="outline">
+              <Button className="w-full rounded-[0.45rem] border-primary/30 bg-white/78 px-5 sm:w-auto sm:px-6" href="/verticals" variant="outline">
                 Explore Our Ecosystem
                 <ExternalLink aria-hidden="true" className="h-4 w-4" />
               </Button>

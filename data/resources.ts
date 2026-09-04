@@ -1,6 +1,18 @@
 import type { Resource } from "@/data/types";
 
-export const resources = [
+export const resourceReviewNotice =
+  "N-Stride resources are being prepared for clinical review with author, reviewer, publication date, review date, references, disclaimer and relevant CTA details before publication.";
+
+export const resourceReviewTopics = [
+  "Diabetic foot warning signs",
+  "Off-loading basics",
+  "Therapeutic footwear decisions",
+  "Foot checkup expectations",
+  "NPWT VAC dressing basics",
+  "Prosthetics and orthotics education",
+] as const;
+
+export const draftResources = [
   {
     id: "diabetic-foot-warning-signs",
     title: "Diabetic Foot Warning Signs",
@@ -56,3 +68,5 @@ export const resources = [
     href: "/resources/prosthetics-orthotics-explained",
   },
 ] satisfies Resource[];
+
+export const resources = [] satisfies Resource[];

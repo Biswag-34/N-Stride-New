@@ -252,6 +252,20 @@ li {
     padding-bottom: 4.75rem;
   }
 
+  #enquiry-form {
+    padding-bottom: calc(6rem + env(safe-area-inset-bottom)) !important;
+  }
+
+  .mobile-action-bar {
+    transition: transform 180ms ease, opacity 180ms ease;
+  }
+
+  body:has(input:focus, textarea:focus, select:focus) .mobile-action-bar {
+    transform: translateY(115%);
+    opacity: 0;
+    pointer-events: none;
+  }
+
   input,
   select,
   textarea {

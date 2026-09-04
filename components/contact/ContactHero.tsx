@@ -11,6 +11,8 @@ const nodes = [
   { label: "Wound Care", mobileLabel: "Wound" },
   { label: "Bio-Fit", mobileLabel: "Bio-Fit" },
   { label: "Step-Ahead", mobileLabel: "Partner" },
+  { label: "FitRx", mobileLabel: "FitRx" },
+  { label: "Order Support", mobileLabel: "Support" },
   { label: "General Enquiry", mobileLabel: "General" },
 ];
 
@@ -38,7 +40,7 @@ export function ContactHero() {
                 Start Enquiry
                 <ArrowRight aria-hidden="true" className="h-4 w-4" />
               </Button>
-              <Button className="hidden w-full xs:w-auto md:inline-flex" href={`tel:${brand.contact.phone}`} size="lg" variant="outline">
+              <Button className="hidden w-full xs:w-auto md:inline-flex" href={`tel:${brand.contact.phoneHref}`} size="lg" variant="outline">
                 Call N-Stride
               </Button>
               <Button className="hidden w-full xs:w-auto md:inline-flex" external href={brand.ecommerceUrl} size="lg" variant="ghost">
@@ -64,20 +66,22 @@ export function ContactHero() {
 
           <div className="relative mx-auto hidden h-[18rem] w-full max-w-[32rem] overflow-hidden rounded-[1.25rem] border border-border-soft bg-white/90 shadow-[0_18px_52px_rgba(16,42,67,0.07)] xs:h-[19rem] md:block">
             <svg className="absolute inset-0 h-full w-full" viewBox="0 0 560 352" aria-hidden="true">
-              <path d="M280 176 L112 80 M280 176 L280 58 M280 176 L448 80 M280 176 L112 272 M280 176 L280 294 M280 176 L448 272" fill="none" stroke="#C9E6F8" strokeLinecap="round" strokeWidth="3" />
-              <path d="M280 176 L112 80 M280 176 L280 58 M280 176 L448 80 M280 176 L112 272 M280 176 L280 294 M280 176 L448 272" fill="none" stroke="#1479C9" strokeLinecap="round" strokeOpacity="0.35" strokeWidth="1.5" />
+              <path d="M280 176 L92 76 M280 176 L280 54 M280 176 L468 76 M280 176 L92 276 M280 176 L280 298 M280 176 L468 276 M280 176 L92 176 M280 176 L468 176" fill="none" stroke="#C9E6F8" strokeLinecap="round" strokeWidth="3" />
+              <path d="M280 176 L92 76 M280 176 L280 54 M280 176 L468 76 M280 176 L92 276 M280 176 L280 298 M280 176 L468 276 M280 176 L92 176 M280 176 L468 176" fill="none" stroke="#1479C9" strokeLinecap="round" strokeOpacity="0.35" strokeWidth="1.5" />
             </svg>
             <div className="absolute left-1/2 top-1/2 flex h-32 w-32 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full border border-primary/20 bg-white p-4 text-center font-heading text-lg font-semibold text-primary-dark shadow-card">
               N-Stride Support
             </div>
             {nodes.map((node, index) => {
               const positions = [
-                "left-3 top-12 xs:left-5 sm:left-8",
+                "left-3 top-10 xs:left-5 sm:left-6",
                 "left-1/2 top-6 -translate-x-1/2 xs:top-8",
-                "right-3 top-12 xs:right-5 sm:right-8",
-                "left-3 bottom-12 xs:left-5 sm:left-8",
+                "right-3 top-10 xs:right-5 sm:right-6",
+                "left-3 bottom-10 xs:left-5 sm:left-6",
                 "left-1/2 bottom-6 -translate-x-1/2 xs:bottom-8",
-                "right-3 bottom-12 xs:right-5 sm:right-8",
+                "right-3 bottom-10 xs:right-5 sm:right-6",
+                "left-3 top-1/2 -translate-y-1/2 xs:left-5 sm:left-6",
+                "right-3 top-1/2 -translate-y-1/2 xs:right-5 sm:right-6",
               ];
 
               return (
