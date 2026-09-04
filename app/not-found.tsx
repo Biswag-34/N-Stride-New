@@ -1,5 +1,4 @@
 import { ArrowRight, Home, MessageCircle, Newspaper } from "lucide-react";
-import Link from "next/link";
 
 import { Button } from "@/components/ui/Button";
 import { Container } from "@/components/ui/Container";

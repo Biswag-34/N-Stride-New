@@ -44,7 +44,7 @@ export function Header() {
   return (
     <>
       <header className="sticky top-0 z-50 border-b border-white/55 bg-white/66 shadow-[0_18px_48px_rgba(16,42,67,0.12),inset_0_1px_0_rgba(255,255,255,0.72)] backdrop-blur-2xl backdrop-saturate-150 before:pointer-events-none before:absolute before:inset-0 before:bg-[linear-gradient(90deg,rgba(255,255,255,0.72),rgba(255,255,255,0.36)_48%,rgba(221,241,255,0.54))] before:content-['']">
-      <div className="relative z-10 mx-auto flex h-14 max-w-container items-center justify-between gap-3 px-4 xs:px-5 sm:px-6 lg:px-8">
+      <div className="relative z-10 mx-auto grid h-14 max-w-container grid-cols-[auto_1fr_auto] items-center gap-3 px-4 xs:px-5 sm:px-6 lg:px-8">
         <Link
           aria-label={`${SITE_NAME} home`}
           className="flex min-h-11 min-w-0 items-center gap-3 rounded-md focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-primary/25"
@@ -63,7 +63,7 @@ export function Header() {
           </span>
         </Link>
 
-        <nav aria-label="Primary navigation" className="hidden items-center gap-1 lg:flex" data-desktop-header-nav="true">
+        <nav aria-label="Primary navigation" className="hidden min-w-0 items-center justify-center gap-1 lg:flex" data-desktop-header-nav="true">
           {navigationLinks.map((item) => {
             const active = item.href === "/" ? pathname === "/" : pathname.startsWith(item.href);
             const dropdownOpen = activeDropdown === item.href;
@@ -151,7 +151,7 @@ export function Header() {
           })}
         </nav>
 
-        <div className="hidden items-center gap-3 lg:flex" data-desktop-header-actions="true">
+        <div className="hidden items-center justify-end gap-3 lg:flex" data-desktop-header-actions="true">
           <Button className={cn("min-h-9 rounded-[0.45rem] px-4 text-xs", bioFitPage && "bg-[#7357d8] hover:bg-[#5a42bd]")} href="/contact" size="md">
             Book Consultation
           </Button>
@@ -166,7 +166,7 @@ export function Header() {
           aria-controls="mobile-navigation-drawer"
           aria-label={menuOpen ? "Close menu" : "Open menu"}
           className={cn(
-            "relative z-[70] inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-md border border-[#c5e2f4] bg-white text-primary-dark shadow-[0_12px_30px_rgba(16,42,67,0.18)] backdrop-blur-xl transition hover:bg-white/90 lg:hidden",
+            "relative z-[70] col-start-3 inline-flex h-11 w-11 shrink-0 items-center justify-center justify-self-end rounded-md border border-[#c5e2f4] bg-white text-primary-dark shadow-[0_12px_30px_rgba(16,42,67,0.18)] backdrop-blur-xl transition hover:bg-white/90 lg:hidden",
           )}
           data-mobile-menu-button="true"
           onClick={() => setMenuOpen((current) => !current)}

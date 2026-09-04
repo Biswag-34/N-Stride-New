@@ -29,10 +29,10 @@ export function KineticsHero({ vertical }: KineticsHeroProps) {
         <div className="relative z-10 max-w-[18rem]">
           <p className="font-heading text-[0.68rem] font-extrabold uppercase tracking-[0.16em] text-[#009b92]">Kinetics</p>
           <h1 className="mt-3 font-heading text-[2rem] font-extrabold leading-[1.06] text-primary-dark">
-            Move with greater confidence.
+            Therapeutic footwear fitted for protection and everyday comfort.
           </h1>
           <p className="mt-3 text-[0.88rem] font-medium leading-6 text-[#36536a]">
-            Therapeutic footwear and fit support for protected everyday movement.
+            Footwear, insoles, socks and accessories selected around foot shape, pressure needs, activity and clinical guidance.
           </p>
           <Button className="nstride-mobile-action mt-5 w-full bg-[#009b92] hover:bg-[#087a74]" href={vertical.cta.primary.href}>
             Book an assessment
@@ -67,11 +67,10 @@ export function KineticsHero({ vertical }: KineticsHeroProps) {
             className="max-w-[28rem] font-heading text-[clamp(2rem,6vw,3.45rem)] font-bold leading-[1.04] text-primary-dark lg:leading-[1.02]"
             variants={fadeUp}
           >
-            <span className="block">Therapeutic footwear for safer, more comfortable movement.</span>
+            <span className="block">Therapeutic footwear fitted for protection and everyday comfort.</span>
           </motion.h1>
           <motion.p className="mt-5 max-w-[30rem] text-sm leading-7 text-text-secondary sm:text-base" variants={fadeUp}>
-            N-Stride Kinetics brings therapeutic footwear and fit-focused design together for protection,
-            comfort and confidence in every step.
+            Footwear, insoles, socks and accessories selected around foot shape, pressure needs, activity and clinical guidance.
           </motion.p>
           <motion.div className="mt-6 flex flex-col gap-3 xs:flex-row xs:flex-wrap" variants={fadeUp}>
             <Button className="min-h-12 w-full rounded-[0.45rem] px-5 text-xs xs:w-auto xs:px-6 md:min-h-11 lg:min-h-10" href={vertical.cta.primary.href}>
@@ -88,9 +87,9 @@ export function KineticsHero({ vertical }: KineticsHeroProps) {
             </Button>
           </motion.div>
           <motion.div className="mt-8 grid gap-4 md:grid-cols-3 lg:mt-10" variants={fadeUp}>
-            <IconText icon={<GiRunningShoe className="h-5 w-5" />} text="movement" title="Built for everyday" />
-            <IconText icon={<HeartPulse className="h-5 w-5" />} text="fit & comfort" title="Clinically guided" />
-            <IconText icon={<ShieldCheck className="h-5 w-5" />} text="reviewed for fit" title="Clinician guided" />
+            <IconText icon={<GiRunningShoe className="h-5 w-5" />} text="Footwear for regular use" title="Everyday protection" />
+            <IconText icon={<HeartPulse className="h-5 w-5" />} text="Matched to foot and activity needs" title="Fit-led selection" />
+            <IconText icon={<ShieldCheck className="h-5 w-5" />} text="Insoles and footwear when indicated" title="Pressure-support options" />
           </motion.div>
         </motion.div>
 
@@ -124,7 +123,7 @@ export function KineticsHero({ vertical }: KineticsHeroProps) {
               <div className="absolute -left-10 bottom-0 h-36 w-[78%] rounded-full bg-[#dff1ff]/62 blur-3xl" />
               <div className="absolute bottom-[7%] right-[14%] z-20 flex items-center gap-2 rounded-full border border-white/82 bg-white/46 px-4 py-2 text-xs font-bold text-primary-dark shadow-[0_14px_34px_rgba(7,59,102,0.12)] backdrop-blur-md">
                 <span className="h-2 w-2 rounded-full bg-primary" />
-                Fit reviewed for comfort
+                Fit checked for comfort
               </div>
               <svg
                 aria-hidden="true"

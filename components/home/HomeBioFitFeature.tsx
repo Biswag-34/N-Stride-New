@@ -34,10 +34,10 @@ const capabilityCards = [
 
 export function HomeBioFitFeature() {
   return (
-    <section className="bg-white py-8 md:py-6">
+    <section className="bg-[linear-gradient(135deg,#ffffff_0%,#f7f4ff_46%,#eefaff_100%)] py-8 md:py-6">
       <Container>
         <motion.div
-          className="relative overflow-hidden rounded-[1.35rem] border border-[#ddd6fe] bg-[linear-gradient(135deg,#ffffff,#fbf8ff_48%,#f0fcff)] p-4 shadow-[0_24px_70px_rgba(90,103,216,0.1)] sm:p-6 md:p-5 lg:p-6"
+          className="relative overflow-hidden rounded-[1.35rem] border border-[#d8d0fa] bg-[linear-gradient(135deg,#ffffff,#fbf8ff_48%,#f0fcff)] p-4 shadow-[0_24px_70px_rgba(90,103,216,0.1)] sm:p-6 md:p-5 lg:p-6"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.2 }}
@@ -48,15 +48,11 @@ export function HomeBioFitFeature() {
 
           <div className="relative grid gap-7 md:gap-5 lg:grid-cols-[0.52fr_0.48fr] lg:items-center">
             <motion.div variants={staggerItem}>
-              <p className="inline-flex rounded-full bg-white/82 px-3 py-1 text-[0.64rem] font-extrabold uppercase tracking-[0.2em] text-accent-indigo ring-1 ring-[#ddd6fe]">
-                {bioFit.name}
-              </p>
-              <h2 className="mt-4 max-w-[35rem] text-3xl font-semibold leading-tight text-primary-dark sm:text-4xl md:text-[2rem] lg:text-3xl">
-                Bio-Fit: mobility restoration built around real patient needs.
+              <h2 className="max-w-[35rem] text-3xl font-semibold leading-tight text-primary-dark sm:text-4xl md:text-[2rem] lg:text-3xl">
+                Bio-Fit: personalised solutions for mobility and restoration.
               </h2>
               <p className="mt-4 max-w-[39rem] text-sm leading-7 text-text-secondary md:max-w-[34rem] md:leading-6">
-                {bioFit.shortDescription}
-                <span className="md:hidden"> The pathway connects assessment, fitting, adaptation guidance and rehabilitation support so every recommendation has a clear clinical purpose.</span>
+                Prosthetics, orthotics, mobility supports and silicone restoration planned around each person&apos;s fit, function and daily needs.
               </p>
 
               <div className="mt-5 grid grid-cols-2 gap-2 md:grid-cols-3 md:gap-2">
@@ -77,7 +73,7 @@ export function HomeBioFitFeature() {
 
               <div className="mt-5 grid gap-2 sm:grid-cols-2 md:grid-cols-4">
                 {bioFit.proofPoints.slice(0, 4).map((point) => (
-                  <div className="flex items-start gap-2 rounded-[0.8rem] bg-white/78 px-3 py-3 text-xs font-bold leading-5 text-primary-dark ring-1 ring-[#e2dcff] md:px-2.5 md:py-2.5 md:leading-4" key={point}>
+                  <div className="flex items-start gap-2 rounded-[0.8rem] bg-white/82 px-3 py-3 text-xs font-bold leading-5 text-primary-dark ring-1 ring-[#ded7ff] md:px-2.5 md:py-2.5 md:leading-4" key={point}>
                     <CheckCircle2 aria-hidden="true" className="mt-0.5 h-4 w-4 shrink-0 text-accent-indigo" />
                     {point}
                   </div>

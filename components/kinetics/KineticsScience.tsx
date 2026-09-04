@@ -33,13 +33,10 @@ export function KineticsScience() {
         <div className="grid items-center gap-10 lg:grid-cols-[0.3fr_0.55fr_0.15fr]">
           <MotionReveal>
             <h2 className="font-heading text-3xl font-bold leading-tight text-primary-dark md:text-4xl">
-              Science in every stitch.
-              <br />
-              Comfort in every step.
+              Designed around fit, pressure and protection.
             </h2>
             <p className="mt-5 text-sm leading-7 text-text-secondary">
-              We combine clinical insight with advanced materials to deliver footwear that supports natural movement
-              and long-term well-being.
+              Supportive lasts, skin-friendly materials, cushioning, stable outsoles and removable insoles work together for more comfortable movement.
             </p>
             <ul className="mt-5 space-y-3">
               {bullets.map((item) => (

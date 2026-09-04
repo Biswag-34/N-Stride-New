@@ -21,7 +21,6 @@ import {
 } from "lucide-react";
 
 import { Button } from "@/components/ui/Button";
-import { brand } from "@/data/brand";
 import { ctas } from "@/data/ctas";
 
 import { AboutContainer, AboutIconBubble, AboutReveal, AboutSection, aboutEase } from "./AboutPrimitives";
@@ -29,39 +28,39 @@ import { AboutContainer, AboutIconBubble, AboutReveal, AboutSection, aboutEase }
 const identityTabs = [
   {
     label: "Who We Are",
-    title: "A connected care ecosystem for foot and lower-limb health.",
-    text: "N-Stride brings assessment, therapeutic footwear, wound-care support, prosthetics, orthotics and consultation pathways into one coordinated journey.",
+    title: "A connected foot and lower-limb care ecosystem.",
+    text: "N-Stride brings assessment, therapeutic footwear, wound-care support, prosthetics, orthotics and professional guidance into a coordinated pathway.",
     icon: HeartHandshake,
     image: "/about/identity-who-we-are.png",
     imageAlt: "N-Stride care team reviewing footwear and lower-limb care planning",
-    points: ["Scientifically guided care thinking", "Integrated verticals", "Patient-first guidance"],
+    points: ["Assessment-led guidance", "Four connected verticals", "Patient-first pathways"],
   },
   {
     label: "What We Are",
-    title: "More than a product brand. More than a single clinic service.",
-    text: "We are a practical care platform built around assessment, protection, support, restoration and long-term follow-up.",
+    title: "A practical platform linking assessment, protection and mobility support.",
+    text: "We combine care services, therapeutic products and partner programs so the next step can move from understanding a need to fitting, support and follow-up.",
     icon: Layers3,
     image: "/about/identity-what-we-are.png",
     imageAlt: "N-Stride clinical care ecosystem with diagnostics, footwear and wound care support",
-    points: ["Diagnostics and insight", "Therapeutic product pathways", "Recovery and restoration support"],
+    points: ["Assess and understand", "Protect and support", "Restore and follow up"],
   },
   {
     label: "Why We Are",
-    title: "Because fragmented care makes every step harder.",
-    text: "People often move between disconnected providers, unclear recommendations and generic products. N-Stride makes the next step clearer.",
+    title: "To replace fragmented choices with a clearer care pathway.",
+    text: "Foot and lower-limb needs often cross products, services and providers. N-Stride helps connect those decisions so patients and partners know where to go next.",
     icon: Sparkles,
     image: "/about/identity-why-we-are.png",
     imageAlt: "N-Stride clinician explaining foot pressure assessment to a patient",
-    points: ["Earlier risk awareness", "Clearer care direction", "Better continuity"],
+    points: ["Earlier risk direction", "Fewer disconnected handoffs", "Clearer ongoing support"],
   },
   {
     label: "For Whom",
-    title: "For patients, families, clinicians and partners building better mobility.",
-    text: "From diabetic foot risk to everyday pain, wound support and mobility restoration, the ecosystem is designed for real-world care needs.",
+    title: "For patients, caregivers, clinicians and care partners.",
+    text: "The ecosystem supports people seeking foot protection, wound-care guidance or mobility solutions, as well as clinics and partners building structured care services.",
     icon: UsersRound,
     image: "/about/identity-for-whom.png",
     imageAlt: "N-Stride consultation with patients and family members",
-    points: ["Patients and caregivers", "Doctors and clinics", "Care partners and entrepreneurs"],
+    points: ["Patients and caregivers", "Doctors and clinics", "Care and business partners"],
   },
 ];
 
@@ -83,10 +82,10 @@ const partners = [
 ];
 
 const careSignals = [
-  { label: "Foot checkups", icon: ScanLine },
+  { label: "Assessment & diagnostics", icon: ScanLine },
   { label: "Therapeutic footwear", icon: Footprints },
-  { label: "Wound care", icon: HeartPulse },
-  { label: "Clinical partners", icon: Hospital },
+  { label: "Wound-care support", icon: HeartPulse },
+  { label: "Mobility & restoration", icon: Hospital },
 ];
 
 function IdentitySection() {
@@ -102,10 +101,10 @@ function IdentitySection() {
         <AboutReveal className="relative grid gap-4 lg:grid-cols-[0.31fr_0.69fr] lg:items-stretch">
           <div className="relative rounded-[1rem] bg-white/86 p-3 shadow-[0_16px_42px_rgba(20,121,201,0.06)] ring-1 ring-[#d7ebfa] backdrop-blur md:p-4">
             <h2 className="font-heading text-[clamp(1.65rem,2.65vw,2.45rem)] font-bold leading-tight text-primary-dark">
-              The N-Stride identity, in four clear answers.
+              Four answers that define N-Stride.
             </h2>
             <p className="mt-3 hidden text-sm leading-6 text-text-secondary md:block">
-              The model is built to keep care connected, practical and easier to understand at every stage.
+              Who we are, what we offer, why we exist and who we serve—clearly explained.
             </p>
             <div className="mt-4 grid grid-cols-2 gap-2 md:mt-5 md:grid-cols-1">
               {identityTabs.map((tab, index) => (
@@ -184,10 +183,10 @@ function CertificateSection() {
       <AboutContainer>
         <AboutReveal className="mb-6 flex flex-col justify-between gap-3 md:flex-row md:items-end">
           <h2 className="max-w-[620px] font-heading text-[clamp(1.8rem,2.8vw,2.7rem)] font-bold leading-tight text-primary-dark">
-            Trust signals built into every care pathway.
+            What makes every N-Stride pathway dependable.
           </h2>
           <p className="max-w-[440px] text-sm leading-7 text-text-secondary">
-            Premium standards, clinical structure and continuity give patients and partners a more reliable way forward.
+            Clinically guided assessment, fit-focused products and coordinated follow-up support clearer decisions and more consistent care.
           </p>
         </AboutReveal>
         <div className="grid gap-4 md:grid-cols-3">
@@ -311,10 +310,10 @@ export function AboutPage() {
               <div className="max-w-[17.5rem]">
                 <p className="font-heading text-[0.68rem] font-extrabold uppercase tracking-[0.16em] text-primary">About N-Stride</p>
                 <h1 className="mt-3 font-heading text-[2rem] font-extrabold leading-[1.08] text-primary-dark">
-                  Connected care, built around every step.
+                  One connected ecosystem for foot and lower-limb care.
                 </h1>
                 <p className="mt-3 text-[0.86rem] font-medium leading-6 text-text-secondary">
-                  Clinicians, technology and care pathways working together for foot and lower-limb health.
+                  From assessment and therapeutic footwear to wound support, prosthetics and orthotics, N-Stride coordinates the right next step.
                 </p>
                 <Button className="nstride-mobile-action mt-5 w-full max-w-[16rem] rounded-[0.75rem]" href={ctas.primary.href} size="lg">
                   Talk to our team
@@ -344,11 +343,11 @@ export function AboutPage() {
         <AboutContainer className="relative z-10 grid items-center pb-12 pt-14 lg:min-h-[640px] lg:pb-16 lg:pt-16">
           <AboutReveal>
             <h1 className="max-w-[650px] font-heading text-[clamp(2.35rem,5.6vw,5rem)] font-bold leading-[1.02] text-primary-dark">
-              One ecosystem.
-              <br />
-              Complete mobility care.
+              One connected ecosystem for foot and lower-limb care.
             </h1>
-            <p className="mt-5 max-w-[570px] text-sm font-semibold leading-7 text-text-secondary sm:text-base sm:leading-8">{brand.shortIntro}</p>
+            <p className="mt-5 max-w-[570px] text-sm font-semibold leading-7 text-text-secondary sm:text-base sm:leading-8">
+              From assessment and therapeutic footwear to wound support, prosthetics and orthotics, N-Stride coordinates the right next step.
+            </p>
             <div className="mt-7 flex flex-col gap-3 xs:flex-row xs:flex-wrap">
               <Button className="w-full rounded-[0.5rem] px-7 text-sm xs:w-auto" href={ctas.primary.href} size="lg">
                 {ctas.primary.label}

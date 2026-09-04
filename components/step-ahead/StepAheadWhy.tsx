@@ -141,12 +141,10 @@ export function StepAheadWhy() {
         <div className="grid items-center gap-8 lg:grid-cols-[0.95fr_1.05fr]">
           <StepReveal>
             <h2 className="max-w-[620px] font-heading text-[clamp(1.85rem,3vw,3rem)] font-bold leading-[1.04] text-primary-dark">
-              Bringing structured diabetic foot care to more communities.
+              Bring structured diabetic foot care closer to patients.
             </h2>
             <p className="mt-5 max-w-[675px] text-[0.98rem] leading-8 text-text-secondary">
-              Most clinics want to deliver better diabetic foot care but face real barriers - setup decisions, high costs, lack of
-              training and limited time. Step-Ahead removes the guesswork and gives you a ready-to-execute framework for clinical
-              excellence and sustainable growth.
+              Many clinics lack dedicated tools, trained teams and standard workflows for diabetic foot care. Step-Ahead brings these essentials together so clinics can launch sooner and support patients closer to home.
             </p>
             <div className="mt-10 grid max-w-[650px] gap-5 md:grid-cols-3">
               {stats.map((stat) => {

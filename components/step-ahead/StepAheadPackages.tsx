@@ -52,11 +52,14 @@ export function StepAheadPackages() {
           <div>
             <p className="font-heading text-xs font-bold uppercase tracking-[0.18em] text-primary">Package design</p>
             <h2 className="mt-3 max-w-[34rem] font-heading text-[clamp(1.85rem,2.8vw,2.75rem)] font-bold leading-tight text-primary-dark">
-              Pick a clinic launch engine, not a loose bundle.
+              Choose the Step-Ahead setup that fits your clinic.
             </h2>
           </div>
           <p className="max-w-[43rem] text-sm leading-7 text-text-secondary lg:justify-self-end">
-            Each level is built around the same operating spine, then tuned by depth of equipment, training and support. Pricing is indicative; GST treatment, effective date, fulfilment process and final scope are confirmed during onboarding.
+            Essential and Advanced follow the same launch framework—technology, training, inventory, SOPs and support—with different levels of diagnostic depth and ongoing guidance.
+            <span className="mt-2 block text-xs leading-5 text-text-muted">
+              Pricing is indicative; GST treatment, effective date, fulfilment process and final scope are confirmed during onboarding.
+            </span>
           </p>
         </StepReveal>
 

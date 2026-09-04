@@ -102,6 +102,55 @@ li {
   overflow-wrap: anywhere;
 }
 
+.nstride-footer-summary {
+  max-width: 68ch;
+}
+
+main :is(h1, h2, h3) {
+  max-width: min(100%, 42ch);
+  overflow: visible;
+  text-wrap: balance;
+}
+
+main h1 {
+  font-size: clamp(1.8rem, 3.1vw, 2.8rem) !important;
+  line-height: 1.12 !important;
+}
+
+main h2 {
+  font-size: clamp(1.22rem, 1.75vw, 1.75rem) !important;
+  line-height: 1.18 !important;
+}
+
+main h3 {
+  font-size: clamp(0.95rem, 0.9vw, 1.08rem) !important;
+  line-height: 1.28 !important;
+}
+
+main :is(h1, h2, h3) + p {
+  max-width: 66ch;
+  font-size: clamp(0.95rem, 0.35vw + 0.88rem, 1.05rem);
+  line-height: 1.65 !important;
+}
+
+main :is(p, span)[class*="uppercase"][class*="tracking"]:has(+ :is(h1, h2, h3)) {
+  display: none !important;
+}
+
+main :is(p, span)[class*="uppercase"][class*="tracking"]:has(+ :is(h1, h2, h3)) + :is(h1, h2, h3) {
+  margin-top: 0 !important;
+}
+
+@media (min-width: 768px) and (max-width: 1199.98px) {
+  main :is(h1, h2) {
+    max-width: min(100%, 36ch);
+  }
+
+  main :is(h1, h2) + p {
+    max-width: 58ch;
+  }
+}
+
 ::selection {
   background: rgba(38, 182, 200, 0.22);
   color: var(--primary-dark);
@@ -169,21 +218,21 @@ li {
 
   main section h1 {
     max-width: 100%;
-    font-size: clamp(1.9rem, 8.1vw, 2.52rem) !important;
-    line-height: 1.03 !important;
+    font-size: clamp(1.38rem, 6.1vw, 1.78rem) !important;
+    line-height: 1.14 !important;
     overflow-wrap: break-word;
   }
 
   main section h2 {
     max-width: 100%;
-    font-size: clamp(1.42rem, 6.4vw, 1.95rem) !important;
-    line-height: 1.08 !important;
+    font-size: clamp(1.06rem, 4.55vw, 1.32rem) !important;
+    line-height: 1.2 !important;
     overflow-wrap: break-word;
   }
 
   main section h3 {
-    font-size: clamp(1.05rem, 5.4vw, 1.42rem) !important;
-    line-height: 1.16 !important;
+    font-size: clamp(0.9rem, 3.7vw, 1rem) !important;
+    line-height: 1.28 !important;
     overflow-wrap: break-word;
   }
 

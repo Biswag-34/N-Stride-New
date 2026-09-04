@@ -10,23 +10,23 @@ import { leadCaptureHref } from "@/data/leadCapture";
 import { staggerContainer, staggerItem } from "@/lib/motion";
 
 const fitRxSteps = [
-  { label: "Assess", text: "Screen needs and support requirements", icon: ClipboardCheck },
-  { label: "Configure", text: "Select the right insole category", icon: Settings2 },
-  { label: "Fit", text: "Pair with compatible N-Stride footwear", icon: Footprints },
+  { label: "Assess", text: "Identify foot profile, pressure priority, activity and support needs.", icon: ClipboardCheck },
+  { label: "Configure", text: "Select the appropriate wedge, arch, metatarsal, heel-raise or off-loading option.", icon: Settings2 },
+  { label: "Fit", text: "Pair the selected insole with compatible N-Stride footwear and check comfort.", icon: Footprints },
 ];
 
 const fitRxSystem = [
-  { label: "Clinical insole kit", icon: Boxes },
-  { label: "Partner training", icon: GraduationCap },
-  { label: "Recurring fulfilment", icon: Repeat2 },
+  { label: "Configurable insole kit", icon: Boxes },
+  { label: "Guided team onboarding", icon: GraduationCap },
+  { label: "Repeat supply support", icon: Repeat2 },
 ];
 
 export function HomeFitRxFeature() {
   return (
-    <section className="bg-white py-8">
+    <section className="bg-[linear-gradient(135deg,#ffffff_0%,#eefcff_45%,#eefbf7_100%)] py-8">
       <Container>
         <motion.div
-          className="relative overflow-hidden rounded-[1.35rem] border border-[#c9e6f8] bg-[linear-gradient(135deg,#f8fcff,#ffffff_52%,#eefbf7)] p-4 shadow-[0_24px_70px_rgba(20,121,201,0.08)] sm:p-6 lg:p-8"
+          className="relative overflow-hidden rounded-[1.35rem] border border-[#bfe9ed] bg-[linear-gradient(135deg,#f8feff,#ffffff_52%,#eefbf7)] p-4 shadow-[0_24px_70px_rgba(38,182,200,0.09)] sm:p-6 lg:p-8"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.22 }}
@@ -52,18 +52,18 @@ export function HomeFitRxFeature() {
 
             <motion.div className="order-1 lg:order-2" variants={staggerItem}>
               <h2 className="max-w-[35rem] text-3xl font-semibold leading-tight text-primary-dark sm:text-4xl">
-                FitRx: clinical footwear customization for partners.
+                A guided insole and footwear service for clinics.
               </h2>
               <p className="mt-4 max-w-[38rem] text-sm leading-7 text-text-secondary">
-                A partner-enabled system that combines a professional insole kit, compatible medical-grade footwear and a guided assessment workflow.
+                FitRx helps partners assess fit and pressure-support needs, select the appropriate N-Stride insole configuration, pair it with compatible therapeutic footwear and manage repeat fulfilment through one practical workflow.
               </p>
               <div className="mt-5 grid gap-2 md:mt-7 md:grid-cols-3 md:gap-3">
                 {fitRxSteps.map((item) => {
                   const Icon = item.icon;
 
                   return (
-                    <div className="flex items-center gap-3 rounded-[0.75rem] border border-[#d7ebfa] bg-white px-3 py-2.5 shadow-[0_12px_30px_rgba(20,121,201,0.06)] md:block md:rounded-[0.9rem] md:px-4 md:py-4" key={item.label}>
-                      <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-[0.6rem] bg-soft-sky text-primary md:h-10 md:w-10 md:rounded-[0.7rem]">
+                    <div className="flex items-center gap-3 rounded-[0.75rem] border border-[#cfeeed] bg-white/86 px-3 py-2.5 shadow-[0_12px_30px_rgba(38,182,200,0.07)] md:block md:rounded-[0.9rem] md:px-4 md:py-4" key={item.label}>
+                      <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-[0.6rem] bg-[#e7fbf8] text-[#009b92] md:h-10 md:w-10 md:rounded-[0.7rem]">
                         <Icon aria-hidden="true" className="h-4 w-4 md:h-5 md:w-5" />
                       </span>
                       <p className="font-heading text-sm font-bold text-primary-dark md:mt-4">{item.label}</p>
@@ -72,7 +72,7 @@ export function HomeFitRxFeature() {
                   );
                 })}
               </div>
-              <div className="mt-3 grid gap-2 rounded-[0.8rem] bg-[#073b66] p-2.5 md:mt-5 md:grid-cols-3 md:gap-3 md:rounded-[0.95rem] md:p-3">
+              <div className="mt-3 grid gap-2 rounded-[0.8rem] bg-[#075d61] p-2.5 md:mt-5 md:grid-cols-3 md:gap-3 md:rounded-[0.95rem] md:p-3">
                 {fitRxSystem.map((item) => {
                   const Icon = item.icon;
 
@@ -86,7 +86,7 @@ export function HomeFitRxFeature() {
               </div>
               <div className="mt-7 flex flex-col gap-3 xs:flex-row xs:flex-wrap">
                 <Button className="w-full rounded-[0.65rem] xs:w-auto" href={leadCaptureHref({ cta: "discuss_fitrx_partnership", source: "/", type: "fitrx" })}>
-                  Bring FitRx to Your Business
+                  Bring FitRx to Your Clinic
                   <ArrowRight aria-hidden="true" className="h-4 w-4" />
                 </Button>
                 <Button className="w-full rounded-[0.65rem] bg-white/86 xs:w-auto" href={leadCaptureHref({ cta: "discuss_fitrx_partnership", source: "/", type: "fitrx" })} variant="outline">

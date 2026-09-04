@@ -75,10 +75,10 @@ export default function FitRxPage() {
           <div className="relative z-10 max-w-[18.5rem]">
             <p className="font-heading text-[0.68rem] font-extrabold uppercase tracking-[0.16em] text-[#51d8cf]">FitRx</p>
             <h1 className="mt-3 font-heading text-[2rem] font-extrabold leading-[1.06] text-white">
-              Bring better-fit footwear to your business.
+              Build a guided insole and footwear service in your clinic.
             </h1>
             <p className="mt-3 text-[0.88rem] font-medium leading-6 text-white/88">
-              A consultation-led footwear and insole program for clinics and partners.
+              FitRx combines a configurable insole kit, compatible N-Stride footwear, partner training and repeat fulfilment in one practical workflow.
             </p>
           </div>
         </div>
@@ -149,10 +149,10 @@ export default function FitRxPage() {
           <div>
             <p className="font-heading text-xs font-bold uppercase tracking-[0.18em] text-primary">N-Stride FitRx</p>
             <h1 className="mt-4 max-w-[42rem] font-heading text-[clamp(2.45rem,5vw,5.35rem)] font-extrabold leading-[1.02] text-primary-dark">
-              A guided therapeutic-footwear and insole program for clinical partners.
+              Build a guided insole and footwear service in your clinic.
             </h1>
             <p className="mt-5 max-w-[39rem] text-base leading-8 text-text-secondary">
-              FitRx helps clinics assess patient needs, configure an appropriate insole and footwear pathway, and manage repeat fulfilment.
+              FitRx combines a configurable insole kit, compatible N-Stride footwear, partner training and repeat fulfilment in one practical workflow.
             </p>
             <div className="mt-7 flex flex-col gap-3 xs:flex-row xs:flex-wrap">
               <Button className="w-full rounded-[0.6rem] xs:w-auto" href={leadCaptureHref({ cta: "discuss_fitrx_partnership", source: "/fitrx", type: "fitrx" })} size="lg">

@@ -25,14 +25,14 @@ export function Footer() {
 
   return (
     <footer className="relative isolate overflow-hidden border-t border-[#c9e6f8] bg-[linear-gradient(180deg,#f8fcff_0%,#eef8ff_55%,#ffffff_100%)] text-text-primary">
-      <div aria-hidden="true" className="absolute -left-24 top-8 h-60 w-60 rounded-full bg-[#dff4ff]/70 blur-3xl" />
-      <div aria-hidden="true" className="absolute -right-28 bottom-0 h-72 w-72 rounded-full bg-[#dff7f4]/70 blur-3xl" />
+      <div aria-hidden="true" className="absolute -left-24 top-8 hidden h-60 w-60 rounded-full bg-[#dff4ff]/70 blur-3xl md:block" />
+      <div aria-hidden="true" className="absolute -right-28 bottom-0 hidden h-72 w-72 rounded-full bg-[#dff7f4]/70 blur-3xl md:block" />
       <div aria-hidden="true" className="absolute inset-x-0 top-0 h-1 bg-[linear-gradient(90deg,#073b66,#1479c9,#26b6c8,#5cb85c)]" />
 
-      <Container className="relative z-10 py-6 md:py-7">
-        <div className="flex flex-col gap-5 border-b border-[#c9e6f8] pb-5 md:flex-row md:items-center md:justify-between">
-          <div className="flex flex-col gap-3 md:flex-row md:items-center md:gap-5">
-            <Link className="relative flex h-11 w-40 shrink-0 items-center focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-primary/20" href="/">
+      <Container className="relative z-10 py-4 md:py-7">
+        <div className="flex flex-col gap-4 border-b border-[#c9e6f8] pb-4 md:flex-row md:items-center md:justify-between md:gap-5 md:pb-5">
+          <div className="flex flex-row items-center gap-3 md:gap-5">
+            <Link className="relative flex h-9 w-32 shrink-0 items-center focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-primary/20 md:h-11 md:w-40" href="/">
               <Image
                 alt={`${SITE_NAME} logo`}
                 className="object-contain object-left"
@@ -42,12 +42,12 @@ export function Footer() {
               />
             </Link>
             <div className="max-w-3xl md:border-l md:border-[#c9e6f8] md:pl-5">
-              <p className="font-heading text-lg font-extrabold leading-tight text-primary-dark">Connected foot and lower-limb care.</p>
-              <p className="mt-1 text-xs font-semibold leading-5 text-text-secondary md:max-w-2xl">{brand.summary}</p>
+              <p className="font-heading text-base font-extrabold leading-tight text-primary-dark md:text-lg">Connected foot and lower-limb care.</p>
+              <p className="nstride-footer-summary mt-1 text-xs font-semibold leading-5 text-text-secondary md:max-w-2xl">{brand.summary}</p>
             </div>
           </div>
 
-          <div className="flex flex-col gap-2 xs:flex-row">
+          <div className="grid grid-cols-2 gap-2 xs:flex xs:flex-row">
             <Link className="inline-flex min-h-10 items-center justify-center gap-2 rounded-[0.5rem] bg-primary px-4 text-xs font-extrabold text-white shadow-[0_12px_28px_rgba(20,121,201,0.18)] transition hover:-translate-y-0.5 hover:bg-primary-dark" href="/contact">
               Book Consultation
               <ArrowRight aria-hidden="true" className="h-4 w-4" />
@@ -59,7 +59,7 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="grid gap-6 py-5 md:grid-cols-[1.05fr_1.6fr_0.6fr] md:gap-7">
+        <div className="grid gap-4 py-4 md:grid-cols-[1.05fr_1.6fr_0.6fr] md:gap-7 md:py-5">
           <div className="space-y-3">
             <h2 className="text-[0.68rem] font-extrabold uppercase tracking-[0.18em] text-primary">Reach N-Stride</h2>
             <div className="grid gap-2 text-[0.8rem] leading-5 text-text-secondary">
@@ -78,7 +78,7 @@ export function Footer() {
             </div>
           </div>
 
-          <div className="grid gap-5 md:grid-cols-3 md:border-x md:border-[#c9e6f8] md:px-7">
+          <div className="grid grid-cols-2 gap-4 md:grid-cols-3 md:gap-5 md:border-x md:border-[#c9e6f8] md:px-7">
             {footerNavigation.map((group) => (
               <div key={group.title}>
                 <h2 className="text-[0.68rem] font-extrabold uppercase tracking-[0.18em] text-primary">{group.title}</h2>
@@ -141,7 +141,7 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="relative overflow-hidden rounded-full bg-[linear-gradient(90deg,#073b66,#1479c9,#26b6c8)] px-4 py-2 text-white shadow-[0_16px_38px_rgba(20,121,201,0.12)]">
+        <div className="relative overflow-hidden rounded-[0.85rem] bg-[linear-gradient(90deg,#073b66,#1479c9,#26b6c8)] px-4 py-2 text-white shadow-[0_16px_38px_rgba(20,121,201,0.12)] md:rounded-full">
           <div aria-hidden="true" className="absolute inset-y-0 left-1/2 w-24 -translate-x-1/2 bg-white/18 blur-2xl" />
           <div className="relative z-10 flex flex-col gap-1 text-[0.74rem] font-semibold xs:flex-row xs:items-center xs:justify-between">
             <p>&copy; 2026 Nayapada&apos;s N-Stride. All rights reserved.</p>

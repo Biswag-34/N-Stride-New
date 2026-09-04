@@ -37,10 +37,10 @@ export function HomeHero() {
           <div className="relative z-10 max-w-[18.5rem] pt-3">
             <p className="font-heading text-[0.68rem] font-extrabold uppercase tracking-[0.16em] text-primary">Connected care</p>
             <h1 className="mt-3 font-heading text-[2.35rem] font-extrabold leading-[1.03] text-primary-dark">
-              Find the right next step.
+              Connected care for healthier feet and better mobility.
             </h1>
             <p className="mt-3 text-[0.9rem] font-medium leading-6 text-[#36536a]">
-              Connected foot and lower-limb care, from checkup to support.
+              Nayapada&apos;s N-Stride brings foot assessment, therapeutic footwear, wound-care support, orthotics and prosthetics into one coordinated care pathway.
             </p>
             <div className="mt-5 grid gap-2">
               <Button className="nstride-mobile-action w-full rounded-[0.7rem]" href={leadCaptureHref({ cta: "book_consultation", source: "/", type: "general" })}>
@@ -120,10 +120,10 @@ export function HomeHero() {
               className="relative max-w-[34rem] text-[clamp(2.05rem,9vw,3.35rem)] font-semibold leading-[1.03] text-white [text-shadow:0_2px_18px_rgba(0,0,0,0.38)] sm:text-5xl md:text-primary-dark md:[text-shadow:0_2px_22px_rgba(255,255,255,0.72)]"
               variants={fadeUp}
             >
-              Find the right next step for your feet and mobility.
+              Connected care for healthier feet and better mobility.
             </motion.h1>
             <motion.p className="relative mt-5 max-w-[34rem] text-sm leading-7 text-white/90 [text-shadow:0_2px_14px_rgba(0,0,0,0.32)] sm:text-base sm:leading-8 md:text-[#375368] md:[text-shadow:0_1px_16px_rgba(255,255,255,0.76)]" variants={fadeUp}>
-              N-Stride connects foot assessment, therapeutic footwear, wound-care support, orthotics, prosthetics and rehabilitation guidance through one coordinated care ecosystem.
+              Nayapada&apos;s N-Stride brings foot assessment, therapeutic footwear, wound-care support, orthotics and prosthetics into one coordinated care pathway.
             </motion.p>
             <motion.div className="relative mt-7 flex flex-col gap-3 sm:flex-row sm:flex-wrap" variants={fadeUp}>
               <Button className="w-full rounded-[0.45rem] px-5 sm:w-auto sm:px-6" href={leadCaptureHref({ cta: "book_consultation", source: "/", type: "general" })}>

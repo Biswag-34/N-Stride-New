@@ -25,10 +25,10 @@ export function KineticsPathways() {
       <KineticsContainer>
         <MotionReveal>
           <h2 className="max-w-[37rem] font-heading text-3xl font-bold text-primary-dark">
-            Choose what moves you forward.
+            Choose the support your feet need.
           </h2>
           <p className="mt-2 max-w-[28rem] text-sm leading-7 text-text-secondary">
-            Purpose-built footwear and support solutions for every unique need.
+            Explore therapeutic footwear, custom options, socks, insoles and accessories for daily protection, pressure relief and comfort.
           </p>
         </MotionReveal>
 

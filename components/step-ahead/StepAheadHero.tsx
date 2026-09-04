@@ -10,23 +10,23 @@ import { StepContainer, StepIconBubble, StepReveal, StepSection } from "./StepAh
 const proofItems = [
   {
     icon: FileCheck2,
-    title: "Structured Care Model",
-    text: "Evidence-aligned pathways and protocols",
+    title: "Clinic-ready care model",
+    text: "Defined patient flow and SOPs",
   },
   {
     icon: RefreshCcw,
-    title: "Connected Support",
-    text: "From setup to scale - we are with you at every step",
+    title: "Tools + team training",
+    text: "Equipment and staff readiness together",
   },
   {
     icon: Handshake,
-    title: "Partner-First Mindset",
-    text: "Built for clinics, designed for impact and growth",
+    title: "Launch-to-review support",
+    text: "Guidance from setup through early operations",
   },
   {
     icon: BarChart3,
-    title: "Clearer Tracking",
-    text: "Documentation, follow-up and service visibility",
+    title: "Built for clinic growth",
+    text: "Patient education, follow-up and service visibility",
   },
 ];
 
@@ -39,10 +39,10 @@ export function StepAheadHero() {
         <div className="relative z-10 max-w-[18.5rem]">
           <p className="font-heading text-[0.68rem] font-extrabold uppercase tracking-[0.16em] text-[#73dcff]">Step-Ahead</p>
           <h1 className="mt-3 font-heading text-[2rem] font-extrabold leading-[1.06] text-white">
-            Launch a structured diabetic foot-care service.
+            Launch structured diabetic foot care in your clinic.
           </h1>
           <p className="mt-3 text-[0.88rem] font-medium leading-6 text-white/88">
-            Equipment, training, starter inventory and launch support in one configurable program.
+            A configurable clinic partnership combining diagnostics, equipment, team training, starter inventory, SOPs and launch support.
           </p>
         </div>
       </div>
@@ -75,10 +75,10 @@ export function StepAheadHero() {
       <StepContainer className="relative grid items-center gap-8 pb-12 pt-8 xs:pb-14 xs:pt-10 sm:gap-10 lg:min-h-[560px] lg:grid-cols-[0.95fr_1.05fr] lg:py-10">
         <StepReveal className="max-w-[690px]">
           <h1 className="max-w-[650px] font-heading text-[clamp(2rem,6.5vw,3.9rem)] font-bold leading-[1.04] text-primary-dark lg:leading-[1.02]">
-            <span className="block">Launch a structured diabetic foot-care service in your clinic.</span>
+            <span className="block">Launch structured diabetic foot care in your clinic.</span>
           </h1>
           <p className="mt-5 max-w-[610px] text-sm leading-7 text-text-secondary sm:text-[1rem] sm:leading-8">
-            A configurable partnership program combining equipment, training, starter inventory, operating procedures and launch support.
+            A configurable clinic partnership combining diagnostics, equipment, team training, starter inventory, SOPs and launch support.
           </p>
 
           <div className="mt-7 flex flex-col gap-3 xs:flex-row xs:flex-wrap sm:gap-4">
