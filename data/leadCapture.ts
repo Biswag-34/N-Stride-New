@@ -68,6 +68,12 @@ const copyByCta: Record<string, Partial<LeadCaptureCopy>> = {
     messagePlaceholder: "Order number if available, product name and the support you need.",
     submitLabel: "Request Order Support",
   },
+  report_broken_link: {
+    heading: "Report a broken link.",
+    messageLabel: "What link or page did not work?",
+    messagePlaceholder: "Share the page, button or link that sent you here.",
+    submitLabel: "Report Broken Link",
+  },
 };
 
 export function leadCaptureHref({ cta, source, type = "general" }: LeadHrefOptions = {}) {

@@ -1,6 +1,7 @@
 import type { FooterNavigationGroup, NavigationItem } from "@/data/types";
 
 import { brand } from "@/data/brand";
+import { leadCaptureHref } from "@/data/leadCapture";
 
 export const navigation = [
   { label: "Home", href: "/" },
@@ -38,7 +39,7 @@ export const footerNavigation = [
     links: [
       { label: "FitRx", href: "/fitrx" },
       { label: "Step-Ahead", href: "/step-ahead" },
-      { label: "Book Consultation", href: "/contact" },
+      { label: "Book Consultation", href: leadCaptureHref({ cta: "book_consultation", type: "general" }) },
     ],
   },
   {

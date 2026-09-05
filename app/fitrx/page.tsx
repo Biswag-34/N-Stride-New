@@ -1,6 +1,26 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import { ArrowRight, Boxes, CheckCircle2, ClipboardCheck, Footprints, GraduationCap, Link2, Repeat2, ScanLine, Settings2, Sparkles, Store } from "lucide-react";
+import {
+  ArrowRight,
+  BadgeIndianRupee,
+  Boxes,
+  Building2,
+  CalendarClock,
+  CheckCircle2,
+  ClipboardCheck,
+  Footprints,
+  GraduationCap,
+  Link2,
+  MapPin,
+  MessageCircle,
+  Repeat2,
+  Ruler,
+  ScanLine,
+  Settings2,
+  ShieldCheck,
+  Sparkles,
+  Store,
+} from "lucide-react";
 
 import { Button } from "@/components/ui/Button";
 import { Container } from "@/components/ui/Container";
@@ -66,23 +86,59 @@ const mobileFitRxPath = [
 
 const mobileFitRxChecks = ["Eligibility", "Kit contents", "Training scope", "Commercial terms"];
 
+const cassetteHighlights = [
+  { value: "₹20k", label: "per cassette", icon: BadgeIndianRupee },
+  { value: "1 size", label: "selected foot size", icon: Ruler },
+  { value: "9", label: "named MCR correction options", icon: Settings2 },
+];
+
+const correctionLibrary = [
+  "Medial wedge",
+  "Lateral wedge",
+  "Arch support",
+  "Metatarsal bar",
+  "Hollow / reverse scooping",
+  "Heel raise",
+  "Lego / modular offloading",
+  "Front offloading",
+  "Back offloading",
+];
+
+const partnershipInputs = [
+  { title: "Organisation fit", text: "Clinic, hospital, rehab, pharmacy or distributor.", icon: Building2 },
+  { title: "Service goal", text: "Add footwear-insole service, training or fulfilment.", icon: ShieldCheck },
+  { title: "Location signal", text: "City, state, patient volume and number of locations.", icon: MapPin },
+  { title: "Callback route", text: "Preferred time goes to the partnerships team.", icon: CalendarClock },
+];
+
 export default function FitRxPage() {
   return (
     <>
-      <section className="relative isolate overflow-hidden bg-white md:hidden">
-        <div className="relative min-h-[29rem] overflow-hidden px-4 pb-5 pt-6 text-white">
-          <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(7,59,102,0.94)_0%,rgba(7,59,102,0.78)_42%,rgba(7,59,102,0.18)_100%),url('/home/fitrx-insoles-clinic.png')] bg-cover bg-[63%_center]" />
-          <div className="relative z-10 max-w-[18.5rem]">
-            <p className="font-heading text-[0.68rem] font-extrabold uppercase tracking-[0.16em] text-[#51d8cf]">FitRx</p>
-            <h1 className="mt-3 font-heading text-[2rem] font-extrabold leading-[1.06] text-white">
+      <section className="relative isolate overflow-hidden bg-[linear-gradient(180deg,#eefbf7,#ffffff)] px-4 pb-6 pt-5 md:hidden">
+        <div className="relative overflow-hidden rounded-[1.05rem] bg-[linear-gradient(145deg,#073b66,#087a74_64%,#8edbd0)] p-4 text-white shadow-[0_22px_54px_rgba(7,59,102,0.16)]">
+          <div className="relative z-10">
+            <p className="font-heading text-[0.68rem] font-extrabold uppercase tracking-[0.16em] text-[#8edbd0]">FitRx</p>
+            <h1 className="mt-3 max-w-none font-heading text-[2rem] font-extrabold leading-[1.06] text-white">
               Build a guided insole and footwear service in your clinic.
             </h1>
-            <p className="mt-3 text-[0.88rem] font-medium leading-6 text-white/88">
+            <p className="mt-3 max-w-none text-[0.88rem] font-medium leading-6 text-white/88">
               FitRx combines a configurable insole kit, compatible N-Stride footwear, partner training and repeat fulfilment in one practical workflow.
             </p>
           </div>
+
+          <div className="relative mt-5 h-[12.75rem] overflow-hidden rounded-[0.9rem] bg-white/10 ring-1 ring-white/20">
+            <Image
+              alt="FitRx insole and clinical footwear customization system"
+              className="object-cover object-[63%_center]"
+              fill
+              priority
+              sizes="100vw"
+              src="/home/fitrx-insoles-clinic.png"
+            />
+            <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(7,59,102,0),rgba(7,59,102,0.28))]" />
+          </div>
         </div>
-        <div className="-mt-12 px-4 pb-6">
+        <div className="mt-3">
           <div className="nstride-mobile-card grid grid-cols-3 divide-x divide-[#d7ebfa] p-3 text-center">
             {partnerStack.slice(0, 3).map((item) => {
               const Icon = item.icon;
@@ -187,85 +243,102 @@ export default function FitRxPage() {
 
       <section className="relative hidden overflow-hidden bg-white py-10 md:block md:py-14">
         <Container>
-          <div className="grid gap-6 lg:grid-cols-[0.34fr_0.66fr] lg:items-end">
+          <div className="grid gap-5 lg:grid-cols-[0.42fr_0.58fr] lg:items-end">
             <div>
-              <p className="font-heading text-xs font-bold uppercase tracking-[0.18em] text-primary">Partner workflow</p>
-              <h2 className="mt-3 max-w-[32rem] font-heading text-3xl font-bold leading-tight text-primary-dark sm:text-4xl">
+              <h2 className="max-w-[32rem] font-heading text-3xl font-bold leading-tight text-primary-dark sm:text-4xl">
                 A footwear service line that behaves like a system.
               </h2>
             </div>
-            <p className="max-w-[48rem] text-sm leading-7 text-text-secondary lg:justify-self-end">
+            <p className="max-w-[46rem] text-sm leading-7 text-text-secondary lg:justify-self-end">
               FitRx packages the partner workflow as one guided console: confirm eligibility, understand the kit, train the team, configure the right support path and keep fulfilment repeatable.
             </p>
           </div>
 
-          <div className="mt-7 grid overflow-hidden rounded-[1.25rem] bg-[#071f3a] text-white shadow-[0_28px_82px_rgba(7,31,58,0.22)] ring-1 ring-[#bfe5f7] lg:grid-cols-[0.3fr_0.44fr_0.26fr]">
-            <div className="border-b border-white/12 p-5 lg:border-b-0 lg:border-r lg:p-6">
-              <p className="font-heading text-[0.68rem] font-extrabold uppercase tracking-[0.18em] text-[#8edbd0]">FitRx console</p>
-              <div className="mt-5 grid gap-2.5">
+          <div className="mt-7 overflow-hidden rounded-[1.15rem] bg-[#071f3a] text-white shadow-[0_28px_82px_rgba(7,31,58,0.22)] ring-1 ring-[#bfe5f7]">
+            <div className="grid lg:grid-cols-[0.38fr_0.62fr]">
+              <div className="border-b border-white/12 bg-white/[0.04] p-5 lg:border-b-0 lg:border-r lg:p-6">
+                <div className="flex items-center gap-3">
+                  <span className="grid h-11 w-11 place-items-center rounded-[0.75rem] bg-white text-primary shadow-[0_14px_34px_rgba(0,0,0,0.2)]">
+                    <Sparkles aria-hidden="true" className="h-5 w-5" />
+                  </span>
+                  <div>
+                    <p className="font-heading text-lg font-extrabold leading-tight">FitRx console</p>
+                    <p className="mt-1 text-xs font-semibold leading-5 text-white/62">One operating path for setup, fitting and repeat supply.</p>
+                  </div>
+                </div>
+
+                <div className="mt-5 grid gap-2.5">
                 {workflow.map((item, index) => {
                   const Icon = item.icon;
 
                   return (
-                    <div className="grid grid-cols-[2.35rem_1fr] items-center gap-3 rounded-[0.85rem] bg-white/[0.07] p-2.5 ring-1 ring-white/10" key={item.title}>
-                      <span className="grid h-9 w-9 place-items-center rounded-[0.65rem] bg-white text-primary">
-                        <Icon aria-hidden="true" className="h-4 w-4" />
+                    <div className="grid grid-cols-[2.65rem_1fr] items-start gap-3 rounded-[0.85rem] bg-white/[0.075] p-3 ring-1 ring-white/10" key={item.title}>
+                      <span className="grid h-10 w-10 place-items-center rounded-[0.7rem] bg-white text-primary shadow-[0_10px_26px_rgba(0,0,0,0.16)]">
+                        <Icon aria-hidden="true" className="h-[1.15rem] w-[1.15rem]" />
                       </span>
                       <span>
-                        <span className="block font-heading text-xs font-extrabold text-white">0{index + 1}. {item.title}</span>
-                        <span className="mt-0.5 block text-[0.68rem] font-semibold leading-4 text-white/58">{item.text}</span>
+                        <span className="block font-heading text-sm font-extrabold leading-tight text-white">0{index + 1}. {item.title}</span>
+                        <span className="mt-1 block text-xs font-semibold leading-5 text-white/62">{item.text}</span>
                       </span>
                     </div>
                   );
                 })}
               </div>
-            </div>
+              </div>
 
-            <div className="relative min-h-[24rem] overflow-hidden p-5 lg:p-7">
-              <div aria-hidden="true" className="absolute inset-x-7 top-1/2 h-px bg-[linear-gradient(90deg,transparent,rgba(142,219,208,0.62),transparent)]" />
-              <div aria-hidden="true" className="absolute bottom-8 left-1/2 top-8 w-px bg-[linear-gradient(180deg,transparent,rgba(142,219,208,0.38),transparent)]" />
-              <div className="relative grid h-full place-items-center">
-                <div className="grid h-44 w-44 place-items-center rounded-full bg-[radial-gradient(circle,#ffffff_0%,#f7fcff_52%,#d9f6f3_100%)] text-center text-primary-dark shadow-[0_30px_70px_rgba(0,0,0,0.28)] ring-[18px] ring-white/[0.07]">
-                  <span>
-                    <Sparkles aria-hidden="true" className="mx-auto h-8 w-8 text-primary" />
-                    <span className="mt-2 block font-heading text-xl font-extrabold">FitRx</span>
-                    <span className="mt-1 block text-[0.68rem] font-bold uppercase tracking-[0.16em] text-text-secondary">Partner Workflow</span>
-                  </span>
+              <div className="p-5 lg:p-7">
+                <div className="rounded-[1rem] border border-white/10 bg-[linear-gradient(135deg,rgba(255,255,255,0.09),rgba(255,255,255,0.035))] p-4 lg:p-5">
+                  <div className="grid items-center gap-5 xl:grid-cols-[0.36fr_0.64fr]">
+                    <div className="rounded-[0.95rem] bg-[radial-gradient(circle_at_50%_28%,#ffffff,#eefbf7_62%,#c7f0ec)] p-5 text-primary-dark shadow-[0_26px_70px_rgba(0,0,0,0.24)]">
+                      <div className="grid h-32 place-items-center rounded-[0.85rem] border border-[#bfe9e5] bg-white/78 text-center">
+                        <span>
+                          <Sparkles aria-hidden="true" className="mx-auto h-7 w-7 text-primary" />
+                          <span className="mt-2 block font-heading text-2xl font-extrabold">FitRx</span>
+                          <span className="mt-1 block text-xs font-bold text-text-secondary">Workflow OS</span>
+                        </span>
+                      </div>
+                      <p className="mt-4 text-xs font-bold leading-5 text-[#31556a]">
+                        A guided service model connecting clinical intake, product logic, partner training and repeat fulfilment.
+                      </p>
+                    </div>
+
+                    <div className="relative">
+                      <div aria-hidden="true" className="absolute left-6 right-6 top-7 hidden h-px bg-[linear-gradient(90deg,#8edbd0,#73dcff,#8edbd0)] xl:block" />
+                      <div className="relative grid gap-3 xl:grid-cols-3">
+                        {partnerSignals.map((signal) => (
+                          <div className="rounded-[0.95rem] bg-white p-4 text-primary-dark shadow-[0_18px_44px_rgba(0,0,0,0.16)] ring-1 ring-white/75" key={signal.label}>
+                            <span className="grid h-11 w-11 place-items-center rounded-full bg-[#e7fbf8] font-heading text-xs font-extrabold text-[#087a74] ring-1 ring-[#b9ebe5]">{signal.value}</span>
+                            <p className="mt-4 font-heading text-base font-extrabold leading-tight">{signal.label}</p>
+                            <p className="mt-2 text-xs font-semibold leading-5 text-text-secondary">{signal.text}</p>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="mt-4 grid gap-3 lg:grid-cols-4">
+                    {["Eligibility check", "Kit and category mapping", "Training-backed fulfilment", "Commercial terms review"].map((item) => (
+                      <div className="flex min-h-12 items-center gap-2 rounded-[0.75rem] bg-white/[0.08] px-3 py-2 text-xs font-extrabold leading-4 text-white ring-1 ring-white/12" key={item}>
+                        <CheckCircle2 aria-hidden="true" className="h-4 w-4 shrink-0 text-[#8edbd0]" />
+                        {item}
+                      </div>
+                    ))}
+                  </div>
                 </div>
 
-                {partnerSignals.map((signal, index) => (
-                  <div
-                    className={
-                      index === 0
-                        ? "absolute left-0 top-3 max-w-[11rem] rounded-[0.95rem] bg-white p-3 text-primary-dark shadow-[0_18px_44px_rgba(0,0,0,0.18)]"
-                        : index === 1
-                          ? "absolute right-0 top-[42%] max-w-[11rem] rounded-[0.95rem] bg-[#e9fff8] p-3 text-primary-dark shadow-[0_18px_44px_rgba(0,0,0,0.18)]"
-                          : "absolute bottom-2 left-[18%] max-w-[12rem] rounded-[0.95rem] bg-[#eef6ff] p-3 text-primary-dark shadow-[0_18px_44px_rgba(0,0,0,0.18)]"
-                    }
-                    key={signal.label}
-                  >
-                    <p className="font-heading text-[0.68rem] font-extrabold uppercase tracking-[0.16em] text-primary">{signal.value}</p>
-                    <p className="mt-1 font-heading text-sm font-extrabold">{signal.label}</p>
-                    <p className="mt-1 text-xs font-semibold leading-5 text-text-secondary">{signal.text}</p>
-                  </div>
-                ))}
-              </div>
-            </div>
+                <div className="mt-4 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+                  {partnerStack.map((item) => {
+                    const Icon = item.icon;
 
-            <div className="grid content-between gap-4 border-t border-white/12 p-5 lg:border-l lg:border-t-0 lg:p-6">
-              <div>
-                <p className="font-heading text-lg font-extrabold">Partner-ready outputs</p>
-                <p className="mt-2 text-xs font-semibold leading-5 text-white/66">
-                  What the clinic gets after eligibility, kit contents, training scope and fulfilment terms are aligned.
-                </p>
-              </div>
-              <div className="grid gap-2.5">
-                {["Eligibility check", "Kit and category mapping", "Training-backed fulfilment", "Commercial terms review"].map((item) => (
-                  <div className="flex items-center gap-2 rounded-full bg-white/[0.08] px-3 py-2 text-xs font-extrabold ring-1 ring-white/10" key={item}>
-                    <CheckCircle2 aria-hidden="true" className="h-4 w-4 shrink-0 text-[#8edbd0]" />
-                    {item}
-                  </div>
-                ))}
+                    return (
+                      <div className="rounded-[0.85rem] bg-white/[0.06] p-3 ring-1 ring-white/10" key={item.label}>
+                        <Icon aria-hidden="true" className="h-5 w-5 text-[#8edbd0]" />
+                        <p className="mt-3 font-heading text-sm font-extrabold leading-tight text-white">{item.label}</p>
+                        <p className="mt-1 text-xs font-semibold leading-5 text-white/58">Connected module</p>
+                      </div>
+                    );
+                  })}
+                </div>
               </div>
             </div>
           </div>
@@ -306,6 +379,80 @@ export default function FitRxPage() {
                 );
               })}
               </div>
+            </div>
+          </div>
+        </Container>
+      </section>
+
+      <section className="bg-[linear-gradient(180deg,#f7fcff,#ffffff)] px-4 py-8 md:px-0 md:py-14">
+        <Container className="px-0 md:px-8 lg:px-12 xl:px-16">
+          <div className="grid gap-5 lg:grid-cols-[0.44fr_0.56fr] lg:items-stretch">
+            <div className="relative overflow-hidden rounded-[1.1rem] bg-[#061f3b] p-4 text-white shadow-[0_24px_70px_rgba(7,31,58,0.18)] ring-1 ring-[#bfe5f7] md:p-6">
+              <div className="absolute inset-y-0 right-0 w-1/2 bg-[linear-gradient(90deg,transparent,rgba(142,219,208,0.16))]" />
+              <div className="relative">
+                <h2 className="max-w-[30rem] font-heading text-[1.65rem] font-extrabold leading-tight md:text-3xl">
+                  One cassette. One selected size. Nine clear MCR support options.
+                </h2>
+                <p className="mt-3 max-w-[34rem] text-sm leading-6 text-white/72">
+                  FitRx is a clinic-partner cassette for comparing support and off-loading approaches, then connecting the selected pathway to compatible footwear and repeat fulfilment.
+                </p>
+                <div className="mt-5 grid grid-cols-3 gap-2">
+                  {cassetteHighlights.map((item) => {
+                    const Icon = item.icon;
+
+                    return (
+                      <div className="rounded-[0.85rem] bg-white/[0.08] p-3 ring-1 ring-white/12" key={item.label}>
+                        <Icon aria-hidden="true" className="h-5 w-5 text-[#8edbd0]" />
+                        <p className="mt-3 font-heading text-xl font-extrabold leading-none text-white md:text-2xl">{item.value}</p>
+                        <p className="mt-1 text-[0.68rem] font-bold leading-4 text-white/58 md:text-xs">{item.label}</p>
+                      </div>
+                    );
+                  })}
+                </div>
+              </div>
+            </div>
+
+            <div className="overflow-hidden rounded-[1.1rem] border border-[#d7ebfa] bg-white shadow-[0_18px_54px_rgba(20,121,201,0.07)]">
+              <div className="grid gap-px bg-[#d7ebfa] sm:grid-cols-3">
+                {correctionLibrary.map((item, index) => (
+                  <div className="group min-h-[5rem] bg-[#fbfdff] p-3 transition hover:bg-white md:p-4" key={item}>
+                    <div className="flex items-start justify-between gap-3">
+                      <span className="grid h-9 w-9 place-items-center rounded-[0.7rem] bg-white font-heading text-xs font-extrabold text-primary shadow-[0_8px_22px_rgba(20,121,201,0.08)] ring-1 ring-[#d7ebfa]">
+                        {String(index + 1).padStart(2, "0")}
+                      </span>
+                      <Footprints aria-hidden="true" className="h-4 w-4 text-[#009b92] transition group-hover:rotate-6" />
+                    </div>
+                    <p className="mt-3 font-heading text-sm font-extrabold leading-tight text-primary-dark">{item}</p>
+                  </div>
+                ))}
+              </div>
+              <div className="bg-[#eefbf7] px-4 py-3 text-xs font-semibold leading-5 text-[#31556a]">
+                Final material, durometer, laterality, replenishment, GST, lead time and compatibility are confirmed during partner onboarding.
+              </div>
+            </div>
+          </div>
+
+          <div className="mt-5 grid gap-4 rounded-[1.05rem] border border-[#c9e6f8] bg-[linear-gradient(135deg,#ffffff,#eefbf7)] p-4 shadow-[0_18px_52px_rgba(20,121,201,0.07)] lg:grid-cols-[0.26fr_0.74fr] lg:items-center">
+            <div>
+              <div className="inline-flex h-12 w-12 items-center justify-center rounded-[0.8rem] bg-white text-primary shadow-soft ring-1 ring-[#d7ebfa]">
+                <MessageCircle aria-hidden="true" className="h-6 w-6" />
+              </div>
+              <h3 className="mt-3 font-heading text-xl font-extrabold leading-tight text-primary-dark md:text-2xl">
+                Partnership enquiry data stays practical.
+              </h3>
+            </div>
+            <div className="grid gap-2 sm:grid-cols-2 lg:grid-cols-4">
+              {partnershipInputs.map((item) => {
+                const Icon = item.icon;
+
+                return (
+                  <div className="rounded-[0.85rem] bg-white p-3 ring-1 ring-[#d8edf8]" key={item.title}>
+                    <Icon aria-hidden="true" className="h-5 w-5 text-[#009b92]" />
+                    <p className="mt-3 font-heading text-sm font-extrabold text-primary-dark">{item.title}</p>
+                    <p className="mt-1 text-xs font-semibold leading-5 text-text-secondary">{item.text}</p>
+                  </div>
+                );
+              })}
             </div>
           </div>
         </Container>

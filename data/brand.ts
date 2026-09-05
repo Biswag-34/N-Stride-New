@@ -27,13 +27,13 @@ export const brand = {
   social: {
     instagram: "https://www.instagram.com/nayapada_nstride/",
     facebook: "https://www.facebook.com/profile.php?id=61576595188326",
-    youtube: "https://youtube.com",
+    youtube: "https://www.youtube.com/@N-stride",
   },
   summary:
     "N-Stride connects therapeutic footwear, assessment pathways, wound-care support, prosthetics, orthotics and clinical partnerships into one foot and lower-limb care ecosystem.",
   socialLinks: [
     { label: "Instagram", href: "https://www.instagram.com/nayapada_nstride/" },
     { label: "Facebook", href: "https://www.facebook.com/profile.php?id=61576595188326" },
-    { label: "YouTube", href: "https://youtube.com" },
+    { label: "YouTube", href: "https://www.youtube.com/@N-stride" },
   ],
 };

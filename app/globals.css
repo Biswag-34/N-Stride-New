@@ -184,7 +184,7 @@ main :is(p, span)[class*="uppercase"][class*="tracking"]:has(+ :is(h1, h2, h3)) 
   }
 
   body {
-    padding-bottom: calc(4.75rem + env(safe-area-inset-bottom));
+    padding-bottom: 0;
     background:
       radial-gradient(circle at top left, rgba(221, 241, 255, 0.42), transparent 20rem),
       var(--background);
@@ -298,7 +298,7 @@ main :is(p, span)[class*="uppercase"][class*="tracking"]:has(+ :is(h1, h2, h3)) 
   }
 
   footer {
-    padding-bottom: 4.75rem;
+    padding-bottom: calc(4.35rem + env(safe-area-inset-bottom));
   }
 
   #enquiry-form {

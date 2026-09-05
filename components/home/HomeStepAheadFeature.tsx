@@ -1,12 +1,12 @@
 "use client";
 
-import { ArrowRight, ClipboardCheck, HeartPulse, Play, RefreshCw, UserRound } from "lucide-react";
+import { ArrowRight, ClipboardCheck, HeartPulse, RefreshCw, UserRound } from "lucide-react";
 import { motion } from "framer-motion";
-import Image from "next/image";
 
 import { Button } from "@/components/ui/Button";
 import { Container } from "@/components/ui/Container";
 import { leadCaptureHref } from "@/data/leadCapture";
+import { stepAheadProgramVideo } from "@/data/media";
 import { staggerContainer, staggerItem } from "@/lib/motion";
 import { ImageDrop } from "./HomeDesignPrimitives";
 
@@ -35,22 +35,15 @@ export function HomeStepAheadFeature() {
               className="min-h-[18rem] shadow-[0_22px_55px_rgba(16,42,67,0.12)] sm:min-h-[22rem]"
               label=""
             >
-              <div className="relative flex h-full min-h-[18rem] items-end overflow-hidden p-5 text-white sm:min-h-[22rem] sm:p-7">
-                <Image
-                  alt="Patient walking in supportive footwear for the Step-Ahead program"
-                  className="object-cover"
-                  fill
-                  sizes="(min-width: 1024px) 480px, 100vw"
-                  src="/home/step-ahead-walking-final.png"
+              <div className="relative h-full min-h-[18rem] overflow-hidden bg-[linear-gradient(180deg,rgba(7,59,102,0.12),rgba(7,59,102,0.68)),url('/home/step-ahead-walking-final.png')] bg-cover bg-center text-white sm:min-h-[22rem]">
+                <iframe
+                  allow="autoplay; fullscreen; encrypted-media; picture-in-picture"
+                  allowFullScreen
+                  className="absolute inset-0 h-full w-full"
+                  frameBorder="0"
+                  src={stepAheadProgramVideo.src}
+                  title={stepAheadProgramVideo.title}
                 />
-                <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(7,59,102,0.05),rgba(7,59,102,0.70))]" />
-                <div className="relative z-10">
-                  <p className="font-heading text-2xl font-semibold">Step-Ahead Program</p>
-                  <p className="mt-1 max-w-[15rem] text-sm leading-6 text-white/88">Clinical care pathway and support</p>
-                </div>
-                <span className="absolute right-6 top-6 z-10 flex h-14 w-14 items-center justify-center rounded-full border-[4px] border-white/40 bg-primary text-white shadow-[0_18px_38px_rgba(7,59,102,0.25)]">
-                  <Play aria-hidden="true" className="ml-0.5 h-6 w-6 fill-current" />
-                </span>
               </div>
             </ImageDrop>
           </motion.div>

@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { ArrowRight, BarChart3, FileCheck2, Handshake, RefreshCcw } from "lucide-react";
 
 import { Button } from "@/components/ui/Button";
@@ -33,20 +34,31 @@ const proofItems = [
 export function StepAheadHero() {
   return (
     <>
-    <section className="relative isolate overflow-hidden bg-white md:hidden">
-      <div className="relative min-h-[29rem] overflow-hidden px-4 pb-5 pt-6 text-white">
-        <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(7,59,102,0.94)_0%,rgba(7,59,102,0.76)_43%,rgba(7,59,102,0.16)_100%),url('/requested-assets/stepahead-hero.png')] bg-cover bg-[63%_center]" />
-        <div className="relative z-10 max-w-[18.5rem]">
+    <section className="relative isolate overflow-hidden bg-[linear-gradient(180deg,#eef8ff,#ffffff)] px-4 pb-6 pt-5 md:hidden">
+      <div className="relative overflow-hidden rounded-[1.05rem] bg-[linear-gradient(145deg,#073b66,#0f6eb9_62%,#26b6c8)] p-4 text-white shadow-[0_22px_54px_rgba(7,59,102,0.16)]">
+        <div className="relative z-10">
           <p className="font-heading text-[0.68rem] font-extrabold uppercase tracking-[0.16em] text-[#73dcff]">Step-Ahead</p>
-          <h1 className="mt-3 font-heading text-[2rem] font-extrabold leading-[1.06] text-white">
+          <h1 className="mt-3 max-w-none font-heading text-[2rem] font-extrabold leading-[1.06] text-white">
             Launch structured diabetic foot care in your clinic.
           </h1>
-          <p className="mt-3 text-[0.88rem] font-medium leading-6 text-white/88">
+          <p className="mt-3 max-w-none text-[0.88rem] font-medium leading-6 text-white/88">
             A configurable clinic partnership combining diagnostics, equipment, team training, starter inventory, SOPs and launch support.
           </p>
         </div>
+
+        <div className="relative mt-5 aspect-video overflow-hidden rounded-[0.9rem] bg-[linear-gradient(180deg,rgba(7,59,102,0.12),rgba(7,59,102,0.68)),url('/requested-assets/stepahead-hero.png')] bg-cover bg-center ring-1 ring-white/20">
+          <Image
+            alt="Step-Ahead diabetic foot-care program setup"
+            className="object-cover object-[63%_center]"
+            fill
+            priority
+            sizes="100vw"
+            src="/requested-assets/stepahead-hero.png"
+          />
+          <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(7,59,102,0),rgba(7,59,102,0.26))]" />
+        </div>
       </div>
-      <div className="-mt-12 px-4 pb-6">
+      <div className="mt-3">
         <div className="grid gap-2">
           {proofItems.map((item, index) => {
             const Icon = item.icon;

@@ -9,14 +9,14 @@ import { StepContainer, StepSection } from "./StepAheadPrimitives";
 
 const mobileStages = [
   { title: "Scope", text: "Clinic type, patient profile and service goals.", icon: ClipboardList },
-  { title: "Equip", text: "Assessment tools, starter inventory and setup support.", icon: PackageCheck },
-  { title: "Train", text: "Team workflow, SOPs and onboarding clarity.", icon: Settings2 },
-  { title: "Launch", text: "Go live with follow-up and fulfilment support.", icon: Rocket },
+  { title: "Equip", text: "Foot scan, VIBRASENSE+T, ABI and pressure mapping.", icon: PackageCheck },
+  { title: "Train", text: "2 to 4 day role-based training and SOP clarity.", icon: Settings2 },
+  { title: "Launch", text: "Starter inventory, patient flow and review support.", icon: Rocket },
 ];
 
 const packages = [
-  { name: "Essential", price: "₹3.5 lakh", text: "Focused diabetic foot-care launch setup." },
-  { name: "Advanced", price: "₹5 lakh", text: "Expanded setup with stronger support depth." },
+  { name: "Essential", price: "₹3.5 lakh", text: "Core diagnostics, 2-day training and ₹1 lakh inventory." },
+  { name: "Advanced", price: "₹5 lakh", text: "Expanded inventory, 4-day training, Doppler and NPWT." },
 ];
 
 export function StepAheadMobileSummary() {
